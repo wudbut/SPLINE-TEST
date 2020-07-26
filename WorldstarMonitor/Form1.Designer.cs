@@ -1088,3 +1088,882 @@
             this.mcn7.Location = new System.Drawing.Point(6, 202);
             this.mcn7.Name = "mcn7";
             this.mcn7.Size = new System.Drawing.Size(75, 23);
+            this.mcn7.TabIndex = 84;
+            // 
+            // mcn6
+            // 
+            this.mcn6.Location = new System.Drawing.Point(6, 173);
+            this.mcn6.Name = "mcn6";
+            this.mcn6.Size = new System.Drawing.Size(75, 23);
+            this.mcn6.TabIndex = 83;
+            // 
+            // mcn5
+            // 
+            this.mcn5.Location = new System.Drawing.Point(6, 144);
+            this.mcn5.Name = "mcn5";
+            this.mcn5.Size = new System.Drawing.Size(75, 23);
+            this.mcn5.TabIndex = 82;
+            // 
+            // mcn4
+            // 
+            this.mcn4.Location = new System.Drawing.Point(6, 115);
+            this.mcn4.Name = "mcn4";
+            this.mcn4.Size = new System.Drawing.Size(75, 23);
+            this.mcn4.TabIndex = 81;
+            // 
+            // mcn3
+            // 
+            this.mcn3.Location = new System.Drawing.Point(6, 86);
+            this.mcn3.Name = "mcn3";
+            this.mcn3.Size = new System.Drawing.Size(75, 23);
+            this.mcn3.TabIndex = 80;
+            // 
+            // mcn2
+            // 
+            this.mcn2.Location = new System.Drawing.Point(6, 53);
+            this.mcn2.Name = "mcn2";
+            this.mcn2.Size = new System.Drawing.Size(75, 23);
+            this.mcn2.TabIndex = 79;
+            // 
+            // mcn1
+            // 
+            this.mcn1.Location = new System.Drawing.Point(6, 22);
+            this.mcn1.Name = "mcn1";
+            this.mcn1.Size = new System.Drawing.Size(75, 23);
+            this.mcn1.TabIndex = 78;
+            // 
+            // mc8
+            // 
+            this.mc8.Location = new System.Drawing.Point(87, 231);
+            this.mc8.Name = "mc8";
+            this.mc8.Size = new System.Drawing.Size(482, 23);
+            this.mc8.TabIndex = 76;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(578, 231);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(88, 23);
+            this.button11.TabIndex = 77;
+            this.button11.Text = "Start Miner";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // mc7
+            // 
+            this.mc7.Location = new System.Drawing.Point(87, 202);
+            this.mc7.Name = "mc7";
+            this.mc7.Size = new System.Drawing.Size(482, 23);
+            this.mc7.TabIndex = 74;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(578, 202);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(88, 23);
+            this.button10.TabIndex = 75;
+            this.button10.Text = "Start Miner";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // mc6
+            // 
+            this.mc6.Location = new System.Drawing.Point(87, 173);
+            this.mc6.Name = "mc6";
+            this.mc6.Size = new System.Drawing.Size(482, 23);
+            this.mc6.TabIndex = 72;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(578, 173);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(88, 23);
+            this.button8.TabIndex = 73;
+            this.button8.Text = "Start Miner";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // mc5
+            // 
+            this.mc5.Location = new System.Drawing.Point(87, 144);
+            this.mc5.Name = "mc5";
+            this.mc5.Size = new System.Drawing.Size(483, 23);
+            this.mc5.TabIndex = 70;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(578, 144);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(88, 23);
+            this.button9.TabIndex = 71;
+            this.button9.Text = "Start Miner";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // mc4
+            // 
+            this.mc4.Location = new System.Drawing.Point(87, 115);
+            this.mc4.Name = "mc4";
+            this.mc4.Size = new System.Drawing.Size(482, 23);
+            this.mc4.TabIndex = 68;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(578, 115);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(88, 23);
+            this.button7.TabIndex = 69;
+            this.button7.Text = "Start Miner";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // mc3
+            // 
+            this.mc3.Location = new System.Drawing.Point(87, 86);
+            this.mc3.Name = "mc3";
+            this.mc3.Size = new System.Drawing.Size(482, 23);
+            this.mc3.TabIndex = 67;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(578, 86);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(88, 23);
+            this.button6.TabIndex = 67;
+            this.button6.Text = "Start Miner";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // mc2
+            // 
+            this.mc2.Location = new System.Drawing.Point(87, 52);
+            this.mc2.Name = "mc2";
+            this.mc2.Size = new System.Drawing.Size(482, 23);
+            this.mc2.TabIndex = 66;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(578, 52);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(88, 23);
+            this.button5.TabIndex = 65;
+            this.button5.Text = "Start Miner";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // mc1
+            // 
+            this.mc1.Location = new System.Drawing.Point(87, 22);
+            this.mc1.Name = "mc1";
+            this.mc1.Size = new System.Drawing.Size(482, 23);
+            this.mc1.TabIndex = 65;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(578, 22);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(88, 23);
+            this.button4.TabIndex = 63;
+            this.button4.Text = "Start Miner";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.label18);
+            this.tabPage1.Controls.Add(this.probabilitySolveLabel);
+            this.tabPage1.Controls.Add(this.label29);
+            this.tabPage1.Controls.Add(this.networkHashrateLabel);
+            this.tabPage1.Controls.Add(this.label32);
+            this.tabPage1.Controls.Add(this.blockRewardLabel);
+            this.tabPage1.Controls.Add(this.label31);
+            this.tabPage1.Controls.Add(this.blockHeightLabel);
+            this.tabPage1.Controls.Add(this.label36);
+            this.tabPage1.Controls.Add(this.dailyBitcoinSentLabel);
+            this.tabPage1.Controls.Add(this.label35);
+            this.tabPage1.Controls.Add(this.dailyTransactionTotalLabel);
+            this.tabPage1.Controls.Add(this.label34);
+            this.tabPage1.Controls.Add(this.dailyAVGPriceLabel);
+            this.tabPage1.Controls.Add(this.label33);
+            this.tabPage1.Controls.Add(this.totalMarketCapLabel);
+            this.tabPage1.Controls.Add(this.label49);
+            this.tabPage1.Controls.Add(this.totalBitcoinLabel);
+            this.tabPage1.Controls.Add(this.label47);
+            this.tabPage1.Controls.Add(this.quickPriceListBox);
+            this.tabPage1.Controls.Add(this.listBox9);
+            this.tabPage1.Controls.Add(this.label40);
+            this.tabPage1.Controls.Add(this.label39);
+            this.tabPage1.Controls.Add(this.label38);
+            this.tabPage1.Controls.Add(this.label37);
+            this.tabPage1.Controls.Add(this.label30);
+            this.tabPage1.Controls.Add(this.btcValueListBox);
+            this.tabPage1.Controls.Add(this.totalCoinListBox);
+            this.tabPage1.Controls.Add(this.marketTotalListBox);
+            this.tabPage1.Controls.Add(this.chart3);
+            this.tabPage1.Controls.Add(this.label28);
+            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.tradingPairLabel);
+            this.tabPage1.Controls.Add(this.linkLabel10);
+            this.tabPage1.Controls.Add(this.quickMarketSymbol);
+            this.tabPage1.Controls.Add(this.quickCryptsyMarketID);
+            this.tabPage1.Controls.Add(this.quickLastTradeTime);
+            this.tabPage1.Controls.Add(this.quickStatVolume);
+            this.tabPage1.Controls.Add(this.quickStatRatio);
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(690, 518);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Market Data";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(6, 362);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(79, 15);
+            this.label18.TabIndex = 129;
+            this.label18.Text = "Total Bitcoin: ";
+            // 
+            // probabilitySolveLabel
+            // 
+            this.probabilitySolveLabel.AutoSize = true;
+            this.probabilitySolveLabel.Location = new System.Drawing.Point(168, 491);
+            this.probabilitySolveLabel.Name = "probabilitySolveLabel";
+            this.probabilitySolveLabel.Size = new System.Drawing.Size(14, 15);
+            this.probabilitySolveLabel.TabIndex = 146;
+            this.probabilitySolveLabel.Text = "0";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(6, 380);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(122, 15);
+            this.label29.TabIndex = 130;
+            this.label29.Text = "Market Capitalization:";
+            // 
+            // networkHashrateLabel
+            // 
+            this.networkHashrateLabel.AutoSize = true;
+            this.networkHashrateLabel.Location = new System.Drawing.Point(115, 476);
+            this.networkHashrateLabel.Name = "networkHashrateLabel";
+            this.networkHashrateLabel.Size = new System.Drawing.Size(14, 15);
+            this.networkHashrateLabel.TabIndex = 145;
+            this.networkHashrateLabel.Text = "0";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(6, 395);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(86, 15);
+            this.label32.TabIndex = 131;
+            this.label32.Text = "24hr avg Price:";
+            // 
+            // blockRewardLabel
+            // 
+            this.blockRewardLabel.AutoSize = true;
+            this.blockRewardLabel.Location = new System.Drawing.Point(91, 461);
+            this.blockRewardLabel.Name = "blockRewardLabel";
+            this.blockRewardLabel.Size = new System.Drawing.Size(14, 15);
+            this.blockRewardLabel.TabIndex = 144;
+            this.blockRewardLabel.Text = "0";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(6, 413);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(131, 15);
+            this.label31.TabIndex = 132;
+            this.label31.Text = "24hr Transaction Total: ";
+            // 
+            // blockHeightLabel
+            // 
+            this.blockHeightLabel.AutoSize = true;
+            this.blockHeightLabel.Location = new System.Drawing.Point(87, 446);
+            this.blockHeightLabel.Name = "blockHeightLabel";
+            this.blockHeightLabel.Size = new System.Drawing.Size(14, 15);
+            this.blockHeightLabel.TabIndex = 143;
+            this.blockHeightLabel.Text = "0";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(6, 428);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(102, 15);
+            this.label36.TabIndex = 133;
+            this.label36.Text = "24hr Bitcoin Sent:";
+            // 
+            // dailyBitcoinSentLabel
+            // 
+            this.dailyBitcoinSentLabel.AutoSize = true;
+            this.dailyBitcoinSentLabel.Location = new System.Drawing.Point(114, 428);
+            this.dailyBitcoinSentLabel.Name = "dailyBitcoinSentLabel";
+            this.dailyBitcoinSentLabel.Size = new System.Drawing.Size(14, 15);
+            this.dailyBitcoinSentLabel.TabIndex = 142;
+            this.dailyBitcoinSentLabel.Text = "0";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(6, 446);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(75, 15);
+            this.label35.TabIndex = 134;
+            this.label35.Text = "Block Height:";
+            // 
+            // dailyTransactionTotalLabel
+            // 
+            this.dailyTransactionTotalLabel.AutoSize = true;
+            this.dailyTransactionTotalLabel.Location = new System.Drawing.Point(143, 413);
+            this.dailyTransactionTotalLabel.Name = "dailyTransactionTotalLabel";
+            this.dailyTransactionTotalLabel.Size = new System.Drawing.Size(14, 15);
+            this.dailyTransactionTotalLabel.TabIndex = 141;
+            this.dailyTransactionTotalLabel.Text = "0";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(6, 476);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(103, 15);
+            this.label34.TabIndex = 135;
+            this.label34.Text = "Network Hashrate:";
+            // 
+            // dailyAVGPriceLabel
+            // 
+            this.dailyAVGPriceLabel.AutoSize = true;
+            this.dailyAVGPriceLabel.Location = new System.Drawing.Point(98, 395);
+            this.dailyAVGPriceLabel.Name = "dailyAVGPriceLabel";
+            this.dailyAVGPriceLabel.Size = new System.Drawing.Size(14, 15);
+            this.dailyAVGPriceLabel.TabIndex = 140;
+            this.dailyAVGPriceLabel.Text = "0";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(6, 461);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(79, 15);
+            this.label33.TabIndex = 136;
+            this.label33.Text = "Block Reward:";
+            // 
+            // totalMarketCapLabel
+            // 
+            this.totalMarketCapLabel.AutoSize = true;
+            this.totalMarketCapLabel.Location = new System.Drawing.Point(134, 380);
+            this.totalMarketCapLabel.Name = "totalMarketCapLabel";
+            this.totalMarketCapLabel.Size = new System.Drawing.Size(14, 15);
+            this.totalMarketCapLabel.TabIndex = 139;
+            this.totalMarketCapLabel.Text = "0";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(6, 491);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(156, 15);
+            this.label49.TabIndex = 137;
+            this.label49.Text = "Probability to solve per Hash:";
+            // 
+            // totalBitcoinLabel
+            // 
+            this.totalBitcoinLabel.AutoSize = true;
+            this.totalBitcoinLabel.Location = new System.Drawing.Point(91, 362);
+            this.totalBitcoinLabel.Name = "totalBitcoinLabel";
+            this.totalBitcoinLabel.Size = new System.Drawing.Size(14, 15);
+            this.totalBitcoinLabel.TabIndex = 138;
+            this.totalBitcoinLabel.Text = "0";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(9, 241);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(114, 15);
+            this.label47.TabIndex = 110;
+            this.label47.Text = "Quick Price Checker";
+            // 
+            // quickPriceListBox
+            // 
+            this.quickPriceListBox.FormattingEnabled = true;
+            this.quickPriceListBox.ItemHeight = 15;
+            this.quickPriceListBox.Location = new System.Drawing.Point(55, 259);
+            this.quickPriceListBox.Name = "quickPriceListBox";
+            this.quickPriceListBox.Size = new System.Drawing.Size(90, 79);
+            this.quickPriceListBox.TabIndex = 108;
+            // 
+            // listBox9
+            // 
+            this.listBox9.FormattingEnabled = true;
+            this.listBox9.ItemHeight = 15;
+            this.listBox9.Items.AddRange(new object[] {
+            "LTC",
+            "DOGE",
+            "TIPS",
+            "DRK",
+            "FTC"});
+            this.listBox9.Location = new System.Drawing.Point(9, 259);
+            this.listBox9.Name = "listBox9";
+            this.listBox9.Size = new System.Drawing.Size(59, 79);
+            this.listBox9.TabIndex = 107;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(39, 208);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(24, 15);
+            this.label40.TabIndex = 105;
+            this.label40.Text = "0.0";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(6, 208);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(36, 15);
+            this.label39.TabIndex = 104;
+            this.label39.Text = "Total:";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(183, 3);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(72, 15);
+            this.label38.TabIndex = 103;
+            this.label38.Text = "BTC \"Value\":";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(54, 3);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(36, 15);
+            this.label37.TabIndex = 102;
+            this.label37.Text = "Total:";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(6, 3);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(33, 15);
+            this.label30.TabIndex = 98;
+            this.label30.Text = "Coin:";
+            // 
+            // btcValueListBox
+            // 
+            this.btcValueListBox.FormattingEnabled = true;
+            this.btcValueListBox.ItemHeight = 15;
+            this.btcValueListBox.Items.AddRange(new object[] {
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"});
+            this.btcValueListBox.Location = new System.Drawing.Point(186, 21);
+            this.btcValueListBox.Name = "btcValueListBox";
+            this.btcValueListBox.Size = new System.Drawing.Size(84, 184);
+            this.btcValueListBox.TabIndex = 101;
+            // 
+            // totalCoinListBox
+            // 
+            this.totalCoinListBox.FormattingEnabled = true;
+            this.totalCoinListBox.ItemHeight = 15;
+            this.totalCoinListBox.Location = new System.Drawing.Point(57, 21);
+            this.totalCoinListBox.Name = "totalCoinListBox";
+            this.totalCoinListBox.Size = new System.Drawing.Size(133, 184);
+            this.totalCoinListBox.TabIndex = 100;
+            // 
+            // marketTotalListBox
+            // 
+            this.marketTotalListBox.FormattingEnabled = true;
+            this.marketTotalListBox.ItemHeight = 15;
+            this.marketTotalListBox.Items.AddRange(new object[] {
+            "BTC",
+            "LTC",
+            "DOGE",
+            "FTC",
+            "FRC",
+            "CGB",
+            "DVC",
+            "42",
+            "TIPS",
+            "LOT",
+            "XPM",
+            "DRK"});
+            this.marketTotalListBox.Location = new System.Drawing.Point(8, 21);
+            this.marketTotalListBox.Name = "marketTotalListBox";
+            this.marketTotalListBox.Size = new System.Drawing.Size(66, 184);
+            this.marketTotalListBox.TabIndex = 99;
+            // 
+            // chart3
+            // 
+            chartArea5.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chart3.Legends.Add(legend5);
+            this.chart3.Location = new System.Drawing.Point(293, 163);
+            this.chart3.Name = "chart3";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series5.CustomProperties = "DoughnutRadius=70, PieDrawingStyle=Concave, PieLabelStyle=Disabled";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chart3.Series.Add(series5);
+            this.chart3.Size = new System.Drawing.Size(391, 349);
+            this.chart3.TabIndex = 106;
+            this.chart3.Text = "chart3";
+            title5.Name = "Title1";
+            title5.Text = "Overall BTC %";
+            this.chart3.Titles.Add(title5);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(497, 21);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(34, 15);
+            this.label28.TabIndex = 87;
+            this.label28.Text = "Ratio";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(445, 108);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(89, 15);
+            this.label10.TabIndex = 82;
+            this.label10.Text = "Market Symbols";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(445, 79);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(89, 15);
+            this.label9.TabIndex = 81;
+            this.label9.Text = "Last Trade Time";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(488, 50);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 15);
+            this.label4.TabIndex = 80;
+            this.label4.Text = "Volume";
+            // 
+            // tradingPairLabel
+            // 
+            this.tradingPairLabel.AutoSize = true;
+            this.tradingPairLabel.Location = new System.Drawing.Point(534, 0);
+            this.tradingPairLabel.Name = "tradingPairLabel";
+            this.tradingPairLabel.Size = new System.Drawing.Size(65, 15);
+            this.tradingPairLabel.TabIndex = 79;
+            this.tradingPairLabel.Text = "Coin / Coin";
+            // 
+            // linkLabel10
+            // 
+            this.linkLabel10.AutoSize = true;
+            this.linkLabel10.LinkColor = System.Drawing.Color.CornflowerBlue;
+            this.linkLabel10.Location = new System.Drawing.Point(428, 137);
+            this.linkLabel10.Name = "linkLabel10";
+            this.linkLabel10.Size = new System.Drawing.Size(103, 15);
+            this.linkLabel10.TabIndex = 78;
+            this.linkLabel10.TabStop = true;
+            this.linkLabel10.Text = "Cryptsy Market ID";
+            this.linkLabel10.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel10_LinkClicked_1);
+            // 
+            // quickMarketSymbol
+            // 
+            this.quickMarketSymbol.Location = new System.Drawing.Point(537, 105);
+            this.quickMarketSymbol.Name = "quickMarketSymbol";
+            this.quickMarketSymbol.Size = new System.Drawing.Size(145, 23);
+            this.quickMarketSymbol.TabIndex = 77;
+            // 
+            // quickCryptsyMarketID
+            // 
+            this.quickCryptsyMarketID.Location = new System.Drawing.Point(537, 134);
+            this.quickCryptsyMarketID.Name = "quickCryptsyMarketID";
+            this.quickCryptsyMarketID.Size = new System.Drawing.Size(145, 23);
+            this.quickCryptsyMarketID.TabIndex = 76;
+            // 
+            // quickLastTradeTime
+            // 
+            this.quickLastTradeTime.Location = new System.Drawing.Point(537, 76);
+            this.quickLastTradeTime.Name = "quickLastTradeTime";
+            this.quickLastTradeTime.Size = new System.Drawing.Size(145, 23);
+            this.quickLastTradeTime.TabIndex = 75;
+            // 
+            // quickStatVolume
+            // 
+            this.quickStatVolume.Location = new System.Drawing.Point(537, 47);
+            this.quickStatVolume.Name = "quickStatVolume";
+            this.quickStatVolume.Size = new System.Drawing.Size(145, 23);
+            this.quickStatVolume.TabIndex = 74;
+            // 
+            // quickStatRatio
+            // 
+            this.quickStatRatio.Location = new System.Drawing.Point(537, 18);
+            this.quickStatRatio.Name = "quickStatRatio";
+            this.quickStatRatio.Size = new System.Drawing.Size(145, 23);
+            this.quickStatRatio.TabIndex = 73;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Location = new System.Drawing.Point(7, 12);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(698, 546);
+            this.tabControl1.TabIndex = 63;
+            // 
+            // RESTAPIWorkerPercentageLabel
+            // 
+            this.RESTAPIWorkerPercentageLabel.AutoSize = true;
+            this.RESTAPIWorkerPercentageLabel.Location = new System.Drawing.Point(324, 609);
+            this.RESTAPIWorkerPercentageLabel.Name = "RESTAPIWorkerPercentageLabel";
+            this.RESTAPIWorkerPercentageLabel.Size = new System.Drawing.Size(45, 15);
+            this.RESTAPIWorkerPercentageLabel.TabIndex = 90;
+            this.RESTAPIWorkerPercentageLabel.Text = "label59";
+            // 
+            // linkLabel9
+            // 
+            this.linkLabel9.AutoSize = true;
+            this.linkLabel9.LinkColor = System.Drawing.Color.CornflowerBlue;
+            this.linkLabel9.Location = new System.Drawing.Point(868, 14);
+            this.linkLabel9.Name = "linkLabel9";
+            this.linkLabel9.Size = new System.Drawing.Size(63, 15);
+            this.linkLabel9.TabIndex = 68;
+            this.linkLabel9.TabStop = true;
+            this.linkLabel9.Text = "bitcoin.org";
+            this.linkLabel9.VisitedLinkColor = System.Drawing.Color.CornflowerBlue;
+            this.linkLabel9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel9_LinkClicked_2);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1238, 633);
+            this.Controls.Add(this.RESTAPIWorkerPercentageLabel);
+            this.Controls.Add(this.label48);
+            this.Controls.Add(this.RESTAPIWorkerProgress);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.recentTradesListBox);
+            this.Controls.Add(this.buyOrdersListBox);
+            this.Controls.Add(this.sellOrdersListBox);
+            this.Controls.Add(this.btcePriceLabel);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.coinbasePriceLabel);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.marketListBox);
+            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lastUpdateTimeLabel);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.donateTextBox);
+            this.Controls.Add(this.groupBox1);
+            this.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Form1";
+            this.Text = "Worldst▲r Crypto-Monitor - Bet▲ v3.0";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label coinbasePriceLabel;
+        private System.Windows.Forms.Label lastUpdateTimeLabel;
+        private System.ComponentModel.BackgroundWorker RESTAPIworker;
+        private System.Windows.Forms.TextBox donateTextBox;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel linkLabel4;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.LinkLabel linkLabel7;
+        private System.Windows.Forms.Label btcePriceLabel;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ListBox marketListBox;
+        private System.Windows.Forms.ListBox sellOrdersListBox;
+        private System.Windows.Forms.ListBox buyOrdersListBox;
+        private System.Windows.Forms.ListBox recentTradesListBox;
+        private System.Windows.Forms.LinkLabel linkLabel8;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.ProgressBar RESTAPIWorkerProgress;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TextBox a11;
+        private System.Windows.Forms.TextBox a10;
+        private System.Windows.Forms.TextBox a9;
+        private System.Windows.Forms.TextBox ldonation;
+        private System.Windows.Forms.TextBox lexchange;
+        private System.Windows.Forms.TextBox lwallet;
+        private System.Windows.Forms.TextBox a8;
+        private System.Windows.Forms.TextBox a4;
+        private System.Windows.Forms.TextBox a7;
+        private System.Windows.Forms.TextBox a6;
+        private System.Windows.Forms.TextBox a5;
+        private System.Windows.Forms.TextBox a3;
+        private System.Windows.Forms.TextBox a2;
+        private System.Windows.Forms.TextBox a1;
+        private System.Windows.Forms.TextBox bdonation;
+        private System.Windows.Forms.TextBox bexchange;
+        private System.Windows.Forms.TextBox bwallet;
+        private System.Windows.Forms.TextBox ddonation;
+        private System.Windows.Forms.TextBox dexchange;
+        private System.Windows.Forms.TextBox dwallet;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.ComboBox minerSelector;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox textBox42;
+        private System.Windows.Forms.TextBox textBox41;
+        private System.Windows.Forms.TextBox textBox38;
+        private System.Windows.Forms.TextBox textBox40;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.TextBox mcn8;
+        private System.Windows.Forms.TextBox mcn7;
+        private System.Windows.Forms.TextBox mcn6;
+        private System.Windows.Forms.TextBox mcn5;
+        private System.Windows.Forms.TextBox mcn4;
+        private System.Windows.Forms.TextBox mcn3;
+        private System.Windows.Forms.TextBox mcn2;
+        private System.Windows.Forms.TextBox mcn1;
+        private System.Windows.Forms.TextBox mc8;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.TextBox mc7;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.TextBox mc6;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TextBox mc5;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.TextBox mc4;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox mc3;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox mc2;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox mc1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.ListBox quickPriceListBox;
+        private System.Windows.Forms.ListBox listBox9;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.ListBox btcValueListBox;
+        private System.Windows.Forms.ListBox totalCoinListBox;
+        private System.Windows.Forms.ListBox marketTotalListBox;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label tradingPairLabel;
+        private System.Windows.Forms.LinkLabel linkLabel10;
+        private System.Windows.Forms.TextBox quickMarketSymbol;
+        private System.Windows.Forms.TextBox quickCryptsyMarketID;
+        private System.Windows.Forms.TextBox quickLastTradeTime;
+        private System.Windows.Forms.TextBox quickStatVolume;
+        private System.Windows.Forms.TextBox quickStatRatio;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label probabilitySolveLabel;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label networkHashrateLabel;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label blockRewardLabel;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label blockHeightLabel;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label dailyBitcoinSentLabel;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label dailyTransactionTotalLabel;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label dailyAVGPriceLabel;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label totalMarketCapLabel;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label totalBitcoinLabel;
+        private System.Windows.Forms.Label RESTAPIWorkerPercentageLabel;
+        private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.LinkLabel linkLabel5;
+        private System.Windows.Forms.LinkLabel linkLabel6;
+        private System.Windows.Forms.LinkLabel linkLabel11;
+        private System.Windows.Forms.LinkLabel linkLabel12;
+        private System.Windows.Forms.LinkLabel linkLabel9;
+    }
+}
