@@ -64,4 +64,43 @@ namespace WorldStarMonitor
             }
             filec.Close();
 
-            System.IO.StreamReader
+            System.IO.StreamReader filet = new System.IO.StreamReader("totallist.txt");
+            while ((line = filet.ReadLine()) != null)
+            {
+                this.totalCoinListBox.Items.Add(line.ToString());
+                counter++;
+            }
+            filet.Close();
+
+            //Initiate the QuickPriceListBox with 0 value
+            for (int i = 0; i < 5; i++)
+            {
+                this.quickPriceListBox.Items.Add("0");
+            }
+
+            //Set the miner combo box to the first mining tool in the index
+            this.minerSelector.SelectedIndex = 0;
+
+            quickStatRatio.ReadOnly = true;
+            quickStatVolume.ReadOnly = true;
+            quickLastTradeTime.ReadOnly = true;
+            quickCryptsyMarketID.ReadOnly = true;
+            quickMarketSymbol.ReadOnly = true;
+
+            //Make my donation box hidden so its a copyable label basically
+            donateTextBox.BorderStyle = 0;
+            donateTextBox.BackColor = this.BackColor;
+            donateTextBox.TabStop = false;
+
+            //Last time checked, loading data for the initialization
+            this.lastUpdateTimeLabel.Text = "Loading Data";
+
+            //Labels to display Current Bitcoin price from Btce and coinbase
+            this.coinbasePriceLabel.Text = "0000.00" + " USD";
+            this.btcePriceLabel.Text = "0000.00" + " USD";
+
+            //Blockchain.info restapi query labels
+            this.totalBitcoinLabel.Text = "0";
+            this.totalMarketCapLabel.Text = "0";
+            this.dailyAVGPriceLabel.Text = "0";
+            this.dailyTransactionTotalLabe
