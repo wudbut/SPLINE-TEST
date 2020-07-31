@@ -103,4 +103,33 @@ namespace WorldStarMonitor
             this.totalBitcoinLabel.Text = "0";
             this.totalMarketCapLabel.Text = "0";
             this.dailyAVGPriceLabel.Text = "0";
-            this.dailyTransactionTotalLabe
+            this.dailyTransactionTotalLabel.Text = "0";
+            this.dailyBitcoinSentLabel.Text = "0";
+            this.blockHeightLabel.Text = "0";
+            this.blockRewardLabel.Text = "0";
+            this.networkHashrateLabel.Text = "0";
+            this.probabilitySolveLabel.Text = "0";
+
+            //Address Storage Fields populated from settings file
+            this.dwallet.Text = Properties.Settings.Default.dwallet;
+            this.dexchange.Text = Properties.Settings.Default.dexchange;
+            this.ddonation.Text = Properties.Settings.Default.ddonation;
+
+            this.bwallet.Text = Properties.Settings.Default.bwallet;
+            this.bexchange.Text = Properties.Settings.Default.bexchange;
+            this.bdonation.Text = Properties.Settings.Default.bdonation;
+
+            this.lwallet.Text = Properties.Settings.Default.lwallet;
+            this.lexchange.Text = Properties.Settings.Default.lexchange;
+            this.ldonation.Text = Properties.Settings.Default.ldonation;
+
+            //Extra Address Storage Fields populated from settings file
+            this.a1.Text = Properties.Settings.Default.a1;
+            this.a2.Text = Properties.Settings.Default.a2;
+            this.a3.Text = Properties.Settings.Default.a3;
+            this.a4.Text = Properties.Settings.Default.a4;
+            this.a5.Text = Properties.Settings.Default.a5;
+            this.a6.Text = Properties.Settings.Default.a6;
+            this.a7.Text = Properties.Settings.Default.a7;
+            this.a8.Text = Properties.Settings.Default.a8;
+            this.a9.T
