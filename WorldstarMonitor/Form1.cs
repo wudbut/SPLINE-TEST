@@ -163,4 +163,36 @@ namespace WorldStarMonitor
             restCalls restReturnData = new restCalls
             {
                 coinbasevalue = "",
-             
+                btcevalue = "",
+                time = "",
+                label = "LTCBTC"
+            };
+
+            RESTAPIworker.WorkerReportsProgress = true;
+            RESTAPIworker.ProgressChanged += new ProgressChangedEventHandler(backgroundWorker1_ProgressChanged);
+            
+            //Send argument to our RESTAPI Worker Thread
+            RESTAPIworker.RunWorkerAsync(restReturnData);
+
+            //Generate a timer that has an event handler of a tick interval of 10 seconds to update the application
+            timer.Tick += new EventHandler(timer_Tick); // Everytime timer ticks, timer_Tick will be called
+            timer.Interval = (100) * (1);             // Timer will tick every 1 second
+            timer.Enabled = true;                       // Enable the timer
+            timer.Start();
+        }
+
+        class restCalls
+        {
+            //Current selected market data return
+            public string marketid { get; set; }
+            public string label { get; set; }
+            public string lasttradeprice { get; set; }
+            public string volume { get; set; }
+            public string lasttradetime { get; set; }
+            public string primaryname { get; set; }
+            public string primarycode { get; set; }
+            public string secondaryname { get; set; }
+            public string secondarycode { get; set; }
+            public List<Recenttrade> recenttrades { get; set; }
+            public List<Sellorder> sellorders { get; set; }
+            public List<Buyorder> buyor
