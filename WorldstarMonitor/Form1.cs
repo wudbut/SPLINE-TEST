@@ -132,4 +132,35 @@ namespace WorldStarMonitor
             this.a6.Text = Properties.Settings.Default.a6;
             this.a7.Text = Properties.Settings.Default.a7;
             this.a8.Text = Properties.Settings.Default.a8;
-            this.a9.T
+            this.a9.Text = Properties.Settings.Default.a9;
+            this.a10.Text = Properties.Settings.Default.a10;
+            this.a11.Text = Properties.Settings.Default.a11;
+
+            //Mining command storage fields populated from settings file
+            this.mc1.Text = Properties.Settings.Default.mc1;
+            this.mc2.Text = Properties.Settings.Default.mc2;
+            this.mc3.Text = Properties.Settings.Default.mc3;
+            this.mc4.Text = Properties.Settings.Default.mc4;
+            this.mc5.Text = Properties.Settings.Default.mc5;
+            this.mc6.Text = Properties.Settings.Default.mc6;
+            this.mc7.Text = Properties.Settings.Default.mc7;
+            this.mc8.Text = Properties.Settings.Default.mc8;
+            
+            //Mining command coin name storage fields populated from settings field
+            this.mcn1.Text = Properties.Settings.Default.mcn1;
+            this.mcn2.Text = Properties.Settings.Default.mcn2;
+            this.mcn3.Text = Properties.Settings.Default.mcn3;
+            this.mcn4.Text = Properties.Settings.Default.mcn4;
+            this.mcn5.Text = Properties.Settings.Default.mcn5;
+            this.mcn6.Text = Properties.Settings.Default.mcn6;
+            this.mcn7.Text = Properties.Settings.Default.mcn7;
+            this.mcn8.Text = Properties.Settings.Default.mcn8;
+
+            this.marketListBox.SetSelected(0, true);
+            //If the textbox for wallet addr is blank put in text
+
+
+            restCalls restReturnData = new restCalls
+            {
+                coinbasevalue = "",
+             
