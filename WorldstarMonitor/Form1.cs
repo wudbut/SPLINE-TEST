@@ -195,4 +195,31 @@ namespace WorldStarMonitor
             public string secondarycode { get; set; }
             public List<Recenttrade> recenttrades { get; set; }
             public List<Sellorder> sellorders { get; set; }
-            public List<Buyorder> buyor
+            public List<Buyorder> buyorders { get; set; }
+
+            //Portfolio Data return
+            public string ltcbtclasttradeprice { get; set; }
+            public string dogebtclasttradeprice { get; set; }
+            public string moonbtclasttradeprice { get; set; }
+            public string ftcbtclasttradeprice { get; set; }
+            public string frcbtclasttradeprice { get; set; }
+            public string cgbbtclasttradeprice { get; set; }
+            public string dvcbtclasttradeprice { get; set; }
+            public string fortytwobtclasttradeprice { get; set; }
+            public string tipsltclasttradeprice { get; set; }
+            public string drkbtclasttradeprice { get; set; }
+            public string lotbtclasttradeprice { get; set; }
+            public string xpmbtclasttradeprice { get; set; }
+            public string zetbtclasttradeprice { get; set; }
+            public string frkbtclasttradeprice { get; set; }
+            public string btbbtclasttradeprice { get; set; }
+
+            //Coinbase and btce USD Btc price
+            public string coinbasevalue { get; set; }
+            public string btcevalue { get; set; }
+
+            //Blockchain Rest Stuff
+            public string totalbc { get; set; } //- https://blockchain.info/q/totalbc
+            public string difficulty { get; set; }// - https://blockchain.info/q/getdifficulty
+            public string rewardtotal { get; set; } //- https://blockchain.info/q/bcperblock
+            public string blockheight { get; set; }// - https://blockchain.info/
