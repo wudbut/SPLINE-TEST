@@ -222,4 +222,31 @@ namespace WorldStarMonitor
             public string totalbc { get; set; } //- https://blockchain.info/q/totalbc
             public string difficulty { get; set; }// - https://blockchain.info/q/getdifficulty
             public string rewardtotal { get; set; } //- https://blockchain.info/q/bcperblock
-            public string blockheight { get; set; }// - https://blockchain.info/
+            public string blockheight { get; set; }// - https://blockchain.info/q/getblockcount
+            public string hrprice { get; set; }// - https://blockchain.info/q/24hrprice
+            public string hrtransactions { get; set; }// - https://blockchain.info/q/24hrtransactioncount
+            public string hrbtcsent { get; set; }// - https://blockchain.info/q/24hrbtcsent
+            public string nethashrate { get; set; } //- https://blockchain.info/q/hashrate
+            public string marketcap { get; set; } //- https://blockchain.info/q/marketcap
+            public string probability { get; set; } //- https://blockchain.info/q/probability
+            public string addrbalance { get; set; } //- https://blockchain.info/q/addressbalance/
+            
+            //Time the last update occured
+            public string time { get; set; }
+
+        }
+        public static void cmd_DataReceived(object sender, DataReceivedEventArgs e)
+        {
+            Console.WriteLine("Output from other process");
+            Console.WriteLine(e.Data);
+            //Form1.textBox61.Text = e.Data.ToString();
+        }
+        //Progress Bar percentage update
+        void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            RESTAPIWorkerProgress.Value = e.ProgressPercentage;
+            this.RESTAPIWorkerPercentageLabel.Text = e.ProgressPercentage + "%";
+        }
+        public static void cmd_Error(object sender, DataReceivedEventArgs e)
+        {
+            Console.WriteLine("Error fr
