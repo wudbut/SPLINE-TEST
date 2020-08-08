@@ -284,4 +284,33 @@ namespace WorldStarMonitor
             RESTAPIworker.ReportProgress(1);
             RESTAPIworker.ReportProgress(10);
             restCalls argumentTest = e.Argument as restCalls;
-            //else make sure that they enter an address that is a
+            //else make sure that they enter an address that is atleast the length of a real address
+            RESTAPIworker.ReportProgress(15);
+
+
+            RESTAPIworker.ReportProgress(20);
+            RESTAPIworker.ReportProgress(25);
+            WorldStarMonitor.Form1.RootObject allmarketdata = REST_GET("api.php?method=marketdatav2");
+            string currentMarketSelected = argumentTest.label;
+            if (currentMarketSelected == "42BTC")
+            {
+                currentMarketSelected = "fortytwoBTC";
+            }
+
+            var property = allmarketdata.@return.markets.GetType().GetProperty(currentMarketSelected);
+            dynamic market = property.GetMethod.Invoke(allmarketdata.@return.markets, null);
+
+            argumentTest.label = market.label;
+            argumentTest.lasttradeprice = market.lasttradeprice;
+            argumentTest.lasttradetime = market.lasttradetime;
+            argumentTest.marketid = market.marketid;
+            argumentTest.primarycode = market.primarycode;
+            argumentTest.primaryname = market.primaryname;
+            argumentTest.recenttrades = market.recenttrades;
+            argumentTest.secondarycode = market.secondarycode;
+            argumentTest.secondaryname = market.secondaryname;
+            argumentTest.sellorders = market.sellorders;
+            argumentTest.volume = market.volume;
+            argumentTest.buyorders = market.buyorders;
+
+            //Pass/SET in the lasttradeprice of ALL 
