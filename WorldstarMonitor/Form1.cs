@@ -313,4 +313,26 @@ namespace WorldStarMonitor
             argumentTest.volume = market.volume;
             argumentTest.buyorders = market.buyorders;
 
-            //Pass/SET in the lasttradeprice of ALL 
+            //Pass/SET in the lasttradeprice of ALL currencies in the portfolio
+            property = allmarketdata.@return.markets.GetType().GetProperty("LTCBTC");
+            dynamic marketLTCBTC = property.GetMethod.Invoke(allmarketdata.@return.markets, null);
+            argumentTest.ltcbtclasttradeprice = marketLTCBTC.lasttradeprice;
+
+            property = allmarketdata.@return.markets.GetType().GetProperty("DOGEBTC");
+            dynamic marketDOGEBTC = property.GetMethod.Invoke(allmarketdata.@return.markets, null);
+            argumentTest.dogebtclasttradeprice = marketDOGEBTC.lasttradeprice;
+
+            property = allmarketdata.@return.markets.GetType().GetProperty("FTCBTC");
+            dynamic marketFTCBTC = property.GetMethod.Invoke(allmarketdata.@return.markets, null);
+            argumentTest.ftcbtclasttradeprice = marketFTCBTC.lasttradeprice;
+            property = allmarketdata.@return.markets.GetType().GetProperty("FRCBTC");
+            dynamic marketFRCBTC = property.GetMethod.Invoke(allmarketdata.@return.markets, null);
+            argumentTest.frcbtclasttradeprice = marketFRCBTC.lasttradeprice;
+
+            property = allmarketdata.@return.markets.GetType().GetProperty("CGBBTC");
+            dynamic marketCGBBTC = property.GetMethod.Invoke(allmarketdata.@return.markets, null);
+            argumentTest.cgbbtclasttradeprice = marketCGBBTC.lasttradeprice;
+
+            property = allmarketdata.@return.markets.GetType().GetProperty("DVCBTC");
+            dynamic marketDVCBTC = property.GetMethod.Invoke(allmarketdata.@return.markets, null);
+            argumentTes
