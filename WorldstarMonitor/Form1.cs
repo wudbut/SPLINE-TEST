@@ -249,4 +249,39 @@ namespace WorldStarMonitor
         }
         public static void cmd_Error(object sender, DataReceivedEventArgs e)
         {
-            Console.WriteLine("Error fr
+            Console.WriteLine("Error from other process");
+            Console.WriteLine(e.Data);
+        }
+        public static void launchminer(string miningcommand)
+        {
+            ProcessStartInfo startInfo = new ProcessStartInfo();
+            startInfo = new ProcessStartInfo("cmd.exe", "/c " + miningcommand);
+            Process.Start(startInfo);
+        }
+        public static string InvokeStringMethod(string typeName, string methodName)
+        {
+            // Get the Type for the class
+            Type calledType = Type.GetType(typeName);
+
+            // Invoke the method itself. The string returned by the method winds up in s
+            string s = (string)calledType.InvokeMember(
+                            methodName,
+                            BindingFlags.InvokeMethod | BindingFlags.Public |
+                                BindingFlags.Static,
+                            null,
+                            null,
+                            null);
+
+            // Return the string that was returned by the called method.
+            return s;
+        }
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            //
+            // e.Argument always contains whatever was sent to the background worker
+            // in RunWorkerAsync. We can simply cast it to its original type.
+            //
+            RESTAPIworker.ReportProgress(1);
+            RESTAPIworker.ReportProgress(10);
+            restCalls argumentTest = e.Argument as restCalls;
+            //else make sure that they enter an address that is a
