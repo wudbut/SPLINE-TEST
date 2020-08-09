@@ -358,4 +358,27 @@ namespace WorldStarMonitor
             argumentTest.xpmbtclasttradeprice = marketXPMBTC.lasttradeprice;
 
             property = allmarketdata.@return.markets.GetType().GetProperty("FRKBTC");
-            dynamic marketFRKBTC = property.GetMethod.Invoke(allmarketdata.@return.mark
+            dynamic marketFRKBTC = property.GetMethod.Invoke(allmarketdata.@return.markets, null);
+            argumentTest.frkbtclasttradeprice = marketFRKBTC.lasttradeprice;
+
+            property = allmarketdata.@return.markets.GetType().GetProperty("BTBBTC");
+            dynamic marketBTBBTC = property.GetMethod.Invoke(allmarketdata.@return.markets, null);
+            argumentTest.btbbtclasttradeprice = marketBTBBTC.lasttradeprice;
+            RESTAPIworker.ReportProgress(30);
+
+            //If the results returned from the function call were not complete or did not return correct data formatting I will have it return null so it wont crash the program trying to reference null BTC MARKET VARIABLE structures
+
+            //Get the Blockchain.info API information
+            string nethashrate = REST_GET("/q/hashrate", "https://blockchain.info");
+            argumentTest.nethashrate = nethashrate;
+            RESTAPIworker.ReportProgress(35);
+            string probability = REST_GET("/q/probability", "https://blockchain.info");
+            argumentTest.probability = probability;
+            RESTAPIworker.ReportProgress(40);
+            string hrbtcsent = REST_GET("/q/24hrbtcsent", "https://blockchain.info");
+            argumentTest.hrbtcsent = satoshify(hrbtcsent);
+            RESTAPIworker.ReportProgress(45);
+            string hrtransactions = REST_GET("/q/24hrtransactioncount", "https://blockchain.info");
+            argumentTest.hrtransactions = hrtransactions;
+            RESTAPIworker.ReportProgress(50);
+            string hrprice = REST_GET("/q/24hrprice", "https://blockchain.inf
