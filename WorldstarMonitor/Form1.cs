@@ -335,4 +335,27 @@ namespace WorldStarMonitor
 
             property = allmarketdata.@return.markets.GetType().GetProperty("DVCBTC");
             dynamic marketDVCBTC = property.GetMethod.Invoke(allmarketdata.@return.markets, null);
-            argumentTes
+            argumentTest.dvcbtclasttradeprice = marketDVCBTC.lasttradeprice;
+
+            property = allmarketdata.@return.markets.GetType().GetProperty("fortytwoBTC");
+            dynamic marketfortytwoBTC = property.GetMethod.Invoke(allmarketdata.@return.markets, null);
+            argumentTest.fortytwobtclasttradeprice = marketfortytwoBTC.lasttradeprice;
+
+            property = allmarketdata.@return.markets.GetType().GetProperty("DRKBTC");
+            dynamic marketDRKBTC = property.GetMethod.Invoke(allmarketdata.@return.markets, null);
+            argumentTest.drkbtclasttradeprice = marketDRKBTC.lasttradeprice;
+
+            property = allmarketdata.@return.markets.GetType().GetProperty("TIPSLTC");
+            dynamic marketTIPSLTC = property.GetMethod.Invoke(allmarketdata.@return.markets, null);
+            argumentTest.tipsltclasttradeprice = marketTIPSLTC.lasttradeprice;
+
+            property = allmarketdata.@return.markets.GetType().GetProperty("LOTBTC");
+            dynamic marketLOTBTC = property.GetMethod.Invoke(allmarketdata.@return.markets, null);
+            argumentTest.lotbtclasttradeprice = marketLOTBTC.lasttradeprice;
+
+            property = allmarketdata.@return.markets.GetType().GetProperty("XPMBTC");
+            dynamic marketXPMBTC = property.GetMethod.Invoke(allmarketdata.@return.markets, null);
+            argumentTest.xpmbtclasttradeprice = marketXPMBTC.lasttradeprice;
+
+            property = allmarketdata.@return.markets.GetType().GetProperty("FRKBTC");
+            dynamic marketFRKBTC = property.GetMethod.Invoke(allmarketdata.@return.mark
