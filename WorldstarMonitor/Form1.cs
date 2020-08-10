@@ -409,4 +409,34 @@ namespace WorldStarMonitor
             argumentTest.btcevalue = btcevalue;
 
             RESTAPIworker.ReportProgress(85);
-            argument
+            argumentTest.time = DateTime.Now.ToString();
+
+            RESTAPIworker.ReportProgress(90);
+
+            RESTAPIworker.ReportProgress(100);
+            e.Result = argumentTest;
+            RESTAPIworker.ReportProgress(100);
+        }
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            // Receive the result from our worker, and display it.
+            restCalls test = e.Result as restCalls;
+
+            this.lastUpdateTimeLabel.Text = test.time.ToString();
+
+            this.coinbasePriceLabel.Text = test.coinbasevalue.ToString() + " USD";
+            this.btcePriceLabel.Text = test.btcevalue.ToString() + " USD";
+
+            this.quickStatRatio.Text = test.lasttradeprice.ToString();
+            this.quickStatVolume.Text = test.volume.ToString();
+            this.quickLastTradeTime.Text = test.lasttradetime.ToString();
+            this.quickCryptsyMarketID.Text = test.marketid.ToString();
+            this.tradingPairLabel.Text = test.primaryname.ToString() + " / " + test.secondaryname.ToString();
+            this.quickMarketSymbol.Text = test.primarycode.ToString() + " / " + test.secondarycode.ToString();
+            this.buyOrdersListBox.Items.Clear();
+            this.sellOrdersListBox.Items.Clear();
+            this.recentTradesListBox.Items.Clear();
+
+            this.totalBitcoinLabel.Text = test.totalbc.ToString() + " BTC";
+            this.totalMarketCapLabel.Text = test.marketcap.ToString() + " USD";
+           
