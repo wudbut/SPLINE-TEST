@@ -381,4 +381,32 @@ namespace WorldStarMonitor
             string hrtransactions = REST_GET("/q/24hrtransactioncount", "https://blockchain.info");
             argumentTest.hrtransactions = hrtransactions;
             RESTAPIworker.ReportProgress(50);
-            string hrprice = REST_GET("/q/24hrprice", "https://blockchain.inf
+            string hrprice = REST_GET("/q/24hrprice", "https://blockchain.info");
+            argumentTest.hrprice = hrprice;
+            RESTAPIworker.ReportProgress(55);
+            string blockheight = REST_GET("/q/getblockcount", "https://blockchain.info");
+            argumentTest.blockheight = blockheight;
+            RESTAPIworker.ReportProgress(60);
+            string rewardtotal = REST_GET("/q/bcperblock", "https://blockchain.info");
+            argumentTest.rewardtotal=satoshify(rewardtotal);
+            RESTAPIworker.ReportProgress(65);
+            string difficulty = REST_GET("/q/getdifficulty", "https://blockchain.info");
+            argumentTest.difficulty = Double.Parse(difficulty, System.Globalization.NumberStyles.Float).ToString();
+            string totalbc = REST_GET("/q/totalbc", "https://blockchain.info");
+            argumentTest.totalbc = satoshify(totalbc);
+            RESTAPIworker.ReportProgress(70);
+            string marketcap = REST_GET("/q/marketcap", "https://blockchain.info");
+            argumentTest.marketcap = Double.Parse(marketcap, System.Globalization.NumberStyles.Float).ToString();
+
+            //Get the coinbase Restapi spot price +Value
+            string coinbasevalue = REST_GET_COINBASE("api/v1/prices/spot_rate?currency=USD");
+            argumentTest.coinbasevalue = coinbasevalue;
+            RESTAPIworker.ReportProgress(75);
+            
+            //Get the BTCE Restapi price value
+            string btcevalue = REST_GET_BTCE("api/2/btc_usd/ticker/");
+            RESTAPIworker.ReportProgress(80);
+            argumentTest.btcevalue = btcevalue;
+
+            RESTAPIworker.ReportProgress(85);
+            argument
