@@ -439,4 +439,39 @@ namespace WorldStarMonitor
 
             this.totalBitcoinLabel.Text = test.totalbc.ToString() + " BTC";
             this.totalMarketCapLabel.Text = test.marketcap.ToString() + " USD";
-           
+            
+            this.dailyAVGPriceLabel.Text = test.hrprice.ToString() + " USD";
+            this.dailyTransactionTotalLabel.Text = test.hrtransactions.ToString() + " tx";
+            this.dailyBitcoinSentLabel.Text = test.hrbtcsent.ToString() + " BTC";
+            this.blockHeightLabel.Text = test.blockheight.ToString() + " Blocks";
+            this.blockRewardLabel.Text = test.rewardtotal.ToString() + " BTC";
+            this.networkHashrateLabel.Text = test.difficulty.ToString() + " GHASH";
+            this.probabilitySolveLabel.Text = test.probability.ToString();
+
+            string baseDate = DateTime.Now.ToString("hh:mm:ss");
+            var x = baseDate;
+            var orderscount = 0;
+
+            if (test.buyorders != null)
+            {
+                orderscount = test.buyorders.Count;
+            }
+            else
+            {
+                orderscount = 0;
+            }
+
+            if (orderscount <= 10)
+            {
+            }
+            if (orderscount > 10)
+            {
+                orderscount = 10;
+            }
+            for (int i = 0; i < orderscount; i++)
+            {
+                this.buyOrdersListBox.Items.Add("Price: " + test.buyorders[i].price.ToString() + " - Coins: " + test.buyorders[i].quantity.ToString() + " - " + test.secondarycode + " Wall: " + test.buyorders[i].total.ToString());
+            }
+            for (int i = 0; i < 12; i++)
+            {
+                this.sellOrdersListBox.Items.Insert(0, "Price: " + test.sellorder
