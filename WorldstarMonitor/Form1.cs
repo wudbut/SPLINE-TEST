@@ -516,4 +516,23 @@ namespace WorldStarMonitor
             btcValueListBox.Items[11] = portdrk.ToString("0.00000000");
             quickPriceListBox.Items[3] = drkdVal.ToString("0.00000000");
 
-            double ftcdVal = double.Pa
+            double ftcdVal = double.Parse(test.ftcbtclasttradeprice, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture);
+            var portftc = (double.Parse(totalCoinListBox.Items[3].ToString(), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture) * ftcdVal);
+            minusval = (portftc * .0030);
+            portftc = portftc - minusval;
+            btcValueListBox.Items[3] = portftc.ToString("0.00000000");
+            quickPriceListBox.Items[4] = ftcdVal.ToString("0.00000000");
+
+            double frcdVal = double.Parse(test.frcbtclasttradeprice, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture);
+            var portfrc = (double.Parse(totalCoinListBox.Items[4].ToString(), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture) * frcdVal);
+            minusval = (portfrc * .0030);
+            portfrc = portfrc - minusval;
+            btcValueListBox.Items[4] = portfrc.ToString("0.00000000");
+
+            double cgbdVal = double.Parse(test.cgbbtclasttradeprice, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture);
+            var portcgb = (double.Parse(totalCoinListBox.Items[5].ToString(), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture) * cgbdVal);
+            minusval = (portcgb * .0030);
+            portcgb = portcgb - minusval;
+            btcValueListBox.Items[5] = portcgb.ToString("0.00000000");
+
+            double dvcdVal = double.P
