@@ -496,4 +496,24 @@ namespace WorldStarMonitor
             var portbtc = totalCoinListBox.Items[0].ToString();
             btcValueListBox.Items[0] = portbtc;
             double ltcdVal = double.Parse(test.ltcbtclasttradeprice, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture);
-            var portltc = (double.Parse(totalCoinListBox.Items[1].ToString
+            var portltc = (double.Parse(totalCoinListBox.Items[1].ToString(), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture) * ltcdVal);
+            var minusval = (portltc * .0030);
+            portltc = portltc - minusval;
+            btcValueListBox.Items[1] = portltc.ToString("0.00000000");
+            quickPriceListBox.Items[0] = ltcdVal;
+
+            double dogedVal = double.Parse(test.dogebtclasttradeprice, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture);
+            var portdoge = (double.Parse(totalCoinListBox.Items[2].ToString(), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture) * dogedVal);
+            minusval = (portdoge * .0030);
+            portdoge = portdoge - minusval;
+            btcValueListBox.Items[2] = portdoge.ToString("0.00000000");
+            quickPriceListBox.Items[1] = dogedVal.ToString("0.00000000");
+
+            double drkdVal = double.Parse(test.drkbtclasttradeprice, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture);
+            var portdrk = (double.Parse(totalCoinListBox.Items[11].ToString(), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture) * drkdVal);
+            minusval = (portdrk * .0030);
+            portdrk = portdrk - minusval;
+            btcValueListBox.Items[11] = portdrk.ToString("0.00000000");
+            quickPriceListBox.Items[3] = drkdVal.ToString("0.00000000");
+
+            double ftcdVal = double.Pa
