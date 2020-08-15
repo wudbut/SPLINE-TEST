@@ -474,4 +474,26 @@ namespace WorldStarMonitor
             }
             for (int i = 0; i < 12; i++)
             {
-                this.sellOrdersListBox.Items.Insert(0, "Price: " + test.sellorder
+                this.sellOrdersListBox.Items.Insert(0, "Price: " + test.sellorders[i].price.ToString() + " - Coins: " + test.sellorders[i].quantity.ToString() + " - " + test.secondarycode + " Wall: " + test.sellorders[i].total.ToString());
+            }
+            for (int i = 0; i < 8; i++)
+            {
+                this.recentTradesListBox.Items.Add("Price: " + test.recenttrades[i].price.ToString() + " - Coins: " + test.recenttrades[i].quantity.ToString() + " - " + test.secondarycode + " Total: " + test.recenttrades[i].total.ToString());
+            }
+
+            var y = test.volume.ToString();//test.lastbtcdogeprice.ToString();
+            var ly = test.lasttradeprice.ToString();
+            //var lby = "1";//test.lastbtcltcprice.ToString();
+            double dVal = 0.00000000;
+
+            dVal = double.Parse(y, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture);
+            double ddVal = 0.00000000;
+            //double dddVal = 0.00000000;
+            //dddVal = double.Parse(lby, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture);
+            ddVal = double.Parse(ly, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture);
+
+            //Update portfolio values
+            var portbtc = totalCoinListBox.Items[0].ToString();
+            btcValueListBox.Items[0] = portbtc;
+            double ltcdVal = double.Parse(test.ltcbtclasttradeprice, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture);
+            var portltc = (double.Parse(totalCoinListBox.Items[1].ToString
