@@ -575,4 +575,23 @@ namespace WorldStarMonitor
             for (int i = 0; i < btcValueListBox.Items.Count; i++)
             {
                 finalval += double.Parse(btcValueListBox.Items[i].ToString(), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture);
- 
+            }
+            //double totalportbtc = portltc + (double.Parse(portbtc, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture)) +portcgb + portdoge + portdvc + portfortytwo + portfrc + portfrk + portftc + portlot + portmoon + portxpm + portzet;
+            label40.Text = "~" + /*totalportbtc.ToString("0.00000000")*/finalval.ToString("0.00000000") + " BTC " + '\n' + "~" + (finalval * (double.Parse(test.coinbasevalue, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture))).ToString("0.00") + " USD";
+
+            double[] yValues = { portltc, (double.Parse(portbtc, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture)), portcgb, portdoge, porttipsbtc, portdvc, portfortytwo, portfrc, portftc, portlot/*, portmoon*/, portxpm, portdrk };
+            string[] xValues = { "Litecoin", "Bitcoin", "CryptogenicBullion", "DOGE", "Fedoracoin", "Devcoin", "42Coin", "Freicoin", "Feathercoin", "Lottocoin" /*, "Mooncoin"*/ , "Primecoin", "Darkcoin" };
+
+            chart3.Series[0].Points.DataBindXY(xValues, yValues);
+            chart3.Series[0].ToolTip = "#VALY, #AXISLABEL";
+            // Set Doughnut chart type
+            chart3.Series[0].ChartType = SeriesChartType.Doughnut;
+        }
+        //Everytime the timer ticks, populate the boxes
+        void timer_Tick(object sender, EventArgs e)
+        {
+            restCalls test = new restCalls
+            {
+                coinbasevalue = "▲",
+                btcevalue = "▲",
+             
