@@ -594,4 +594,35 @@ namespace WorldStarMonitor
             {
                 coinbasevalue = "▲",
                 btcevalue = "▲",
-             
+                time = "▲",
+                label = marketListBox.GetItemText(marketListBox.SelectedItem)
+            };
+            // Send argument to our worker thread
+            if (!RESTAPIworker.IsBusy)
+            {
+                RESTAPIworker.RunWorkerAsync(test);
+            }
+        }
+        public string REST_GET(string requestresource, string restclientURL)
+        {
+            var client = new RestClient(restclientURL);
+            var request = new RestRequest(requestresource, Method.GET);
+            IRestResponse response = client.Execute(request);
+            string toreturn = response.Content;
+
+            while (toreturn == "<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.1.19</center>\r\n</body>\r\n</html>\r\n" || toreturn==null)
+            {
+                response = client.Execute(request);
+                toreturn = response.Content;
+            }
+            return toreturn;
+        }
+        //This uses Dogechains api to gather the balance of a given Doge address
+        public string REST_GET_ADDRBALANCE(string requestresource)
+        {
+            var client = new RestClient("http://dogechain.info/");
+            var request = new RestRequest(requestresource, Method.GET);
+            IRestResponse response = client.Execute(request);
+            string toreturn = response.Content;
+
+            if (toreturn == "<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>502 Bad Gatewa
