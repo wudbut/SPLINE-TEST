@@ -625,4 +625,48 @@ namespace WorldStarMonitor
             IRestResponse response = client.Execute(request);
             string toreturn = response.Content;
 
-            if (toreturn == "<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>502 Bad Gatewa
+            if (toreturn == "<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.1.19</center>\r\n</body>\r\n</html>\r\n")
+            {
+                response = client.Execute(request);
+                toreturn = response.Content;
+            }
+            return toreturn;
+        }
+        //This is what populates the UI elements
+
+
+        //Grabs and parses the Coinbase restapi call for current USD price
+        public string REST_GET_COINBASE(string requestresource)
+        {
+            var client = new RestClient("https://coinbase.com/");
+            var request = new RestRequest(requestresource, Method.GET);
+            IRestResponse response = client.Execute(request);
+            string toreturn = response.Content;
+            string returnvalue = "";
+            if (toreturn[2] != 'a')
+            {
+                response = client.Execute(request);
+                toreturn = response.Content;
+            }
+            //{"amount":"815.81","currency":"USD"}
+            //Parse loop
+            else
+            {
+                int i = 0;
+                while (toreturn[i] != ':')
+                {
+                    i++;
+                }
+                i++;
+                if (toreturn[i] == '"')
+                {
+                    string coinbasevalue = "";
+                    i++;
+                    while (toreturn[i] != '"')
+                    {
+                        coinbasevalue += toreturn[i];
+                        i++;
+                    }
+                    returnvalue = coinbasevalue;
+                }
+ 
