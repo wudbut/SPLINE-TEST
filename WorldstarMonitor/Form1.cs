@@ -669,4 +669,46 @@ namespace WorldStarMonitor
                     }
                     returnvalue = coinbasevalue;
                 }
- 
+            }
+            return returnvalue;
+        }
+        public string REST_GET_BTCE(string requestresource)
+        {
+            var client = new RestClient("https://btc-e.com/");
+            var request = new RestRequest(requestresource, Method.GET);
+            IRestResponse response = client.Execute(request);
+            string toreturn = response.Content;
+            string returnvalue = "";
+            if (toreturn[2] != 't')
+            {
+                response = client.Execute(request);
+                toreturn = response.Content;
+            }
+            //{"ticker":{"high":839,"low":803.73798,"avg":821.36899,"vol":7231853.03422,"vol_cur":8804.24766,"last":829.8,"buy":829,"sell":828,"updated":1390165230,"server_time":1390165231}}
+            //Parse loop
+            else
+            {
+                int i = 0;
+                while (toreturn[i] != 'a')
+                {
+                    i++;
+                }
+                if (toreturn[i] == 'a')
+                {
+                    i += 5;
+                    string btcevalue = "";
+                    while (toreturn[i] != ',')
+                    {
+                        btcevalue += toreturn[i];
+                        i++;
+                    }
+                    returnvalue = btcevalue;
+                }
+            }
+            return returnvalue;
+        }
+        //This calls Cryptsy and gets market information
+        public WorldStarMonitor.Form1.RootObject REST_GET(string requestresource)
+        {
+            var client = new RestClient("http://pubapi.cryptsy.com/");
+            var request
