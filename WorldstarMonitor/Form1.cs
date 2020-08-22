@@ -752,4 +752,38 @@ namespace WorldStarMonitor
             public string marketid { get; set; }
             public string label { get; set; }
             public string lasttradeprice { get; set; }
-            public string vol
+            public string volume { get; set; }
+            public string lasttradetime { get; set; }
+            public string primaryname { get; set; }
+            public string primarycode { get; set; }
+            public string secondaryname { get; set; }
+            public string secondarycode { get; set; }
+            public object recenttrades { get; set; }
+            public List<Sellorder> sellorders { get; set; }
+            public object buyorders { get; set; }
+        }
+
+        public class DOGEUSD
+        {
+            public string marketid { get; set; }
+            public string label { get; set; }
+            public string lasttradeprice { get; set; }
+            public string volume { get; set; }
+            public string lasttradetime { get; set; }
+            public string primaryname { get; set; }
+            public string primarycode { get; set; }
+            public string secondaryname { get; set; }
+            public string secondarycode { get; set; }
+            public object recenttrades { get; set; }
+            public List<Sellorder> sellorders { get; set; }
+            public object buyorders { get; set; }
+        }
+
+        public class DRKUSD
+        {
+            public string marketid { get; set; }
+            public string label { get; set; }
+            public string lasttradeprice { get; set; }
+            public string volume { get; set; }
+            public string lasttradetime { get; set; }
+            public string primaryname { get; s
