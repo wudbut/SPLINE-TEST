@@ -2785,4 +2785,40 @@ namespace WorldStarMonitor
 
         public class LTBBTC
         {
-            public string marketid { get;
+            public string marketid { get; set; }
+            public string label { get; set; }
+            public string lasttradeprice { get; set; }
+            public string volume { get; set; }
+            public string lasttradetime { get; set; }
+            public string primaryname { get; set; }
+            public string primarycode { get; set; }
+            public string secondaryname { get; set; }
+            public string secondarycode { get; set; }
+            public List<Recenttrade> recenttrades { get; set; }
+            public List<Sellorder> sellorders { get; set; }
+            public List<Buyorder> buyorders { get; set; }
+        }
+
+        public class LTCBTC
+        {
+            public string marketid { get; set; }
+            public string label { get; set; }
+            public string lasttradeprice { get; set; }
+            public string volume { get; set; }
+            public string lasttradetime { get; set; }
+            public string primaryname { get; set; }
+            public string primarycode { get; set; }
+            public string secondaryname { get; set; }
+            public string secondarycode { get; set; }
+            public List<Recenttrade> recenttrades { get; set; }
+            public List<Sellorder> sellorders { get; set; }
+            public List<Buyorder> buyorders { get; set; }
+        }
+
+        public class LYCBTC
+        {
+            public string marketid { get; set; }
+            public string label { get; set; }
+            public string lasttradeprice { get; set; }
+            public string volume { get; set; }
+            pu
