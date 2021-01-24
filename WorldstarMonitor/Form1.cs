@@ -3886,4 +3886,39 @@ namespace WorldStarMonitor
             public string lasttradeprice { get; set; }
             public string volume { get; set; }
             public string lasttradetime { get; set; }
-            public string primaryname { get;
+            public string primaryname { get; set; }
+            public string primarycode { get; set; }
+            public string secondaryname { get; set; }
+            public string secondarycode { get; set; }
+            public List<Recenttrade> recenttrades { get; set; }
+            public List<Sellorder> sellorders { get; set; }
+            public List<Buyorder> buyorders { get; set; }
+        }
+
+        public class Markets
+        {
+            public BTCUSD BTCUSD { get; set; }
+            public DOGEUSD DOGEUSD { get; set; }
+            public DRKUSD DRKUSD { get; set; }
+            public FTCUSD FTCUSD { get; set; }
+            public LTCUSD LTCUSD { get; set; }
+            public ADTLTC ADTLTC { get; set; }
+            public ANCLTC ANCLTC { get; set; }
+            public ASCLTC ASCLTC { get; set; }
+            public AURLTC AURLTC { get; set; }
+            public BATLTC BATLTC { get; set; }
+            public BCLTC BCLTC { get; set; }
+            public CGBLTC CGBLTC { get; set; }
+            public CNCLTC CNCLTC { get; set; }
+            public COLLTC COLLTC { get; set; }
+            public CPRLTC CPRLTC { get; set; }
+            public CTMLTC CTMLTC { get; set; }
+            public DBLLTC DBLLTC { get; set; }
+            public DGCLTC DGCLTC { get; set; }
+            public DIMELTC DIMELTC { get; set; }
+            public DMCLTC DMCLTC { get; set; }
+            public DOGELTC DOGELTC { get; set; }
+            public DRKLTC DRKLTC { get; set; }
+            public DVCLTC DVCLTC { get; set; }
+            public ELPLTC ELPLTC { get; set; }
+            public EZCLTC EZCLTC { 
