@@ -3921,4 +3921,38 @@ namespace WorldStarMonitor
             public DRKLTC DRKLTC { get; set; }
             public DVCLTC DVCLTC { get; set; }
             public ELPLTC ELPLTC { get; set; }
-            public EZCLTC EZCLTC { 
+            public EZCLTC EZCLTC { get; set; }
+            public FLOLTC FLOLTC { get; set; }
+            public FRKLTC FRKLTC { get; set; }
+            public FSTLTC FSTLTC { get; set; }
+            public FTCLTC FTCLTC { get; set; }
+            public GLDLTC GLDLTC { get; set; }
+            public GMELTC GMELTC { get; set; }
+            public IFCLTC IFCLTC { get; set; }
+            public JKCLTC JKCLTC { get; set; }
+            public KARMLTC KARMLTC { get; set; }
+            public MAXLTC MAXLTC { get; set; }
+            public MECLTC MECLTC { get; set; }
+            public MEMLTC MEMLTC { get; set; }
+            public MOONLTC MOONLTC { get; set; }
+            public MSTLTC MSTLTC { get; set; }
+            public NETLTC NETLTC { get; set; }
+            public NXTLTC NXTLTC { get; set; }
+            public PPCLTC PPCLTC { get; set; }
+            public PXCLTC PXCLTC { get; set; }
+            public QRKLTC QRKLTC { get; set; }
+            public RBBTLTC RBBTLTC { get; set; }
+            public RDDLTC RDDLTC { get; set; }
+            public REDLTC REDLTC { get; set; }
+            public RYCLTC RYCLTC { get; set; }
+            public SBCLTC SBCLTC { get; set; }
+            public SXCLTC SXCLTC { get; set; }
+            public TIPSLTC TIPSLTC { get; set; }
+            public TIXLTC TIXLTC { get; set; }
+            public VRCLTC VRCLTC { get; set; }
+            public VTCLTC VTCLTC { get; set; }
+            public WDCLTC WDCLTC { get; set; }
+            public XCLTC XCLTC { get; set; }
+            public XNCLTC XNCLTC { get; set; }
+            public XPMLTC XPMLTC { get; set; }
+         
