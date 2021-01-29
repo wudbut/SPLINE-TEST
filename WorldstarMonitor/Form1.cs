@@ -3955,4 +3955,36 @@ namespace WorldStarMonitor
             public XCLTC XCLTC { get; set; }
             public XNCLTC XNCLTC { get; set; }
             public XPMLTC XPMLTC { get; set; }
-         
+            public YACLTC YACLTC { get; set; }
+            public ZEITLTC ZEITLTC { get; set; }
+            public ZETLTC ZETLTC { get; set; }
+            public fortytwoBTC fortytwoBTC { get; set; }
+            public ACBTC ACBTC { get; set; }
+            public ALFBTC ALFBTC { get; set; }
+            public AMCBTC AMCBTC { get; set; }
+            public ANCBTC ANCBTC { get; set; }
+            public ARGBTC ARGBTC { get; set; }
+            public AURBTC AURBTC { get; set; }
+            public BCBTC BCBTC { get; set; }
+            public BCXBTC BCXBTC { get; set; }
+            public BENBTC BENBTC { get; set; }
+            public BETBTC BETBTC { get; set; }
+            public BQCBTC BQCBTC { get; set; }
+            public BTBBTC BTBBTC { get; set; }
+            public BTEBTC BTEBTC { get; set; }
+            public BTGBTC BTGBTC { get; set; }
+            public BUKBTC BUKBTC { get; set; }
+            public CACHBTC CACHBTC { get; set; }
+            public CAPBTC CAPBTC { get; set; }
+            public CASHBTC CASHBTC { get; set; }
+            public CATBTC CATBTC { get; set; }
+            public CGBBTC CGBBTC { get; set; }
+            public CINNIBTC CINNIBTC { get; set; }
+            public CLRBTC CLRBTC { get; set; }
+            public CMCBTC CMCBTC { get; set; }
+            public CNCBTC CNCBTC { get; set; }
+            public COMMBTC COMMBTC { get; set; }
+            public CRCBTC CRCBTC { get; set; }
+            public CSCBTC CSCBTC { get; set; }
+            public DEMBTC DEMBTC { get; set; }
+            public DGBBTC DGBBTC { get;
