@@ -3987,4 +3987,37 @@ namespace WorldStarMonitor
             public CRCBTC CRCBTC { get; set; }
             public CSCBTC CSCBTC { get; set; }
             public DEMBTC DEMBTC { get; set; }
-            public DGBBTC DGBBTC { get;
+            public DGBBTC DGBBTC { get; set; }
+            public DGCBTC DGCBTC { get; set; }
+            public DIMEBTC DIMEBTC { get; set; }
+            public DMDBTC DMDBTC { get; set; }
+            public DOGEBTC DOGEBTC { get; set; }
+            public DRKBTC DRKBTC { get; set; }
+            public DVCBTC DVCBTC { get; set; }
+            public EACBTC EACBTC { get; set; }
+            public ELCBTC ELCBTC { get; set; }
+            public EMC2BTC EMC2BTC { get; set; }
+            public EMDBTC EMDBTC { get; set; }
+            public EXEBTC EXEBTC { get; set; }
+            public EZCBTC EZCBTC { get; set; }
+            public FFCBTC FFCBTC { get; set; }
+            public FLAPBTC FLAPBTC { get; set; }
+            public FLTBTC FLTBTC { get; set; }
+            public FRCBTC FRCBTC { get; set; }
+            public FRKBTC FRKBTC { get; set; }
+            public FSTBTC FSTBTC { get; set; }
+            public FTCBTC FTCBTC { get; set; }
+            public GDCBTC GDCBTC { get; set; }
+            public GLCBTC GLCBTC { get; set; }
+            public GLDBTC GLDBTC { get; set; }
+            public GLXBTC GLXBTC { get; set; }
+            public HBNBTC HBNBTC { get; set; }
+            public HVCBTC HVCBTC { get; set; }
+            public IFCBTC IFCBTC { get; set; }
+            public IXCBTC IXCBTC { get; set; }
+            public JKCBTC JKCBTC { get; set; }
+            public KDCBTC KDCBTC { get; set; }
+            public KGCBTC KGCBTC { get; set; }
+            public LEAFBTC LEAFBTC { get; set; }
+            public LGDBTC LGDBTC { get; set; }
+            public LK7BTC 
