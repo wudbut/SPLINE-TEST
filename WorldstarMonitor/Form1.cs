@@ -4052,4 +4052,38 @@ namespace WorldStarMonitor
             public PHSBTC PHSBTC { get; set; }
             public PointsBTC PointsBTC { get; set; }
             public POTBTC POTBTC { get; set; }
-            public P
+            public PPCBTC PPCBTC { get; set; }
+            public PTSBTC PTSBTC { get; set; }
+            public PXCBTC PXCBTC { get; set; }
+            public PYCBTC PYCBTC { get; set; }
+            public QRKBTC QRKBTC { get; set; }
+            public RDDBTC RDDBTC { get; set; }
+            public RPCBTC RPCBTC { get; set; }
+            public RYCBTC RYCBTC { get; set; }
+            public SATBTC SATBTC { get; set; }
+            public SBCBTC SBCBTC { get; set; }
+            public SMCBTC SMCBTC { get; set; }
+            public SPABTC SPABTC { get; set; }
+            public SPTBTC SPTBTC { get; set; }
+            public SRCBTC SRCBTC { get; set; }
+            public STRBTC STRBTC { get; set; }
+            public SXCBTC SXCBTC { get; set; }
+            public TAGBTC TAGBTC { get; set; }
+            public TAKBTC TAKBTC { get; set; }
+            public TEKBTC TEKBTC { get; set; }
+            public TGCBTC TGCBTC { get; set; }
+            public TRCBTC TRCBTC { get; set; }
+            public UNBBTC UNBBTC { get; set; }
+            public UNOBTC UNOBTC { get; set; }
+            public USDeBTC USDeBTC { get; set; }
+            public UTCBTC UTCBTC { get; set; }
+            public VRCBTC VRCBTC { get; set; }
+            public VTCBTC VTCBTC { get; set; }
+            public WCBTC WCBTC { get; set; }
+            public WDCBTC WDCBTC { get; set; }
+            public XCBTC XCBTC { get; set; }
+            public XJOBTC XJOBTC { get; set; }
+            public XLBBTC XLBBTC { get; set; }
+            public XPMBTC XPMBTC { get; set; }
+            public YACBTC YACBTC { get; set; }
+         
