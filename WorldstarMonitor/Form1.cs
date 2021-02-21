@@ -4020,4 +4020,36 @@ namespace WorldStarMonitor
             public KGCBTC KGCBTC { get; set; }
             public LEAFBTC LEAFBTC { get; set; }
             public LGDBTC LGDBTC { get; set; }
-            public LK7BTC 
+            public LK7BTC LK7BTC { get; set; }
+            public LKYBTC LKYBTC { get; set; }
+            public LOTBTC LOTBTC { get; set; }
+            public LTBBTC LTBBTC { get; set; }
+            public LTCBTC LTCBTC { get; set; }
+            public LYCBTC LYCBTC { get; set; }
+            public MAXBTC MAXBTC { get; set; }
+            public MECBTC MECBTC { get; set; }
+            public MEOWBTC MEOWBTC { get; set; }
+            public MINTBTC MINTBTC { get; set; }
+            public MN1BTC MN1BTC { get; set; }
+            public MN2BTC MN2BTC { get; set; }
+            public MNCBTC MNCBTC { get; set; }
+            public MRYBTC MRYBTC { get; set; }
+            public MYRBTC MYRBTC { get; set; }
+            public MZCBTC MZCBTC { get; set; }
+            public NANBTC NANBTC { get; set; }
+            public NAUTBTC NAUTBTC { get; set; }
+            public NBLBTC NBLBTC { get; set; }
+            public NECBTC NECBTC { get; set; }
+            public NETBTC NETBTC { get; set; }
+            public NMCBTC NMCBTC { get; set; }
+            public NRBBTC NRBBTC { get; set; }
+            public NRSBTC NRSBTC { get; set; }
+            public NVCBTC NVCBTC { get; set; }
+            public NXTBTC NXTBTC { get; set; }
+            public NYANBTC NYANBTC { get; set; }
+            public ORBBTC ORBBTC { get; set; }
+            public OSCBTC OSCBTC { get; set; }
+            public PHSBTC PHSBTC { get; set; }
+            public PointsBTC PointsBTC { get; set; }
+            public POTBTC POTBTC { get; set; }
+            public P
