@@ -4134,4 +4134,50 @@ namespace WorldStarMonitor
 
         private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.
+            Process.Start("http://www.reddit.com/r/dogecoin");
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("http://dogechain.info");
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("http://doge-dice.com");
+        }
+
+        private void linkLabel7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("http://www.bitcointalk.org");
+        }
+
+        private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("http://www.dogecoin.com");
+        }
+
+        private void linkLabel8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.cryptsy.com/markets/view/3");
+        }
+
+        private void linkLabel9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.cryptsy.com/markets/view/132");
+        }
+
+        private void linkLabel10_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.cryptsy.com/markets/view/135");
+        }
+
+        private void label7_Click_1(object sender, EventArgs e)
+        {
+            Process.Start("http://www.btc-e.com");
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.dwallet = this.dwallet.Text;
+            Properties.Settings.Default.dexchange = this
