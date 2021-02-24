@@ -4086,4 +4086,52 @@ namespace WorldStarMonitor
             public XLBBTC XLBBTC { get; set; }
             public XPMBTC XPMBTC { get; set; }
             public YACBTC YACBTC { get; set; }
-         
+            public YBCBTC YBCBTC { get; set; }
+            public ZCCBTC ZCCBTC { get; set; }
+            public ZEDBTC ZEDBTC { get; set; }
+            public ZETBTC ZETBTC { get; set; }
+        }
+
+        public class Return
+        {
+            public Markets markets { get; set; }
+        }
+
+        public class RootObject
+        {
+            public int success { get; set; }
+            public Return @return { get; set; }
+        }
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.cryptsy.com/markets/view/132");
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://coinbase.com");
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.cryptsy.com/markets/view/135");
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.cryptsy.com/markets/view/3");
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.cryptsy.com");
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.coinbase.com");
+        }
+
+        private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.
