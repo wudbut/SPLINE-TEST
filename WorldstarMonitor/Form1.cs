@@ -4212,4 +4212,37 @@ namespace WorldStarMonitor
             {
                 finalcommand += " --scrypt -o ";
                 finalcommand += this.textBox42.Text;
-         
+                finalcommand += " -u ";
+                finalcommand += this.textBox38.Text;
+                finalcommand += " -p ";
+                finalcommand += this.textBox41.Text;
+            }
+            if (minerSelector.Text == "cudaminer")
+            //C:\Users\time\Downloads\cudaminer-2013-12-18\cudaminer-2013-12-18\x64\cudaminer.exe -o stratum+tcp://teamdoge.com:3333 -O jujuman.jujuwork:soriv
+            {
+                finalcommand += " -o ";
+                finalcommand += this.textBox42.Text;
+                finalcommand += " -O ";
+                finalcommand += this.textBox38.Text;
+                finalcommand += ":";
+                finalcommand += this.textBox41.Text;
+            }
+            if (minerSelector.Text == "minerd")
+            //C:\Users\time\Downloads\pooler-cpuminer-2.3.2-win32\minerd.exe --url stratum+tcp://localhost:22555 --userpass u:p
+            {
+                finalcommand += " --url ";
+                finalcommand += this.textBox42.Text;
+                finalcommand += " --userpass ";
+                finalcommand += this.textBox38.Text;
+                finalcommand += ":";
+                finalcommand += this.textBox41.Text;
+            }
+            this.richTextBox1.Text = finalcommand;
+        }
+        private void linkLabel12_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.cryptsy.com/markets/view/135");
+        }
+        private void linkLabel11_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.cryptsy.c
