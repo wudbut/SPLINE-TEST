@@ -4180,4 +4180,36 @@ namespace WorldStarMonitor
         private void button1_Click_1(object sender, EventArgs e)
         {
             Properties.Settings.Default.dwallet = this.dwallet.Text;
-            Properties.Settings.Default.dexchange = this
+            Properties.Settings.Default.dexchange = this.dexchange.Text;
+            Properties.Settings.Default.ddonation = this.ddonation.Text;
+
+            Properties.Settings.Default.bwallet = this.bwallet.Text;
+            Properties.Settings.Default.bexchange = this.bexchange.Text;
+            Properties.Settings.Default.bdonation = this.bdonation.Text;
+
+            Properties.Settings.Default.lwallet = this.lwallet.Text;
+            Properties.Settings.Default.lexchange = this.lexchange.Text;
+            Properties.Settings.Default.ldonation = this.ldonation.Text;
+
+            Properties.Settings.Default.a1 = this.a1.Text;
+            Properties.Settings.Default.a2 = this.a2.Text;
+            Properties.Settings.Default.a3 = this.a3.Text;
+            Properties.Settings.Default.a4 = this.a4.Text;
+            Properties.Settings.Default.a5 = this.a5.Text;
+            Properties.Settings.Default.a6 = this.a6.Text;
+            Properties.Settings.Default.a7 = this.a7.Text;
+            Properties.Settings.Default.a8 = this.a8.Text;
+            Properties.Settings.Default.Save();
+        }
+        //Builds the mining command to be saved in a batch file or to be pasted into the command storage area
+        private void buildcommand()
+        {
+            string finalcommand = "";
+            string exepath = "\"" + this.textBox40.Text + "\"";
+            finalcommand += exepath + " ";
+            if (minerSelector.Text == "cgminer")
+            //-o http://pool.ABCPool.co:8332 -u workername -p password
+            {
+                finalcommand += " --scrypt -o ";
+                finalcommand += this.textBox42.Text;
+         
