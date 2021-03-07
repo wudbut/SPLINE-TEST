@@ -4245,4 +4245,49 @@ namespace WorldStarMonitor
         }
         private void linkLabel11_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://www.cryptsy.c
+            Process.Start("https://www.cryptsy.com/markets/view/132");
+        }
+
+        private void linkLabel13_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.cryptsy.com/markets/view/3");
+        }
+        private void linkLabel8_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("http://virusscan.jotti.org/en");
+        }
+        private void linkLabel9_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("http://dogemonitor.com");
+        }
+        private void linkLabel10_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.cryptsy.com/markets/view/" + this.quickCryptsyMarketID.Text);
+        }
+       
+        private void button9_Click(object sender, EventArgs e)
+        {
+            launchminer(this.mc5.Text);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            launchminer(this.mc1.Text);
+        }
+        private void button5_Click(object sender, EventArgs e)
+        {
+            launchminer(this.mc2.Text);
+        }
+        private void button6_Click(object sender, EventArgs e)
+        {
+            launchminer(this.mc3.Text);
+        }
+        private void button7_Click(object sender, EventArgs e)
+        {
+            launchminer(this.mc4.Text);
+        }
+        private void button8_Click(object sender, EventArgs e)
+        {
+            launchminer(this.mc6.Text);
+        }
+        private void button10_Clic
