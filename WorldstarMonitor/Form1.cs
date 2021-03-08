@@ -4328,4 +4328,34 @@ namespace WorldStarMonitor
             Properties.Settings.Default.mcn4 = this.mcn4.Text;
             Properties.Settings.Default.mcn5 = this.mcn5.Text;
             Properties.Settings.Default.mcn6 = this.mcn6.Text;
-            Pro
+            Properties.Settings.Default.mcn7 = this.mcn7.Text;
+            Properties.Settings.Default.mcn8 = this.mcn8.Text;
+            Properties.Settings.Default.Save();
+        }
+        private void linkLabel3_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("http://just-dice.com");
+        }
+        private void linkLabel5_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("http://bitcoinwisdom.com");
+        }
+        private void linkLabel6_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("http://winkdex.com/#/");
+        }
+        private void linkLabel11_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://blockchain.info");
+        }
+        private void linkLabel12_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://btc-e.com/");
+        }
+
+        private void linkLabel9_LinkClicked_2(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://bitcoin.org");
+        }
+    }
+}
