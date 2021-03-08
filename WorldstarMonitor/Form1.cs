@@ -4290,4 +4290,42 @@ namespace WorldStarMonitor
         {
             launchminer(this.mc6.Text);
         }
-        private void button10_Clic
+        private void button10_Click(object sender, EventArgs e)
+        {
+            launchminer(this.mc7.Text);
+        }
+        private void button11_Click(object sender, EventArgs e)
+        {
+            launchminer(this.mc8.Text);
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            buildcommand();
+        }
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if (this.richTextBox1.TextLength > 0)
+            {
+                launchminer(this.richTextBox1.Text);
+            }
+        }
+
+        //Saves all the custom mining commands
+        private void button14_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.mc1 = this.mc1.Text;
+            Properties.Settings.Default.mc2 = this.mc2.Text;
+            Properties.Settings.Default.mc3 = this.mc3.Text;
+            Properties.Settings.Default.mc4 = this.mc4.Text;
+            Properties.Settings.Default.mc5 = this.mc5.Text;
+            Properties.Settings.Default.mc6 = this.mc6.Text;
+            Properties.Settings.Default.mc7 = this.mc7.Text;
+            Properties.Settings.Default.mc8 = this.mc8.Text;
+
+            Properties.Settings.Default.mcn1 = this.mcn1.Text;
+            Properties.Settings.Default.mcn2 = this.mcn2.Text;
+            Properties.Settings.Default.mcn3 = this.mcn3.Text;
+            Properties.Settings.Default.mcn4 = this.mcn4.Text;
+            Properties.Settings.Default.mcn5 = this.mcn5.Text;
+            Properties.Settings.Default.mcn6 = this.mcn6.Text;
+            Pro
