@@ -2,4 +2,39 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WorldStarMonitor.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="dwallet" Type="System.String" Scope=
+    <Setting Name="dwallet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Enter an Address</Value>
+    </Setting>
+    <Setting Name="dexchange" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Enter an Address</Value>
+    </Setting>
+    <Setting Name="ddonation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Enter an Address</Value>
+    </Setting>
+    <Setting Name="bwallet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Enter an Address</Value>
+    </Setting>
+    <Setting Name="bexchange" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Enter an Address</Value>
+    </Setting>
+    <Setting Name="bdonation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Enter an Address</Value>
+    </Setting>
+    <Setting Name="a1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Enter an Address</Value>
+    </Setting>
+    <Setting Name="a2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Enter an Address</Value>
+    </Setting>
+    <Setting Name="a3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Enter an Address</Value>
+    </Setting>
+    <Setting Name="a4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Enter an Address</Value>
+    </Setting>
+    <Setting Name="a5" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Enter an Address</Value>
+    </Setting>
+    <Setting Name="a6" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Enter an Address</Value>
+    
