@@ -37,4 +37,33 @@
     </Setting>
     <Setting Name="a6" Type="System.String" Scope="User">
       <Value Profile="(Default)">Enter an Address</Value>
-    
+    </Setting>
+    <Setting Name="a7" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Enter an Address</Value>
+    </Setting>
+    <Setting Name="a8" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Enter an Address</Value>
+    </Setting>
+    <Setting Name="lwallet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Enter an Address</Value>
+    </Setting>
+    <Setting Name="lexchange" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Enter an Address</Value>
+    </Setting>
+    <Setting Name="ldonation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Enter an Address</Value>
+    </Setting>
+    <Setting Name="a9" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Enter an Address</Value>
+    </Setting>
+    <Setting Name="a10" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Enter an Address</Value>
+    </Setting>
+    <Setting Name="a11" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Enter an Address</Value>
+    </Setting>
+    <Setting Name="mc1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"C:\Users\time\Downloads\cgminer-3.7.2-windows (1)\cgminer-3.7.2-windows\cgminer.exe" --scrypt -I 12 -g 2 -w 256 --gpu-engine 1100 --gpu-memclock 1250 --gpu-powertune 20 --thread-concurrency 16384 --scrypt -o stratum+tcp://lotus.nut2pools.com:5595 -u juju.u -p p</Value>
+    </Setting>
+    <Setting Name="mc2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"C:\Users\time\Downl
