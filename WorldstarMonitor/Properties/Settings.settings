@@ -66,4 +66,17 @@
       <Value Profile="(Default)">"C:\Users\time\Downloads\cgminer-3.7.2-windows (1)\cgminer-3.7.2-windows\cgminer.exe" --scrypt -I 12 -g 2 -w 256 --gpu-engine 1100 --gpu-memclock 1250 --gpu-powertune 20 --thread-concurrency 16384 --scrypt -o stratum+tcp://lotus.nut2pools.com:5595 -u juju.u -p p</Value>
     </Setting>
     <Setting Name="mc2" Type="System.String" Scope="User">
-      <Value Profile="(Default)">"C:\Users\time\Downl
+      <Value Profile="(Default)">"C:\Users\time\Downloads\cgminer-3.7.2-windows (1)\cgminer-3.7.2-windows\cgminer.exe" --scrypt -I 12 -g 2 -w 256 --thread-concurrency 8192 -o stratum+tcp://ltc.give-me-coins.com:3336 -u juju.testworker -p sorivonio!@#^%12231
+ </Value>
+    </Setting>
+    <Setting Name="mc3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"C:\Users\time\Downloads\cgminer-3.7.2-windows (1)\cgminer-3.7.2-windows\cgminer.exe" --scrypt -I 12 -g 2 -w 256 --thread-concurrency 8192 -o stratum+tcp://stratum3.dogehouse.org:8080 -u juju.jujuwork -p sorivonio!@#^%12231</Value>
+    </Setting>
+    <Setting Name="mc4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"C:\Users\time\Downloads\cgminer-3.7.2-windows (1)\cgminer-3.7.2-windows\cgminer.exe" --scrypt -I 12 -g 2 -w 256 --gpu-engine 1100 --gpu-memclock 1250 --gpu-powertune 20 --thread-concurrency 16384 -o stratum+tcp://smc.hash.so:3363 -u juju.u -p p</Value>
+    </Setting>
+    <Setting Name="mc5" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"C:\Users\time\Downloads\cgminer-3.7.2-windows (1)\cgminer-3.7.2-windows\cgminer.exe" --scrypt -I 12 -g 2 -w 256 --gpu-engine 1100 --gpu-memclock 1250 --gpu-powertune 20 --thread-concurrency 16384 --scrypt -o stratum+tcp://fed.notnull.org:3333 -u juju.u -p p</Value>
+    </Setting>
+    <Setting Name="mc6" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"C:\Users\time\Downloads\cgminer-3.7.2-windows (1)\cgminer-3.7.2-windows\cgminer.exe" --scrypt -I 12 -g 2 -w 256 --gpu-engine 1100 --gpu-memclock 1250 --gpu-powertune 20 --thread-concurrency 16384 -o 
