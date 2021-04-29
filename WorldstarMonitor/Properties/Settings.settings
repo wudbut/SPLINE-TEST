@@ -105,4 +105,11 @@
     <Setting Name="mcn6" Type="System.String" Scope="User">
       <Value Profile="(Default)">Nutcoin</Value>
     </Setting>
-   
+    <Setting Name="mcn7" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Feathercoin</Value>
+    </Setting>
+    <Setting Name="mcn8" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Coino</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
