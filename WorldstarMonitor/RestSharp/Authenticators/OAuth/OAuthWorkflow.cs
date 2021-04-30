@@ -109,4 +109,44 @@ namespace RestSharp.Authenticators.OAuth
 		}
 
 		/// <summary>
-		/// Generates a <see cref="OAuthWe
+		/// Generates a <see cref="OAuthWebQueryInfo"/> instance to pass to an
+		/// <see cref="IAuthenticator" /> for the purpose of exchanging a request token
+		/// for an access token authorized by the user at the Service Provider site.
+		/// </summary>
+		/// <param name="method">The HTTP method for the intended request</param>
+		/// <seealso cref="http://oauth.net/core/1.0#anchor9"/>
+		/// <param name="parameters">Any existing, non-OAuth query parameters desired in the request</param>
+		public virtual OAuthWebQueryInfo BuildAccessTokenInfo(string method, WebParameterCollection parameters)
+		{
+			ValidateAccessRequestState();
+
+			if (parameters == null)
+			{
+				parameters = new WebParameterCollection();
+			}
+
+			var uri = new Uri(AccessTokenUrl);
+			var timestamp = OAuthTools.GetTimestamp();
+			var nonce = OAuthTools.GetNonce();
+
+			AddAuthParameters(parameters, timestamp, nonce);
+
+			var signatureBase = OAuthTools.ConcatenateRequestElements(method, uri.ToString(), parameters);
+			var signature = OAuthTools.GetSignature(SignatureMethod, SignatureTreatment, signatureBase, ConsumerSecret, TokenSecret);
+
+			var info = new OAuthWebQueryInfo
+			{
+				WebMethod = method,
+				ParameterHandling = ParameterHandling,
+				ConsumerKey = ConsumerKey,
+				Token = Token,
+				SignatureMethod = SignatureMethod.ToRequestValue(),
+				SignatureTreatment = SignatureTreatment,
+				Signature = signature,
+				Timestamp = timestamp,
+				Nonce = nonce,
+				Version = Version ?? "1.0",
+				Verifier = Verifier,
+				Callback = CallbackUrl,
+				TokenSecret = TokenSecret,
+				ConsumerSecret = ConsumerSecret,
