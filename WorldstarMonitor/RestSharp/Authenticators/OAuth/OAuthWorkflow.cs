@@ -27,4 +27,41 @@ namespace RestSharp.Authenticators.OAuth
 		public virtual OAuthParameterHandling ParameterHandling { get; set; }
 
 		public virtual string ClientUsername { get; set; }
-		public virtual strin
+		public virtual string ClientPassword { get; set; }
+
+		/// <seealso cref="http://oauth.net/core/1.0#request_urls"/>
+		public virtual string RequestTokenUrl { get; set; }
+
+		/// <seealso cref="http://oauth.net/core/1.0#request_urls"/>
+		public virtual string AccessTokenUrl { get; set; }
+
+		/// <seealso cref="http://oauth.net/core/1.0#request_urls"/>
+		public virtual string AuthorizationUrl { get; set; }
+
+		/// <summary>
+		/// Generates a <see cref="OAuthWebQueryInfo"/> instance to pass to an
+		/// <see cref="IAuthenticator" /> for the purpose of requesting an
+		/// unauthorized request token.
+		/// </summary>
+		/// <param name="method">The HTTP method for the intended request</param>
+		/// <seealso cref="http://oauth.net/core/1.0#anchor9"/>
+		/// <returns></returns>
+		public OAuthWebQueryInfo BuildRequestTokenInfo(string method)
+		{
+			return BuildRequestTokenInfo(method, null);
+		}
+
+		/// <summary>
+		/// Generates a <see cref="OAuthWebQueryInfo"/> instance to pass to an
+		/// <see cref="IAuthenticator" /> for the purpose of requesting an
+		/// unauthorized request token.
+		/// </summary>
+		/// <param name="method">The HTTP method for the intended request</param>
+		/// <param name="parameters">Any existing, non-OAuth query parameters desired in the request</param>
+		/// <seealso cref="http://oauth.net/core/1.0#anchor9"/>
+		/// <returns></returns>
+		public virtual OAuthWebQueryInfo BuildRequestTokenInfo(string method, WebParameterCollection parameters)
+		{
+			ValidateTokenRequestState();
+
+			if (parameters == nul
