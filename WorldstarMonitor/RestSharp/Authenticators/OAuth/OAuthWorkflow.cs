@@ -188,4 +188,61 @@ namespace RestSharp.Authenticators.OAuth
 				ClientMode = "client_auth",
 				ClientUsername = ClientUsername,
 				ClientPassword = ClientPassword,
-				ConsumerKey 
+				ConsumerKey = ConsumerKey,
+				SignatureMethod = SignatureMethod.ToRequestValue(),
+				SignatureTreatment = SignatureTreatment,
+				Signature = signature,
+				Timestamp = timestamp,
+				Nonce = nonce,
+				Version = Version ?? "1.0",
+				TokenSecret = TokenSecret,
+				ConsumerSecret = ConsumerSecret
+			};
+
+			return info;
+		}
+
+		public virtual OAuthWebQueryInfo BuildProtectedResourceInfo(string method, WebParameterCollection parameters, string url)
+		{
+			ValidateProtectedResourceState();
+
+			if (parameters == null)
+			{
+				parameters = new WebParameterCollection();
+			}
+
+			// Include url parameters in query pool
+			var uri = new Uri(url);
+#if !SILVERLIGHT && !WINDOWS_PHONE && !PocketPC
+			var urlParameters = HttpUtility.ParseQueryString(uri.Query);
+#else
+			var urlParameters = uri.Query.ParseQueryString();
+#endif
+
+#if !SILVERLIGHT && !WINDOWS_PHONE && !PocketPC
+			foreach (var parameter in urlParameters.AllKeys)
+#else
+			foreach (var parameter in urlParameters.Keys)
+#endif
+			{
+#if PocketPC
+                switch (method.ToUpper())
+#else
+				switch (method.ToUpperInvariant())
+#endif
+				{
+					case "POST":
+						parameters.Add(new HttpPostParameter(parameter, urlParameters[parameter]));
+						break;
+					default:
+						parameters.Add(parameter, urlParameters[parameter]);
+						break;
+				}
+			}
+
+			var timestamp = OAuthTools.GetTimestamp();
+			var nonce = OAuthTools.GetNonce();
+
+			AddAuthParameters(parameters, timestamp, nonce);
+
+			var signatureBase = OAuthTools.ConcatenateRequestElements(
