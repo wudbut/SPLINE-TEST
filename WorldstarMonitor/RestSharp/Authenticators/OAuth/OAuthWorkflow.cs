@@ -150,3 +150,42 @@ namespace RestSharp.Authenticators.OAuth
 				Callback = CallbackUrl,
 				TokenSecret = TokenSecret,
 				ConsumerSecret = ConsumerSecret,
+			};
+
+			return info;
+		}
+
+		/// <summary>
+		/// Generates a <see cref="OAuthWebQueryInfo"/> instance to pass to an
+		/// <see cref="IAuthenticator" /> for the purpose of exchanging user credentials
+		/// for an access token authorized by the user at the Service Provider site.
+		/// </summary>
+		/// <param name="method">The HTTP method for the intended request</param>
+		/// <seealso cref="http://tools.ietf.org/html/draft-dehora-farrell-oauth-accesstoken-creds-00#section-4"/>
+		/// <param name="parameters">Any existing, non-OAuth query parameters desired in the request</param>
+		public virtual OAuthWebQueryInfo BuildClientAuthAccessTokenInfo(string method, WebParameterCollection parameters)
+		{
+			ValidateClientAuthAccessRequestState();
+
+			if (parameters == null)
+			{
+				parameters = new WebParameterCollection();
+			}
+
+			var uri = new Uri(AccessTokenUrl);
+			var timestamp = OAuthTools.GetTimestamp();
+			var nonce = OAuthTools.GetNonce();
+
+			AddXAuthParameters(parameters, timestamp, nonce);
+
+			var signatureBase = OAuthTools.ConcatenateRequestElements(method, uri.ToString(), parameters);
+			var signature = OAuthTools.GetSignature(SignatureMethod, SignatureTreatment, signatureBase, ConsumerSecret);
+
+			var info = new OAuthWebQueryInfo
+			{
+				WebMethod = method,
+				ParameterHandling = ParameterHandling,
+				ClientMode = "client_auth",
+				ClientUsername = ClientUsername,
+				ClientPassword = ClientPassword,
+				ConsumerKey 
