@@ -371,4 +371,38 @@ namespace RestSharp.Authenticators.OAuth
 
 			if (!Verifier.IsNullOrBlank())
 			{
-				authPara
+				authParameters.Add(new WebPair("oauth_verifier", Verifier));
+			}
+
+			if (!SessionHandle.IsNullOrBlank())
+			{
+				authParameters.Add(new WebPair("oauth_session_handle", SessionHandle));
+			}
+
+			foreach (var authParameter in authParameters)
+			{
+				parameters.Add(authParameter);
+			}
+		}
+
+		private void AddXAuthParameters(ICollection<WebPair> parameters, string timestamp, string nonce)
+		{
+			var authParameters = new WebParameterCollection
+			{
+				new WebPair("x_auth_username", ClientUsername),
+				new WebPair("x_auth_password", ClientPassword),
+				new WebPair("x_auth_mode", "client_auth"),
+				new WebPair("oauth_consumer_key", ConsumerKey),
+				new WebPair("oauth_signature_method", SignatureMethod.ToRequestValue()),
+				new WebPair("oauth_timestamp", timestamp),
+				new WebPair("oauth_nonce", nonce),
+				new WebPair("oauth_version", Version ?? "1.0")
+			};
+
+			foreach (var authParameter in authParameters)
+			{
+				parameters.Add(authParameter);
+			}
+		}
+	}
+}
