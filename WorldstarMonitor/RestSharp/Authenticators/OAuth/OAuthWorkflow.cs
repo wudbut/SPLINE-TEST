@@ -312,4 +312,63 @@ namespace RestSharp.Authenticators.OAuth
 			}
 		}
 
-		private void ValidateCli
+		private void ValidateClientAuthAccessRequestState()
+		{
+			if (AccessTokenUrl.IsNullOrBlank())
+			{
+				throw new ArgumentException("You must specify an access token URL");
+			}
+
+			if (ConsumerKey.IsNullOrBlank())
+			{
+				throw new ArgumentException("You must specify a consumer key");
+			}
+
+			if (ConsumerSecret.IsNullOrBlank())
+			{
+				throw new ArgumentException("You must specify a consumer secret");
+			}
+
+			if (ClientUsername.IsNullOrBlank() || ClientPassword.IsNullOrBlank())
+			{
+				throw new ArgumentException("You must specify user credentials");
+			}
+		}
+
+		private void ValidateProtectedResourceState()
+		{
+			if (ConsumerKey.IsNullOrBlank())
+			{
+				throw new ArgumentException("You must specify a consumer key");
+			}
+
+			if (ConsumerSecret.IsNullOrBlank())
+			{
+				throw new ArgumentException("You must specify a consumer secret");
+			}
+		}
+
+		private void AddAuthParameters(ICollection<WebPair> parameters, string timestamp, string nonce)
+		{
+			var authParameters = new WebParameterCollection
+			{
+				new WebPair("oauth_consumer_key", ConsumerKey),
+				new WebPair("oauth_nonce", nonce),
+				new WebPair("oauth_signature_method", SignatureMethod.ToRequestValue()),
+				new WebPair("oauth_timestamp", timestamp),
+				new WebPair("oauth_version", Version ?? "1.0")
+			};
+
+			if (!Token.IsNullOrBlank())
+			{
+				authParameters.Add(new WebPair("oauth_token", Token));
+			}
+
+			if (!CallbackUrl.IsNullOrBlank())
+			{
+				authParameters.Add(new WebPair("oauth_callback", CallbackUrl));
+			}
+
+			if (!Verifier.IsNullOrBlank())
+			{
+				authPara
