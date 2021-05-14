@@ -245,4 +245,71 @@ namespace RestSharp.Authenticators.OAuth
 
 			AddAuthParameters(parameters, timestamp, nonce);
 
-			var signatureBase = OAuthTools.ConcatenateRequestElements(
+			var signatureBase = OAuthTools.ConcatenateRequestElements(method, url, parameters);
+
+			var signature = OAuthTools.GetSignature(
+				SignatureMethod, SignatureTreatment, signatureBase, ConsumerSecret, TokenSecret
+				);
+
+			var info = new OAuthWebQueryInfo
+			{
+				WebMethod = method,
+				ParameterHandling = ParameterHandling,
+				ConsumerKey = ConsumerKey,
+				Token = Token,
+				SignatureMethod = SignatureMethod.ToRequestValue(),
+				SignatureTreatment = SignatureTreatment,
+				Signature = signature,
+				Timestamp = timestamp,
+				Nonce = nonce,
+				Version = Version ?? "1.0",
+				Callback = CallbackUrl,
+				ConsumerSecret = ConsumerSecret,
+				TokenSecret = TokenSecret
+			};
+
+			return info;
+		}
+
+		private void ValidateTokenRequestState()
+		{
+			if (RequestTokenUrl.IsNullOrBlank())
+			{
+				throw new ArgumentException("You must specify a request token URL");
+			}
+
+			if (ConsumerKey.IsNullOrBlank())
+			{
+				throw new ArgumentException("You must specify a consumer key");
+			}
+
+			if (ConsumerSecret.IsNullOrBlank())
+			{
+				throw new ArgumentException("You must specify a consumer secret");
+			}
+		}
+
+		private void ValidateAccessRequestState()
+		{
+			if (AccessTokenUrl.IsNullOrBlank())
+			{
+				throw new ArgumentException("You must specify an access token URL");
+			}
+
+			if (ConsumerKey.IsNullOrBlank())
+			{
+				throw new ArgumentException("You must specify a consumer key");
+			}
+
+			if (ConsumerSecret.IsNullOrBlank())
+			{
+				throw new ArgumentException("You must specify a consumer secret");
+			}
+
+			if (Token.IsNullOrBlank())
+			{
+				throw new ArgumentException("You must specify a token");
+			}
+		}
+
+		private void ValidateCli
