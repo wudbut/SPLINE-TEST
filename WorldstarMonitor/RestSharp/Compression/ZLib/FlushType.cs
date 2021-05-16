@@ -31,4 +31,22 @@ namespace RestSharp.Compression.ZLib
 		/// the decompressor can get all input data available so far.  When using this
 		/// with a ZlibCodec, <c>AvailableBytesIn</c> will be zero after the call if
 		/// enough output space has been provided before the call.  Flushing will
-		/// degrade compression and so it should be used only whe
+		/// degrade compression and so it should be used only when necessary.
+		/// </summary>
+		Sync,
+
+		/// <summary>
+		/// Use this during compression to specify that all output should be flushed, as
+		/// with <c>FlushType.Sync</c>, but also, the compression state should be reset
+		/// so that decompression can restart from this point if previous compressed
+		/// data has been damaged or if random access is desired.  Using
+		/// <c>FlushType.Full</c> too often can significantly degrade the compression.
+		/// </summary>
+		Full,
+
+		/// <summary>Signals the end of the compression/decompression stream.</summary>
+		Finish,
+	}
+}
+
+#endif
