@@ -361,3 +361,83 @@ namespace RestSharp.Compression.ZLib
 				if (result == Z_DATA_ERROR)
 				{
 					z.Message = "oversubscribed literal/length tree";
+				}
+				else if (result != Z_MEM_ERROR)
+				{
+					z.Message = "incomplete literal/length tree";
+					result = Z_DATA_ERROR;
+				}
+				return result;
+			}
+
+			// build distance tree
+			initWorkArea(288);
+			result = huft_build(c, nl, nd, 0, cpdist, cpdext, td, bd, hp, hn, v);
+
+			if (result != Z_OK || (bd[0] == 0 && nl > 257))
+			{
+				if (result == Z_DATA_ERROR)
+				{
+					z.Message = "oversubscribed distance tree";
+				}
+				else if (result == Z_BUF_ERROR)
+				{
+					z.Message = "incomplete distance tree";
+					result = Z_DATA_ERROR;
+				}
+				else if (result != Z_MEM_ERROR)
+				{
+					z.Message = "empty distance tree with lengths";
+					result = Z_DATA_ERROR;
+				}
+				return result;
+			}
+
+			return Z_OK;
+		}
+
+		internal static int inflate_trees_fixed(int[] bl, int[] bd, int[][] tl, int[][] td, ZlibCodec z)
+		{
+			bl[0] = fixed_bl;
+			bd[0] = fixed_bd;
+			tl[0] = fixed_tl;
+			td[0] = fixed_td;
+			return Z_OK;
+		}
+
+		private void initWorkArea(int vsize)
+		{
+			if (hn == null)
+			{
+				hn = new int[1];
+				v = new int[vsize];
+				c = new int[BMAX + 1];
+				r = new int[3];
+				u = new int[BMAX];
+				x = new int[BMAX + 1];
+			}
+			if (v.Length < vsize)
+			{
+				v = new int[vsize];
+			}
+			for (int i = 0; i < vsize; i++)
+			{
+				v[i] = 0;
+			}
+			for (int i = 0; i < BMAX + 1; i++)
+			{
+				c[i] = 0;
+			}
+			for (int i = 0; i < 3; i++)
+			{
+				r[i] = 0;
+			}
+			//  for(int i=0; i<BMAX; i++){u[i]=0;}
+			Array.Copy(c, 0, u, 0, BMAX);
+			//  for(int i=0; i<BMAX+1; i++){x[i]=0;}
+			Array.Copy(c, 0, x, 0, BMAX + 1);
+		}
+	}
+}
+
+#endif
