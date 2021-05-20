@@ -56,4 +56,58 @@
 // 
 // -----------------------------------------------------------------------
 //
-// T
+// This program is based on zlib-1.1.3; credit to authors
+// Jean-loup Gailly(jloup@gzip.org) and Mark Adler(madler@alumni.caltech.edu)
+// and contributors of zlib.
+//
+// -----------------------------------------------------------------------
+
+#if WINDOWS_PHONE
+
+using System;
+using Interop = System.Runtime.InteropServices;
+
+namespace RestSharp.Compression.ZLib
+{
+	/// <summary>
+	/// A general purpose exception class for exceptions in the Zlib library.
+	/// </summary>
+	internal class ZlibException : System.Exception
+	{
+		/// <summary>
+		/// The ZlibException class captures exception information generated
+		/// by the Zlib library. 
+		/// </summary>
+		public ZlibException()
+			: base()
+		{
+		}
+
+		/// <summary>
+		/// This ctor collects a message attached to the exception.
+		/// </summary>
+		/// <param name="s"></param>
+		public ZlibException(System.String s)
+			: base(s)
+		{
+		}
+	}
+
+
+	internal class SharedUtils
+	{
+		/// <summary>
+		/// Performs an unsigned bitwise right shift with the specified number
+		/// </summary>
+		/// <param name="number">Number to operate on</param>
+		/// <param name="bits">Ammount of bits to shift</param>
+		/// <returns>The resulting number from the shift operation</returns>
+		public static int URShift(int number, int bits)
+		{
+			return (int)((uint)number >> bits);
+		}
+
+		/// <summary>
+		/// Performs an unsigned bitwise right shift with the specified number
+		/// </summary>
+		/// <param name="number">Number to operate on</param
