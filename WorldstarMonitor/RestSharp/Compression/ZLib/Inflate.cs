@@ -1420,3 +1420,412 @@ namespace RestSharp.Compression.ZLib
 
 			return ZlibConstants.Z_OK;
 		}
+	}
+
+	internal sealed class InflateManager
+	{
+		// preset dictionary flag in zlib header
+		private const int PRESET_DICT = 0x20;
+
+		private const int Z_DEFLATED = 8;
+
+		private const int METHOD = 0; // waiting for method byte
+		private const int FLAG = 1; // waiting for flag byte
+		private const int DICT4 = 2; // four dictionary check bytes to go
+		private const int DICT3 = 3; // three dictionary check bytes to go
+		private const int DICT2 = 4; // two dictionary check bytes to go
+		private const int DICT1 = 5; // one dictionary check byte to go
+		private const int DICT0 = 6; // waiting for inflateSetDictionary
+		private const int BLOCKS = 7; // decompressing blocks
+		private const int CHECK4 = 8; // four check bytes to go
+		private const int CHECK3 = 9; // three check bytes to go
+		private const int CHECK2 = 10; // two check bytes to go
+		private const int CHECK1 = 11; // one check byte to go
+		private const int DONE = 12; // finished check, done
+		private const int BAD = 13; // got an error--stay here
+
+		internal int mode; // current inflate mode
+		internal ZlibCodec _codec; // pointer back to this zlib stream
+
+		// mode dependent information
+		internal int method; // if FLAGS, method byte
+
+		// if CHECK, check values to compare
+		internal long[] was = new long[1]; // computed check value
+		internal long need; // stream check value
+
+		// if BAD, inflateSync's marker bytes count
+		internal int marker;
+
+		// mode independent information
+		//internal int nowrap; // flag for no wrapper
+		private bool _handleRfc1950HeaderBytes = true;
+		internal bool HandleRfc1950HeaderBytes
+		{
+			get { return _handleRfc1950HeaderBytes; }
+			set { _handleRfc1950HeaderBytes = value; }
+		}
+		internal int wbits; // log2(window size)  (8..15, defaults to 15)
+
+		internal InflateBlocks blocks; // current inflate_blocks state
+
+		public InflateManager() { }
+
+		public InflateManager(bool expectRfc1950HeaderBytes)
+		{
+			_handleRfc1950HeaderBytes = expectRfc1950HeaderBytes;
+		}
+
+		internal int Reset()
+		{
+			_codec.TotalBytesIn = _codec.TotalBytesOut = 0;
+			_codec.Message = null;
+			mode = HandleRfc1950HeaderBytes ? METHOD : BLOCKS;
+			blocks.Reset(null);
+			return ZlibConstants.Z_OK;
+		}
+
+		internal int End()
+		{
+			if (blocks != null)
+				blocks.Free();
+			blocks = null;
+			return ZlibConstants.Z_OK;
+		}
+
+		internal int Initialize(ZlibCodec codec, int w)
+		{
+			_codec = codec;
+			_codec.Message = null;
+			blocks = null;
+
+			// handle undocumented nowrap option (no zlib header or check)
+			//nowrap = 0;
+			//if (w < 0)
+			//{
+			//    w = - w;
+			//    nowrap = 1;
+			//}
+
+			// set window size
+			if (w < 8 || w > 15)
+			{
+				End();
+				throw new ZlibException("Bad window size.");
+
+				//return ZlibConstants.Z_STREAM_ERROR;
+			}
+			wbits = w;
+
+			blocks = new InflateBlocks(codec,
+				HandleRfc1950HeaderBytes ? this : null,
+				1 << w);
+
+			// reset state
+			Reset();
+			return ZlibConstants.Z_OK;
+		}
+
+		internal int Inflate(FlushType flush)
+		{
+			int r;
+			int b;
+			int f = (int)flush;
+
+			if (_codec.InputBuffer == null)
+				throw new ZlibException("InputBuffer is null. ");
+
+			f = (f == (int)FlushType.Finish)
+				? ZlibConstants.Z_BUF_ERROR
+				: ZlibConstants.Z_OK;
+			r = ZlibConstants.Z_BUF_ERROR;
+			while (true)
+			{
+				switch (mode)
+				{
+					case METHOD:
+						if (_codec.AvailableBytesIn == 0)
+							return r;
+
+						r = f;
+
+						_codec.AvailableBytesIn--; _codec.TotalBytesIn++;
+
+						if (((method = _codec.InputBuffer[_codec.NextIn++]) & 0xf) != Z_DEFLATED)
+						{
+							mode = BAD;
+							_codec.Message = String.Format("unknown compression method (0x{0:X2})", method);
+							marker = 5; // can't try inflateSync
+							break;
+						}
+						if ((method >> 4) + 8 > wbits)
+						{
+							mode = BAD;
+							_codec.Message = String.Format("invalid window size ({0})", (method >> 4) + 8);
+							marker = 5; // can't try inflateSync
+							break;
+						}
+						mode = FLAG;
+						goto case FLAG;
+
+					case FLAG:
+
+						if (_codec.AvailableBytesIn == 0) return r;
+
+						r = f;
+
+						_codec.AvailableBytesIn--; _codec.TotalBytesIn++;
+						b = (_codec.InputBuffer[_codec.NextIn++]) & 0xff;
+
+						if ((((method << 8) + b) % 31) != 0)
+						{
+							mode = BAD;
+							_codec.Message = "incorrect header check";
+							marker = 5; // can't try inflateSync
+							break;
+						}
+
+						if ((b & PRESET_DICT) == 0)
+						{
+							mode = BLOCKS;
+							break;
+						}
+						mode = DICT4;
+						goto case DICT4;
+
+					case DICT4:
+
+						if (_codec.AvailableBytesIn == 0) return r;
+
+						r = f;
+
+						_codec.AvailableBytesIn--; _codec.TotalBytesIn++;
+						need = ((_codec.InputBuffer[_codec.NextIn++] & 0xff) << 24) & unchecked((int)0xff000000L);
+						mode = DICT3;
+						goto case DICT3;
+
+					case DICT3:
+
+						if (_codec.AvailableBytesIn == 0) return r;
+
+						r = f;
+
+						_codec.AvailableBytesIn--; _codec.TotalBytesIn++;
+						need += (((_codec.InputBuffer[_codec.NextIn++] & 0xff) << 16) & 0xff0000L);
+						mode = DICT2;
+						goto case DICT2;
+
+					case DICT2:
+
+						if (_codec.AvailableBytesIn == 0) return r;
+
+						r = f;
+
+						_codec.AvailableBytesIn--; _codec.TotalBytesIn++;
+						need += (((_codec.InputBuffer[_codec.NextIn++] & 0xff) << 8) & 0xff00L);
+						mode = DICT1;
+						goto case DICT1;
+
+					case DICT1:
+
+						if (_codec.AvailableBytesIn == 0) return r;
+
+						r = f;
+
+						_codec.AvailableBytesIn--; _codec.TotalBytesIn++;
+						need += (_codec.InputBuffer[_codec.NextIn++] & 0xffL);
+						_codec._Adler32 = need;
+						mode = DICT0;
+						return ZlibConstants.Z_NEED_DICT;
+
+					case DICT0:
+						mode = BAD;
+						_codec.Message = "need dictionary";
+						marker = 0; // can try inflateSync
+						return ZlibConstants.Z_STREAM_ERROR;
+
+					case BLOCKS:
+						r = blocks.Process(r);
+						if (r == ZlibConstants.Z_DATA_ERROR)
+						{
+							mode = BAD;
+							marker = 0; // can try inflateSync
+							break;
+						}
+						if (r == ZlibConstants.Z_OK) r = f;
+
+						if (r != ZlibConstants.Z_STREAM_END) return r;
+
+						r = f;
+						blocks.Reset(was);
+						if (!HandleRfc1950HeaderBytes)
+						{
+							mode = DONE;
+							break;
+						}
+						mode = CHECK4;
+						goto case CHECK4;
+
+					case CHECK4:
+
+						if (_codec.AvailableBytesIn == 0) return r;
+
+						r = f;
+
+						_codec.AvailableBytesIn--; _codec.TotalBytesIn++;
+						need = ((_codec.InputBuffer[_codec.NextIn++] & 0xff) << 24) & unchecked((int)0xff000000L);
+						mode = CHECK3;
+						goto case CHECK3;
+
+					case CHECK3:
+						if (_codec.AvailableBytesIn == 0) return r;
+						r = f;
+						_codec.AvailableBytesIn--; _codec.TotalBytesIn++;
+						need += (((_codec.InputBuffer[_codec.NextIn++] & 0xff) << 16) & 0xff0000L);
+						mode = CHECK2;
+						goto case CHECK2;
+
+					case CHECK2:
+						if (_codec.AvailableBytesIn == 0) return r;
+						r = f;
+
+						_codec.AvailableBytesIn--;
+						_codec.TotalBytesIn++;
+						need += (((_codec.InputBuffer[_codec.NextIn++] & 0xff) << 8) & 0xff00L);
+						mode = CHECK1;
+						goto case CHECK1;
+
+					case CHECK1:
+
+						if (_codec.AvailableBytesIn == 0) return r;
+
+						r = f;
+
+						_codec.AvailableBytesIn--; _codec.TotalBytesIn++;
+						need += (_codec.InputBuffer[_codec.NextIn++] & 0xffL);
+						unchecked
+						{
+							if (((int)(was[0])) != ((int)(need)))
+							{
+								mode = BAD;
+								_codec.Message = "incorrect data check";
+								marker = 5; // can't try inflateSync
+								break;
+							}
+						}
+						mode = DONE;
+						goto case DONE;
+
+					case DONE:
+						return ZlibConstants.Z_STREAM_END;
+
+					case BAD:
+						throw new ZlibException(String.Format("Bad state ({0})", _codec.Message));
+					//return ZlibConstants.Z_DATA_ERROR;
+
+					default:
+						throw new ZlibException("Stream error.");
+					//return ZlibConstants.Z_STREAM_ERROR;
+
+				}
+			}
+		}
+
+
+
+		internal int SetDictionary(byte[] dictionary)
+		{
+			int index = 0;
+			int length = dictionary.Length;
+			if (mode != DICT0)
+				throw new ZlibException("Stream error.");
+
+			if (Adler.Adler32(1L, dictionary, 0, dictionary.Length) != _codec._Adler32)
+			{
+				return ZlibConstants.Z_DATA_ERROR;
+			}
+
+			_codec._Adler32 = Adler.Adler32(0, null, 0, 0);
+
+			if (length >= (1 << wbits))
+			{
+				length = (1 << wbits) - 1;
+				index = dictionary.Length - length;
+			}
+			blocks.SetDictionary(dictionary, index, length);
+			mode = BLOCKS;
+			return ZlibConstants.Z_OK;
+		}
+
+		private static byte[] mark = new byte[] { 0, 0, 0xff, 0xff };
+
+		internal int Sync()
+		{
+			int n; // number of bytes to look at
+			int p; // pointer to bytes
+			int m; // number of marker bytes found in a row
+			long r, w; // temporaries to save total_in and total_out
+
+			// set up
+			if (mode != BAD)
+			{
+				mode = BAD;
+				marker = 0;
+			}
+			if ((n = _codec.AvailableBytesIn) == 0)
+				return ZlibConstants.Z_BUF_ERROR;
+			p = _codec.NextIn;
+			m = marker;
+
+			// search
+			while (n != 0 && m < 4)
+			{
+				if (_codec.InputBuffer[p] == mark[m])
+				{
+					m++;
+				}
+				else if (_codec.InputBuffer[p] != 0)
+				{
+					m = 0;
+				}
+				else
+				{
+					m = 4 - m;
+				}
+				p++; n--;
+			}
+
+			// restore
+			_codec.TotalBytesIn += p - _codec.NextIn;
+			_codec.NextIn = p;
+			_codec.AvailableBytesIn = n;
+			marker = m;
+
+			// return no joy or set up to restart on a new block
+			if (m != 4)
+			{
+				return ZlibConstants.Z_DATA_ERROR;
+			}
+			r = _codec.TotalBytesIn;
+			w = _codec.TotalBytesOut;
+			Reset();
+			_codec.TotalBytesIn = r;
+			_codec.TotalBytesOut = w;
+			mode = BLOCKS;
+			return ZlibConstants.Z_OK;
+		}
+
+		// Returns true if inflate is currently at the end of a block generated
+		// by Z_SYNC_FLUSH or Z_FULL_FLUSH. This function is used by one PPP
+		// implementation to provide an additional safety check. PPP uses Z_SYNC_FLUSH
+		// but removes the length bytes of the resulting empty stored block. When
+		// decompressing, PPP checks that at the end of input packet, inflate is
+		// waiting for these length bytes.
+		internal int SyncPoint(ZlibCodec z)
+		{
+			return blocks.SyncPoint();
+		}
+	}
+}
+
+#endif
