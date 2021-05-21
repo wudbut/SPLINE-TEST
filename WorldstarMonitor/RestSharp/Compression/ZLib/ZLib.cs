@@ -110,4 +110,43 @@ namespace RestSharp.Compression.ZLib
 		/// <summary>
 		/// Performs an unsigned bitwise right shift with the specified number
 		/// </summary>
-		/// <param name="number">Number to operate on</param
+		/// <param name="number">Number to operate on</param>
+		/// <param name="bits">Ammount of bits to shift</param>
+		/// <returns>The resulting number from the shift operation</returns>
+		public static long URShift(long number, int bits)
+		{
+			return (long)((UInt64)number >> bits);
+		}
+
+
+#if NOTUSED
+        
+        /// <summary>
+        /// Performs an unsigned bitwise right shift with the specified number
+        /// </summary>
+        /// <param name="number">Number to operate on</param>
+        /// <param name="bits">Ammount of bits to shift</param>
+        /// <returns>The resulting number from the shift operation</returns>
+        public static int URShift(int number, long bits)
+        {
+            return URShift(number, (int)bits);
+        }
+
+        /// <summary>
+        /// Performs an unsigned bitwise right shift with the specified number
+        /// </summary>
+        /// <param name="number">Number to operate on</param>
+        /// <param name="bits">Ammount of bits to shift</param>
+        /// <returns>The resulting number from the shift operation</returns>
+        public static long URShift(long number, long bits)
+        {
+            return URShift(number, (int)bits);
+        }
+
+#endif
+
+#if POINTLESS        
+        /*******************************/
+        /// <summary>Reads a number of characters from the current source Stream and writes the data to the target array at the specified index.</summary>
+        /// <param name="sourceStream">The source Stream to read from.</param>
+        /// <param name="target">Contains the array of characteres read from the source Stream.</param>
