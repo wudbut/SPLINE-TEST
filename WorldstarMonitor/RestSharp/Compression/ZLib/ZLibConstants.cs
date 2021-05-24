@@ -49,4 +49,57 @@
 // LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
 // OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
 // LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
-// NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTW
+// NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+// EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// 
+// -----------------------------------------------------------------------
+//
+// This program is based on zlib-1.1.3; credit to authors
+// Jean-loup Gailly(jloup@gzip.org) and Mark Adler(madler@alumni.caltech.edu)
+// and contributors of zlib.
+//
+// -----------------------------------------------------------------------
+
+#if WINDOWS_PHONE
+
+using System;
+
+namespace RestSharp.Compression.ZLib
+{
+	/// <summary>
+	/// A bunch of constants used in the Zlib interface.
+	/// </summary>
+	internal static class ZlibConstants
+	{
+		/// <summary>
+		/// The maximum number of window bits for the Deflate algorithm.
+		/// </summary>
+		public const int WindowBitsMax = 15; // 32K LZ77 window
+
+		/// <summary>
+		/// The default number of window bits for the Deflate algorithm.
+		/// </summary>
+		public const int WindowBitsDefault = WindowBitsMax;
+
+		/// <summary>
+		/// indicates everything is A-OK
+		/// </summary>
+		public const int Z_OK = 0;
+
+		/// <summary>
+		/// Indicates that the last operation reached the end of the stream.
+		/// </summary>
+		public const int Z_STREAM_END = 1;
+
+		/// <summary>
+		/// The operation ended in need of a dictionary. 
+		/// </summary>
+		public const int Z_NEED_DICT = 2;
+
+		/// <summary>
+		/// There was an error with the stream - not enough data, not open and readable, etc.
+		/// </summary>
+		public const int Z_STREAM_ERROR = -2;
+
+		/// <summary>
+		/// There was an error with the data - not enough data, bad data, etc.
