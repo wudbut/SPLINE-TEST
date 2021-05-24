@@ -281,4 +281,15 @@ namespace RestSharp.Compression.ZLib
 
 		/*
 		private java.util.zip.Adler32 adler=new java.util.zip.Adler32();
-		long adler32(long value, byte[] buf, in
+		long adler32(long value, byte[] buf, int index, int len){
+		if(value==1) {adler.reset();}
+		if(buf==null) {adler.reset();}
+		else{adler.update(buf, index, len);}
+		return adler.getValue();
+		}
+		*/
+	}
+
+}
+
+#endif
