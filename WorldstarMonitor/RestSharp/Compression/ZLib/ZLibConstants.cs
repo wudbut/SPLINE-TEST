@@ -103,3 +103,25 @@ namespace RestSharp.Compression.ZLib
 
 		/// <summary>
 		/// There was an error with the data - not enough data, bad data, etc.
+		/// </summary>
+		public const int Z_DATA_ERROR = -3;
+
+		/// <summary>
+		/// There was an error with the working buffer.
+		/// </summary>
+		public const int Z_BUF_ERROR = -5;
+
+		/// <summary>
+		/// The size of the working buffer used in the ZlibCodec class. Defaults to 8192 bytes.
+		/// </summary>
+		public const int WorkingBufferSizeDefault = 8192; // 8192; // 0x8000;  // 16384; // 1024;
+
+		/// <summary>
+		/// The minimum size of the working buffer used in the ZlibCodec class.  Currently it is 128 bytes.
+		/// </summary>
+		public const int WorkingBufferSizeMin = 128;
+	}
+
+}
+
+#endif
