@@ -63,3 +63,50 @@ namespace RestSharp.Compression.ZLib
 	///
 	/// <para>
 	/// This class is similar to <see cref="DeflateStream"/>, except that it adds the
+	/// RFC1950 header and trailer bytes to a compressed stream when compressing, or expects
+	/// the RFC1950 header and trailer bytes when decompressing.  It is also similar to the
+	/// <see cref="GZipStream"/>.
+	/// </para>
+	/// </remarks>
+	/// <seealso cref="DeflateStream" />
+	/// <seealso cref="GZipStream" />
+	internal class ZlibStream : System.IO.Stream
+	{
+		internal ZlibBaseStream _baseStream;
+		bool _disposed;
+
+		public ZlibStream(System.IO.Stream stream)
+		{
+			_baseStream = new ZlibBaseStream(stream, ZlibStreamFlavor.ZLIB, false);
+		}
+
+		#region Zlib properties
+
+		/// <summary>
+		/// This property sets the flush behavior on the stream.  
+		/// Sorry, though, not sure exactly how to describe all the various settings.
+		/// </summary>
+		virtual public FlushType FlushMode
+		{
+			get { return (this._baseStream._flushMode); }
+			set
+			{
+				if (_disposed) throw new ObjectDisposedException("ZlibStream");
+				this._baseStream._flushMode = value;
+			}
+		}
+
+		/// <summary>
+		/// The size of the working buffer for the compression codec. 
+		/// </summary>
+		///
+		/// <remarks>
+		/// <para>
+		/// The working buffer is used for all stream operations.  The default size is 1024 bytes.
+		/// The minimum size is 128 bytes. You may get better performance with a larger buffer.
+		/// Then again, you might not.  You would have to test it.
+		/// </para>
+		///
+		/// <para>
+		/// Set this before the first call to Read()  or Write() on the stream. If you try to set it 
+		/// afterwards, it will throw
