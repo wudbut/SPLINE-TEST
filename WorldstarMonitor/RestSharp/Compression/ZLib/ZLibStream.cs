@@ -173,4 +173,65 @@ namespace RestSharp.Compression.ZLib
 		/// <summary>
 		/// Indicates whether the stream can be read.
 		/// </summary>
-		/
+		/// <remarks>
+		/// The return value depends on whether the captive stream supports reading.
+		/// </remarks>
+		public override bool CanRead
+		{
+			get
+			{
+				if (_disposed) throw new ObjectDisposedException("ZlibStream");
+				return _baseStream._stream.CanRead;
+			}
+		}
+
+		/// <summary>
+		/// Indicates whether the stream supports Seek operations.
+		/// </summary>
+		/// <remarks>
+		/// Always returns false.
+		/// </remarks>
+		public override bool CanSeek
+		{
+			get { return false; }
+		}
+
+		/// <summary>
+		/// Indicates whether the stream can be written.
+		/// </summary>
+		/// <remarks>
+		/// The return value depends on whether the captive stream supports writing.
+		/// </remarks>
+		public override bool CanWrite
+		{
+			get
+			{
+				if (_disposed) throw new ObjectDisposedException("ZlibStream");
+				return _baseStream._stream.CanWrite;
+			}
+		}
+
+		/// <summary>
+		/// Flush the stream.
+		/// </summary>
+		public override void Flush()
+		{
+			if (_disposed) throw new ObjectDisposedException("ZlibStream");
+			_baseStream.Flush();
+		}
+
+		/// <summary>
+		/// Reading this property always throws a NotImplementedException.
+		/// </summary>
+		public override long Length
+		{
+			get { throw new NotImplementedException(); }
+		}
+
+		/// <summary>
+		/// The position of the stream pointer. 
+		/// </summary>
+		/// <remarks>
+		/// Writing this property always throws a NotImplementedException. Reading will
+		/// return the total bytes written out, if used in writing, or the total bytes 
+		/// read in, if used in reading.   The count may refer to compressed byte
