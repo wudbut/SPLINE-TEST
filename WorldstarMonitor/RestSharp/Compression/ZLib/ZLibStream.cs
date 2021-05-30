@@ -109,4 +109,68 @@ namespace RestSharp.Compression.ZLib
 		///
 		/// <para>
 		/// Set this before the first call to Read()  or Write() on the stream. If you try to set it 
-		/// afterwards, it will throw
+		/// afterwards, it will throw.
+		/// </para>
+		/// </remarks>
+		public int BufferSize
+		{
+			get
+			{
+				return this._baseStream._bufferSize;
+			}
+			set
+			{
+				if (_disposed) throw new ObjectDisposedException("ZlibStream");
+				if (this._baseStream._workingBuffer != null)
+					throw new ZlibException("The working buffer is already set.");
+				if (value < ZlibConstants.WorkingBufferSizeMin)
+					throw new ZlibException(String.Format("Don't be silly. {0} bytes?? Use a bigger buffer.", value));
+				this._baseStream._bufferSize = value;
+			}
+		}
+
+		/// <summary> Returns the total number of bytes input so far.</summary>
+		virtual public long TotalIn
+		{
+			get { return this._baseStream._z.TotalBytesIn; }
+		}
+
+		/// <summary> Returns the total number of bytes output so far.</summary>
+		virtual public long TotalOut
+		{
+			get { return this._baseStream._z.TotalBytesOut; }
+		}
+
+		#endregion
+
+		#region System.IO.Stream methods
+
+		/// <summary>
+		/// Dispose the stream.  
+		/// </summary>
+		/// <remarks>
+		/// This may or may not result in a Close() call on the captive stream. 
+		/// See the constructors that have a leaveOpen parameter for more information.
+		/// </remarks>
+		protected override void Dispose(bool disposing)
+		{
+			try
+			{
+				if (!_disposed)
+				{
+					if (disposing && (this._baseStream != null))
+						this._baseStream.Close();
+					_disposed = true;
+				}
+			}
+			finally
+			{
+				base.Dispose(disposing);
+			}
+		}
+
+
+		/// <summary>
+		/// Indicates whether the stream can be read.
+		/// </summary>
+		/
