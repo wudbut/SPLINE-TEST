@@ -234,4 +234,43 @@ namespace RestSharp.Compression.ZLib
 		/// <remarks>
 		/// Writing this property always throws a NotImplementedException. Reading will
 		/// return the total bytes written out, if used in writing, or the total bytes 
-		/// read in, if used in reading.   The count may refer to compressed byte
+		/// read in, if used in reading.   The count may refer to compressed bytes or 
+		/// uncompressed bytes, depending on how you've used the stream.
+		/// </remarks>
+		public override long Position
+		{
+			get
+			{
+				if (this._baseStream._streamMode == ZlibBaseStream.StreamMode.Writer)
+					return this._baseStream._z.TotalBytesOut;
+				if (this._baseStream._streamMode == ZlibBaseStream.StreamMode.Reader)
+					return this._baseStream._z.TotalBytesIn;
+				return 0;
+			}
+
+			set { throw new NotImplementedException(); }
+		}
+
+		/// <summary>
+		/// Read data from the stream. 
+		/// </summary>
+		///
+		/// <remarks>
+		///
+		/// <para>
+		/// If you wish to use the ZlibStream to compress data while reading, you can create a
+		/// ZlibStream with CompressionMode.Compress, providing an uncompressed data stream.  Then
+		/// call Read() on that ZlibStream, and the data read will be compressed.  If you wish to
+		/// use the ZlibStream to decompress data while reading, you can create a ZlibStream with
+		/// CompressionMode.Decompress, providing a readable compressed data stream.  Then call
+		/// Read() on that ZlibStream, and the data will be decompressed as it is read.
+		/// </para>
+		///
+		/// <para>
+		/// A ZlibStream can be used for Read() or Write(), but not both. 
+		/// </para>
+		/// </remarks>
+		/// <param name="buffer">The buffer into which the read data should be placed.</param>
+		/// <param name="offset">the offset within that data array to put the first byte read.</param>
+		/// <param name="count">the number of bytes to read.</param>
+		public override int Read(byte[] buffer, i
