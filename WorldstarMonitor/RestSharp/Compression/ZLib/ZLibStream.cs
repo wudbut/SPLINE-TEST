@@ -273,4 +273,47 @@ namespace RestSharp.Compression.ZLib
 		/// <param name="buffer">The buffer into which the read data should be placed.</param>
 		/// <param name="offset">the offset within that data array to put the first byte read.</param>
 		/// <param name="count">the number of bytes to read.</param>
-		public override int Read(byte[] buffer, i
+		public override int Read(byte[] buffer, int offset, int count)
+		{
+			if (_disposed) throw new ObjectDisposedException("ZlibStream");
+			return _baseStream.Read(buffer, offset, count);
+		}
+
+		/// <summary>
+		/// Calling this method always throws a NotImplementedException.
+		/// </summary>
+		public override long Seek(long offset, System.IO.SeekOrigin origin)
+		{
+			throw new NotImplementedException();
+		}
+
+		/// <summary>
+		/// Calling this method always throws a NotImplementedException.
+		/// </summary>
+		public override void SetLength(long value)
+		{
+			throw new NotImplementedException();
+		}
+
+		/// <summary>
+		/// Write data to the stream. 
+		/// </summary>
+		///
+		/// <remarks>
+		///
+		/// <para>
+		/// If you wish to use the ZlibStream to compress data while writing, you can create a
+		/// ZlibStream with CompressionMode.Compress, and a writable output stream.  Then call
+		/// Write() on that ZlibStream, providing uncompressed data as input.  The data sent to
+		/// the output stream will be the compressed form of the data written.  If you wish to use
+		/// the ZlibStream to decompress data while writing, you can create a ZlibStream with
+		/// CompressionMode.Decompress, and a writable output stream.  Then call Write() on that
+		/// stream, providing previously compressed data. The data sent to the output stream will
+		/// be the decompressed form of the data written.
+		/// </para>
+		///
+		/// <para>
+		/// A ZlibStream can be used for Read() or Write(), but not both. 
+		/// </para>
+		/// </remarks>
+		/// <param name="buffer">The buffer holding data to write to the stream
