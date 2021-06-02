@@ -316,4 +316,52 @@ namespace RestSharp.Compression.ZLib
 		/// A ZlibStream can be used for Read() or Write(), but not both. 
 		/// </para>
 		/// </remarks>
-		/// <param name="buffer">The buffer holding data to write to the stream
+		/// <param name="buffer">The buffer holding data to write to the stream.</param>
+		/// <param name="offset">the offset within that data array to find the first byte to write.</param>
+		/// <param name="count">the number of bytes to write.</param>
+		public override void Write(byte[] buffer, int offset, int count)
+		{
+			if (_disposed) throw new ObjectDisposedException("ZlibStream");
+			_baseStream.Write(buffer, offset, count);
+		}
+		#endregion
+
+
+		/// <summary>
+		/// Uncompress a byte array into a single string.
+		/// </summary>
+		/// <seealso cref="ZlibStream.CompressString(String)"/>
+		/// <param name="compressed">
+		/// A buffer containing ZLIB-compressed data.  
+		/// </param>
+		public static String UncompressString(byte[] compressed)
+		{
+			// workitem 8460
+			byte[] working = new byte[1024];
+			var encoding = System.Text.Encoding.UTF8;
+			using (var output = new MemoryStream())
+			{
+				using (var input = new MemoryStream(compressed))
+				{
+					using (Stream decompressor = new ZlibStream(input))
+					{
+						int n;
+						while ((n = decompressor.Read(working, 0, working.Length)) != 0)
+						{
+							output.Write(working, 0, n);
+						}
+					}
+					// reset to allow read from start
+					output.Seek(0, SeekOrigin.Begin);
+					var sr = new StreamReader(output, encoding);
+					return sr.ReadToEnd();
+				}
+			}
+		}
+
+		/// <summary>
+		/// Uncompress a byte array into a byte array.
+		/// </summary>
+		/// <seealso cref="ZlibStream.CompressBuffer(byte[])"/>
+		/// <seealso cref="ZlibStream.UncompressString(byte[])"/>
+		/// <param name="compressed"
