@@ -415,4 +415,73 @@ namespace RestSharp.Compression.ZLib
 
 		internal int Crc32 { get { if (crc == null) return 0; return crc.Crc32Result; } }
 
-		public ZlibBaseStream(Syst
+		public ZlibBaseStream(System.IO.Stream stream, ZlibStreamFlavor flavor, bool leaveOpen)
+			: base()
+		{
+			this._flushMode = FlushType.None;
+			//this._workingBuffer = new byte[WORKING_BUFFER_SIZE_DEFAULT];
+			this._stream = stream;
+			this._leaveOpen = leaveOpen;
+			this._flavor = flavor;
+			// workitem 7159
+			if (flavor == ZlibStreamFlavor.GZIP)
+			{
+				crc = new CRC32();
+			}
+		}
+
+		private ZlibCodec z
+		{
+			get
+			{
+				if (_z == null)
+				{
+					bool wantRfc1950Header = (this._flavor == ZlibStreamFlavor.ZLIB);
+					_z = new ZlibCodec();
+					_z.InitializeInflate(wantRfc1950Header);
+				}
+				return _z;
+			}
+		}
+
+
+
+		private byte[] workingBuffer
+		{
+			get
+			{
+				if (_workingBuffer == null)
+					_workingBuffer = new byte[_bufferSize];
+				return _workingBuffer;
+			}
+		}
+
+
+		// workitem 7813 - totally unnecessary
+		//         public override void WriteByte(byte b)
+		//         {
+		//             _buf1[0] = (byte)b;
+		//             // workitem 7159
+		//             if (crc != null)
+		//                 crc.SlurpBlock(_buf1, 0, 1);
+		//             Write(_buf1, 0, 1);
+		//         }
+
+
+
+		public override void Write(System.Byte[] buffer, int offset, int count)
+		{
+			// workitem 7159
+			// calculate the CRC on the unccompressed data  (before writing)
+			if (crc != null)
+				crc.SlurpBlock(buffer, offset, count);
+
+			if (_streamMode == StreamMode.Undefined)
+				_streamMode = StreamMode.Writer;
+			else if (_streamMode != StreamMode.Writer)
+				throw new ZlibException("Cannot Write after Reading.");
+
+			if (count == 0)
+				return;
+
+			// first reference of z property will initiali
