@@ -484,4 +484,56 @@ namespace RestSharp.Compression.ZLib
 			if (count == 0)
 				return;
 
-			// first reference of z property will initiali
+			// first reference of z property will initialize the private var _z
+			z.InputBuffer = buffer;
+			_z.NextIn = offset;
+			_z.AvailableBytesIn = count;
+			bool done = false;
+			do
+			{
+				_z.OutputBuffer = workingBuffer;
+				_z.NextOut = 0;
+				_z.AvailableBytesOut = _workingBuffer.Length;
+				//int rc = (_wantCompress)
+				//    ? _z.Deflate(_flushMode)
+				//    : _z.Inflate(_flushMode);
+				int rc = _z.Inflate(_flushMode);
+				if (rc != ZlibConstants.Z_OK && rc != ZlibConstants.Z_STREAM_END)
+					throw new ZlibException("inflating: " + _z.Message);
+
+				_stream.Write(_workingBuffer, 0, _workingBuffer.Length - _z.AvailableBytesOut);
+
+				done = _z.AvailableBytesIn == 0 && _z.AvailableBytesOut != 0;
+
+				// If GZIP and de-compress, we're done when 8 bytes remain.
+				if (_flavor == ZlibStreamFlavor.GZIP)
+					done = (_z.AvailableBytesIn == 8 && _z.AvailableBytesOut != 0);
+
+			}
+			while (!done);
+		}
+
+
+
+		private void finish()
+		{
+			if (_z == null) return;
+
+			if (_streamMode == StreamMode.Writer)
+			{
+				bool done = false;
+				do
+				{
+					_z.OutputBuffer = workingBuffer;
+					_z.NextOut = 0;
+					_z.AvailableBytesOut = _workingBuffer.Length;
+					//int rc = (_wantCompress)
+					//    ? _z.Deflate(FlushType.Finish)
+					//    : _z.Inflate(FlushType.Finish);
+					int rc = _z.Inflate(FlushType.Finish);
+					if (rc != ZlibConstants.Z_STREAM_END && rc != ZlibConstants.Z_OK)
+						throw new ZlibException("inflating: " + _z.Message);
+
+					if (_workingBuffer.Length - _z.AvailableBytesOut > 0)
+					{
+						_st
