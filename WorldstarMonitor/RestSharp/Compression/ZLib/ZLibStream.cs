@@ -364,4 +364,55 @@ namespace RestSharp.Compression.ZLib
 		/// </summary>
 		/// <seealso cref="ZlibStream.CompressBuffer(byte[])"/>
 		/// <seealso cref="ZlibStream.UncompressString(byte[])"/>
-		/// <param name="compressed"
+		/// <param name="compressed">
+		/// A buffer containing ZLIB-compressed data.  
+		/// </param>
+		public static byte[] UncompressBuffer(byte[] compressed)
+		{
+			// workitem 8460
+			byte[] working = new byte[1024];
+			using (var output = new MemoryStream())
+			{
+				using (var input = new MemoryStream(compressed))
+				{
+					using (Stream decompressor = new ZlibStream(input))
+					{
+						int n;
+						while ((n = decompressor.Read(working, 0, working.Length)) != 0)
+						{
+							output.Write(working, 0, n);
+						}
+					}
+					return output.ToArray();
+				}
+			}
+		}
+	}
+
+
+	internal enum ZlibStreamFlavor { ZLIB = 1950, DEFLATE = 1951, GZIP = 1952 }
+
+	internal class ZlibBaseStream : System.IO.Stream
+	{
+		protected internal ZlibCodec _z = null; // deferred init... new ZlibCodec();
+
+		protected internal StreamMode _streamMode = StreamMode.Undefined;
+		protected internal FlushType _flushMode;
+		protected internal ZlibStreamFlavor _flavor;
+		protected internal bool _leaveOpen;
+		protected internal byte[] _workingBuffer;
+		protected internal int _bufferSize = ZlibConstants.WorkingBufferSizeDefault;
+		protected internal byte[] _buf1 = new byte[1];
+
+		protected internal System.IO.Stream _stream;
+
+		// workitem 7159
+		CRC32 crc;
+		protected internal string _GzipFileName;
+		protected internal string _GzipComment;
+		protected internal DateTime _GzipMtime;
+		protected internal int _gzipHeaderByteCount;
+
+		internal int Crc32 { get { if (crc == null) return 0; return crc.Crc32Result; } }
+
+		public ZlibBaseStream(Syst
