@@ -536,4 +536,47 @@ namespace RestSharp.Compression.ZLib
 
 					if (_workingBuffer.Length - _z.AvailableBytesOut > 0)
 					{
-						_st
+						_stream.Write(_workingBuffer, 0, _workingBuffer.Length - _z.AvailableBytesOut);
+					}
+
+					done = _z.AvailableBytesIn == 0 && _z.AvailableBytesOut != 0;
+					// If GZIP and de-compress, we're done when 8 bytes remain.
+					if (_flavor == ZlibStreamFlavor.GZIP)
+						done = (_z.AvailableBytesIn == 8 && _z.AvailableBytesOut != 0);
+
+				}
+				while (!done);
+
+				Flush();
+
+				// workitem 7159
+				if (_flavor == ZlibStreamFlavor.GZIP)
+				{
+					//Console.WriteLine("GZipStream: Last write");
+					throw new ZlibException("Writing with decompression is not supported.");
+				}
+			}
+			// workitem 7159
+			else if (_streamMode == StreamMode.Reader)
+			{
+				if (_flavor == ZlibStreamFlavor.GZIP)
+				{
+					// workitem 8501: handle edge case (decompress empty stream)
+					if (_z.TotalBytesOut == 0L)
+						return;
+
+					// Read and potentially verify the GZIP trailer: CRC32 and  size mod 2^32
+					byte[] trailer = new byte[8];
+
+					if (_z.AvailableBytesIn != 8)
+						throw new ZlibException(String.Format("Protocol error. AvailableBytesIn={0}, expected 8",
+							 _z.AvailableBytesIn));
+
+					Array.Copy(_z.InputBuffer, _z.NextIn, trailer, 0, trailer.Length);
+
+					Int32 crc32_expected = BitConverter.ToInt32(trailer, 0);
+					int crc32_actual = crc.Crc32Result;
+					Int32 isize_expected = BitConverter.ToInt32(trailer, 4);
+					Int32 isize_actual = (Int32)(_z.TotalBytesOut & 0x00000000FFFFFFFF);
+
+					// Console.WriteLine("GZipStream: slurped trailer  cr
