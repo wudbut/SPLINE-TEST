@@ -709,4 +709,48 @@ namespace RestSharp.Compression.ZLib
 				n = _stream.Read(extra, 0, extra.Length);
 				if (n != extraLength)
 					throw new ZlibException("Unexpected end-of-file reading GZIP header.");
-				totalBytesRead 
+				totalBytesRead += n;
+			}
+			if ((header[3] & 0x08) == 0x08)
+				_GzipFileName = ReadZeroTerminatedString();
+			if ((header[3] & 0x10) == 0x010)
+				_GzipComment = ReadZeroTerminatedString();
+			if ((header[3] & 0x02) == 0x02)
+				Read(_buf1, 0, 1); // CRC16, ignore
+
+			return totalBytesRead;
+		}
+
+
+
+		public override System.Int32 Read(System.Byte[] buffer, System.Int32 offset, System.Int32 count)
+		{
+			// According to MS documentation, any implementation of the IO.Stream.Read function must:
+			// (a) throw an exception if offset & count reference an invalid part of the buffer,
+			//     or if count < 0, or if buffer is null
+			// (b) return 0 only upon EOF, or if count = 0
+			// (c) if not EOF, then return at least 1 byte, up to <count> bytes
+
+			if (_streamMode == StreamMode.Undefined)
+			{
+				if (!this._stream.CanRead) throw new ZlibException("The stream is not readable.");
+				// for the first read, set up some controls.
+				_streamMode = StreamMode.Reader;
+				// (The first reference to _z goes through the private accessor which
+				// may initialize it.)
+				z.AvailableBytesIn = 0;
+				if (_flavor == ZlibStreamFlavor.GZIP)
+				{
+					_gzipHeaderByteCount = _ReadAndValidateGzipHeader();
+					// workitem 8501: handle edge case (decompress empty stream)
+					if (_gzipHeaderByteCount == 0)
+						return 0;
+				}
+			}
+
+			if (_streamMode != StreamMode.Reader)
+				throw new ZlibException("Cannot Read after Writing.");
+
+			if (count == 0) return 0;
+			if (buffer == null) throw new ArgumentNullException("buffer");
+			if (count < 0) throw new ArgumentOutOfRan
