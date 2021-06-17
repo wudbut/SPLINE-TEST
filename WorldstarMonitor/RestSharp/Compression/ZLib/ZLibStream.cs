@@ -753,4 +753,43 @@ namespace RestSharp.Compression.ZLib
 
 			if (count == 0) return 0;
 			if (buffer == null) throw new ArgumentNullException("buffer");
-			if (count < 0) throw new ArgumentOutOfRan
+			if (count < 0) throw new ArgumentOutOfRangeException("count");
+			if (offset < buffer.GetLowerBound(0)) throw new ArgumentOutOfRangeException("offset");
+			if ((offset + count) > buffer.GetLength(0)) throw new ArgumentOutOfRangeException("count");
+
+			int rc = 0;
+
+			// set up the output of the deflate/inflate codec:
+			_z.OutputBuffer = buffer;
+			_z.NextOut = offset;
+			_z.AvailableBytesOut = count;
+
+			// This is necessary in case _workingBuffer has been resized. (new byte[])
+			// (The first reference to _workingBuffer goes through the private accessor which
+			// may initialize it.)
+			_z.InputBuffer = workingBuffer;
+
+			do
+			{
+				// need data in _workingBuffer in order to deflate/inflate.  Here, we check if we have any.
+				if ((_z.AvailableBytesIn == 0) && (!nomoreinput))
+				{
+					// No data available, so try to Read data from the captive stream.
+					_z.NextIn = 0;
+					_z.AvailableBytesIn = _stream.Read(_workingBuffer, 0, _workingBuffer.Length);
+					if (_z.AvailableBytesIn == 0)
+						nomoreinput = true;
+
+				}
+				// we have data in InputBuffer; now compress or decompress as appropriate
+				//rc = (_wantCompress)
+				//    ? _z.Deflate(_flushMode)
+				//    : _z.Inflate(_flushMode);
+				rc = _z.Inflate(_flushMode);
+				if (nomoreinput && (rc == ZlibConstants.Z_BUF_ERROR))
+					return 0;
+
+				if (rc != ZlibConstants.Z_OK && rc != ZlibConstants.Z_STREAM_END)
+					throw new ZlibException(String.Format("inflating:  rc={0}  msg={1}", rc, _z.Message));
+
+				if ((nomoreinput || rc == ZlibConstants.Z_STREAM_END) && (
