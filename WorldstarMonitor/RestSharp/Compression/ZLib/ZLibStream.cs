@@ -650,3 +650,63 @@ namespace RestSharp.Compression.ZLib
             return (_buf1[0] & 0xFF);
         }
 #endif
+
+		private bool nomoreinput = false;
+
+
+
+		private string ReadZeroTerminatedString()
+		{
+			var list = new System.Collections.Generic.List<byte>();
+			bool done = false;
+			do
+			{
+				// workitem 7740
+				int n = _stream.Read(_buf1, 0, 1);
+				if (n != 1)
+					throw new ZlibException("Unexpected EOF reading GZIP header.");
+				else
+				{
+					if (_buf1[0] == 0)
+						done = true;
+					else
+						list.Add(_buf1[0]);
+				}
+			} while (!done);
+			byte[] a = list.ToArray();
+			return GZipStream.iso8859dash1.GetString(a, 0, a.Length);
+		}
+
+
+		private int _ReadAndValidateGzipHeader()
+		{
+			int totalBytesRead = 0;
+			// read the header on the first read
+			byte[] header = new byte[10];
+			int n = _stream.Read(header, 0, header.Length);
+
+			// workitem 8501: handle edge case (decompress empty stream)
+			if (n == 0)
+				return 0;
+
+			if (n != 10)
+				throw new ZlibException("Not a valid GZIP stream.");
+
+			if (header[0] != 0x1F || header[1] != 0x8B || header[2] != 8)
+				throw new ZlibException("Bad GZIP header.");
+
+			Int32 timet = BitConverter.ToInt32(header, 4);
+			_GzipMtime = GZipStream._unixEpoch.AddSeconds(timet);
+			totalBytesRead += n;
+			if ((header[3] & 0x04) == 0x04)
+			{
+				// read and discard extra field
+				n = _stream.Read(header, 0, 2); // 2-byte length field
+				totalBytesRead += n;
+
+				Int16 extraLength = (Int16)(header[0] + header[1] * 256);
+				byte[] extra = new byte[extraLength];
+				n = _stream.Read(extra, 0, extra.Length);
+				if (n != extraLength)
+					throw new ZlibException("Unexpected end-of-file reading GZIP header.");
+				totalBytesRead 
