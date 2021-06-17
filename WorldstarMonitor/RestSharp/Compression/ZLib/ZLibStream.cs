@@ -579,4 +579,74 @@ namespace RestSharp.Compression.ZLib
 					Int32 isize_expected = BitConverter.ToInt32(trailer, 4);
 					Int32 isize_actual = (Int32)(_z.TotalBytesOut & 0x00000000FFFFFFFF);
 
-					// Console.WriteLine("GZipStream: slurped trailer  cr
+					// Console.WriteLine("GZipStream: slurped trailer  crc(0x{0:X8}) isize({1})", crc32_expected, isize_expected);
+					// Console.WriteLine("GZipStream: calc'd data      crc(0x{0:X8}) isize({1})", crc32_actual, isize_actual);
+
+					if (crc32_actual != crc32_expected)
+						throw new ZlibException(String.Format("Bad CRC32 in GZIP stream. (actual({0:X8})!=expected({1:X8}))", crc32_actual, crc32_expected));
+
+					if (isize_actual != isize_expected)
+						throw new ZlibException(String.Format("Bad size in GZIP stream. (actual({0})!=expected({1}))", isize_actual, isize_expected));
+				}
+			}
+		}
+
+
+		private void end()
+		{
+			if (z == null)
+				return;
+			//if (_wantCompress)
+			//{
+			//    _z.EndDeflate();
+			//}
+			//else
+			{
+				_z.EndInflate();
+			}
+			_z = null;
+		}
+
+
+		public override void Close()
+		{
+			if (_stream == null) return;
+			try
+			{
+				finish();
+			}
+			finally
+			{
+				end();
+				if (!_leaveOpen) _stream.Close();
+				_stream = null;
+			}
+		}
+
+		public override void Flush()
+		{
+			_stream.Flush();
+		}
+
+		public override System.Int64 Seek(System.Int64 offset, System.IO.SeekOrigin origin)
+		{
+			throw new NotImplementedException();
+			//_outStream.Seek(offset, origin);
+		}
+		public override void SetLength(System.Int64 value)
+		{
+			_stream.SetLength(value);
+		}
+
+
+#if NOT
+        public int Read()
+        {
+            if (Read(_buf1, 0, 1) == 0)
+                return 0;
+            // calculate CRC after reading
+            if (crc!=null)
+                crc.SlurpBlock(_buf1,0,1);
+            return (_buf1[0] & 0xFF);
+        }
+#endif
