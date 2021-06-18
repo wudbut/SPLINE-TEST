@@ -866,4 +866,10 @@ namespace RestSharp.Compression.ZLib
 		{
 			Writer,
 			Reader,
-			Undefined
+			Undefined,
+		}
+	}
+
+}
+
+#endif
