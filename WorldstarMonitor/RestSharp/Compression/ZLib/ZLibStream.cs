@@ -792,4 +792,78 @@ namespace RestSharp.Compression.ZLib
 				if (rc != ZlibConstants.Z_OK && rc != ZlibConstants.Z_STREAM_END)
 					throw new ZlibException(String.Format("inflating:  rc={0}  msg={1}", rc, _z.Message));
 
-				if ((nomoreinput || rc == ZlibConstants.Z_STREAM_END) && (
+				if ((nomoreinput || rc == ZlibConstants.Z_STREAM_END) && (_z.AvailableBytesOut == count))
+					break; // nothing more to read
+			}
+			//while (_z.AvailableBytesOut == count && rc == ZlibConstants.Z_OK);
+			while (_z.AvailableBytesOut > 0 && !nomoreinput && rc == ZlibConstants.Z_OK);
+
+
+			// workitem 8557
+			// is there more room in output? 
+			if (_z.AvailableBytesOut > 0)
+			{
+				if (rc == ZlibConstants.Z_OK && _z.AvailableBytesIn == 0)
+				{
+					// deferred
+				}
+
+				// are we completely done reading?
+				if (nomoreinput)
+				{
+					// and in compression?
+					/*if (_wantCompress)
+					{
+						// no more input data available; therefore we flush to
+						// try to complete the read
+						rc = _z.Deflate(FlushType.Finish);
+
+						if (rc != ZlibConstants.Z_OK && rc != ZlibConstants.Z_STREAM_END)
+							throw new ZlibException(String.Format("Deflating:  rc={0}  msg={1}", rc, _z.Message));
+					}*/
+				}
+			}
+
+
+			rc = (count - _z.AvailableBytesOut);
+
+			// calculate CRC after reading
+			if (crc != null)
+				crc.SlurpBlock(buffer, offset, rc);
+
+			return rc;
+		}
+
+
+
+		public override System.Boolean CanRead
+		{
+			get { return this._stream.CanRead; }
+		}
+
+		public override System.Boolean CanSeek
+		{
+			get { return this._stream.CanSeek; }
+		}
+
+		public override System.Boolean CanWrite
+		{
+			get { return this._stream.CanWrite; }
+		}
+
+		public override System.Int64 Length
+		{
+			get { return _stream.Length; }
+		}
+
+		public override long Position
+		{
+			get { throw new NotImplementedException(); }
+			set { throw new NotImplementedException(); }
+		}
+
+		internal enum StreamMode
+		{
+			Writer,
+			Reader,
+			Undefined
