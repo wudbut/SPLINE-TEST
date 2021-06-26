@@ -113,4 +113,16 @@ namespace RestSharp.Extensions
 				encoding = Encoding.BigEndianUnicode; // utf-16be
 			}
 
-			using (MemoryStream stream = 
+			using (MemoryStream stream = new MemoryStream())
+			{
+				stream.Write(buffer, 0, buffer.Length);
+				stream.Seek(0, SeekOrigin.Begin);
+				using (StreamReader reader = new StreamReader(stream, encoding))
+				{
+					return reader.ReadToEnd();
+				}
+			}
+#endif
+		}
+	}
+}
