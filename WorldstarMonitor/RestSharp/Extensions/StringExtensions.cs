@@ -58,4 +58,66 @@ namespace RestSharp.Extensions
 			if (input.Length <= maxLength)
 				return Uri.EscapeDataString(input);
 
-			StringBuilder sb = new StringBuilder(input.Length
+			StringBuilder sb = new StringBuilder(input.Length * 2);
+			int index = 0;
+			while (index < input.Length)
+			{
+				int length = Math.Min(input.Length - index, maxLength);
+				string subString = input.Substring(index, length);
+				sb.Append(Uri.EscapeDataString(subString));
+				index += subString.Length;
+			}
+
+			return sb.ToString();
+		}
+
+#if !PocketPC
+		public static string HtmlDecode(this string input)
+		{
+			return HttpUtility.HtmlDecode(input);
+		}
+
+		public static string HtmlEncode(this string input)
+		{
+			return HttpUtility.HtmlEncode(input);
+		}
+#endif
+
+#if FRAMEWORK
+		public static string HtmlAttributeEncode(this string input)
+		{
+			return HttpUtility.HtmlAttributeEncode(input);
+		}
+#endif
+
+		/// <summary>
+		/// Check that a string is not null or empty
+		/// </summary>
+		/// <param name="input">String to check</param>
+		/// <returns>bool</returns>
+		public static bool HasValue(this string input)
+		{
+			return !string.IsNullOrEmpty(input);
+		}
+
+		/// <summary>
+		/// Remove underscores from a string
+		/// </summary>
+		/// <param name="input">String to process</param>
+		/// <returns>string</returns>
+		public static string RemoveUnderscoresAndDashes(this string input)
+		{
+			return input.Replace("_", "").Replace("-", ""); // avoiding regex
+		}
+
+		/// <summary>
+		/// Parses most common JSON date formats
+		/// </summary>
+		/// <param name="input">JSON value to parse</param>
+		/// <returns>DateTime</returns>
+		public static DateTime ParseJsonDate(this string input, CultureInfo culture)
+		{
+			input = input.Replace("\n", "");
+			input = input.Replace("\r", "");
+
+			inpu
