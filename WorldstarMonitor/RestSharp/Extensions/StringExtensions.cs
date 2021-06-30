@@ -120,4 +120,62 @@ namespace RestSharp.Extensions
 			input = input.Replace("\n", "");
 			input = input.Replace("\r", "");
 
-			inpu
+			input = input.RemoveSurroundingQuotes();
+
+			long? unix = null;
+            try {
+                unix = Int64.Parse(input);
+            } catch (Exception) { };
+			if (unix.HasValue)
+			{
+				var epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+				return epoch.AddSeconds(unix.Value);
+			}
+
+			if (input.Contains("/Date("))
+			{
+				return ExtractDate(input, @"\\?/Date\((-?\d+)(-|\+)?([0-9]{4})?\)\\?/", culture);
+			}
+
+			if (input.Contains("new Date("))
+			{
+				input = input.Replace(" ", "");
+				// because all whitespace is removed, match against newDate( instead of new Date(
+				return ExtractDate(input, @"newDate\((-?\d+)*\)", culture);
+			}
+
+			return ParseFormattedDate(input, culture);
+		}
+
+		/// <summary>
+		/// Remove leading and trailing " from a string
+		/// </summary>
+		/// <param name="input">String to parse</param>
+		/// <returns>String</returns>
+		public static string RemoveSurroundingQuotes(this string input)
+		{
+			if (input.StartsWith("\"") && input.EndsWith("\""))
+			{
+				// remove leading/trailing quotes
+				input = input.Substring(1, input.Length - 2);
+			}
+			return input;
+		}
+
+		private static DateTime ParseFormattedDate(string input, CultureInfo culture)
+		{
+			var formats = new[] {
+				"u", 
+				"s", 
+				"yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'", 
+				"yyyy-MM-ddTHH:mm:ssZ", 
+				"yyyy-MM-dd HH:mm:ssZ", 
+				"yyyy-MM-ddTHH:mm:ss", 
+				"yyyy-MM-ddTHH:mm:sszzzzzz",
+				"M/d/yyyy h:mm:ss tt" // default format for invariant culture
+			};
+
+#if PocketPC
+			foreach (string format in formats) {
+				try {
+					return Da
