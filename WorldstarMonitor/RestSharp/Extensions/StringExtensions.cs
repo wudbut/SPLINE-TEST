@@ -178,4 +178,63 @@ namespace RestSharp.Extensions
 #if PocketPC
 			foreach (string format in formats) {
 				try {
-					return Da
+					return DateTime.ParseExact(input, format, culture);
+				} catch (Exception) {
+				}
+			}
+			try {
+				return DateTime.Parse(input, culture);
+			} catch (Exception) {
+			}
+#else
+			DateTime date;
+			if (DateTime.TryParseExact(input, formats, culture, DateTimeStyles.None, out date))
+			{
+				return date;
+			}
+			if (DateTime.TryParse(input, culture, DateTimeStyles.None, out date))
+			{
+				return date;
+			}
+#endif
+
+			return default(DateTime);
+		}
+
+		private static DateTime ExtractDate(string input, string pattern, CultureInfo culture)
+		{
+			DateTime dt = DateTime.MinValue;
+			var regex = new Regex(pattern);
+			if (regex.IsMatch(input))
+			{
+				var matches = regex.Matches(input);
+				var match = matches[0];
+				var ms = Convert.ToInt64(match.Groups[1].Value);
+				var epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+				dt = epoch.AddMilliseconds(ms);
+
+				// adjust if time zone modifier present
+				if (match.Groups.Count > 2 && !String.IsNullOrEmpty(match.Groups[3].Value))
+				{
+					var mod = DateTime.ParseExact(match.Groups[3].Value, "HHmm", culture);
+					if (match.Groups[2].Value == "+")
+					{
+						dt = dt.Add(mod.TimeOfDay);
+					}
+					else
+					{
+						dt = dt.Subtract(mod.TimeOfDay);
+					}
+				}
+
+			}
+			return dt;
+		}
+
+		/// <summary>
+		/// Checks a string to see if it matches a regex
+		/// </summary>
+		/// <param name="input">String to check</param>
+		/// <param name="pattern">Pattern to match</param>
+		/// <returns>bool</returns>
+		public static bool Matches(this string input, string pattern)
