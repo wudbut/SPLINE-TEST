@@ -238,3 +238,51 @@ namespace RestSharp.Extensions
 		/// <param name="pattern">Pattern to match</param>
 		/// <returns>bool</returns>
 		public static bool Matches(this string input, string pattern)
+		{
+			return Regex.IsMatch(input, pattern);
+		}
+
+		/// <summary>
+		/// Converts a string to pascal case
+		/// </summary>
+		/// <param name="lowercaseAndUnderscoredWord">String to convert</param>
+		/// <returns>string</returns>
+		public static string ToPascalCase(this string lowercaseAndUnderscoredWord, CultureInfo culture)
+		{
+			return ToPascalCase(lowercaseAndUnderscoredWord, true, culture);
+		}
+
+		/// <summary>
+		/// Converts a string to pascal case with the option to remove underscores
+		/// </summary>
+		/// <param name="text">String to convert</param>
+		/// <param name="removeUnderscores">Option to remove underscores</param>
+		/// <returns></returns>
+		public static string ToPascalCase(this string text, bool removeUnderscores, CultureInfo culture)
+		{
+			if (String.IsNullOrEmpty(text))
+				return text;
+
+			text = text.Replace("_", " ");
+			string joinString = removeUnderscores ? String.Empty : "_";
+			string[] words = text.Split(' ');
+			if (words.Length > 1 || words[0].IsUpperCase())
+			{
+				for (int i = 0; i < words.Length; i++)
+				{
+					if (words[i].Length > 0)
+					{
+						string word = words[i];
+						string restOfWord = word.Substring(1);
+
+						if (restOfWord.IsUpperCase())
+							restOfWord = restOfWord.ToLower(culture);
+
+						char firstChar = char.ToUpper(word[0], culture);
+						words[i] = String.Concat(firstChar, restOfWord);
+					}
+				}
+				return String.Join(joinString, words);
+			}
+			return String.Concat(words[0].Substring(0, 1).ToUpper(culture), words[0].Substring(1));
+		}
