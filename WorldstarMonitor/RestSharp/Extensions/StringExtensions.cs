@@ -286,3 +286,53 @@ namespace RestSharp.Extensions
 			}
 			return String.Concat(words[0].Substring(0, 1).ToUpper(culture), words[0].Substring(1));
 		}
+
+		/// <summary>
+		/// Converts a string to camel case
+		/// </summary>
+		/// <param name="lowercaseAndUnderscoredWord">String to convert</param>
+		/// <returns>String</returns>
+		public static string ToCamelCase(this string lowercaseAndUnderscoredWord, CultureInfo culture)
+		{
+			return MakeInitialLowerCase(ToPascalCase(lowercaseAndUnderscoredWord, culture));
+		}
+
+		/// <summary>
+		/// Convert the first letter of a string to lower case
+		/// </summary>
+		/// <param name="word">String to convert</param>
+		/// <returns>string</returns>
+		public static string MakeInitialLowerCase(this string word)
+		{
+			return String.Concat(word.Substring(0, 1).ToLower(), word.Substring(1));
+		}
+
+		/// <summary>
+		/// Checks to see if a string is all uppper case
+		/// </summary>
+		/// <param name="inputString">String to check</param>
+		/// <returns>bool</returns>
+		public static bool IsUpperCase(this string inputString)
+		{
+			return Regex.IsMatch(inputString, @"^[A-Z]+$");
+		}
+
+		/// <summary>
+		/// Add underscores to a pascal-cased string
+		/// </summary>
+		/// <param name="pascalCasedWord">String to convert</param>
+		/// <returns>string</returns>
+		public static string AddUnderscores(this string pascalCasedWord)
+		{
+			return
+				Regex.Replace(
+					Regex.Replace(Regex.Replace(pascalCasedWord, @"([A-Z]+)([A-Z][a-z])", "$1_$2"), @"([a-z\d])([A-Z])",
+						"$1_$2"), @"[-\s]", "_");
+		}
+
+		/// <summary>
+		/// Add dashes to a pascal-cased string
+		/// </summary>
+		/// <param name="pascalCasedWord">String to convert</param>
+		/// <returns>string</returns>
+		public static string AddDashes
