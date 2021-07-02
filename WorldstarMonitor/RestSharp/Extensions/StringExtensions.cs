@@ -335,4 +335,58 @@ namespace RestSharp.Extensions
 		/// </summary>
 		/// <param name="pascalCasedWord">String to convert</param>
 		/// <returns>string</returns>
-		public static string AddDashes
+		public static string AddDashes(this string pascalCasedWord)
+		{
+			return
+				Regex.Replace(
+					Regex.Replace(
+						Regex.Replace(pascalCasedWord, @"([A-Z]+)([A-Z][a-z])", "$1-$2"),
+					@"([a-z\d])([A-Z])",
+				"$1-$2"), @"[\s]", "-");
+		}
+
+		/// <summary>
+		/// Add an undescore prefix to a pascasl-cased string
+		/// </summary>
+		/// <param name="pascalCasedWord"></param>
+		/// <returns></returns>
+		public static string AddUnderscorePrefix(this string pascalCasedWord)
+		{
+			return string.Format("_{0}", pascalCasedWord);
+		}
+
+		/// <summary>
+		/// Return possible variants of a name for name matching.
+		/// </summary>
+		/// <param name="name">String to convert</param>
+		/// <param name="culture">The culture to use for conversion</param>
+		/// <returns>IEnumerable&lt;string&gt;</returns>
+		public static IEnumerable<string> GetNameVariants(this string name, CultureInfo culture)
+		{
+			if (String.IsNullOrEmpty(name))
+				yield break;
+
+			yield return name;
+
+			// try camel cased name
+			yield return name.ToCamelCase(culture);
+
+			// try lower cased name
+			yield return name.ToLower(culture);
+
+			// try name with underscores
+			yield return name.AddUnderscores();
+
+			// try name with underscores with lower case
+			yield return name.AddUnderscores().ToLower(culture);
+
+			// try name with dashes
+			yield return name.AddDashes();
+
+			// try name with dashes with lower case
+			yield return name.AddDashes().ToLower(culture);
+
+			// try name with underscore prefix
+			yield return name.AddUnderscorePrefix();
+
+			// try n
