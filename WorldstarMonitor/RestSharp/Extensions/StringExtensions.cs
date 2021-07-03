@@ -389,4 +389,8 @@ namespace RestSharp.Extensions
 			// try name with underscore prefix
 			yield return name.AddUnderscorePrefix();
 
-			// try n
+			// try name with underscore prefix, using camel case
+			yield return name.ToCamelCase(culture).AddUnderscorePrefix();
+		}
+	}
+}
