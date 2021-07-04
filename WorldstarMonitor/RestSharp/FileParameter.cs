@@ -54,4 +54,16 @@ namespace RestSharp
 		/// </summary>
 		public Action<Stream> Writer { get; set; }
 		/// <summary>
-		
+		/// Name of the file to use when uploading
+		/// </summary>
+		public string FileName { get; set; }
+		/// <summary>
+		/// MIME content type of file
+		/// </summary>
+		public string ContentType { get; set; }
+		/// <summary>
+		/// Name of the parameter
+		/// </summary>
+		public string Name { get; set; }
+	}
+}
