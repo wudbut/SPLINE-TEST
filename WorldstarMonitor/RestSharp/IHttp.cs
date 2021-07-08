@@ -8,4 +8,60 @@
 //     http://www.apache.org/licenses/LICENSE-2.0
 //
 //   Unless required by applicable law or agreed to in writing, software
-//   distributed under the License is
+//   distributed under the License is distributed on an "AS IS" BASIS,
+//   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//   See the License for the specific language governing permissions and
+//   limitations under the License. 
+#endregion
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Net;
+using System.Security.Cryptography.X509Certificates;
+
+namespace RestSharp
+{
+	public interface IHttp
+	{
+		Action<Stream> ResponseWriter { get; set; }
+#if !PocketPC
+		CookieContainer CookieContainer { get; set; }
+#endif
+		ICredentials Credentials { get; set; }
+
+		/// <summary>
+		/// Always send a multipart/form-data request - even when no Files are present.
+		/// </summary>
+		bool AlwaysMultipartFormData { get; set; }
+
+		string UserAgent { get; set; }
+		int Timeout { get; set; }
+		int ReadWriteTimeout { get; set; }
+#if !SILVERLIGHT
+		bool FollowRedirects { get; set; }
+#endif
+#if FRAMEWORK
+		X509CertificateCollection ClientCertificates { get; set; }
+		int? MaxRedirects { get; set; }
+#endif
+#if !PocketPC
+		bool UseDefaultCredentials { get; set; }
+#endif
+		IList<HttpHeader> Headers { get; }
+		IList<HttpParameter> Parameters { get; }
+		IList<HttpFile> Files { get; }
+		IList<HttpCookie> Cookies { get; }
+		string RequestBody { get; set; }
+		string RequestContentType { get; set; }
+		bool PreAuthenticate { get; set; }
+
+		/// <summary>
+		/// An alternative to RequestBody, for when the caller already has the byte array.
+		/// </summary>
+		byte[] RequestBodyBytes { get; set; }
+
+		Uri Url { get; set; }
+
+		HttpWebRequest DeleteAsync(Action<HttpResponse> action);
+		HttpWebRequ
