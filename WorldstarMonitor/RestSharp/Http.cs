@@ -425,3 +425,28 @@ namespace RestSharp
 		private void ProcessResponseStream(Stream webResponseStream, HttpResponse response)
 		{
 			if (ResponseWriter == null)
+			{
+				response.RawBytes = webResponseStream.ReadAsBytes();
+			}
+			else
+			{
+				ResponseWriter(webResponseStream);
+			}
+		}
+
+#if FRAMEWORK
+		private void AddRange(HttpWebRequest r, string range)
+		{
+			System.Text.RegularExpressions.Match m = System.Text.RegularExpressions.Regex.Match(range, "=(\\d+)-(\\d+)$");
+			if (!m.Success)
+			{
+				return;
+			}
+
+			int from = Convert.ToInt32(m.Groups[1].Value);
+			int to = Convert.ToInt32(m.Groups[2].Value);
+			r.AddRange(from, to);
+		}
+#endif
+	}
+}
