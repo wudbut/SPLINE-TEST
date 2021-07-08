@@ -55,4 +55,13 @@ namespace RestSharp
 		/// Date and time the cookie was created
 		/// </summary>
 		public DateTime TimeStamp { get; set; }
-		
+		/// <summary>
+		/// Value of the cookie
+		/// </summary>
+		public string Value { get; set; }
+		/// <summary>
+		/// Version of the cookie
+		/// </summary>
+		public int Version { get; set; }
+	}
+}
