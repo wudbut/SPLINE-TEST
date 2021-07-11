@@ -77,4 +77,36 @@ namespace RestSharp
 		/// 
 		/// </summary>
 		/// <param name="request"></param>
-		R
+		RestRequestAsyncHandle ExecuteAsync<T>(IRestRequest request, Action<IRestResponse<T>, RestRequestAsyncHandle> callback);
+
+#if FRAMEWORK
+		/// <summary>
+		/// X509CertificateCollection to be sent with request
+		/// </summary>
+		X509CertificateCollection ClientCertificates { get; set; }
+		IRestResponse Execute(IRestRequest request);
+		IRestResponse<T> Execute<T>(IRestRequest request) where T : new();
+		
+		IWebProxy Proxy { get; set; }
+#endif
+
+		Uri BuildUri(IRestRequest request);
+
+		/// <summary>
+		/// Executes a GET-style request and callback asynchronously, authenticating if needed
+		/// </summary>
+		/// <param name="request">Request to be executed</param>
+		/// <param name="callback">Callback function to be executed upon completion providing access to the async handle.</param>
+		/// <param name="httpMethod">The HTTP method to execute</param>
+		RestRequestAsyncHandle ExecuteAsyncGet(IRestRequest request, Action<IRestResponse, RestRequestAsyncHandle> callback, string httpMethod);
+
+		/// <summary>
+		/// Executes a POST-style request and callback asynchronously, authenticating if needed
+		/// </summary>
+		/// <param name="request">Request to be executed</param>
+		/// <param name="callback">Callback function to be executed upon completion providing access to the async handle.</param>
+		/// <param name="httpMethod">The HTTP method to execute</param>
+		RestRequestAsyncHandle ExecuteAsyncPost(IRestRequest request, Action<IRestResponse, RestRequestAsyncHandle> callback, string httpMethod);
+
+		/// <summary>
+		/// Executes a GET-style request and callback asynchronously, authe
