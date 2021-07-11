@@ -9,4 +9,72 @@
 //
 //   Unless required by applicable law or agreed to in writing, software
 //   distributed under the License is distributed on an "AS IS" BASIS,
-//  
+//   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//   See the License for the specific language governing permissions and
+//   limitations under the License. 
+#endregion
+
+using System;
+using System.Net;
+using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
+#if NET4 || MONODROID || MONOTOUCH || WP8
+using System.Threading;
+using System.Threading.Tasks;
+#endif
+
+namespace RestSharp
+{
+	/// <summary>
+	/// 
+	/// </summary>
+	public interface IRestClient
+	{
+		/// <summary>
+		/// 
+		/// </summary>
+#if !PocketPC
+		CookieContainer CookieContainer { get; set; }
+#endif
+		/// <summary>
+		/// 
+		/// </summary>
+		string UserAgent { get; set; }
+		/// <summary>
+		/// 
+		/// </summary>
+		int Timeout { get; set; }
+		/// <summary>
+		/// 
+		/// </summary>
+		int ReadWriteTimeout { get; set; }
+		/// <summary>
+		/// 
+		/// </summary>
+		bool UseSynchronizationContext { get; set; }
+		/// <summary>
+		/// 
+		/// </summary>
+		IAuthenticator Authenticator { get; set; }
+		/// <summary>
+		/// 
+		/// </summary>
+		string BaseUrl { get; set; }
+		/// <summary>
+		/// 
+		/// </summary>
+		bool PreAuthenticate { get; set; }
+		/// <summary>
+		/// 
+		/// </summary>
+		IList<Parameter> DefaultParameters { get; }
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="request"></param>
+		RestRequestAsyncHandle ExecuteAsync(IRestRequest request, Action<IRestResponse, RestRequestAsyncHandle> callback);
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="request"></param>
+		R
