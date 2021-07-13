@@ -172,3 +172,38 @@ namespace RestSharp
 		Task<IRestResponse<T>> ExecutePostTaskAsync<T>(IRestRequest request);
 
 		/// <summary>
+		/// Executes a POST-style request asynchronously, authenticating if needed
+		/// </summary>
+		/// <typeparam name="T">Target deserialization type</typeparam>
+		/// <param name="request">Request to be executed</param>
+		/// <param name="token">The cancellation token</param>
+		Task<IRestResponse<T>> ExecutePostTaskAsync<T>(IRestRequest request, CancellationToken token);
+
+		/// <summary>
+		/// Executes the request and callback asynchronously, authenticating if needed
+		/// </summary>
+		/// <param name="request">Request to be executed</param>
+		/// <param name="token">The cancellation token</param>
+		Task<IRestResponse> ExecuteTaskAsync(IRestRequest request, CancellationToken token);
+
+		/// <summary>
+		/// Executes the request asynchronously, authenticating if needed
+		/// </summary>
+		/// <param name="request">Request to be executed</param>
+		Task<IRestResponse> ExecuteTaskAsync(IRestRequest request);
+
+		/// <summary>
+		/// Executes a GET-style asynchronously, authenticating if needed
+		/// </summary>
+		/// <param name="request">Request to be executed</param>
+		Task<IRestResponse> ExecuteGetTaskAsync(IRestRequest request);
+
+		/// <summary>
+		/// Executes a GET-style asynchronously, authenticating if needed
+		/// </summary>
+		/// <param name="request">Request to be executed</param>
+		/// <param name="token">The cancellation token</param>
+		Task<IRestResponse> ExecuteGetTaskAsync(IRestRequest request, CancellationToken token);
+
+		/// <summary>
+		/// Executes a POST-style asynchronously, au
