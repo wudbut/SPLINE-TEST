@@ -206,4 +206,17 @@ namespace RestSharp
 		Task<IRestResponse> ExecuteGetTaskAsync(IRestRequest request, CancellationToken token);
 
 		/// <summary>
-		/// Executes a POST-style asynchronously, au
+		/// Executes a POST-style asynchronously, authenticating if needed
+		/// </summary>
+		/// <param name="request">Request to be executed</param>
+		Task<IRestResponse> ExecutePostTaskAsync(IRestRequest request);
+
+		/// <summary>
+		/// Executes a POST-style asynchronously, authenticating if needed
+		/// </summary>
+		/// <param name="request">Request to be executed</param>
+		/// <param name="token">The cancellation token</param>
+		Task<IRestResponse> ExecutePostTaskAsync(IRestRequest request, CancellationToken token);
+#endif
+	}
+}
