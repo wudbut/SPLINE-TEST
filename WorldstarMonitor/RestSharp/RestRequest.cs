@@ -326,3 +326,177 @@ namespace RestSharp
 		/// Adds a HTTP parameter to the request (QueryString for GET, DELETE, OPTIONS and HEAD; Encoded form for POST and PUT)
 		/// </summary>
 		/// <param name="name">Name of the parameter</param>
+		/// <param name="value">Value of the parameter</param>
+		/// <returns>This request</returns>
+		public IRestRequest AddParameter (string name, object value)
+		{
+			return AddParameter(new Parameter { Name = name, Value = value, Type = ParameterType.GetOrPost });
+		}
+
+		/// <summary>
+		/// Adds a parameter to the request. There are four types of parameters:
+		///	- GetOrPost: Either a QueryString value or encoded form value based on method
+		///	- HttpHeader: Adds the name/value pair to the HTTP request's Headers collection
+		///	- UrlSegment: Inserted into URL if there is a matching url token e.g. {AccountId}
+		///	- RequestBody: Used by AddBody() (not recommended to use directly)
+		/// </summary>
+		/// <param name="name">Name of the parameter</param>
+		/// <param name="value">Value of the parameter</param>
+		/// <param name="type">The type of parameter to add</param>
+		/// <returns>This request</returns>
+		public IRestRequest AddParameter (string name, object value, ParameterType type)
+		{
+			return AddParameter(new Parameter { Name = name, Value = value, Type = type });
+		}
+
+		/// <summary>
+		/// Shortcut to AddParameter(name, value, HttpHeader) overload
+		/// </summary>
+		/// <param name="name">Name of the header to add</param>
+		/// <param name="value">Value of the header to add</param>
+		/// <returns></returns>
+		public IRestRequest AddHeader (string name, string value)
+		{
+			return AddParameter(name, value, ParameterType.HttpHeader);
+		}
+
+		/// <summary>
+		/// Shortcut to AddParameter(name, value, Cookie) overload
+		/// </summary>
+		/// <param name="name">Name of the cookie to add</param>
+		/// <param name="value">Value of the cookie to add</param>
+		/// <returns></returns>
+		public IRestRequest AddCookie (string name, string value)
+		{
+			return AddParameter(name, value, ParameterType.Cookie);
+		}
+
+		/// <summary>
+		/// Shortcut to AddParameter(name, value, UrlSegment) overload
+		/// </summary>
+		/// <param name="name">Name of the segment to add</param>
+		/// <param name="value">Value of the segment to add</param>
+		/// <returns></returns>
+		public IRestRequest AddUrlSegment (string name, string value)
+		{
+			return AddParameter(name, value, ParameterType.UrlSegment);
+		}
+
+		/// <summary>
+		/// Container of all HTTP parameters to be passed with the request. 
+		/// See AddParameter() for explanation of the types of parameters that can be passed
+		/// </summary>
+		public List<Parameter> Parameters { get; private set; }
+
+		/// <summary>
+		/// Container of all the files to be uploaded with the request.
+		/// </summary>
+		public List<FileParameter> Files { get; private set; }
+
+		private Method _method = Method.GET;
+		/// <summary>
+		/// Determines what HTTP method to use for this request. Supported methods: GET, POST, PUT, DELETE, HEAD, OPTIONS
+		/// Default is GET
+		/// </summary>
+		public Method Method
+		{
+			get { return _method; }
+			set { _method = value; }
+		}
+
+		/// <summary>
+		/// The Resource URL to make the request against.
+		/// Tokens are substituted with UrlSegment parameters and match by name.
+		/// Should not include the scheme or domain. Do not include leading slash.
+		/// Combined with RestClient.BaseUrl to assemble final URL:
+		/// {BaseUrl}/{Resource} (BaseUrl is scheme + domain, e.g. http://example.com)
+		/// </summary>
+		/// <example>
+		/// // example for url token replacement
+		/// request.Resource = "Products/{ProductId}";
+		///	request.AddParameter("ProductId", 123, ParameterType.UrlSegment);
+		/// </example>
+		public string Resource { get; set; }
+
+		private DataFormat _requestFormat = DataFormat.Xml;
+		/// <summary>
+		/// Serializer to use when writing XML request bodies. Used if RequestFormat is Xml.
+		/// By default XmlSerializer is used.
+		/// </summary>
+		public DataFormat RequestFormat
+		{
+			get
+			{
+				return _requestFormat;
+			}
+			set
+			{
+				_requestFormat = value;
+			}
+		}
+
+		/// <summary>
+		/// Used by the default deserializers to determine where to start deserializing from.
+		/// Can be used to skip container or root elements that do not have corresponding deserialzation targets.
+		/// </summary>
+		public string RootElement { get; set; }
+
+		/// <summary>
+		/// A function to run prior to deserializing starting (e.g. change settings if error encountered)
+		/// </summary>
+		public Action<IRestResponse> OnBeforeDeserialization { get; set; }
+
+		/// <summary>
+		/// Used by the default deserializers to explicitly set which date format string to use when parsing dates.
+		/// </summary>
+		public string DateFormat { get; set; }
+
+		/// <summary>
+		/// Used by XmlDeserializer. If not specified, XmlDeserializer will flatten response by removing namespaces from element names.
+		/// </summary>
+		public string XmlNamespace { get; set; }
+
+		/// <summary>
+		/// In general you would not need to set this directly. Used by the NtlmAuthenticator. 
+		/// </summary>
+		public ICredentials Credentials { get; set; }
+
+		/// <summary>
+		/// Gets or sets a user-defined state object that contains information about a request and which can be later 
+		/// retrieved when the request completes.
+		/// </summary>
+		public object UserState { get; set; }
+
+		/// <summary>
+		/// Timeout in milliseconds to be used for the request. This timeout value overrides a timeout set on the RestClient.
+		/// </summary>
+		public int Timeout { get; set; }
+
+		/// <summary>
+		/// The number of milliseconds before the writing or reading times out.  This timeout value overrides a timeout set on the RestClient.
+		/// </summary>
+		public int ReadWriteTimeout { get; set; }
+
+		private int _attempts;
+
+		/// <summary>
+		/// Internal Method so that RestClient can increase the number of attempts
+		/// </summary>
+		public void IncreaseNumAttempts()
+		{
+			_attempts++;
+		}
+
+		/// <summary>
+		/// How many attempts were made to send this Request?
+		/// </summary>
+		/// <remarks>
+		/// This Number is incremented each time the RestClient sends the request.
+		/// Useful when using Asynchronous Execution with Callbacks
+		/// </remarks>
+		public int Attempts
+		{
+			get { return _attempts; }
+		}
+	}
+}
