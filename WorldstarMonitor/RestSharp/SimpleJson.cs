@@ -39,4 +39,56 @@
 // usually already defined in properties
 //#define NETFX_CORE;
 
-// If you a
+// If you are targetting WinStore, WP8 and NET4.5+ PCL make sure to #define SIMPLE_JSON_TYPEINFO;
+
+// original json parsing code from http://techblog.procurios.nl/k/618/news/view/14605/14863/How-do-I-write-my-own-parser-for-JSON.html
+
+#if NETFX_CORE
+#define SIMPLE_JSON_TYPEINFO
+#endif
+
+using System;
+using System.CodeDom.Compiler;
+using System.Collections;
+using System.Collections.Generic;
+#if !SIMPLE_JSON_NO_LINQ_EXPRESSION
+using System.Linq.Expressions;
+#endif
+using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
+#if SIMPLE_JSON_DYNAMIC
+using System.Dynamic;
+#endif
+using System.Globalization;
+using System.Reflection;
+using System.Runtime.Serialization;
+using System.Text;
+using RestSharp.Reflection;
+
+// ReSharper disable LoopCanBeConvertedToQuery
+// ReSharper disable RedundantExplicitArrayCreation
+// ReSharper disable SuggestUseVarKeywordEvident
+namespace RestSharp
+{
+    /// <summary>
+    /// Represents the json array.
+    /// </summary>
+    [GeneratedCode("simple-json", "1.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Never)]
+    [SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+#if SIMPLE_JSON_OBJARRAYINTERNAL
+    internal
+#else
+    public
+#endif
+ class JsonArray : List<object>
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="JsonArray"/> class. 
+        /// </summary>
+        public JsonArray() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="JsonArray"/> class. 
+        /// </summary>
+        /// <param name="capacity">Th
