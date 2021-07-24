@@ -239,4 +239,52 @@ namespace RestSharp
         /// Adds the specified item.
         /// </summary>
         /// <param name="item">The item.</param>
-        public void Add
+        public void Add(KeyValuePair<string, object> item)
+        {
+            _members.Add(item.Key, item.Value);
+        }
+
+        /// <summary>
+        /// Clears this instance.
+        /// </summary>
+        public void Clear()
+        {
+            _members.Clear();
+        }
+
+        /// <summary>
+        /// Determines whether [contains] [the specified item].
+        /// </summary>
+        /// <param name="item">The item.</param>
+        /// <returns>
+        /// 	<c>true</c> if [contains] [the specified item]; otherwise, <c>false</c>.
+        /// </returns>
+        public bool Contains(KeyValuePair<string, object> item)
+        {
+            return _members.ContainsKey(item.Key) && _members[item.Key] == item.Value;
+        }
+
+        /// <summary>
+        /// Copies to.
+        /// </summary>
+        /// <param name="array">The array.</param>
+        /// <param name="arrayIndex">Index of the array.</param>
+        public void CopyTo(KeyValuePair<string, object>[] array, int arrayIndex)
+        {
+            if (array == null) throw new ArgumentNullException("array");
+            int num = Count;
+            foreach (KeyValuePair<string, object> kvp in this)
+            {
+                array[arrayIndex++] = kvp;
+                if (--num <= 0)
+                    return;
+            }
+        }
+
+        /// <summary>
+        /// Gets the count.
+        /// </summary>
+        /// <value>The count.</value>
+        public int Count
+        {
+            get { return _members
