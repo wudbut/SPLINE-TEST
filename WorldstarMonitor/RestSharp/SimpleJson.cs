@@ -91,4 +91,50 @@ namespace RestSharp
         /// <summary>
         /// Initializes a new instance of the <see cref="JsonArray"/> class. 
         /// </summary>
-        /// <param name="capacity">Th
+        /// <param name="capacity">The capacity of the json array.</param>
+        public JsonArray(int capacity) : base(capacity) { }
+
+        /// <summary>
+        /// The json representation of the array.
+        /// </summary>
+        /// <returns>The json representation of the array.</returns>
+        public override string ToString()
+        {
+            return SimpleJson.SerializeObject(this) ?? string.Empty;
+        }
+    }
+
+    /// <summary>
+    /// Represents the json object.
+    /// </summary>
+    [GeneratedCode("simple-json", "1.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Never)]
+    [SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+#if SIMPLE_JSON_OBJARRAYINTERNAL
+    internal
+#else
+    public
+#endif
+ class JsonObject :
+#if SIMPLE_JSON_DYNAMIC
+ DynamicObject,
+#endif
+ IDictionary<string, object>
+    {
+        /// <summary>
+        /// The internal member dictionary.
+        /// </summary>
+        private readonly Dictionary<string, object> _members;
+
+        /// <summary>
+        /// Initializes a new instance of <see cref="JsonObject"/>.
+        /// </summary>
+        public JsonObject()
+        {
+            _members = new Dictionary<string, object>();
+        }
+
+        /// <summary>
+        /// Initializes a new instance of <see cref="JsonObject"/>.
+        /// </summary>
+        /// <param name="comparer">The <see cref="T:System.Collections.Generic.IEqualityComparer`1"/> implementation to use when comparing keys, or null to use the default <see cref="T:System.Collections.Generic.EqualityCompare
