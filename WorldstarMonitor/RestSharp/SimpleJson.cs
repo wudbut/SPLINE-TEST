@@ -181,4 +181,62 @@ namespace RestSharp
         /// <returns>
         ///     <c>true</c> if the specified key contains key; otherwise, <c>false</c>.
         /// </returns>
-        public bool ContainsKey(string
+        public bool ContainsKey(string key)
+        {
+            return _members.ContainsKey(key);
+        }
+
+        /// <summary>
+        /// Gets the keys.
+        /// </summary>
+        /// <value>The keys.</value>
+        public ICollection<string> Keys
+        {
+            get { return _members.Keys; }
+        }
+
+        /// <summary>
+        /// Removes the specified key.
+        /// </summary>
+        /// <param name="key">The key.</param>
+        /// <returns></returns>
+        public bool Remove(string key)
+        {
+            return _members.Remove(key);
+        }
+
+        /// <summary>
+        /// Tries the get value.
+        /// </summary>
+        /// <param name="key">The key.</param>
+        /// <param name="value">The value.</param>
+        /// <returns></returns>
+        public bool TryGetValue(string key, out object value)
+        {
+            return _members.TryGetValue(key, out value);
+        }
+
+        /// <summary>
+        /// Gets the values.
+        /// </summary>
+        /// <value>The values.</value>
+        public ICollection<object> Values
+        {
+            get { return _members.Values; }
+        }
+
+        /// <summary>
+        /// Gets or sets the <see cref="System.Object"/> with the specified key.
+        /// </summary>
+        /// <value></value>
+        public object this[string key]
+        {
+            get { return _members[key]; }
+            set { _members[key] = value; }
+        }
+
+        /// <summary>
+        /// Adds the specified item.
+        /// </summary>
+        /// <param name="item">The item.</param>
+        public void Add
