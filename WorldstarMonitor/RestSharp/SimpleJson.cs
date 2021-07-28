@@ -287,4 +287,52 @@ namespace RestSharp
         /// <value>The count.</value>
         public int Count
         {
-            get { return _members
+            get { return _members.Count; }
+        }
+
+        /// <summary>
+        /// Gets a value indicating whether this instance is read only.
+        /// </summary>
+        /// <value>
+        /// 	<c>true</c> if this instance is read only; otherwise, <c>false</c>.
+        /// </value>
+        public bool IsReadOnly
+        {
+            get { return false; }
+        }
+
+        /// <summary>
+        /// Removes the specified item.
+        /// </summary>
+        /// <param name="item">The item.</param>
+        /// <returns></returns>
+        public bool Remove(KeyValuePair<string, object> item)
+        {
+            return _members.Remove(item.Key);
+        }
+
+        /// <summary>
+        /// Gets the enumerator.
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerator<KeyValuePair<string, object>> GetEnumerator()
+        {
+            return _members.GetEnumerator();
+        }
+
+        /// <summary>
+        /// Returns an enumerator that iterates through a collection.
+        /// </summary>
+        /// <returns>
+        /// An <see cref="T:System.Collections.IEnumerator"/> object that can be used to iterate through the collection.
+        /// </returns>
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return _members.GetEnumerator();
+        }
+
+        /// <summary>
+        /// Returns a json <see cref="T:System.String"/> that represents the current <see cref="T:System.Object"/>.
+        /// </summary>
+        /// <returns>
+        /// A json <see cref="T:System.String"/> that represents the current <
