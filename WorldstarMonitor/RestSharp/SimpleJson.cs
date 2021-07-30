@@ -359,4 +359,36 @@ namespace RestSharp
             // </pex>
             Type targetType = binder.Type;
 
-         
+            if ((targetType == typeof(IEnumerable)) ||
+                (targetType == typeof(IEnumerable<KeyValuePair<string, object>>)) ||
+                (targetType == typeof(IDictionary<string, object>)) ||
+                (targetType == typeof(IDictionary)))
+            {
+                result = this;
+                return true;
+            }
+
+            return base.TryConvert(binder, out result);
+        }
+
+        /// <summary>
+        /// Provides the implementation for operations that delete an object member. This method is not intended for use in C# or Visual Basic.
+        /// </summary>
+        /// <param name="binder">Provides information about the deletion.</param>
+        /// <returns>
+        /// Alwasy returns true.
+        /// </returns>
+        public override bool TryDeleteMember(DeleteMemberBinder binder)
+        {
+            // <pex>
+            if (binder == null)
+                throw new ArgumentNullException("binder");
+            // </pex>
+            return _members.Remove(binder.Name);
+        }
+
+        /// <summary>
+        /// Provides the implementation for operations that get a value by index. Classes derived from the <see cref="T:System.Dynamic.DynamicObject"/> class can override this method to specify dynamic behavior for indexing operations.
+        /// </summary>
+        /// <param name="binder">Provides information about the operation.</param>
+        /// <param name="indexes">The indexes that are used in the operation. For example, for the sampleObject[3] operation in C# (sampleObject(3) in Vis
