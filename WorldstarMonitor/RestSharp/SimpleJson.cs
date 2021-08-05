@@ -484,4 +484,41 @@ namespace RestSharp
 namespace RestSharp
 {
     /// <summary>
-    /
+    /// This class encodes and decodes JSON strings.
+    /// Spec. details, see http://www.json.org/
+    /// 
+    /// JSON uses Arrays and Objects. These correspond here to the datatypes JsonArray(IList&lt;object>) and JsonObject(IDictionary&lt;string,object>).
+    /// All numbers are parsed to doubles.
+    /// </summary>
+    [GeneratedCode("simple-json", "1.0.0")]
+#if SIMPLE_JSON_INTERNAL
+    internal
+#else
+    public
+#endif
+ static class SimpleJson
+    {
+        private const int TOKEN_NONE = 0;
+        private const int TOKEN_CURLY_OPEN = 1;
+        private const int TOKEN_CURLY_CLOSE = 2;
+        private const int TOKEN_SQUARED_OPEN = 3;
+        private const int TOKEN_SQUARED_CLOSE = 4;
+        private const int TOKEN_COLON = 5;
+        private const int TOKEN_COMMA = 6;
+        private const int TOKEN_STRING = 7;
+        private const int TOKEN_NUMBER = 8;
+        private const int TOKEN_TRUE = 9;
+        private const int TOKEN_FALSE = 10;
+        private const int TOKEN_NULL = 11;
+        private const int BUILDER_CAPACITY = 2000;
+
+        /// <summary>
+        /// Parses the string json into a value
+        /// </summary>
+        /// <param name="json">A JSON string.</param>
+        /// <returns>An IList&lt;object>, a IDictionary&lt;string,object>, a double, a string, null, true, or false</returns>
+        public static object DeserializeObject(string json)
+        {
+            object obj;
+            if (TryDeserializeObject(json, out obj))
+ 
