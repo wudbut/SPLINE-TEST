@@ -562,4 +562,41 @@ namespace RestSharp
         }
 
         public static object DeserializeObject(string json, Type type)
-  
+        {
+            return DeserializeObject(json, type, null);
+        }
+
+        public static T DeserializeObject<T>(string json, IJsonSerializerStrategy jsonSerializerStrategy)
+        {
+            return (T)DeserializeObject(json, typeof(T), jsonSerializerStrategy);
+        }
+
+        public static T DeserializeObject<T>(string json)
+        {
+            return (T)DeserializeObject(json, typeof(T), null);
+        }
+
+        /// <summary>
+        /// Converts a IDictionary&lt;string,object> / IList&lt;object> object into a JSON string
+        /// </summary>
+        /// <param name="json">A IDictionary&lt;string,object> / IList&lt;object></param>
+        /// <param name="jsonSerializerStrategy">Serializer strategy to use</param>
+        /// <returns>A JSON encoded string, or null if object 'json' is not serializable</returns>
+        public static string SerializeObject(object json, IJsonSerializerStrategy jsonSerializerStrategy)
+        {
+            StringBuilder builder = new StringBuilder(BUILDER_CAPACITY);
+            bool success = SerializeValue(jsonSerializerStrategy, json, builder);
+            return (success ? builder.ToString() : null);
+        }
+
+        public static string SerializeObject(object json)
+        {
+            return SerializeObject(json, CurrentJsonSerializerStrategy);
+        }
+
+        public static string EscapeToJavascriptString(string jsonString)
+        {
+            if (string.IsNullOrEmpty(jsonString))
+                return jsonString;
+
+            S
