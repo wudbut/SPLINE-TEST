@@ -521,4 +521,45 @@ namespace RestSharp
         {
             object obj;
             if (TryDeserializeObject(json, out obj))
- 
+                return obj;
+            throw new SerializationException("Invalid JSON string");
+        }
+
+        /// <summary>
+        /// Try parsing the json string into a value.
+        /// </summary>
+        /// <param name="json">
+        /// A JSON string.
+        /// </param>
+        /// <param name="obj">
+        /// The object.
+        /// </param>
+        /// <returns>
+        /// Returns true if successfull otherwise false.
+        /// </returns>
+        [SuppressMessage("Microsoft.Design", "CA1007:UseGenericsWhereAppropriate", Justification="Need to support .NET 2")]
+        public static bool TryDeserializeObject(string json, out object obj)
+        {
+            bool success = true;
+            if (json != null)
+            {
+                char[] charArray = json.ToCharArray();
+                int index = 0;
+                obj = ParseValue(charArray, ref index, ref success);
+            }
+            else
+                obj = null;
+
+            return success;
+        }
+
+        public static object DeserializeObject(string json, Type type, IJsonSerializerStrategy jsonSerializerStrategy)
+        {
+            object jsonObject = DeserializeObject(json);
+            return type == null || jsonObject != null && ReflectionUtils.IsAssignableFrom(jsonObject.GetType(), type)
+                       ? jsonObject
+                       : (jsonSerializerStrategy ?? CurrentJsonSerializerStrategy).DeserializeObject(jsonObject, type);
+        }
+
+        public static object DeserializeObject(string json, Type type)
+  
