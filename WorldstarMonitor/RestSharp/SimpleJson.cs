@@ -693,4 +693,55 @@ namespace RestSharp
                         return null;
                     }
                     // value
-                    object value = ParseValue(jso
+                    object value = ParseValue(json, ref index, ref success);
+                    if (!success)
+                    {
+                        success = false;
+                        return null;
+                    }
+                    table[name] = value;
+                }
+            }
+            return table;
+        }
+
+        static JsonArray ParseArray(char[] json, ref int index, ref bool success)
+        {
+            JsonArray array = new JsonArray();
+
+            // [
+            NextToken(json, ref index);
+
+            bool done = false;
+            while (!done)
+            {
+                int token = LookAhead(json, index);
+                if (token == TOKEN_NONE)
+                {
+                    success = false;
+                    return null;
+                }
+                else if (token == TOKEN_COMMA)
+                    NextToken(json, ref index);
+                else if (token == TOKEN_SQUARED_CLOSE)
+                {
+                    NextToken(json, ref index);
+                    break;
+                }
+                else
+                {
+                    object value = ParseValue(json, ref index, ref success);
+                    if (!success)
+                        return null;
+                    array.Add(value);
+                }
+            }
+            return array;
+        }
+
+        static object ParseValue(char[] json, ref int index, ref bool success)
+        {
+            switch (LookAhead(json, index))
+            {
+                case TOKEN_STRING:
+                    return P
