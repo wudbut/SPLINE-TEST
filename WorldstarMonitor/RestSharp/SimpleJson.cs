@@ -744,4 +744,50 @@ namespace RestSharp
             switch (LookAhead(json, index))
             {
                 case TOKEN_STRING:
-                    return P
+                    return ParseString(json, ref index, ref success);
+                case TOKEN_NUMBER:
+                    return ParseNumber(json, ref index, ref success);
+                case TOKEN_CURLY_OPEN:
+                    return ParseObject(json, ref index, ref success);
+                case TOKEN_SQUARED_OPEN:
+                    return ParseArray(json, ref index, ref success);
+                case TOKEN_TRUE:
+                    NextToken(json, ref index);
+                    return true;
+                case TOKEN_FALSE:
+                    NextToken(json, ref index);
+                    return false;
+                case TOKEN_NULL:
+                    NextToken(json, ref index);
+                    return null;
+                case TOKEN_NONE:
+                    break;
+            }
+            success = false;
+            return null;
+        }
+
+        static string ParseString(char[] json, ref int index, ref bool success)
+        {
+            StringBuilder s = new StringBuilder(BUILDER_CAPACITY);
+            char c;
+
+            EatWhitespace(json, ref index);
+
+            // "
+            c = json[index++];
+            bool complete = false;
+            while (!complete)
+            {
+                if (index == json.Length)
+                    break;
+
+                c = json[index++];
+                if (c == '"')
+                {
+                    complete = true;
+                    break;
+                }
+                else if (c == '\\')
+                {
+                    if
