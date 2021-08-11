@@ -790,4 +790,41 @@ namespace RestSharp
                 }
                 else if (c == '\\')
                 {
-                    if
+                    if (index == json.Length)
+                        break;
+                    c = json[index++];
+                    if (c == '"')
+                        s.Append('"');
+                    else if (c == '\\')
+                        s.Append('\\');
+                    else if (c == '/')
+                        s.Append('/');
+                    else if (c == 'b')
+                        s.Append('\b');
+                    else if (c == 'f')
+                        s.Append('\f');
+                    else if (c == 'n')
+                        s.Append('\n');
+                    else if (c == 'r')
+                        s.Append('\r');
+                    else if (c == 't')
+                        s.Append('\t');
+                    else if (c == 'u')
+                    {
+                        int remainingLength = json.Length - index;
+                        if (remainingLength >= 4)
+                        {
+                            // parse the 32 bit hex into an integer codepoint
+                            uint codePoint;
+
+#if PocketPC
+                            try {
+                                codePoint = UInt32.Parse(new string(json, index, 4), NumberStyles.HexNumber);
+                            } catch (Exception ex) {
+                                return "";
+                            }
+#else
+                            if (!(success = UInt32.TryParse(new string(json, index, 4), NumberStyles.HexNumber, CultureInfo.InvariantCulture, out codePoint)))
+                                return "";
+#endif
+      
