@@ -646,4 +646,51 @@ namespace RestSharp
                 }
                 else
                 {
-   
+                    sb.Append(c);
+                }
+            }
+            return sb.ToString();
+        }
+
+        static IDictionary<string, object> ParseObject(char[] json, ref int index, ref bool success)
+        {
+            IDictionary<string, object> table = new JsonObject();
+            int token;
+
+            // {
+            NextToken(json, ref index);
+
+            bool done = false;
+            while (!done)
+            {
+                token = LookAhead(json, index);
+                if (token == TOKEN_NONE)
+                {
+                    success = false;
+                    return null;
+                }
+                else if (token == TOKEN_COMMA)
+                    NextToken(json, ref index);
+                else if (token == TOKEN_CURLY_CLOSE)
+                {
+                    NextToken(json, ref index);
+                    return table;
+                }
+                else
+                {
+                    // name
+                    string name = ParseString(json, ref index, ref success);
+                    if (!success)
+                    {
+                        success = false;
+                        return null;
+                    }
+                    // :
+                    token = NextToken(json, ref index);
+                    if (token != TOKEN_COLON)
+                    {
+                        success = false;
+                        return null;
+                    }
+                    // value
+                    object value = ParseValue(jso
