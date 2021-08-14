@@ -827,4 +827,28 @@ namespace RestSharp
                             if (!(success = UInt32.TryParse(new string(json, index, 4), NumberStyles.HexNumber, CultureInfo.InvariantCulture, out codePoint)))
                                 return "";
 #endif
-      
+                            // convert the integer codepoint to a unicode char and add to string
+                            if (0xD800 <= codePoint && codePoint <= 0xDBFF)  // if high surrogate
+                            {
+                                index += 4; // skip 4 chars
+                                remainingLength = json.Length - index;
+                                if (remainingLength >= 6)
+                                {
+                                    uint lowCodePoint = 0;
+
+#if PocketPC
+                                    bool lowCodePointPassed = false;
+                                    try {
+                                        lowCodePoint = UInt32.Parse(new string(json, index + 2, 4), NumberStyles.HexNumber);
+                                        lowCodePointPassed = true;
+                                    } catch (Exception) { }
+                                    if (new string(json, index, 2) == "\\u" && lowCodePointPassed)
+#else
+                                    if (new string(json, index, 2) == "\\u" && UInt32.TryParse(new string(json, index + 2, 4), NumberStyles.HexNumber, CultureInfo.InvariantCulture, out lowCodePoint))
+#endif
+                                    {
+                                        if (0xDC00 <= lowCodePoint && lowCodePoint <= 0xDFFF)    // if low surrogate
+                                        {
+                                            s.Append((char)codePoint);
+                                            s.Append((char)lowCodePoint);
+                                            
