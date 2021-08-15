@@ -888,4 +888,42 @@ namespace RestSharp
             if (utf32 < 0x10000)
                 return new string((char)utf32, 1);
             utf32 -= 0x10000;
-            return new string(new char[] { (c
+            return new string(new char[] { (char)((utf32 >> 10) + 0xD800), (char)(utf32 % 0x0400 + 0xDC00) });
+        }
+
+        static object ParseNumber(char[] json, ref int index, ref bool success)
+        {
+            EatWhitespace(json, ref index);
+            int lastIndex = GetLastIndexOfNumber(json, index);
+            int charLength = (lastIndex - index) + 1;
+            object returnNumber;
+            string str = new string(json, index, charLength);
+            if (str.IndexOf(".", StringComparison.OrdinalIgnoreCase) != -1 || str.IndexOf("e", StringComparison.OrdinalIgnoreCase) != -1)
+            {
+                double number;
+#if PocketPC
+                try {
+                    number = double.Parse(new string(json, index, charLength), NumberStyles.Any);
+                    success = true;
+                } catch (Exception) {
+                    number = 0;
+                    success = false;
+                }
+#else
+                success = double.TryParse(new string(json, index, charLength), NumberStyles.Any, CultureInfo.InvariantCulture, out number);
+#endif
+                returnNumber = number;
+            }
+            else
+            {
+                long number;
+#if PocketPC
+                try {
+                    number = long.Parse(new string(json, index, charLength), NumberStyles.Any);
+                    success = true;
+                } catch (Exception) {
+                    number = 0;
+                    success = false;
+                }
+#else
+                succe
