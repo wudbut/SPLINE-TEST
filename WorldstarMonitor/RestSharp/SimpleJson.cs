@@ -973,4 +973,50 @@ namespace RestSharp
                 case ']':
                     return TOKEN_SQUARED_CLOSE;
                 case ',':
-                    return T
+                    return TOKEN_COMMA;
+                case '"':
+                    return TOKEN_STRING;
+                case '0':
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                case '-':
+                    return TOKEN_NUMBER;
+                case ':':
+                    return TOKEN_COLON;
+            }
+            index--;
+            int remainingLength = json.Length - index;
+            // false
+            if (remainingLength >= 5)
+            {
+                if (json[index] == 'f' && json[index + 1] == 'a' && json[index + 2] == 'l' && json[index + 3] == 's' && json[index + 4] == 'e')
+                {
+                    index += 5;
+                    return TOKEN_FALSE;
+                }
+            }
+            // true
+            if (remainingLength >= 4)
+            {
+                if (json[index] == 't' && json[index + 1] == 'r' && json[index + 2] == 'u' && json[index + 3] == 'e')
+                {
+                    index += 4;
+                    return TOKEN_TRUE;
+                }
+            }
+            // null
+            if (remainingLength >= 4)
+            {
+                if (json[index] == 'n' && json[index + 1] == 'u' && json[index + 2] == 'l' && json[index + 3] == 'l')
+                {
+                    index += 4;
+                    return TOKEN_NULL;
+                }
+        
