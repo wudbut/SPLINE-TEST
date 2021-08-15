@@ -926,4 +926,51 @@ namespace RestSharp
                     success = false;
                 }
 #else
-                succe
+                success = long.TryParse(new string(json, index, charLength), NumberStyles.Any, CultureInfo.InvariantCulture, out number);
+#endif
+                returnNumber = number;
+            }
+            index = lastIndex + 1;
+            return returnNumber;
+        }
+
+        static int GetLastIndexOfNumber(char[] json, int index)
+        {
+            int lastIndex;
+            for (lastIndex = index; lastIndex < json.Length; lastIndex++)
+                if ("0123456789+-.eE".IndexOf(json[lastIndex]) == -1) break;
+            return lastIndex - 1;
+        }
+
+        static void EatWhitespace(char[] json, ref int index)
+        {
+            for (; index < json.Length; index++)
+                if (" \t\n\r\b\f".IndexOf(json[index]) == -1) break;
+        }
+
+        static int LookAhead(char[] json, int index)
+        {
+            int saveIndex = index;
+            return NextToken(json, ref saveIndex);
+        }
+
+        [SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
+        static int NextToken(char[] json, ref int index)
+        {
+            EatWhitespace(json, ref index);
+            if (index == json.Length)
+                return TOKEN_NONE;
+            char c = json[index];
+            index++;
+            switch (c)
+            {
+                case '{':
+                    return TOKEN_CURLY_OPEN;
+                case '}':
+                    return TOKEN_CURLY_CLOSE;
+                case '[':
+                    return TOKEN_SQUARED_OPEN;
+                case ']':
+                    return TOKEN_SQUARED_CLOSE;
+                case ',':
+                    return T
