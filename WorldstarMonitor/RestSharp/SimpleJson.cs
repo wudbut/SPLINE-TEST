@@ -1051,4 +1051,39 @@ namespace RestSharp
                         else if (IsNumeric(value))
                             success = SerializeNumber(value, builder);
                         else if (value is bool)
-                            builder.Append((bool)value ? "tru
+                            builder.Append((bool)value ? "true" : "false");
+                        else if (value == null)
+                            builder.Append("null");
+                        else
+                        {
+                            object serializedObject;
+                            success = jsonSerializerStrategy.TrySerializeNonPrimitiveObject(value, out serializedObject);
+                            if (success)
+                                SerializeValue(jsonSerializerStrategy, serializedObject, builder);
+                        }
+                    }
+                }
+            }
+            return success;
+        }
+
+        static bool SerializeObject(IJsonSerializerStrategy jsonSerializerStrategy, IEnumerable keys, IEnumerable values, StringBuilder builder)
+        {
+            builder.Append("{");
+            IEnumerator ke = keys.GetEnumerator();
+            IEnumerator ve = values.GetEnumerator();
+            bool first = true;
+            while (ke.MoveNext() && ve.MoveNext())
+            {
+                object key = ke.Current;
+                object value = ve.Current;
+                if (!first)
+                    builder.Append(",");
+                string stringKey = key as string;
+                if (stringKey != null)
+                    SerializeString(stringKey, builder);
+                else
+                    if (!SerializeValue(jsonSerializerStrategy, value, builder)) return false;
+                builder.Append(":");
+                if (!SerializeValue(jsonSerializerStrategy, value, builder))
+                    return fals
