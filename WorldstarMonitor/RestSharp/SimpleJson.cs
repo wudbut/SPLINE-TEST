@@ -1086,4 +1086,49 @@ namespace RestSharp
                     if (!SerializeValue(jsonSerializerStrategy, value, builder)) return false;
                 builder.Append(":");
                 if (!SerializeValue(jsonSerializerStrategy, value, builder))
-                    return fals
+                    return false;
+                first = false;
+            }
+            builder.Append("}");
+            return true;
+        }
+
+        static bool SerializeArray(IJsonSerializerStrategy jsonSerializerStrategy, IEnumerable anArray, StringBuilder builder)
+        {
+            builder.Append("[");
+            bool first = true;
+            foreach (object value in anArray)
+            {
+                if (!first)
+                    builder.Append(",");
+                if (!SerializeValue(jsonSerializerStrategy, value, builder))
+                    return false;
+                first = false;
+            }
+            builder.Append("]");
+            return true;
+        }
+
+        static bool SerializeString(string aString, StringBuilder builder)
+        {
+            builder.Append("\"");
+            char[] charArray = aString.ToCharArray();
+            for (int i = 0; i < charArray.Length; i++)
+            {
+                char c = charArray[i];
+                if (c == '"')
+                    builder.Append("\\\"");
+                else if (c == '\\')
+                    builder.Append("\\\\");
+                else if (c == '\b')
+                    builder.Append("\\b");
+                else if (c == '\f')
+                    builder.Append("\\f");
+                else if (c == '\n')
+                    builder.Append("\\n");
+                else if (c == '\r')
+                    builder.Append("\\r");
+                else if (c == '\t')
+                    builder.Append("\\t");
+                else
+         
