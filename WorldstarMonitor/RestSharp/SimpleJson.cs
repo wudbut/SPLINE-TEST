@@ -1131,4 +1131,39 @@ namespace RestSharp
                 else if (c == '\t')
                     builder.Append("\\t");
                 else
-         
+                    builder.Append(c);
+            }
+            builder.Append("\"");
+            return true;
+        }
+
+        static bool SerializeNumber(object number, StringBuilder builder)
+        {
+            if (number is long)
+                builder.Append(((long)number).ToString(CultureInfo.InvariantCulture));
+            else if (number is ulong)
+                builder.Append(((ulong)number).ToString(CultureInfo.InvariantCulture));
+            else if (number is int)
+                builder.Append(((int)number).ToString(CultureInfo.InvariantCulture));
+            else if (number is uint)
+                builder.Append(((uint)number).ToString(CultureInfo.InvariantCulture));
+            else if (number is decimal)
+                builder.Append(((decimal)number).ToString(CultureInfo.InvariantCulture));
+            else if (number is float)
+                builder.Append(((float)number).ToString(CultureInfo.InvariantCulture));
+            else
+                builder.Append(Convert.ToDouble(number, CultureInfo.InvariantCulture).ToString("r", CultureInfo.InvariantCulture));
+            return true;
+        }
+
+        /// <summary>
+        /// Determines if a given object is numeric in any way
+        /// (can be integer, double, null, etc).
+        /// </summary>
+        static bool IsNumeric(object value)
+        {
+            if (value is sbyte) return true;
+            if (value is byte) return true;
+            if (value is short) return true;
+            if (value is ushort) return true;
+            if (value is in
