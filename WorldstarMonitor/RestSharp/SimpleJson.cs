@@ -1166,4 +1166,48 @@ namespace RestSharp
             if (value is byte) return true;
             if (value is short) return true;
             if (value is ushort) return true;
-            if (value is in
+            if (value is int) return true;
+            if (value is uint) return true;
+            if (value is long) return true;
+            if (value is ulong) return true;
+            if (value is float) return true;
+            if (value is double) return true;
+            if (value is decimal) return true;
+            return false;
+        }
+
+        private static IJsonSerializerStrategy _currentJsonSerializerStrategy;
+        public static IJsonSerializerStrategy CurrentJsonSerializerStrategy
+        {
+            get
+            {
+                return _currentJsonSerializerStrategy ??
+                    (_currentJsonSerializerStrategy =
+#if SIMPLE_JSON_DATACONTRACT
+ DataContractJsonSerializerStrategy
+#else
+ PocoJsonSerializerStrategy
+#endif
+);
+            }
+            set
+            {
+                _currentJsonSerializerStrategy = value;
+            }
+        }
+
+        private static PocoJsonSerializerStrategy _pocoJsonSerializerStrategy;
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        public static PocoJsonSerializerStrategy PocoJsonSerializerStrategy
+        {
+            get
+            {
+                return _pocoJsonSerializerStrategy ?? (_pocoJsonSerializerStrategy = new PocoJsonSerializerStrategy());
+            }
+        }
+
+#if SIMPLE_JSON_DATACONTRACT
+
+        private static DataContractJsonSerializerStrategy _dataContractJsonSerializerStrategy;
+        [System.ComponentModel.EditorBrowsable(EditorBrowsableState.Advanced)]
+        public sta
