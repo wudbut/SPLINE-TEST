@@ -1276,4 +1276,33 @@ namespace RestSharp
         internal virtual IDictionary<string, ReflectionUtils.GetDelegate> GetterValueFactory(Type type)
         {
             IDictionary<string, ReflectionUtils.GetDelegate> result = new Dictionary<string, ReflectionUtils.GetDelegate>();
-            foreach (PropertyInfo propertyInfo in ReflectionUtils.GetProperties
+            foreach (PropertyInfo propertyInfo in ReflectionUtils.GetProperties(type))
+            {
+                if (propertyInfo.CanRead)
+                {
+                    MethodInfo getMethod = ReflectionUtils.GetGetterMethodInfo(propertyInfo);
+                    if (getMethod.IsStatic || !getMethod.IsPublic)
+                        continue;
+                    result[MapClrMemberNameToJsonFieldName(propertyInfo.Name)] = ReflectionUtils.GetGetMethod(propertyInfo);
+                }
+            }
+            foreach (FieldInfo fieldInfo in ReflectionUtils.GetFields(type))
+            {
+                if (fieldInfo.IsStatic || !fieldInfo.IsPublic)
+                    continue;
+                result[MapClrMemberNameToJsonFieldName(fieldInfo.Name)] = ReflectionUtils.GetGetMethod(fieldInfo);
+            }
+            return result;
+        }
+
+        internal virtual IDictionary<string, KeyValuePair<Type, ReflectionUtils.SetDelegate>> SetterValueFactory(Type type)
+        {
+            IDictionary<string, KeyValuePair<Type, ReflectionUtils.SetDelegate>> result = new Dictionary<string, KeyValuePair<Type, ReflectionUtils.SetDelegate>>();
+            foreach (PropertyInfo propertyInfo in ReflectionUtils.GetProperties(type))
+            {
+                if (propertyInfo.CanWrite)
+                {
+                    MethodInfo setMethod = ReflectionUtils.GetSetterMethodInfo(propertyInfo);
+                    if (setMethod.IsStatic || !setMethod.IsPublic)
+                        continue;
+                    result[MapClrMemberNameToJsonFieldName(propertyInfo.Name)] = new KeyValuePair<Type, ReflectionUtils.SetDelegate>(propertyInfo.PropertyType, ReflectionUtils.GetS
