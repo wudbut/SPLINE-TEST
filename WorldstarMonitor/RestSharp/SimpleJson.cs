@@ -1251,4 +1251,29 @@ namespace RestSharp
 
         private static readonly string[] Iso8601Format = new string[]
                                                              {
-                                  
+                                                                 @"yyyy-MM-dd\THH:mm:ss.FFFFFFF\Z",
+                                                                 @"yyyy-MM-dd\THH:mm:ss\Z",
+                                                                 @"yyyy-MM-dd\THH:mm:ssK"
+                                                             };
+
+        public PocoJsonSerializerStrategy()
+        {
+            ConstructorCache = new ReflectionUtils.ThreadSafeDictionary<Type, ReflectionUtils.ConstructorDelegate>(ContructorDelegateFactory);
+            GetCache = new ReflectionUtils.ThreadSafeDictionary<Type, IDictionary<string, ReflectionUtils.GetDelegate>>(GetterValueFactory);
+            SetCache = new ReflectionUtils.ThreadSafeDictionary<Type, IDictionary<string, KeyValuePair<Type, ReflectionUtils.SetDelegate>>>(SetterValueFactory);
+        }
+
+        protected virtual string MapClrMemberNameToJsonFieldName(string clrPropertyName)
+        {
+            return clrPropertyName;
+        }
+
+        internal virtual ReflectionUtils.ConstructorDelegate ContructorDelegateFactory(Type key)
+        {
+            return ReflectionUtils.GetContructor(key, key.IsArray ? ArrayConstructorParameterTypes : EmptyTypes);
+        }
+
+        internal virtual IDictionary<string, ReflectionUtils.GetDelegate> GetterValueFactory(Type type)
+        {
+            IDictionary<string, ReflectionUtils.GetDelegate> result = new Dictionary<string, ReflectionUtils.GetDelegate>();
+            foreach (PropertyInfo propertyInfo in ReflectionUtils.GetProperties
