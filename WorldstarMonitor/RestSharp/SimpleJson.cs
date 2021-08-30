@@ -1210,4 +1210,45 @@ namespace RestSharp
 
         private static DataContractJsonSerializerStrategy _dataContractJsonSerializerStrategy;
         [System.ComponentModel.EditorBrowsable(EditorBrowsableState.Advanced)]
-        public sta
+        public static DataContractJsonSerializerStrategy DataContractJsonSerializerStrategy
+        {
+            get
+            {
+                return _dataContractJsonSerializerStrategy ?? (_dataContractJsonSerializerStrategy = new DataContractJsonSerializerStrategy());
+            }
+        }
+
+#endif
+    }
+    
+    [GeneratedCode("simple-json", "1.0.0")]
+#if SIMPLE_JSON_INTERNAL
+    internal
+#else
+    public
+#endif
+ interface IJsonSerializerStrategy
+    {
+        [SuppressMessage("Microsoft.Design", "CA1007:UseGenericsWhereAppropriate", Justification="Need to support .NET 2")]
+        bool TrySerializeNonPrimitiveObject(object input, out object output);
+        object DeserializeObject(object value, Type type);
+    }
+
+    [GeneratedCode("simple-json", "1.0.0")]
+#if SIMPLE_JSON_INTERNAL
+    internal
+#else
+    public
+#endif
+ class PocoJsonSerializerStrategy : IJsonSerializerStrategy
+    {
+        internal IDictionary<Type, ReflectionUtils.ConstructorDelegate> ConstructorCache;
+        internal IDictionary<Type, IDictionary<string, ReflectionUtils.GetDelegate>> GetCache;
+        internal IDictionary<Type, IDictionary<string, KeyValuePair<Type, ReflectionUtils.SetDelegate>>> SetCache;
+
+        internal static readonly Type[] EmptyTypes = new Type[0];
+        internal static readonly Type[] ArrayConstructorParameterTypes = new Type[] { typeof(int) };
+
+        private static readonly string[] Iso8601Format = new string[]
+                                                             {
+                                  
