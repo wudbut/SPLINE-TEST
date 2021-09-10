@@ -1305,4 +1305,40 @@ namespace RestSharp
                     MethodInfo setMethod = ReflectionUtils.GetSetterMethodInfo(propertyInfo);
                     if (setMethod.IsStatic || !setMethod.IsPublic)
                         continue;
-                    result[MapClrMemberNameToJsonFieldName(propertyInfo.Name)] = new KeyValuePair<Type, ReflectionUtils.SetDelegate>(propertyInfo.PropertyType, ReflectionUtils.GetS
+                    result[MapClrMemberNameToJsonFieldName(propertyInfo.Name)] = new KeyValuePair<Type, ReflectionUtils.SetDelegate>(propertyInfo.PropertyType, ReflectionUtils.GetSetMethod(propertyInfo));
+                }
+            }
+            foreach (FieldInfo fieldInfo in ReflectionUtils.GetFields(type))
+            {
+                if (fieldInfo.IsInitOnly || fieldInfo.IsStatic || !fieldInfo.IsPublic)
+                    continue;
+                result[MapClrMemberNameToJsonFieldName(fieldInfo.Name)] = new KeyValuePair<Type, ReflectionUtils.SetDelegate>(fieldInfo.FieldType, ReflectionUtils.GetSetMethod(fieldInfo));
+            }
+            return result;
+        }
+
+        public virtual bool TrySerializeNonPrimitiveObject(object input, out object output)
+        {
+            return TrySerializeKnownTypes(input, out output) || TrySerializeUnknownTypes(input, out output);
+        }
+
+        [SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
+        public virtual object DeserializeObject(object value, Type type)
+        {
+            if (type == null) throw new ArgumentNullException("type");
+            string str = value as string;
+
+            if (type == typeof (Guid) && string.IsNullOrEmpty(str))
+                return default(Guid);
+
+            if (value == null)
+                return null;
+            
+            object obj = null;
+
+            if (str != null)
+            {
+                if (str.Length != 0) // We know it can't be null now.
+                {
+                    if (type == typeof(DateTime) || (ReflectionUtils.IsNullableType(type) && Nullable.GetUnderlyingType(type) == typeof(DateTime)))
+                        return DateTime.ParseExact(str, Iso8601Format, Cul
