@@ -1370,4 +1370,36 @@ namespace RestSharp
             bool valueIsDouble = value is double;
             if ((valueIsLong && type == typeof(long)) || (valueIsDouble && type == typeof(double)))
                 return value;
-            i
+            if ((valueIsDouble && type != typeof(double)) || (valueIsLong && type != typeof(long)))
+            {
+                obj = type == typeof(int) || type == typeof(long) || type == typeof(double) || type == typeof(float) || type == typeof(bool) || type == typeof(decimal) || type == typeof(byte) || type == typeof(short)
+                            ? Convert.ChangeType(value, type, CultureInfo.InvariantCulture)
+                            : value;
+            }
+            else
+            {
+                IDictionary<string, object> objects = value as IDictionary<string, object>;
+                if (objects != null)
+                {
+                    IDictionary<string, object> jsonObject = objects;
+
+                    if (ReflectionUtils.IsTypeDictionary(type))
+                    {
+                        // if dictionary then
+                        Type[] types = ReflectionUtils.GetGenericTypeArguments(type);
+                        Type keyType = types[0];
+                        Type valueType = types[1];
+
+                        Type genericType = typeof(Dictionary<,>).MakeGenericType(keyType, valueType);
+
+                        IDictionary dict = (IDictionary)ConstructorCache[genericType]();
+
+                        foreach (KeyValuePair<string, object> kvp in jsonObject)
+                            dict.Add(kvp.Key, DeserializeObject(kvp.Value, valueType));
+
+                        obj = dict;
+                    }
+                    else
+                    {
+                        if (type == typeof(object))
+                            ob
