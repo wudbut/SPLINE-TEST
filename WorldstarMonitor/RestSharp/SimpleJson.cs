@@ -1402,4 +1402,35 @@ namespace RestSharp
                     else
                     {
                         if (type == typeof(object))
-                            ob
+                            obj = value;
+                        else
+                        {
+                            obj = ConstructorCache[type]();
+                            foreach (KeyValuePair<string, KeyValuePair<Type, ReflectionUtils.SetDelegate>> setter in SetCache[type])
+                            {
+                                object jsonValue;
+                                if (jsonObject.TryGetValue(setter.Key, out jsonValue))
+                                {
+                                    jsonValue = DeserializeObject(jsonValue, setter.Value.Key);
+                                    setter.Value.Value(obj, jsonValue);
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    IList<object> valueAsList = value as IList<object>;
+                    if (valueAsList != null)
+                    {
+                        IList<object> jsonObject = valueAsList;
+                        IList list = null;
+
+                        if (type.IsArray)
+                        {
+                            list = (IList)ConstructorCache[type](jsonObject.Count);
+                            int i = 0;
+                            foreach (object o in jsonObject)
+                                list[i++] = DeserializeObject(o, type.GetElementType());
+                        }
+                        else if (ReflectionUtils.IsTypeGenericeCollectionInterface(type) || ReflectionUtils.IsAssignableFrom(typeof(ILis
