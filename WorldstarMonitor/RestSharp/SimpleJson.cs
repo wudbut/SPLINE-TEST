@@ -1464,4 +1464,49 @@ namespace RestSharp
                 output = ((DateTime)input).ToUniversalTime().ToString(Iso8601Format[0], CultureInfo.InvariantCulture);
 #if !PocketPC
             else if (input is DateTimeOffset)
-                output = ((DateTimeOffset)input).ToUniversalTime().ToString(Iso8601Format[0], Cultur
+                output = ((DateTimeOffset)input).ToUniversalTime().ToString(Iso8601Format[0], CultureInfo.InvariantCulture);
+#endif
+            else if (input is Guid)
+                output = ((Guid)input).ToString("D");
+            else if (input is Uri)
+                output = input.ToString();
+            else
+            {
+                Enum inputEnum = input as Enum;
+                if (inputEnum != null)
+                    output = SerializeEnum(inputEnum);
+                else
+                {
+                    returnValue = false;
+                    output = null;
+                }
+            }
+            return returnValue;
+        }
+        [SuppressMessage("Microsoft.Design", "CA1007:UseGenericsWhereAppropriate", Justification="Need to support .NET 2")]
+        protected virtual bool TrySerializeUnknownTypes(object input, out object output)
+        {
+            if (input == null) throw new ArgumentNullException("input");
+            output = null;
+            Type type = input.GetType();
+            if (type.FullName == null)
+                return false;
+            IDictionary<string, object> obj = new JsonObject();
+            IDictionary<string, ReflectionUtils.GetDelegate> getters = GetCache[type];
+            foreach (KeyValuePair<string, ReflectionUtils.GetDelegate> getter in getters)
+            {
+                if (getter.Value != null)
+                    obj.Add(MapClrMemberNameToJsonFieldName(getter.Key), getter.Value(input));
+            }
+            output = obj;
+            return true;
+        }
+    }
+
+#if SIMPLE_JSON_DATACONTRACT
+    [GeneratedCode("simple-json", "1.0.0")]
+#if SIMPLE_JSON_INTERNAL
+    internal
+#else
+    public
+#endi
