@@ -1433,4 +1433,35 @@ namespace RestSharp
                             foreach (object o in jsonObject)
                                 list[i++] = DeserializeObject(o, type.GetElementType());
                         }
-                        else if (ReflectionUtils.IsTypeGenericeCollectionInterface(type) || ReflectionUtils.IsAssignableFrom(typeof(ILis
+                        else if (ReflectionUtils.IsTypeGenericeCollectionInterface(type) || ReflectionUtils.IsAssignableFrom(typeof(IList), type))
+                        {
+                            Type innerType = ReflectionUtils.GetGenericTypeArguments(type)[0];
+                            Type genericType = typeof(List<>).MakeGenericType(innerType);
+                            list = (IList)ConstructorCache[genericType](jsonObject.Count);
+                            foreach (object o in jsonObject)
+                                list.Add(DeserializeObject(o, innerType));
+                        }
+                        obj = list;
+                    }
+                }
+                return obj;
+            }
+            if (ReflectionUtils.IsNullableType(type))
+                return ReflectionUtils.ToNullableType(obj, type);
+            return obj;
+        }
+
+        protected virtual object SerializeEnum(Enum p)
+        {
+            return Convert.ToDouble(p, CultureInfo.InvariantCulture);
+        }
+
+        [SuppressMessage("Microsoft.Design", "CA1007:UseGenericsWhereAppropriate", Justification="Need to support .NET 2")]
+        protected virtual bool TrySerializeKnownTypes(object input, out object output)
+        {
+            bool returnValue = true;
+            if (input is DateTime)
+                output = ((DateTime)input).ToUniversalTime().ToString(Iso8601Format[0], CultureInfo.InvariantCulture);
+#if !PocketPC
+            else if (input is DateTimeOffset)
+                output = ((DateTimeOffset)input).ToUniversalTime().ToString(Iso8601Format[0], Cultur
