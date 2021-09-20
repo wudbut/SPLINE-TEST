@@ -1509,4 +1509,31 @@ namespace RestSharp
     internal
 #else
     public
-#endi
+#endif
+ class DataContractJsonSerializerStrategy : PocoJsonSerializerStrategy
+    {
+        public DataContractJsonSerializerStrategy()
+        {
+            GetCache = new ReflectionUtils.ThreadSafeDictionary<Type, IDictionary<string, ReflectionUtils.GetDelegate>>(GetterValueFactory);
+            SetCache = new ReflectionUtils.ThreadSafeDictionary<Type, IDictionary<string, KeyValuePair<Type, ReflectionUtils.SetDelegate>>>(SetterValueFactory);
+        }
+
+        internal override IDictionary<string, ReflectionUtils.GetDelegate> GetterValueFactory(Type type)
+        {
+            bool hasDataContract = ReflectionUtils.GetAttribute(type, typeof(DataContractAttribute)) != null;
+            if (!hasDataContract)
+                return base.GetterValueFactory(type);
+            string jsonKey;
+            IDictionary<string, ReflectionUtils.GetDelegate> result = new Dictionary<string, ReflectionUtils.GetDelegate>();
+            foreach (PropertyInfo propertyInfo in ReflectionUtils.GetProperties(type))
+            {
+                if (propertyInfo.CanRead)
+                {
+                    MethodInfo getMethod = ReflectionUtils.GetGetterMethodInfo(propertyInfo);
+                    if (!getMethod.IsStatic && CanAdd(propertyInfo, out jsonKey))
+                        result[jsonKey] = ReflectionUtils.GetGetMethod(propertyInfo);
+                }
+            }
+            foreach (FieldInfo fieldInfo in ReflectionUtils.GetFields(type))
+            {
+                if (!fieldInfo.IsStatic && CanAdd(field
