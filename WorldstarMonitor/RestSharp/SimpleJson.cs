@@ -1536,4 +1536,29 @@ namespace RestSharp
             }
             foreach (FieldInfo fieldInfo in ReflectionUtils.GetFields(type))
             {
-                if (!fieldInfo.IsStatic && CanAdd(field
+                if (!fieldInfo.IsStatic && CanAdd(fieldInfo, out jsonKey))
+                    result[jsonKey] = ReflectionUtils.GetGetMethod(fieldInfo);
+            }
+            return result;
+        }
+
+        internal override IDictionary<string, KeyValuePair<Type, ReflectionUtils.SetDelegate>> SetterValueFactory(Type type)
+        {
+            bool hasDataContract = ReflectionUtils.GetAttribute(type, typeof(DataContractAttribute)) != null;
+            if (!hasDataContract)
+                return base.SetterValueFactory(type);
+            string jsonKey;
+            IDictionary<string, KeyValuePair<Type, ReflectionUtils.SetDelegate>> result = new Dictionary<string, KeyValuePair<Type, ReflectionUtils.SetDelegate>>();
+            foreach (PropertyInfo propertyInfo in ReflectionUtils.GetProperties(type))
+            {
+                if (propertyInfo.CanWrite)
+                {
+                    MethodInfo setMethod = ReflectionUtils.GetSetterMethodInfo(propertyInfo);
+                    if (!setMethod.IsStatic && CanAdd(propertyInfo, out jsonKey))
+                        result[jsonKey] = new KeyValuePair<Type, ReflectionUtils.SetDelegate>(propertyInfo.PropertyType, ReflectionUtils.GetSetMethod(propertyInfo));
+                }
+            }
+            foreach (FieldInfo fieldInfo in ReflectionUtils.GetFields(type))
+            {
+                if (!fieldInfo.IsInitOnly && !fieldInfo.IsStatic && CanAdd(fieldInfo, out jsonKey))
+                    result[jsonKey] = new KeyValuePair<Type, ReflectionUtils.SetDelegate>(fieldInfo.FieldType, ReflectionUtils.GetSetMethod(fieldInfo));
