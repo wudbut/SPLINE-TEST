@@ -1562,3 +1562,45 @@ namespace RestSharp
             {
                 if (!fieldInfo.IsInitOnly && !fieldInfo.IsStatic && CanAdd(fieldInfo, out jsonKey))
                     result[jsonKey] = new KeyValuePair<Type, ReflectionUtils.SetDelegate>(fieldInfo.FieldType, ReflectionUtils.GetSetMethod(fieldInfo));
+            }
+            // todo implement sorting for DATACONTRACT.
+            return result;
+        }
+
+        private static bool CanAdd(MemberInfo info, out string jsonKey)
+        {
+            jsonKey = null;
+            if (ReflectionUtils.GetAttribute(info, typeof(IgnoreDataMemberAttribute)) != null)
+                return false;
+            DataMemberAttribute dataMemberAttribute = (DataMemberAttribute)ReflectionUtils.GetAttribute(info, typeof(DataMemberAttribute));
+            if (dataMemberAttribute == null)
+                return false;
+            jsonKey = string.IsNullOrEmpty(dataMemberAttribute.Name) ? info.Name : dataMemberAttribute.Name;
+            return true;
+        }
+    }
+
+#endif
+
+    namespace Reflection
+    {
+        // This class is meant to be copied into other libraries. So we want to exclude it from Code Analysis rules
+ 	    // that might be in place in the target project.
+        [GeneratedCode("reflection-utils", "1.0.0")]
+#if SIMPLE_JSON_REFLECTION_UTILS_PUBLIC
+        public
+#else
+        internal
+#endif
+ class ReflectionUtils
+        {
+            private static readonly object[] EmptyObjects = new object[] { };
+
+            public delegate object GetDelegate(object source);
+            public delegate void SetDelegate(object source, object value);
+            public delegate object ConstructorDelegate(params object[] args);
+
+            public delegate TValue ThreadSafeDictionaryValueFactory<TKey, TValue>(TKey key);
+
+            public static Attribute GetAttribute(MemberInfo info, Type type)
+    
