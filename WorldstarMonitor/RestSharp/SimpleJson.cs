@@ -1603,4 +1603,48 @@ namespace RestSharp
             public delegate TValue ThreadSafeDictionaryValueFactory<TKey, TValue>(TKey key);
 
             public static Attribute GetAttribute(MemberInfo info, Type type)
-    
+            {
+#if SIMPLE_JSON_TYPEINFO
+                if (info == null || type == null || !info.IsDefined(type))
+                    return null;
+                return info.GetCustomAttribute(type);
+#else
+                if (info == null || type == null || !Attribute.IsDefined(info, type))
+                    return null;
+                return Attribute.GetCustomAttribute(info, type);
+#endif
+            }
+
+            public static Attribute GetAttribute(Type objectType, Type attributeType)
+            {
+
+#if SIMPLE_JSON_TYPEINFO
+                if (objectType == null || attributeType == null || !objectType.GetTypeInfo().IsDefined(attributeType))
+                    return null;
+                return objectType.GetTypeInfo().GetCustomAttribute(attributeType);
+#else
+                if (objectType == null || attributeType == null || !Attribute.IsDefined(objectType, attributeType))
+                    return null;
+                return Attribute.GetCustomAttribute(objectType, attributeType);
+#endif
+            }
+
+            public static Type[] GetGenericTypeArguments(Type type)
+            {
+#if SIMPLE_JSON_TYPEINFO
+                return type.GetTypeInfo().GenericTypeArguments;
+#else
+                return type.GetGenericArguments();
+#endif
+            }
+
+            public static bool IsTypeGenericeCollectionInterface(Type type)
+            {
+#if SIMPLE_JSON_TYPEINFO
+                if (!type.GetTypeInfo().IsGenericType)
+#else
+                if (!type.IsGenericType)
+#endif
+                    return false;
+
+       
