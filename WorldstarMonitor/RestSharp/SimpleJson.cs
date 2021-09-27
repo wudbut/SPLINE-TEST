@@ -1693,4 +1693,48 @@ namespace RestSharp
 
             public static object ToNullableType(object obj, Type nullableType)
             {
-                return obj == null ? null : Con
+                return obj == null ? null : Convert.ChangeType(obj, Nullable.GetUnderlyingType(nullableType), CultureInfo.InvariantCulture);
+            }
+
+            public static bool IsValueType(Type type)
+            {
+#if SIMPLE_JSON_TYPEINFO
+                return type.GetTypeInfo().IsValueType;
+#else
+                return type.IsValueType;
+#endif
+            }
+
+            public static IEnumerable<ConstructorInfo> GetConstructors(Type type)
+            {
+#if SIMPLE_JSON_TYPEINFO
+                return type.GetTypeInfo().DeclaredConstructors;
+#else
+                return type.GetConstructors();
+#endif
+            }
+
+            public static ConstructorInfo GetConstructorInfo(Type type, params Type[] argsType)
+            {
+                IEnumerable<ConstructorInfo> constructorInfos = GetConstructors(type);
+                int i;
+                bool matches;
+                foreach (ConstructorInfo constructorInfo in constructorInfos)
+                {
+                    ParameterInfo[] parameters = constructorInfo.GetParameters();
+                    if (argsType.Length != parameters.Length)
+                        continue;
+
+                    i = 0;
+                    matches = true;
+                    foreach (ParameterInfo parameterInfo in constructorInfo.GetParameters())
+                    {
+                        if (parameterInfo.ParameterType != argsType[i])
+                        {
+                            matches = false;
+                            break;
+                        }
+                    }
+
+                    if (matches)
+               
