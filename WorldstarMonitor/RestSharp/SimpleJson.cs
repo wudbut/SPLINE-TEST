@@ -1647,4 +1647,50 @@ namespace RestSharp
 #endif
                     return false;
 
-       
+                Type genericDefinition = type.GetGenericTypeDefinition();
+
+                return (genericDefinition == typeof(IList<>) || genericDefinition == typeof(ICollection<>) || genericDefinition == typeof(IEnumerable<>));
+            }
+
+            public static bool IsAssignableFrom(Type type1, Type type2)
+            {
+#if SIMPLE_JSON_TYPEINFO
+                return type1.GetTypeInfo().IsAssignableFrom(type2.GetTypeInfo());
+#else
+                return type1.IsAssignableFrom(type2);
+#endif
+            }
+
+            public static bool IsTypeDictionary(Type type)
+            {
+#if SIMPLE_JSON_TYPEINFO
+                if (typeof(IDictionary<,>).GetTypeInfo().IsAssignableFrom(type.GetTypeInfo()))
+                    return true;
+
+                if (!type.GetTypeInfo().IsGenericType)
+                    return false;
+#else
+                if (typeof(System.Collections.IDictionary).IsAssignableFrom(type))
+                    return true;
+
+                if (!type.IsGenericType)
+                    return false;
+#endif
+                Type genericDefinition = type.GetGenericTypeDefinition();
+                return genericDefinition == typeof(IDictionary<,>);
+            }
+
+            public static bool IsNullableType(Type type)
+            {
+                return
+#if SIMPLE_JSON_TYPEINFO
+ type.GetTypeInfo().IsGenericType
+#else
+ type.IsGenericType
+#endif
+ && type.GetGenericTypeDefinition() == typeof(Nullable<>);
+            }
+
+            public static object ToNullableType(object obj, Type nullableType)
+            {
+                return obj == null ? null : Con
