@@ -1737,4 +1737,52 @@ namespace RestSharp
                     }
 
                     if (matches)
-               
+                        return constructorInfo;
+                }
+
+                return null;
+            }
+
+            public static IEnumerable<PropertyInfo> GetProperties(Type type)
+            {
+#if SIMPLE_JSON_TYPEINFO
+                return type.GetTypeInfo().DeclaredProperties;
+#else
+                return type.GetProperties(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static);
+#endif
+            }
+
+            public static IEnumerable<FieldInfo> GetFields(Type type)
+            {
+#if SIMPLE_JSON_TYPEINFO
+                return type.GetTypeInfo().DeclaredFields;
+#else
+                return type.GetFields(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static);
+#endif
+            }
+
+            public static MethodInfo GetGetterMethodInfo(PropertyInfo propertyInfo)
+            {
+#if SIMPLE_JSON_TYPEINFO
+                return propertyInfo.GetMethod;
+#else
+                return propertyInfo.GetGetMethod(true);
+#endif
+            }
+
+            public static MethodInfo GetSetterMethodInfo(PropertyInfo propertyInfo)
+            {
+#if SIMPLE_JSON_TYPEINFO
+                return propertyInfo.SetMethod;
+#else
+                return propertyInfo.GetSetMethod(true);
+#endif
+            }
+
+            public static ConstructorDelegate GetContructor(ConstructorInfo constructorInfo)
+            {
+#if SIMPLE_JSON_NO_LINQ_EXPRESSION
+                return GetConstructorByReflection(constructorInfo);
+#else
+                return GetConstructorByExpression(constructorInfo);
+#e
