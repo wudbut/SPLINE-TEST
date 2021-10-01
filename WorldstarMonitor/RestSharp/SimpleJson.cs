@@ -1851,4 +1851,33 @@ namespace RestSharp
 #if SIMPLE_JSON_NO_LINQ_EXPRESSION || PocketPC
                 return GetGetMethodByReflection(fieldInfo);
 #else
-                return GetGetMethodByExpression(fiel
+                return GetGetMethodByExpression(fieldInfo);
+#endif
+            }
+
+            public static GetDelegate GetGetMethodByReflection(PropertyInfo propertyInfo)
+            {
+                MethodInfo methodInfo = GetGetterMethodInfo(propertyInfo);
+                return delegate(object source) { return methodInfo.Invoke(source, EmptyObjects); };
+            }
+
+            public static GetDelegate GetGetMethodByReflection(FieldInfo fieldInfo)
+            {
+                return delegate(object source) { return fieldInfo.GetValue(source); };
+            }
+
+#if !SIMPLE_JSON_NO_LINQ_EXPRESSION && !PocketPC
+
+            public static GetDelegate GetGetMethodByExpression(PropertyInfo propertyInfo)
+            {
+                MethodInfo getMethodInfo = GetGetterMethodInfo(propertyInfo);
+                ParameterExpression instance = Expression.Parameter(typeof(object), "instance");
+                UnaryExpression instanceCast = (!IsValueType(propertyInfo.DeclaringType)) ? Expression.TypeAs(instance, propertyInfo.DeclaringType) : Expression.Convert(instance, propertyInfo.DeclaringType);
+                Func<object, object> compiled = Expression.Lambda<Func<object, object>>(Expression.TypeAs(Expression.Call(instanceCast, getMethodInfo), typeof(object)), instance).Compile();
+                return delegate(object source) { return compiled(source); };
+            }
+
+            public static GetDelegate GetGetMethodByExpression(FieldInfo fieldInfo)
+            {
+                ParameterExpression instance = Expression.Parameter(typeof(object), "instance");
+                MemberExpression member =
