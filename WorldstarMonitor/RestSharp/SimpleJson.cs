@@ -1818,4 +1818,37 @@ namespace RestSharp
                 for (int i = 0; i < paramsInfo.Length; i++)
                 {
                     Expression index = Expression.Constant(i);
-                    Type paramType = paramsInfo[i]
+                    Type paramType = paramsInfo[i].ParameterType;
+                    Expression paramAccessorExp = Expression.ArrayIndex(param, index);
+                    Expression paramCastExp = Expression.Convert(paramAccessorExp, paramType);
+                    argsExp[i] = paramCastExp;
+                }
+                NewExpression newExp = Expression.New(constructorInfo, argsExp);
+                Expression<Func<object[], object>> lambda = Expression.Lambda<Func<object[], object>>(newExp, param);
+                Func<object[], object> compiledLambda = lambda.Compile();
+                return delegate(object[] args) { return compiledLambda(args); };
+            }
+
+            public static ConstructorDelegate GetConstructorByExpression(Type type, params Type[] argsType)
+            {
+                ConstructorInfo constructorInfo = GetConstructorInfo(type, argsType);
+                return constructorInfo == null ? null : GetConstructorByExpression(constructorInfo);
+            }
+
+#endif
+
+            public static GetDelegate GetGetMethod(PropertyInfo propertyInfo)
+            {
+#if SIMPLE_JSON_NO_LINQ_EXPRESSION || PocketPC
+                return GetGetMethodByReflection(propertyInfo);
+#else
+                return GetGetMethodByExpression(propertyInfo);
+#endif
+            }
+
+            public static GetDelegate GetGetMethod(FieldInfo fieldInfo)
+            {
+#if SIMPLE_JSON_NO_LINQ_EXPRESSION || PocketPC
+                return GetGetMethodByReflection(fieldInfo);
+#else
+                return GetGetMethodByExpression(fiel
