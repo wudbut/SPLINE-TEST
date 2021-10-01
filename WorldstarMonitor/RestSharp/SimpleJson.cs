@@ -1785,4 +1785,37 @@ namespace RestSharp
                 return GetConstructorByReflection(constructorInfo);
 #else
                 return GetConstructorByExpression(constructorInfo);
-#e
+#endif
+            }
+
+            public static ConstructorDelegate GetContructor(Type type, params Type[] argsType)
+            {
+#if SIMPLE_JSON_NO_LINQ_EXPRESSION
+                return GetConstructorByReflection(type, argsType);
+#else
+                return GetConstructorByExpression(type, argsType);
+#endif
+            }
+
+            public static ConstructorDelegate GetConstructorByReflection(ConstructorInfo constructorInfo)
+            {
+                return delegate(object[] args) { return constructorInfo.Invoke(args); };
+            }
+
+            public static ConstructorDelegate GetConstructorByReflection(Type type, params Type[] argsType)
+            {
+                ConstructorInfo constructorInfo = GetConstructorInfo(type, argsType);
+                return constructorInfo == null ? null : GetConstructorByReflection(constructorInfo);
+            }
+
+#if !SIMPLE_JSON_NO_LINQ_EXPRESSION
+
+            public static ConstructorDelegate GetConstructorByExpression(ConstructorInfo constructorInfo)
+            {
+                ParameterInfo[] paramsInfo = constructorInfo.GetParameters();
+                ParameterExpression param = Expression.Parameter(typeof(object[]), "args");
+                Expression[] argsExp = new Expression[paramsInfo.Length];
+                for (int i = 0; i < paramsInfo.Length; i++)
+                {
+                    Expression index = Expression.Constant(i);
+                    Type paramType = paramsInfo[i]
