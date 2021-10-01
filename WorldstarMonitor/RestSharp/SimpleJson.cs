@@ -1880,4 +1880,44 @@ namespace RestSharp
             public static GetDelegate GetGetMethodByExpression(FieldInfo fieldInfo)
             {
                 ParameterExpression instance = Expression.Parameter(typeof(object), "instance");
-                MemberExpression member =
+                MemberExpression member = Expression.Field(Expression.Convert(instance, fieldInfo.DeclaringType), fieldInfo);
+                GetDelegate compiled = Expression.Lambda<GetDelegate>(Expression.Convert(member, typeof(object)), instance).Compile();
+                return delegate(object source) { return compiled(source); };
+            }
+
+#endif
+
+            public static SetDelegate GetSetMethod(PropertyInfo propertyInfo)
+            {
+#if SIMPLE_JSON_NO_LINQ_EXPRESSION
+                return GetSetMethodByReflection(propertyInfo);
+#else
+                return GetSetMethodByExpression(propertyInfo);
+#endif
+            }
+
+            public static SetDelegate GetSetMethod(FieldInfo fieldInfo)
+            {
+#if SIMPLE_JSON_NO_LINQ_EXPRESSION
+                return GetSetMethodByReflection(fieldInfo);
+#else
+                return GetSetMethodByExpression(fieldInfo);
+#endif
+            }
+
+            public static SetDelegate GetSetMethodByReflection(PropertyInfo propertyInfo)
+            {
+                MethodInfo methodInfo = GetSetterMethodInfo(propertyInfo);
+                return delegate(object source, object value) { methodInfo.Invoke(source, new object[] { value }); };
+            }
+
+            public static SetDelegate GetSetMethodByReflection(FieldInfo fieldInfo)
+            {
+                return delegate(object source, object value) { fieldInfo.SetValue(source, value); };
+            }
+
+#if !SIMPLE_JSON_NO_LINQ_EXPRESSION
+
+            public static SetDelegate GetSetMethodByExpression(PropertyInfo propertyInfo)
+            {
+                MethodInfo setMethodIn
