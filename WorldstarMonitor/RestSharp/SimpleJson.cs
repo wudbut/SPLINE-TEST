@@ -1920,4 +1920,19 @@ namespace RestSharp
 
             public static SetDelegate GetSetMethodByExpression(PropertyInfo propertyInfo)
             {
-                MethodInfo setMethodIn
+                MethodInfo setMethodInfo = GetSetterMethodInfo(propertyInfo);
+                ParameterExpression instance = Expression.Parameter(typeof(object), "instance");
+                ParameterExpression value = Expression.Parameter(typeof(object), "value");
+                UnaryExpression instanceCast = (!IsValueType(propertyInfo.DeclaringType)) ? Expression.TypeAs(instance, propertyInfo.DeclaringType) : Expression.Convert(instance, propertyInfo.DeclaringType);
+                UnaryExpression valueCast = (!IsValueType(propertyInfo.PropertyType)) ? Expression.TypeAs(value, propertyInfo.PropertyType) : Expression.Convert(value, propertyInfo.PropertyType);
+                Action<object, object> compiled = Expression.Lambda<Action<object, object>>(Expression.Call(instanceCast, setMethodInfo, valueCast), new ParameterExpression[] { instance, value }).Compile();
+                return delegate(object source, object val) { compiled(source, val); };
+            }
+
+            public static SetDelegate GetSetMethodByExpression(FieldInfo fieldInfo)
+            {
+                ParameterExpression instance = Expression.Parameter(typeof(object), "instance");
+                ParameterExpression value = Expression.Parameter(typeof(object), "value");
+                Action<object, object> compiled = Expression.Lambda<Action<object, object>>(
+                    Assign(Expression.Field(Expression.Convert(instance, fieldInfo.DeclaringType), fieldInfo), Expression.Convert(value, fieldInfo.FieldType)), instance, value).Compile();
+ 
