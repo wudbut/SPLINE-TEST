@@ -1935,4 +1935,45 @@ namespace RestSharp
                 ParameterExpression value = Expression.Parameter(typeof(object), "value");
                 Action<object, object> compiled = Expression.Lambda<Action<object, object>>(
                     Assign(Expression.Field(Expression.Convert(instance, fieldInfo.DeclaringType), fieldInfo), Expression.Convert(value, fieldInfo.FieldType)), instance, value).Compile();
- 
+                return delegate(object source, object val) { compiled(source, val); };
+            }
+
+            public static BinaryExpression Assign(Expression left, Expression right)
+            {
+#if SIMPLE_JSON_TYPEINFO
+                return Expression.Assign(left, right);
+#else
+                MethodInfo assign = typeof(Assigner<>).MakeGenericType(left.Type).GetMethod("Assign");
+                BinaryExpression assignExpr = Expression.Add(left, right, assign);
+                return assignExpr;
+#endif
+            }
+
+            private static class Assigner<T>
+            {
+                public static T Assign(ref T left, T right)
+                {
+                    return (left = right);
+                }
+            }
+
+#endif
+
+            public sealed class ThreadSafeDictionary<TKey, TValue> : IDictionary<TKey, TValue>
+            {
+                private readonly object _lock = new object();
+                private readonly ThreadSafeDictionaryValueFactory<TKey, TValue> _valueFactory;
+                private Dictionary<TKey, TValue> _dictionary;
+
+                public ThreadSafeDictionary(ThreadSafeDictionaryValueFactory<TKey, TValue> valueFactory)
+                {
+                    _valueFactory = valueFactory;
+                }
+
+                private TValue Get(TKey key)
+                {
+                    if (_dictionary == null)
+                        return AddValue(key);
+                    TValue value;
+                    if (!_dictionary.TryGetValue(key, out value))
+                        retu
