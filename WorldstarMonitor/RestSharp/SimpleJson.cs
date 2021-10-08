@@ -2023,4 +2023,54 @@ namespace RestSharp
                     throw new NotImplementedException();
                 }
 
-     
+                public bool TryGetValue(TKey key, out TValue value)
+                {
+                    value = this[key];
+                    return true;
+                }
+
+                public ICollection<TValue> Values
+                {
+                    get { return _dictionary.Values; }
+                }
+
+                public TValue this[TKey key]
+                {
+                    get { return Get(key); }
+                    set { throw new NotImplementedException(); }
+                }
+
+                public void Add(KeyValuePair<TKey, TValue> item)
+                {
+                    throw new NotImplementedException();
+                }
+
+                public void Clear()
+                {
+                    throw new NotImplementedException();
+                }
+
+                public bool Contains(KeyValuePair<TKey, TValue> item)
+                {
+                    throw new NotImplementedException();
+                }
+
+                public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex)
+                {
+                    throw new NotImplementedException();
+                }
+
+                public int Count
+                {
+                    get { return _dictionary.Count; }
+                }
+
+                public bool IsReadOnly
+                {
+                    get { throw new NotImplementedException(); }
+                }
+
+                public bool Remove(KeyValuePair<TKey, TValue> item)
+                {
+                    throw new NotImplementedException();
+              
