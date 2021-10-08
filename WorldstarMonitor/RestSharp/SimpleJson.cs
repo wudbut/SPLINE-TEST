@@ -1976,4 +1976,51 @@ namespace RestSharp
                         return AddValue(key);
                     TValue value;
                     if (!_dictionary.TryGetValue(key, out value))
-                        retu
+                        return AddValue(key);
+                    return value;
+                }
+
+                private TValue AddValue(TKey key)
+                {
+                    TValue value = _valueFactory(key);
+                    lock (_lock)
+                    {
+                        if (_dictionary == null)
+                        {
+                            _dictionary = new Dictionary<TKey, TValue>();
+                            _dictionary[key] = value;
+                        }
+                        else
+                        {
+                            TValue val;
+                            if (_dictionary.TryGetValue(key, out val))
+                                return val;
+                            Dictionary<TKey, TValue> dict = new Dictionary<TKey, TValue>(_dictionary);
+                            dict[key] = value;
+                            _dictionary = dict;
+                        }
+                    }
+                    return value;
+                }
+
+                public void Add(TKey key, TValue value)
+                {
+                    throw new NotImplementedException();
+                }
+
+                public bool ContainsKey(TKey key)
+                {
+                    return _dictionary.ContainsKey(key);
+                }
+
+                public ICollection<TKey> Keys
+                {
+                    get { return _dictionary.Keys; }
+                }
+
+                public bool Remove(TKey key)
+                {
+                    throw new NotImplementedException();
+                }
+
+     
