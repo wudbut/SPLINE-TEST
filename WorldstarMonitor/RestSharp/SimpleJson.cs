@@ -2073,4 +2073,22 @@ namespace RestSharp
                 public bool Remove(KeyValuePair<TKey, TValue> item)
                 {
                     throw new NotImplementedException();
-              
+                }
+
+                public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator()
+                {
+                    return _dictionary.GetEnumerator();
+                }
+
+                System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+                {
+                    return _dictionary.GetEnumerator();
+                }
+            }
+
+        }
+    }
+}
+// ReSharper restore LoopCanBeConvertedToQuery
+// ReSharper restore RedundantExplicitArrayCreation
+// ReSharper restore SuggestUseVarKeywordEvident
