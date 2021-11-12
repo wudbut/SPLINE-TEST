@@ -1,0 +1,6 @@
+C:\Users\time\Documents\Visual Studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Release\Worldstar Monitor.exe.config
+C:\Users\time\Documents\Visual Studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Release\Worldstar Monitor.exe
+C:\Users\time\Documents\Visual Studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Release\Worldstar Monitor.pdb
+C:\Users\time\Documents\Visual Studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Release\Newtonsoft.Json.dll
+C:\Users\time\Documents\Visual Studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Release\RestSharp.dll
+C:\Users\time\Documents\
