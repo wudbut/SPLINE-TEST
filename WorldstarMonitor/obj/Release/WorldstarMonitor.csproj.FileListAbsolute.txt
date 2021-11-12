@@ -26,3 +26,18 @@ C:\Users\time\Documents\Visual Studio 2012\Projects\WindowsFormsApplication1\Wor
 C:\Users\time\Documents\Visual Studio 2012\Projects\WindowsFormsApplication1\WorldstarMonitor\obj\Release\WorldstarMonitor.csproj.GenerateResource.Cache
 C:\Users\time\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\bin\Release\Worldstar Monitor.exe.config
 C:\Users\time\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\bin\Release\Worldstar Monitor.exe
+C:\Users\time\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\bin\Release\Worldstar Monitor.pdb
+C:\Users\time\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\bin\Release\Newtonsoft.Json.dll
+C:\Users\time\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\bin\Release\RestSharp.dll
+C:\Users\time\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\bin\Release\Newtonsoft.Json.xml
+C:\Users\time\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\bin\Release\RestSharp.xml
+C:\Users\time\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\obj\Release\WorldstarMonitor.csprojResolveAssemblyReference.cache
+C:\Users\time\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\obj\Release\WorldStarMonitor.Form1.resources
+C:\Users\time\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\obj\Release\WorldStarMonitor.Properties.Resources.resources
+C:\Users\time\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\obj\Release\WorldstarMonitor.csproj.GenerateResource.Cache
+C:\Users\time\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\obj\Release\Worldstar Monitor.exe
+C:\Users\time\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\obj\Release\Worldstar Monitor.pdb
+C:\Users\chasej\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\bin\Release\Worldstar Monitor.exe.config
+C:\Users\chasej\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\bin\Release\Worldstar Monitor.exe
+C:\Users\chasej\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\bin\Release\Worldstar Monitor.pdb
+C:\Users\chasej\Documents\GitHub\WorldstarM
