@@ -40,4 +40,12 @@ C:\Users\time\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\obj\Release\Wor
 C:\Users\chasej\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\bin\Release\Worldstar Monitor.exe.config
 C:\Users\chasej\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\bin\Release\Worldstar Monitor.exe
 C:\Users\chasej\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\bin\Release\Worldstar Monitor.pdb
-C:\Users\chasej\Documents\GitHub\WorldstarM
+C:\Users\chasej\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\bin\Release\Newtonsoft.Json.dll
+C:\Users\chasej\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\bin\Release\RestSharp.dll
+C:\Users\chasej\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\bin\Release\Newtonsoft.Json.xml
+C:\Users\chasej\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\bin\Release\RestSharp.xml
+C:\Users\chasej\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\obj\Release\WorldStarMonitor.Form1.resources
+C:\Users\chasej\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\obj\Release\WorldStarMonitor.Properties.Resources.resources
+C:\Users\chasej\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\obj\Release\WorldstarMonitor.csproj.GenerateResource.Cache
+C:\Users\chasej\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\obj\Release\Worldstar Monitor.exe
+C:\Users\chasej\Documents\GitHub\WorldstarMonitor\WorldstarMonitor\obj\Release\Worldstar Monitor.pdb
