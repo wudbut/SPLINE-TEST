@@ -2705,3 +2705,1514 @@
             element of the input sequence.
             </summary>
         </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Sum(System.Collections.Generic.IEnumerable{System.Nullable{System.Single}})">
+            <summary>
+            Computes the sum of a sequence of <see cref="T:System.Single"/> values.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Sum``1(System.Collections.Generic.IEnumerable{``0},Newtonsoft.Json.Serialization.Func{``0,System.Nullable{System.Single}})">
+            <summary>
+            Computes the sum of a sequence of <see cref="T:System.Single"/> 
+            values that are obtained by invoking a transform function on 
+            each element of the input sequence.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Average(System.Collections.Generic.IEnumerable{System.Nullable{System.Single}})">
+            <summary>
+            Computes the average of a sequence of <see cref="T:System.Single"/> values.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Average``1(System.Collections.Generic.IEnumerable{``0},Newtonsoft.Json.Serialization.Func{``0,System.Nullable{System.Single}})">
+            <summary>
+            Computes the average of a sequence of <see cref="T:System.Single"/> values 
+            that are obtained by invoking a transform function on each 
+            element of the input sequence.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Min(System.Collections.Generic.IEnumerable{System.Nullable{System.Single}})">
+            <summary>
+            Returns the minimum value in a sequence of nullable 
+            <see cref="T:System.Single"/> values.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Min``1(System.Collections.Generic.IEnumerable{``0},Newtonsoft.Json.Serialization.Func{``0,System.Nullable{System.Single}})">
+            <summary>
+            Invokes a transform function on each element of a sequence and 
+            returns the minimum nullable <see cref="T:System.Single"/> value.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Max(System.Collections.Generic.IEnumerable{System.Nullable{System.Single}})">
+            <summary>
+            Returns the maximum value in a sequence of nullable 
+            <see cref="T:System.Single"/> values.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Max``1(System.Collections.Generic.IEnumerable{``0},Newtonsoft.Json.Serialization.Func{``0,System.Nullable{System.Single}})">
+            <summary>
+            Invokes a transform function on each element of a sequence and 
+            returns the maximum nullable <see cref="T:System.Single"/> value.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Sum(System.Collections.Generic.IEnumerable{System.Double})">
+            <summary>
+            Computes the sum of a sequence of nullable <see cref="T:System.Double"/> values.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Sum``1(System.Collections.Generic.IEnumerable{``0},Newtonsoft.Json.Serialization.Func{``0,System.Double})">
+            <summary>
+            Computes the sum of a sequence of nullable <see cref="T:System.Double"/> 
+            values that are obtained by invoking a transform function on 
+            each element of the input sequence.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Average(System.Collections.Generic.IEnumerable{System.Double})">
+            <summary>
+            Computes the average of a sequence of nullable <see cref="T:System.Double"/> values.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Average``1(System.Collections.Generic.IEnumerable{``0},Newtonsoft.Json.Serialization.Func{``0,System.Double})">
+            <summary>
+            Computes the average of a sequence of nullable <see cref="T:System.Double"/> values 
+            that are obtained by invoking a transform function on each 
+            element of the input sequence.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Sum(System.Collections.Generic.IEnumerable{System.Nullable{System.Double}})">
+            <summary>
+            Computes the sum of a sequence of <see cref="T:System.Double"/> values.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Sum``1(System.Collections.Generic.IEnumerable{``0},Newtonsoft.Json.Serialization.Func{``0,System.Nullable{System.Double}})">
+            <summary>
+            Computes the sum of a sequence of <see cref="T:System.Double"/> 
+            values that are obtained by invoking a transform function on 
+            each element of the input sequence.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Average(System.Collections.Generic.IEnumerable{System.Nullable{System.Double}})">
+            <summary>
+            Computes the average of a sequence of <see cref="T:System.Double"/> values.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Average``1(System.Collections.Generic.IEnumerable{``0},Newtonsoft.Json.Serialization.Func{``0,System.Nullable{System.Double}})">
+            <summary>
+            Computes the average of a sequence of <see cref="T:System.Double"/> values 
+            that are obtained by invoking a transform function on each 
+            element of the input sequence.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Min(System.Collections.Generic.IEnumerable{System.Nullable{System.Double}})">
+            <summary>
+            Returns the minimum value in a sequence of nullable 
+            <see cref="T:System.Double"/> values.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Min``1(System.Collections.Generic.IEnumerable{``0},Newtonsoft.Json.Serialization.Func{``0,System.Nullable{System.Double}})">
+            <summary>
+            Invokes a transform function on each element of a sequence and 
+            returns the minimum nullable <see cref="T:System.Double"/> value.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Max(System.Collections.Generic.IEnumerable{System.Nullable{System.Double}})">
+            <summary>
+            Returns the maximum value in a sequence of nullable 
+            <see cref="T:System.Double"/> values.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Max``1(System.Collections.Generic.IEnumerable{``0},Newtonsoft.Json.Serialization.Func{``0,System.Nullable{System.Double}})">
+            <summary>
+            Invokes a transform function on each element of a sequence and 
+            returns the maximum nullable <see cref="T:System.Double"/> value.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Sum(System.Collections.Generic.IEnumerable{System.Decimal})">
+            <summary>
+            Computes the sum of a sequence of nullable <see cref="T:System.Decimal"/> values.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Sum``1(System.Collections.Generic.IEnumerable{``0},Newtonsoft.Json.Serialization.Func{``0,System.Decimal})">
+            <summary>
+            Computes the sum of a sequence of nullable <see cref="T:System.Decimal"/> 
+            values that are obtained by invoking a transform function on 
+            each element of the input sequence.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Average(System.Collections.Generic.IEnumerable{System.Decimal})">
+            <summary>
+            Computes the average of a sequence of nullable <see cref="T:System.Decimal"/> values.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Average``1(System.Collections.Generic.IEnumerable{``0},Newtonsoft.Json.Serialization.Func{``0,System.Decimal})">
+            <summary>
+            Computes the average of a sequence of nullable <see cref="T:System.Decimal"/> values 
+            that are obtained by invoking a transform function on each 
+            element of the input sequence.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Sum(System.Collections.Generic.IEnumerable{System.Nullable{System.Decimal}})">
+            <summary>
+            Computes the sum of a sequence of <see cref="T:System.Decimal"/> values.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Sum``1(System.Collections.Generic.IEnumerable{``0},Newtonsoft.Json.Serialization.Func{``0,System.Nullable{System.Decimal}})">
+            <summary>
+            Computes the sum of a sequence of <see cref="T:System.Decimal"/> 
+            values that are obtained by invoking a transform function on 
+            each element of the input sequence.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Average(System.Collections.Generic.IEnumerable{System.Nullable{System.Decimal}})">
+            <summary>
+            Computes the average of a sequence of <see cref="T:System.Decimal"/> values.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Average``1(System.Collections.Generic.IEnumerable{``0},Newtonsoft.Json.Serialization.Func{``0,System.Nullable{System.Decimal}})">
+            <summary>
+            Computes the average of a sequence of <see cref="T:System.Decimal"/> values 
+            that are obtained by invoking a transform function on each 
+            element of the input sequence.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Min(System.Collections.Generic.IEnumerable{System.Nullable{System.Decimal}})">
+            <summary>
+            Returns the minimum value in a sequence of nullable 
+            <see cref="T:System.Decimal"/> values.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Min``1(System.Collections.Generic.IEnumerable{``0},Newtonsoft.Json.Serialization.Func{``0,System.Nullable{System.Decimal}})">
+            <summary>
+            Invokes a transform function on each element of a sequence and 
+            returns the minimum nullable <see cref="T:System.Decimal"/> value.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Max(System.Collections.Generic.IEnumerable{System.Nullable{System.Decimal}})">
+            <summary>
+            Returns the maximum value in a sequence of nullable 
+            <see cref="T:System.Decimal"/> values.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Enumerable.Max``1(System.Collections.Generic.IEnumerable{``0},Newtonsoft.Json.Serialization.Func{``0,System.Nullable{System.Decimal}})">
+            <summary>
+            Invokes a transform function on each element of a sequence and 
+            returns the maximum nullable <see cref="T:System.Decimal"/> value.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.Utilities.LinqBridge.IGrouping`2">
+            <summary>
+            Represents a collection of objects that have a common key.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.Utilities.LinqBridge.IGrouping`2.Key">
+            <summary>
+            Gets the key of the <see cref="T:Newtonsoft.Json.Utilities.LinqBridge.IGrouping`2"/>.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.Utilities.LinqBridge.ILookup`2">
+            <summary>
+            Defines an indexer, size property, and Boolean search method for 
+            data structures that map keys to <see cref="T:System.Collections.Generic.IEnumerable`1"/> 
+            sequences of values.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.Utilities.LinqBridge.IOrderedEnumerable`1">
+            <summary>
+            Represents a sorted sequence.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.IOrderedEnumerable`1.CreateOrderedEnumerable``1(Newtonsoft.Json.Serialization.Func{`0,``0},System.Collections.Generic.IComparer{``0},System.Boolean)">
+            <summary>
+            Performs a subsequent ordering on the elements of an 
+            <see cref="T:Newtonsoft.Json.Utilities.LinqBridge.IOrderedEnumerable`1"/> according to a key.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.Utilities.LinqBridge.Lookup`2">
+            <summary>
+            Represents a collection of keys each mapped to one or more values.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Lookup`2.Contains(`0)">
+            <summary>
+            Determines whether a specified key is in the <see cref="T:Newtonsoft.Json.Utilities.LinqBridge.Lookup`2"/>.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Lookup`2.ApplyResultSelector``1(Newtonsoft.Json.Serialization.Func{`0,System.Collections.Generic.IEnumerable{`1},``0})">
+            <summary>
+            Applies a transform function to each key and its associated 
+            values and returns the results.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.Lookup`2.GetEnumerator">
+            <summary>
+            Returns a generic enumerator that iterates through the <see cref="T:Newtonsoft.Json.Utilities.LinqBridge.Lookup`2"/>.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.Utilities.LinqBridge.Lookup`2.Count">
+            <summary>
+            Gets the number of key/value collection pairs in the <see cref="T:Newtonsoft.Json.Utilities.LinqBridge.Lookup`2"/>.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.Utilities.LinqBridge.Lookup`2.Item(`0)">
+            <summary>
+            Gets the collection of values indexed by the specified key.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.OrderedEnumerable`2.TagPosition(`0,System.Int32)">
+            <remarks>
+            See <a href="http://code.google.com/p/linqbridge/issues/detail?id=11">issue #11</a>
+            for why this method is needed and cannot be expressed as a 
+            lambda at the call site.
+            </remarks>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.LinqBridge.OrderedEnumerable`2.GetFirst(Newtonsoft.Json.Utilities.LinqBridge.Tuple{`0,System.Int32})">
+            <remarks>
+            See <a href="http://code.google.com/p/linqbridge/issues/detail?id=11">issue #11</a>
+            for why this method is needed and cannot be expressed as a 
+            lambda at the call site.
+            </remarks>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.ExtensionAttribute">
+            <remarks>
+            This attribute allows us to define extension methods without 
+            requiring .NET Framework 3.5. For more information, see the section,
+            <a href="http://msdn.microsoft.com/en-us/magazine/cc163317.aspx#S7">Extension Methods in .NET Framework 2.0 Apps</a>,
+            of <a href="http://msdn.microsoft.com/en-us/magazine/cc163317.aspx">Basic Instincts: Extension Methods</a>
+            column in <a href="http://msdn.microsoft.com/msdnmag/">MSDN Magazine</a>, 
+            issue <a href="http://msdn.microsoft.com/en-us/magazine/cc135410.aspx">Nov 2007</a>.
+            </remarks>
+        </member>
+        <member name="T:Newtonsoft.Json.Linq.JPropertyDescriptor">
+            <summary>
+            Represents a view of a <see cref="T:Newtonsoft.Json.Linq.JProperty"/>.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JPropertyDescriptor.#ctor(System.String,System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JPropertyDescriptor"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="propertyType">Type of the property.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JPropertyDescriptor.CanResetValue(System.Object)">
+            <summary>
+            When overridden in a derived class, returns whether resetting an object changes its value.
+            </summary>
+            <returns>
+            true if resetting the component changes its value; otherwise, false.
+            </returns>
+            <param name="component">The component to test for reset capability. 
+                            </param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JPropertyDescriptor.GetValue(System.Object)">
+            <summary>
+            When overridden in a derived class, gets the current value of the property on a component.
+            </summary>
+            <returns>
+            The value of a property for a given component.
+            </returns>
+            <param name="component">The component with the property for which to retrieve the value. 
+                            </param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JPropertyDescriptor.ResetValue(System.Object)">
+            <summary>
+            When overridden in a derived class, resets the value for this property of the component to the default value.
+            </summary>
+            <param name="component">The component with the property value that is to be reset to the default value. 
+                            </param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JPropertyDescriptor.SetValue(System.Object,System.Object)">
+            <summary>
+            When overridden in a derived class, sets the value of the component to a different value.
+            </summary>
+            <param name="component">The component with the property value that is to be set. 
+                            </param><param name="value">The new value. 
+                            </param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JPropertyDescriptor.ShouldSerializeValue(System.Object)">
+            <summary>
+            When overridden in a derived class, determines a value indicating whether the value of this property needs to be persisted.
+            </summary>
+            <returns>
+            true if the property should be persisted; otherwise, false.
+            </returns>
+            <param name="component">The component with the property to be examined for persistence. 
+                            </param>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JPropertyDescriptor.ComponentType">
+            <summary>
+            When overridden in a derived class, gets the type of the component this property is bound to.
+            </summary>
+            <returns>
+            A <see cref="T:System.Type"/> that represents the type of component this property is bound to. When the <see cref="M:System.ComponentModel.PropertyDescriptor.GetValue(System.Object)"/> or <see cref="M:System.ComponentModel.PropertyDescriptor.SetValue(System.Object,System.Object)"/> methods are invoked, the object specified might be an instance of this type.
+            </returns>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JPropertyDescriptor.IsReadOnly">
+            <summary>
+            When overridden in a derived class, gets a value indicating whether this property is read-only.
+            </summary>
+            <returns>
+            true if the property is read-only; otherwise, false.
+            </returns>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JPropertyDescriptor.PropertyType">
+            <summary>
+            When overridden in a derived class, gets the type of the property.
+            </summary>
+            <returns>
+            A <see cref="T:System.Type"/> that represents the type of the property.
+            </returns>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JPropertyDescriptor.NameHashCode">
+            <summary>
+            Gets the hash code for the name of the member.
+            </summary>
+            <value></value>
+            <returns>
+            The hash code for the name of the member.
+            </returns>
+        </member>
+        <member name="T:Newtonsoft.Json.Linq.JRaw">
+            <summary>
+            Represents a raw JSON string.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.Linq.JValue">
+            <summary>
+            Represents a value in JSON (string, integer, date, etc).
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Represents an abstract JSON token.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.Linq.IJEnumerable`1">
+            <summary>
+            Represents a collection of <see cref="T:Newtonsoft.Json.Linq.JToken"/> objects.
+            </summary>
+            <typeparam name="T">The type of token</typeparam>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.IJEnumerable`1.Item(System.Object)">
+            <summary>
+            Gets the <see cref="T:Newtonsoft.Json.Linq.IJEnumerable`1"/> with the specified key.
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.DeepEquals(Newtonsoft.Json.Linq.JToken,Newtonsoft.Json.Linq.JToken)">
+            <summary>
+            Compares the values of two tokens, including the values of all descendant tokens.
+            </summary>
+            <param name="t1">The first <see cref="T:Newtonsoft.Json.Linq.JToken"/> to compare.</param>
+            <param name="t2">The second <see cref="T:Newtonsoft.Json.Linq.JToken"/> to compare.</param>
+            <returns>true if the tokens are equal; otherwise false.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.AddAfterSelf(System.Object)">
+            <summary>
+            Adds the specified content immediately after this token.
+            </summary>
+            <param name="content">A content object that contains simple content or a collection of content objects to be added after this token.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.AddBeforeSelf(System.Object)">
+            <summary>
+            Adds the specified content immediately before this token.
+            </summary>
+            <param name="content">A content object that contains simple content or a collection of content objects to be added before this token.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.Ancestors">
+            <summary>
+            Returns a collection of the ancestor tokens of this token.
+            </summary>
+            <returns>A collection of the ancestor tokens of this token.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.AfterSelf">
+            <summary>
+            Returns a collection of the sibling tokens after this token, in document order.
+            </summary>
+            <returns>A collection of the sibling tokens after this tokens, in document order.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.BeforeSelf">
+            <summary>
+            Returns a collection of the sibling tokens before this token, in document order.
+            </summary>
+            <returns>A collection of the sibling tokens before this token, in document order.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.Value``1(System.Object)">
+            <summary>
+            Gets the <see cref="T:Newtonsoft.Json.Linq.JToken"/> with the specified key converted to the specified type.
+            </summary>
+            <typeparam name="T">The type to convert the token to.</typeparam>
+            <param name="key">The token key.</param>
+            <returns>The converted token value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.Children">
+            <summary>
+            Returns a collection of the child tokens of this token, in document order.
+            </summary>
+            <returns>An <see cref="T:System.Collections.Generic.IEnumerable`1"/> of <see cref="T:Newtonsoft.Json.Linq.JToken"/> containing the child tokens of this <see cref="T:Newtonsoft.Json.Linq.JToken"/>, in document order.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.Children``1">
+            <summary>
+            Returns a collection of the child tokens of this token, in document order, filtered by the specified type.
+            </summary>
+            <typeparam name="T">The type to filter the child tokens on.</typeparam>
+            <returns>A <see cref="T:Newtonsoft.Json.Linq.JEnumerable`1"/> containing the child tokens of this <see cref="T:Newtonsoft.Json.Linq.JToken"/>, in document order.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.Values``1">
+            <summary>
+            Returns a collection of the child values of this token, in document order.
+            </summary>
+            <typeparam name="T">The type to convert the values to.</typeparam>
+            <returns>A <see cref="T:System.Collections.Generic.IEnumerable`1"/> containing the child values of this <see cref="T:Newtonsoft.Json.Linq.JToken"/>, in document order.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.Remove">
+            <summary>
+            Removes this token from its parent.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.Replace(Newtonsoft.Json.Linq.JToken)">
+            <summary>
+            Replaces this token with the specified token.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.WriteTo(Newtonsoft.Json.JsonWriter,Newtonsoft.Json.JsonConverter[])">
+            <summary>
+            Writes this token to a <see cref="T:Newtonsoft.Json.JsonWriter"/>.
+            </summary>
+            <param name="writer">A <see cref="T:Newtonsoft.Json.JsonWriter"/> into which this method will write.</param>
+            <param name="converters">A collection of <see cref="T:Newtonsoft.Json.JsonConverter"/> which will be used when writing the token.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.ToString">
+            <summary>
+            Returns the indented JSON for this token.
+            </summary>
+            <returns>
+            The indented JSON for this token.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.ToString(Newtonsoft.Json.Formatting,Newtonsoft.Json.JsonConverter[])">
+            <summary>
+            Returns the JSON for this token using the given formatting and converters.
+            </summary>
+            <param name="formatting">Indicates how the output is formatted.</param>
+            <param name="converters">A collection of <see cref="T:Newtonsoft.Json.JsonConverter"/> which will be used when writing the token.</param>
+            <returns>The JSON for this token using the given formatting and converters.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Boolean">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Boolean"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Nullable{System.Boolean}">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Nullable`1"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Int64">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Int64"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Nullable{System.DateTime}">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Nullable`1"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Nullable{System.Decimal}">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Nullable`1"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Nullable{System.Double}">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Nullable`1"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Nullable{System.Char}">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Nullable`1"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Int32">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Int32"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Int16">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Int16"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.UInt16">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.UInt16"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Char">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Char"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Byte">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Byte"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.SByte">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.SByte"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Nullable{System.Int32}">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Nullable`1"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Nullable{System.Int16}">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Nullable`1"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Nullable{System.UInt16}">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Nullable`1"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Nullable{System.Byte}">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Nullable`1"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Nullable{System.SByte}">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Nullable`1"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.DateTime">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.DateTime"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Nullable{System.Int64}">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Nullable`1"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Nullable{System.Single}">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Nullable`1"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Decimal">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Decimal"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Nullable{System.UInt32}">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Nullable`1"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Nullable{System.UInt64}">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Nullable`1"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Double">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Double"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Single">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Single"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.String">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.String"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.UInt32">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.UInt32"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.UInt64">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.UInt64"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Byte[]">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Byte[]"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Guid">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Guid"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Nullable{System.Guid}">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Guid"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.TimeSpan">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.TimeSpan"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Nullable{System.TimeSpan}">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.TimeSpan"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Uri">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Uri"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Boolean)~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Boolean"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Byte)~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Byte"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Nullable{System.Byte})~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Nullable`1"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.SByte)~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.SByte"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Nullable{System.SByte})~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Nullable`1"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Nullable{System.Boolean})~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Nullable`1"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Int64)~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Nullable`1"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Nullable{System.DateTime})~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Nullable`1"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Nullable{System.Decimal})~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Nullable`1"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Nullable{System.Double})~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Nullable`1"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Int16)~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Int16"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.UInt16)~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.UInt16"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Int32)~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Int32"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Nullable{System.Int32})~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Nullable`1"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.DateTime)~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.DateTime"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Nullable{System.Int64})~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Nullable`1"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Nullable{System.Single})~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Nullable`1"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Decimal)~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Decimal"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Nullable{System.Int16})~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Nullable`1"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Nullable{System.UInt16})~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Nullable`1"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Nullable{System.UInt32})~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Nullable`1"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Nullable{System.UInt64})~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Nullable`1"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Double)~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Double"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Single)~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Single"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.String)~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.String"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.UInt32)~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.UInt32"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.UInt64)~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.UInt64"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Byte[])~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Byte[]"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Uri)~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Uri"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.TimeSpan)~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.TimeSpan"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Nullable{System.TimeSpan})~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Nullable`1"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Guid)~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Guid"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Nullable{System.Guid})~Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Nullable`1"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.CreateReader">
+            <summary>
+            Creates an <see cref="T:Newtonsoft.Json.JsonReader"/> for this token.
+            </summary>
+            <returns>An <see cref="T:Newtonsoft.Json.JsonReader"/> that can be used to read this token and its descendants.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.FromObject(System.Object)">
+            <summary>
+            Creates a <see cref="T:Newtonsoft.Json.Linq.JToken"/> from an object.
+            </summary>
+            <param name="o">The object that will be used to create <see cref="T:Newtonsoft.Json.Linq.JToken"/>.</param>
+            <returns>A <see cref="T:Newtonsoft.Json.Linq.JToken"/> with the value of the specified object</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.FromObject(System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Creates a <see cref="T:Newtonsoft.Json.Linq.JToken"/> from an object using the specified <see cref="T:Newtonsoft.Json.JsonSerializer"/>.
+            </summary>
+            <param name="o">The object that will be used to create <see cref="T:Newtonsoft.Json.Linq.JToken"/>.</param>
+            <param name="jsonSerializer">The <see cref="T:Newtonsoft.Json.JsonSerializer"/> that will be used when reading the object.</param>
+            <returns>A <see cref="T:Newtonsoft.Json.Linq.JToken"/> with the value of the specified object</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.ToObject``1">
+            <summary>
+            Creates the specified .NET type from the <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <typeparam name="T">The object type that the token will be deserialized to.</typeparam>
+            <returns>The new object created from the JSON value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.ToObject(System.Type)">
+            <summary>
+            Creates the specified .NET type from the <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="objectType">The object type that the token will be deserialized to.</param>
+            <returns>The new object created from the JSON value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.ToObject``1(Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Creates the specified .NET type from the <see cref="T:Newtonsoft.Json.Linq.JToken"/> using the specified <see cref="T:Newtonsoft.Json.JsonSerializer"/>.
+            </summary>
+            <typeparam name="T">The object type that the token will be deserialized to.</typeparam>
+            <param name="jsonSerializer">The <see cref="T:Newtonsoft.Json.JsonSerializer"/> that will be used when creating the object.</param>
+            <returns>The new object created from the JSON value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.ToObject(System.Type,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Creates the specified .NET type from the <see cref="T:Newtonsoft.Json.Linq.JToken"/> using the specified <see cref="T:Newtonsoft.Json.JsonSerializer"/>.
+            </summary>
+            <param name="objectType">The object type that the token will be deserialized to.</param>
+            <param name="jsonSerializer">The <see cref="T:Newtonsoft.Json.JsonSerializer"/> that will be used when creating the object.</param>
+            <returns>The new object created from the JSON value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.ReadFrom(Newtonsoft.Json.JsonReader)">
+            <summary>
+            Creates a <see cref="T:Newtonsoft.Json.Linq.JToken"/> from a <see cref="T:Newtonsoft.Json.JsonReader"/>.
+            </summary>
+            <param name="reader">An <see cref="T:Newtonsoft.Json.JsonReader"/> positioned at the token to read into this <see cref="T:Newtonsoft.Json.Linq.JToken"/>.</param>
+            <returns>
+            An <see cref="T:Newtonsoft.Json.Linq.JToken"/> that contains the token and its descendant tokens
+            that were read from the reader. The runtime type of the token is determined
+            by the token type of the first token encountered in the reader.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.Parse(System.String)">
+            <summary>
+            Load a <see cref="T:Newtonsoft.Json.Linq.JToken"/> from a string that contains JSON.
+            </summary>
+            <param name="json">A <see cref="T:System.String"/> that contains JSON.</param>
+            <returns>A <see cref="T:Newtonsoft.Json.Linq.JToken"/> populated from the string that contains JSON.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.Load(Newtonsoft.Json.JsonReader)">
+            <summary>
+            Creates a <see cref="T:Newtonsoft.Json.Linq.JToken"/> from a <see cref="T:Newtonsoft.Json.JsonReader"/>.
+            </summary>
+            <param name="reader">An <see cref="T:Newtonsoft.Json.JsonReader"/> positioned at the token to read into this <see cref="T:Newtonsoft.Json.Linq.JToken"/>.</param>
+            <returns>
+            An <see cref="T:Newtonsoft.Json.Linq.JToken"/> that contains the token and its descendant tokens
+            that were read from the reader. The runtime type of the token is determined
+            by the token type of the first token encountered in the reader.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.SelectToken(System.String)">
+            <summary>
+            Selects the token that matches the object path.
+            </summary>
+            <param name="path">
+            The object path from the current <see cref="T:Newtonsoft.Json.Linq.JToken"/> to the <see cref="T:Newtonsoft.Json.Linq.JToken"/>
+            to be returned. This must be a string of property names or array indexes separated
+            by periods, such as <code>Tables[0].DefaultView[0].Price</code> in C# or
+            <code>Tables(0).DefaultView(0).Price</code> in Visual Basic.
+            </param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JToken"/> that matches the object path or a null reference if no matching token is found.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.SelectToken(System.String,System.Boolean)">
+            <summary>
+            Selects the token that matches the object path.
+            </summary>
+            <param name="path">
+            The object path from the current <see cref="T:Newtonsoft.Json.Linq.JToken"/> to the <see cref="T:Newtonsoft.Json.Linq.JToken"/>
+            to be returned. This must be a string of property names or array indexes separated
+            by periods, such as <code>Tables[0].DefaultView[0].Price</code> in C# or
+            <code>Tables(0).DefaultView(0).Price</code> in Visual Basic.
+            </param>
+            <param name="errorWhenNoMatch">A flag to indicate whether an error should be thrown if no token is found.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JToken"/> that matches the object path.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.DeepClone">
+            <summary>
+            Creates a new instance of the <see cref="T:Newtonsoft.Json.Linq.JToken"/>. All child tokens are recursively cloned.
+            </summary>
+            <returns>A new instance of the <see cref="T:Newtonsoft.Json.Linq.JToken"/>.</returns>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JToken.EqualityComparer">
+            <summary>
+            Gets a comparer that can compare two tokens for value equality.
+            </summary>
+            <value>A <see cref="T:Newtonsoft.Json.Linq.JTokenEqualityComparer"/> that can compare two nodes for value equality.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JToken.Parent">
+            <summary>
+            Gets or sets the parent.
+            </summary>
+            <value>The parent.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JToken.Root">
+            <summary>
+            Gets the root <see cref="T:Newtonsoft.Json.Linq.JToken"/> of this <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <value>The root <see cref="T:Newtonsoft.Json.Linq.JToken"/> of this <see cref="T:Newtonsoft.Json.Linq.JToken"/>.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JToken.Type">
+            <summary>
+            Gets the node type for this <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <value>The type.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JToken.HasValues">
+            <summary>
+            Gets a value indicating whether this token has child tokens.
+            </summary>
+            <value>
+            	<c>true</c> if this token has child values; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JToken.Next">
+            <summary>
+            Gets the next sibling token of this node.
+            </summary>
+            <value>The <see cref="T:Newtonsoft.Json.Linq.JToken"/> that contains the next sibling token.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JToken.Previous">
+            <summary>
+            Gets the previous sibling token of this node.
+            </summary>
+            <value>The <see cref="T:Newtonsoft.Json.Linq.JToken"/> that contains the previous sibling token.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JToken.Path">
+            <summary>
+            Gets the path of the JSON token. 
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JToken.Item(System.Object)">
+            <summary>
+            Gets the <see cref="T:Newtonsoft.Json.Linq.JToken"/> with the specified key.
+            </summary>
+            <value>The <see cref="T:Newtonsoft.Json.Linq.JToken"/> with the specified key.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JToken.First">
+            <summary>
+            Get the first child token of this token.
+            </summary>
+            <value>A <see cref="T:Newtonsoft.Json.Linq.JToken"/> containing the first child token of the <see cref="T:Newtonsoft.Json.Linq.JToken"/>.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JToken.Last">
+            <summary>
+            Get the last child token of this token.
+            </summary>
+            <value>A <see cref="T:Newtonsoft.Json.Linq.JToken"/> containing the last child token of the <see cref="T:Newtonsoft.Json.Linq.JToken"/>.</value>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.#ctor(Newtonsoft.Json.Linq.JValue)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class from another <see cref="T:Newtonsoft.Json.Linq.JValue"/> object.
+            </summary>
+            <param name="other">A <see cref="T:Newtonsoft.Json.Linq.JValue"/> object to copy from.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.#ctor(System.Int64)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.#ctor(System.Char)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.#ctor(System.UInt64)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.#ctor(System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.#ctor(System.Single)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.#ctor(System.DateTime)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.#ctor(System.Guid)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.#ctor(System.Uri)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.#ctor(System.TimeSpan)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.CreateComment(System.String)">
+            <summary>
+            Creates a <see cref="T:Newtonsoft.Json.Linq.JValue"/> comment with the given value.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Newtonsoft.Json.Linq.JValue"/> comment with the given value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.CreateString(System.String)">
+            <summary>
+            Creates a <see cref="T:Newtonsoft.Json.Linq.JValue"/> string with the given value.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Newtonsoft.Json.Linq.JValue"/> string with the given value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.WriteTo(Newtonsoft.Json.JsonWriter,Newtonsoft.Json.JsonConverter[])">
+            <summary>
+            Writes this token to a <see cref="T:Newtonsoft.Json.JsonWriter"/>.
+            </summary>
+            <param name="writer">A <see cref="T:Newtonsoft.Json.JsonWriter"/> into which this method will write.</param>
+            <param name="converters">A collection of <see cref="T:Newtonsoft.Json.JsonConverter"/> which will be used when writing the token.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.Equals(Newtonsoft.Json.Linq.JValue)">
+            <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+            <returns>
+            true if the current object is equal to the <paramref name="other"/> parameter; otherwise, false.
+            </returns>
+            <param name="other">An object to compare with this object.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object"/> is equal to the current <see cref="T:System.Object"/>.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object"/> to compare with the current <see cref="T:System.Object"/>.</param>
+            <returns>
+            true if the specified <see cref="T:System.Object"/> is equal to the current <see cref="T:System.Object"/>; otherwise, false.
+            </returns>
+            <exception cref="T:System.NullReferenceException">
+            The <paramref name="obj"/> parameter is null.
+            </exception>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type.
+            </summary>
+            <returns>
+            A hash code for the current <see cref="T:System.Object"/>.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.ToString(System.String)">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <param name="format">The format.</param>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.ToString(System.IFormatProvider)">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <param name="formatProvider">The format provider.</param>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.ToString(System.String,System.IFormatProvider)">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <param name="format">The format.</param>
+            <param name="formatProvider">The format provider.</param>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.CompareTo(Newtonsoft.Json.Linq.JValue)">
+            <summary>
+            Compares the current instance with another object of the same type and returns an integer that indicates whether the current instance precedes, follows, or occurs in the same position in the sort order as the other object.
+            </summary>
+            <param name="obj">An object to compare with this instance.</param>
+            <returns>
+            A 32-bit signed integer that indicates the relative order of the objects being compared. The return value has these meanings:
+            Value
+            Meaning
+            Less than zero
+            This instance is less than <paramref name="obj"/>.
+            Zero
+            This instance is equal to <paramref name="obj"/>.
+            Greater than zero
+            This instance is greater than <paramref name="obj"/>.
+            </returns>
+            <exception cref="T:System.ArgumentException">
+            	<paramref name="obj"/> is not the same type as this instance.
+            </exception>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JValue.HasValues">
+            <summary>
+            Gets a value indicating whether this token has child tokens.
+            </summary>
+            <value>
+            	<c>true</c> if this token has child values; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JValue.Type">
+            <summary>
+            Gets the node type for this <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <value>The type.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JValue.Value">
+            <summary>
+            Gets or sets the underlying token value.
+            </summary>
+            <value>The underlying token value.</value>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JRaw.#ctor(Newtonsoft.Json.Linq.JRaw)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JRaw"/> class from another <see cref="T:Newtonsoft.Json.Linq.JRaw"/> object.
+            </summary>
+            <param name="other">A <see cref="T:Newtonsoft.Json.Linq.JRaw"/> object to copy from.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JRaw.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JRaw"/> class.
+            </summary>
+            <param name="rawJson">The raw json.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JRaw.Create(Newtonsoft.Json.JsonReader)">
+            <summary>
+            Creates an instance of <see cref="T:Newtonsoft.Json.Linq.JRaw"/> with the content of the reader's current token.
+            </summary>
+            <param name="reader">The reader.</param>
+            <returns>An instance of <see cref="T:Newtonsoft.Json.Linq.JRaw"/> with the content of the reader's current token.</returns>
+        </member>
+        <member name="T:Newtonsoft.Json.Required">
+            <summary>
+            Indicating whether a property is required.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Required.Default">
+            <summary>
+            The property is not required. The default state.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Required.AllowNull">
+            <summary>
+            The property must be defined in JSON but can be a null value.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Required.Always">
+            <summary>
+            The property must be defined in JSON and cannot be a null value.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.Serialization.IReferenceResolver">
+            <summary>
+            Used to resolve references when serializing and deserializing JSON by the <see cref="T:Newtonsoft.Json.JsonSerializer"/>.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Serialization.IReferenceResolver.ResolveReference(System.Object,System.String)">
+            <summary>
+            Resolves a reference to its object.
+            </summary>
+            <param name="context">The serialization context.</param>
+            <param name="reference">The reference to resolve.</param>
+            <returns>The object that</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Serialization.IReferenceResolver.GetReference(System.Object,System.Object)">
+            <summary>
+            Gets the reference for the sepecified object.
+            </summary>
+            <param name="context">The serialization context.</param>
+            <param name="value">The object to get a reference for.</param>
+            <returns>The reference to the object.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Serialization.IReferenceResolver.IsReferenced(System.Object,System.Object)">
+            <summary>
+            Determines whether the specified object is referenced.
+            </summary>
+            <param name="context">The serialization context.</param>
+            <param name="value">The object to test for a reference.</param>
+            <returns>
+            	<c>true</c> if the specified object is referenced; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Serialization.IReferenceResolver.AddReference(System.Object,System.String,System.Object)">
+            <summary>
+            Adds a reference to the specified object.
+            </summary>
+            <param name="context">The serialization context.</param>
+            <param name="reference">The reference.</param>
+            <param name="value">The object to reference.</param>
+        </member>
+        <member name="T:Newtonsoft.Json.PreserveReferencesHandling">
+            <summary>
+            Specifies reference handling options for the <see cref="T:Newtonsoft.Json.JsonSerializer"/>.
+            Note that references cannot be preserved when a value is set via a non-default constructor such as types that implement ISerializable.
+            </summary>
+            <example>
+              <code lang="cs" source="..\Src\Newtonsoft.Json.Tests\Documentation\SerializationTests.cs" region="PreservingObjectReferencesOn" title="Preserve Object References"/>       
+            </example>
+        </member>
+        <member name="F:Newtonsoft.Json.PreserveReferencesHandling.None">
+            <summary>
+            Do not preserve references when serializing types.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.PreserveReferencesHandling.Objects">
+            <summary>
+            Preserve references when serializing into a JSON object structure.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.PreserveReferencesHandling.Arrays">
+            <summary>
+            Preserve references when serializing into a JSON array structure.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.PreserveReferencesHandling.All">
+            <summary>
+            Preserve references when serializing.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.JsonArrayAttribute">
+            <summary>
+            Instructs the <see cref="T:Newtonsoft.Json.JsonSerializer"/> how to serialize the collection.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonArrayAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonArrayAttribute"/> class.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonArrayAttribute.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonObjectAttribute"/> class with a flag indicating whether the array can contain null items
+            </summary>
+            <param name="allowNullItems">A flag indicating whether the array can contain null items.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonArrayAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonArrayAttribute"/> class with the specified container Id.
+            </summary>
+            <param name="id">The container Id.</param>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonArrayAttribute.AllowNullItems">
+            <summary>
+            Gets or sets a value indicating whether null items are allowed in the collection.
+            </summary>
+            <value><c>true</c> if null items are allowed in the collection; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Newtonsoft.Json.DefaultValueHandling">
+            <summary>
+            Specifies default value handling options for the <see cref="T:Newtonsoft.Json.JsonSerializer"/>.
+            </summary>
+            <example>
+              <code lang="cs" source="..\Src\Newtonsoft.Json.Tests\Documentation\SerializationTests.cs" region="ReducingSerializedJsonSizeDefaultValueHandlingObject" title="DefaultValueHandling Class"/>
+              <code lang="cs" source="..\Src\Newtonsoft.Json.Tests\Documentation\SerializationTests.cs" region="ReducingSerializedJsonSizeDefaultValueHandlingExample" title="DefaultValueHandling Ignore Example"/>
+            </example>
+        </member>
+        <member name="F:Newtonsoft.Json.DefaultValueHandling.Include">
+            <summary>
+            Include members where the member value is the same as the member's default value when serializing objects.
+            Included members are written to JSON. Has no effect when deserializing.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.DefaultValueHandling.Ignore">
+            <summary>
+            Ignore members where the member value is the same as the member's default value when serializing objects
+            so that is is not written to JSON.
+            This option will ignore all default values (e.g. <c>null</c> for objects and nullable typesl; <c>0</c> for integers,
+            decimals and floating point numbers; and <c>false</c> for booleans). The default value ignored can be changed by
+            placing the <see cref="T:System.ComponentModel.DefaultValueAttribute"/> on the property.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.DefaultValueHandling.Populate">
+            <summary>
