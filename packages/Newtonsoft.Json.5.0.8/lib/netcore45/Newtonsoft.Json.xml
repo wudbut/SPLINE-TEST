@@ -24,4 +24,32 @@
         <member name="T:Newtonsoft.Json.Bson.BsonReader">
             <summary>
             Represents a reader that provides fast, non-cached, forward-only access to serialized Json data.
-  
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.JsonReader">
+            <summary>
+            Represents a reader that provides fast, non-cached, forward-only access to serialized Json data.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonReader.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonReader"/> class with the specified <see cref="T:System.IO.TextReader"/>.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonReader.Read">
+            <summary>
+            Reads the next JSON token from the stream.
+            </summary>
+            <returns>true if the next token was read successfully; false if there are no more tokens to read.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonReader.ReadAsInt32">
+            <summary>
+            Reads the next JSON token from the stream as a <see cref="T:System.Nullable`1"/>.
+            </summary>
+            <returns>A <see cref="T:System.Nullable`1"/>. This method will return <c>null</c> at the end of an array.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonReader.ReadAsString">
+            <summary>
+            Reads the next JSON token from the stream as a <see cref="T:System.String"/>.
+            </summary>
+            <returns>A <see cref="T:System.String"/>. This method will return <c>null</c> at the end of an arr
