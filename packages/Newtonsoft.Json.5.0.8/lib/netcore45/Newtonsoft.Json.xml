@@ -78,4 +78,38 @@
             </summary>
             <returns>A <see cref="T:System.Nullable`1"/>. This method will return <c>null</c> at the end of an array.</returns>
         </member>
-    
+        <member name="M:Newtonsoft.Json.JsonReader.Skip">
+            <summary>
+            Skips the children of the current token.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonReader.SetToken(Newtonsoft.Json.JsonToken)">
+            <summary>
+            Sets the current token.
+            </summary>
+            <param name="newToken">The new token.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonReader.SetToken(Newtonsoft.Json.JsonToken,System.Object)">
+            <summary>
+            Sets the current token and value.
+            </summary>
+            <param name="newToken">The new token.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonReader.SetStateBasedOnCurrent">
+            <summary>
+            Sets the state based on current token type.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonReader.System#IDisposable#Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonReader.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonRead
