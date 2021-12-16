@@ -222,4 +222,43 @@
         <member name="F:Newtonsoft.Json.JsonReader.State.ArrayStart">
             <summary>
             Reader is at the start of an array.
-            <
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.JsonReader.State.Array">
+            <summary>
+            Reader is in an array.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.JsonReader.State.Closed">
+            <summary>
+            The Close method has been called.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.JsonReader.State.PostValue">
+            <summary>
+            Reader has just read a value.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.JsonReader.State.ConstructorStart">
+            <summary>
+            Reader is at the start of a constructor.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.JsonReader.State.Constructor">
+            <summary>
+            Reader in a constructor.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.JsonReader.State.Error">
+            <summary>
+            An error occurred that prevents the read operation from continuing.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.JsonReader.State.Finished">
+            <summary>
+            The end of the file has been reached successfully.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Bson.BsonReader.#ctor(System.IO.Stream)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Bson.BsonReader"/> c
