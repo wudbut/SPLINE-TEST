@@ -182,4 +182,44 @@
         <member name="P:Newtonsoft.Json.JsonReader.Path">
             <summary>
             Gets the path of the current JSON token. 
- 
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonReader.Culture">
+            <summary>
+            Gets or sets the culture used when reading JSON. Defaults to <see cref="P:System.Globalization.CultureInfo.InvariantCulture"/>.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.JsonReader.State">
+            <summary>
+            Specifies the state of the reader.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.JsonReader.State.Start">
+            <summary>
+            The Read method has not been called.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.JsonReader.State.Complete">
+            <summary>
+            The end of the file has been reached successfully.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.JsonReader.State.Property">
+            <summary>
+            Reader is at a property.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.JsonReader.State.ObjectStart">
+            <summary>
+            Reader is at the start of an object.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.JsonReader.State.Object">
+            <summary>
+            Reader is in an object.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.JsonReader.State.ArrayStart">
+            <summary>
+            Reader is at the start of an array.
+            <
