@@ -261,4 +261,28 @@
         </member>
         <member name="M:Newtonsoft.Json.Bson.BsonReader.#ctor(System.IO.Stream)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Bson.BsonReader"/> c
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Bson.BsonReader"/> class.
+            </summary>
+            <param name="stream">The stream.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Bson.BsonReader.#ctor(System.IO.BinaryReader)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Bson.BsonReader"/> class.
+            </summary>
+            <param name="reader">The reader.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Bson.BsonReader.#ctor(System.IO.Stream,System.Boolean,System.DateTimeKind)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Bson.BsonReader"/> class.
+            </summary>
+            <param name="stream">The stream.</param>
+            <param name="readRootValueAsArray">if set to <c>true</c> the root object will be read as a JSON array.</param>
+            <param name="dateTimeKindHandling">The <see cref="T:System.DateTimeKind"/> used when reading <see cref="T:System.DateTime"/> values from BSON.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Bson.BsonReader.#ctor(System.IO.BinaryReader,System.Boolean,System.DateTimeKind)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Bson.BsonReader"/> class.
+            </summary>
+            <param name="reader">The reader.</param>
+            <param name="readRootValueAsArray">if set to <c>true</c> the root object will be read as a JSON array.</param>
+            
