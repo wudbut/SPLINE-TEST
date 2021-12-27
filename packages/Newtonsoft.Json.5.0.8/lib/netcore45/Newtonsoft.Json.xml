@@ -373,4 +373,44 @@
             </summary>
         </member>
         <member name="M:Newtonsoft.Json.JsonWriter.#ctor">
-            <s
+            <summary>
+            Creates an instance of the <c>JsonWriter</c> class. 
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriter.Flush">
+            <summary>
+            Flushes whatever is in the buffer to the underlying streams and also flushes the underlying stream.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriter.Close">
+            <summary>
+            Closes this stream and the underlying stream.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteStartObject">
+            <summary>
+            Writes the beginning of a Json object.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteEndObject">
+            <summary>
+            Writes the end of a Json object.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteStartArray">
+            <summary>
+            Writes the beginning of a Json array.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteEndArray">
+            <summary>
+            Writes the end of an array.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteStartConstructor(System.String)">
+            <summary>
+            Writes the start of a constructor with the given name.
+            </summary>
+            <param name="name">The name of the constructor.</param>
+        </member>
+        <
