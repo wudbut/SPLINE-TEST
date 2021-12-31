@@ -413,4 +413,33 @@
             </summary>
             <param name="name">The name of the constructor.</param>
         </member>
-        <
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteEndConstructor">
+            <summary>
+            Writes the end constructor.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriter.WritePropertyName(System.String)">
+            <summary>
+            Writes the property name of a name/value pair on a JSON object.
+            </summary>
+            <param name="name">The name of the property.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriter.WritePropertyName(System.String,System.Boolean)">
+            <summary>
+            Writes the property name of a name/value pair on a JSON object.
+            </summary>
+            <param name="name">The name of the property.</param>
+            <param name="escape">A flag to indicate whether the text should be escaped when it is written as a JSON property name.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteEnd">
+            <summary>
+            Writes the end of the current Json object or array.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteToken(Newtonsoft.Json.JsonReader)">
+            <summary>
+            Writes the current <see cref="T:Newtonsoft.Json.JsonReader"/> token and its children.
+            </summary>
+            <param name="reader">The <see cref="T:Newtonsoft.Json.JsonReader"/> to read the token from.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteToken(N
