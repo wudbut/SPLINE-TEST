@@ -442,4 +442,41 @@
             </summary>
             <param name="reader">The <see cref="T:Newtonsoft.Json.JsonReader"/> to read the token from.</param>
         </member>
-        <member name="M:Newtonsoft.Json.JsonWriter.WriteToken(N
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteToken(Newtonsoft.Json.JsonReader,System.Boolean)">
+            <summary>
+            Writes the current <see cref="T:Newtonsoft.Json.JsonReader"/> token.
+            </summary>
+            <param name="reader">The <see cref="T:Newtonsoft.Json.JsonReader"/> to read the token from.</param>
+            <param name="writeChildren">A flag indicating whether the current token's children should be written.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteEnd(Newtonsoft.Json.JsonToken)">
+            <summary>
+            Writes the specified end token.
+            </summary>
+            <param name="token">The end token to write.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteIndent">
+            <summary>
+            Writes indent characters.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteValueDelimiter">
+            <summary>
+            Writes the JSON value delimiter.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteIndentSpace">
+            <summary>
+            Writes an indent space.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteNull">
+            <summary>
+            Writes a null value.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteUndefined">
+            <summary>
+            Writes an undefined value.
+            </summary>
+      
