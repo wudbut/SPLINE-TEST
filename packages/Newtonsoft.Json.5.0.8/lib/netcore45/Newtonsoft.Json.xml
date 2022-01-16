@@ -634,4 +634,34 @@
             <summary>
             Writes a <see cref="T:System.Nullable`1"/> value.
             </summary>
-            <param name="value">The <see cref="T:System.Null
+            <param name="value">The <see cref="T:System.Nullable`1"/> value to write.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteValue(System.Nullable{System.Boolean})">
+            <summary>
+            Writes a <see cref="T:System.Nullable`1"/> value.
+            </summary>
+            <param name="value">The <see cref="T:System.Nullable`1"/> value to write.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteValue(System.Nullable{System.Int16})">
+            <summary>
+            Writes a <see cref="T:System.Nullable`1"/> value.
+            </summary>
+            <param name="value">The <see cref="T:System.Nullable`1"/> value to write.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteValue(System.Nullable{System.UInt16})">
+            <summary>
+            Writes a <see cref="T:System.Nullable`1"/> value.
+            </summary>
+            <param name="value">The <see cref="T:System.Nullable`1"/> value to write.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteValue(System.Nullable{System.Char})">
+            <summary>
+            Writes a <see cref="T:System.Nullable`1"/> value.
+            </summary>
+            <param name="value">The <see cref="T:System.Nullable`1"/> value to write.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteValue(System.Nullable{System.Byte})">
+            <summary>
+            Writes a <see cref="T:System.Nullable`1"/> value.
+            </summary>
+            <param name="
