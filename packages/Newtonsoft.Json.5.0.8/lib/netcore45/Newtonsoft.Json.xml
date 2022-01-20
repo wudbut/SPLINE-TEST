@@ -758,4 +758,41 @@
         </member>
         <member name="P:Newtonsoft.Json.JsonWriter.WriteState">
             <summary>
-            Gets the st
+            Gets the state of the writer.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonWriter.Path">
+            <summary>
+            Gets the path of the writer. 
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonWriter.Formatting">
+            <summary>
+            Indicates how JSON text output is formatted.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonWriter.DateFormatHandling">
+            <summary>
+            Get or set how dates are written to JSON text.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonWriter.DateTimeZoneHandling">
+            <summary>
+            Get or set how <see cref="T:System.DateTime"/> time zones are handling when writing JSON text.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonWriter.StringEscapeHandling">
+            <summary>
+            Get or set how strings are escaped when writing JSON text.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonWriter.FloatFormatHandling">
+            <summary>
+            Get or set how special floating point numbers, e.g. <see cref="F:System.Double.NaN"/>,
+            <see cref="F:System.Double.PositiveInfinity"/> and <see cref="F:System.Double.NegativeInfinity"/>,
+            are written to JSON text.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonWriter.DateFormatString">
+            <summary>
+            Get or set how <see c
