@@ -724,4 +724,38 @@
         <member name="M:Newtonsoft.Json.JsonWriter.WriteComment(System.String)">
             <summary>
             Writes out a comment <code>/*...*/</code> containing the specified text. 
-            </
+            </summary>
+            <param name="text">Text to place inside the comment.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteWhitespace(System.String)">
+            <summary>
+            Writes out the given white space.
+            </summary>
+            <param name="ws">The string of white space characters.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriter.SetWriteState(Newtonsoft.Json.JsonToken,System.Object)">
+            <summary>
+            Sets the state of the JsonWriter,
+            </summary>
+            <param name="token">The JsonToken being written.</param>
+            <param name="value">The value being written.</param>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonWriter.CloseOutput">
+            <summary>
+            Gets or sets a value indicating whether the underlying stream or
+            <see cref="T:System.IO.TextReader"/> should be closed when the writer is closed.
+            </summary>
+            <value>
+            true to close the underlying stream or <see cref="T:System.IO.TextReader"/> when
+            the writer is closed; otherwise false. The default is true.
+            </value>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonWriter.Top">
+            <summary>
+            Gets the top.
+            </summary>
+            <value>The top.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonWriter.WriteState">
+            <summary>
+            Gets the st
