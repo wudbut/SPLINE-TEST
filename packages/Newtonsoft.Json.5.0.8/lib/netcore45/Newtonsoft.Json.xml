@@ -958,4 +958,34 @@
             <summary>
             Writes a <see cref="T:System.Byte"/> value.
             </summary>
-            <param name="val
+            <param name="value">The <see cref="T:System.Byte"/> value to write.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Bson.BsonWriter.WriteValue(System.SByte)">
+            <summary>
+            Writes a <see cref="T:System.SByte"/> value.
+            </summary>
+            <param name="value">The <see cref="T:System.SByte"/> value to write.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Bson.BsonWriter.WriteValue(System.Decimal)">
+            <summary>
+            Writes a <see cref="T:System.Decimal"/> value.
+            </summary>
+            <param name="value">The <see cref="T:System.Decimal"/> value to write.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Bson.BsonWriter.WriteValue(System.DateTime)">
+            <summary>
+            Writes a <see cref="T:System.DateTime"/> value.
+            </summary>
+            <param name="value">The <see cref="T:System.DateTime"/> value to write.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Bson.BsonWriter.WriteValue(System.DateTimeOffset)">
+            <summary>
+            Writes a <see cref="T:System.DateTimeOffset"/> value.
+            </summary>
+            <param name="value">The <see cref="T:System.DateTimeOffset"/> value to write.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Bson.BsonWriter.WriteValue(System.Byte[])">
+            <summary>
+            Writes a <see cref="T:Byte[]"/> value.
+            </summary>
+            <param name="value">The <see 
