@@ -1021,4 +1021,29 @@
             <param name="pattern">The regex pattern.</param>
             <param name="options">The regex options.</param>
         </member>
-        <member na
+        <member name="P:Newtonsoft.Json.Bson.BsonWriter.DateTimeKindHandling">
+            <summary>
+            Gets or sets the <see cref="T:System.DateTimeKind"/> used when writing <see cref="T:System.DateTime"/> values to BSON.
+            When set to <see cref="F:System.DateTimeKind.Unspecified"/> no conversion will occur.
+            </summary>
+            <value>The <see cref="T:System.DateTimeKind"/> used when writing <see cref="T:System.DateTime"/> values to BSON.</value>
+        </member>
+        <member name="T:Newtonsoft.Json.ConstructorHandling">
+            <summary>
+            Specifies how constructors are used when initializing objects during deserialization by the <see cref="T:Newtonsoft.Json.JsonSerializer"/>.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.ConstructorHandling.Default">
+            <summary>
+            First attempt to use the public default constructor, then fall back to single paramatized constructor, then the non-public default constructor.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.ConstructorHandling.AllowNonPublicDefaultConstructor">
+            <summary>
+            Json.NET will use a non-public default constructor before falling back to a paramatized constructor.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.Converters.BsonObjectIdConverter">
+            <summary>
+            Converts a <see cref="T:Newtonsoft.Json.Bson.BsonObjectId"/> to and from JSON and BSON.
+    
