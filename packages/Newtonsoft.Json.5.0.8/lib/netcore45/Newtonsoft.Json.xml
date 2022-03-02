@@ -1528,4 +1528,33 @@
         </member>
         <member name="F:Newtonsoft.Json.DateFormatHandling.MicrosoftDateFormat">
             <summary>
-            Dates are written in the Microsoft JSON format, e.g
+            Dates are written in the Microsoft JSON format, e.g. "\/Date(1198908717056)\/".
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.DateParseHandling">
+            <summary>
+            Specifies how date formatted strings, e.g. "\/Date(1198908717056)\/" and "2012-03-21T05:40Z", are parsed when reading JSON text.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.DateParseHandling.None">
+            <summary>
+            Date formatted strings are not parsed to a date type and are read as strings.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.DateParseHandling.DateTime">
+            <summary>
+            Date formatted strings, e.g. "\/Date(1198908717056)\/" and "2012-03-21T05:40Z", are parsed to <see cref="F:Newtonsoft.Json.DateParseHandling.DateTime"/>.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.DateParseHandling.DateTimeOffset">
+            <summary>
+            Date formatted strings, e.g. "\/Date(1198908717056)\/" and "2012-03-21T05:40Z", are parsed to <see cref="F:Newtonsoft.Json.DateParseHandling.DateTimeOffset"/>.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.DateTimeZoneHandling">
+            <summary>
+            Specifies how to treat the time value when converting between string and <see cref="T:System.DateTime"/>.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.DateTimeZoneHandling.Local">
+  
