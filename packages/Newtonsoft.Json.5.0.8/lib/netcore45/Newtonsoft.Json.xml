@@ -1499,4 +1499,33 @@
         </member>
         <member name="P:Newtonsoft.Json.Converters.XmlNodeConverter.DeserializeRootElementName">
             <summary>
-            Gets or sets the name of the root element to insert when deserializing to
+            Gets or sets the name of the root element to insert when deserializing to XML if the JSON structure has produces multiple root elements.
+            </summary>
+            <value>The name of the deserialize root element.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Converters.XmlNodeConverter.WriteArrayAttribute">
+            <summary>
+            Gets or sets a flag to indicate whether to write the Json.NET array attribute.
+            This attribute helps preserve arrays when converting the written XML back to JSON.
+            </summary>
+            <value><c>true</c> if the array attibute is written to the XML; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Converters.XmlNodeConverter.OmitRootObject">
+            <summary>
+            Gets or sets a value indicating whether to write the root JSON object.
+            </summary>
+            <value><c>true</c> if the JSON root object is omitted; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Newtonsoft.Json.DateFormatHandling">
+            <summary>
+            Specifies how dates are formatted when writing JSON text.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.DateFormatHandling.IsoDateFormat">
+            <summary>
+            Dates are written in the ISO 8601 format, e.g. "2012-03-21T05:40Z".
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.DateFormatHandling.MicrosoftDateFormat">
+            <summary>
+            Dates are written in the Microsoft JSON format, e.g
