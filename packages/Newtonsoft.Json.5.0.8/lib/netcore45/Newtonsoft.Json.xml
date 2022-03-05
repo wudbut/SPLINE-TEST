@@ -1584,4 +1584,28 @@
             </summary>
         </member>
         <member name="F:Newtonsoft.Json.FloatFormatHandling.String">
-      
+            <summary>
+            Write special floating point values as strings in JSON, e.g. "NaN", "Infinity", "-Infinity".
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.FloatFormatHandling.Symbol">
+            <summary>
+            Write special floating point values as symbols in JSON, e.g. NaN, Infinity, -Infinity.
+            Note that this will produce non-valid JSON.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.FloatFormatHandling.DefaultValue">
+            <summary>
+            Write special floating point values as the property's default value in JSON, e.g. 0.0 for a <see cref="T:System.Double"/> property, null for a <see cref="T:System.Nullable`1"/> property.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.DefaultValueHandling">
+            <summary>
+            Specifies default value handling options for the <see cref="T:Newtonsoft.Json.JsonSerializer"/>.
+            </summary>
+            <example>
+              <code lang="cs" source="..\Src\Newtonsoft.Json.Tests\Documentation\SerializationTests.cs" region="ReducingSerializedJsonSizeDefaultValueHandlingObject" title="DefaultValueHandling Class"/>
+              <code lang="cs" source="..\Src\Newtonsoft.Json.Tests\Documentation\SerializationTests.cs" region="ReducingSerializedJsonSizeDefaultValueHandlingExample" title="DefaultValueHandling Ignore Example"/>
+            </example>
+        </member>
+        <member name="F:Newtonsoft.Json.De
