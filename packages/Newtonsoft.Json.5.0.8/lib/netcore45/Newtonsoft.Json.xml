@@ -1662,4 +1662,38 @@
         <member name="F:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full">
             <summary>
             In full mode, the assembly used during deserialization must match exactly the assembly used during serialization. The Load method of the Assembly class is used to load the assembly.
-       
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.Formatting">
+            <summary>
+            Specifies formatting options for the <see cref="T:Newtonsoft.Json.JsonTextWriter"/>.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Formatting.None">
+            <summary>
+            No special formatting is applied. This is the default.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Formatting.Indented">
+            <summary>
+            Causes child objects to be indented according to the <see cref="P:Newtonsoft.Json.JsonTextWriter.Indentation"/> and <see cref="P:Newtonsoft.Json.JsonTextWriter.IndentChar"/> settings.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.IJsonLineInfo">
+            <summary>
+            Provides an interface to enable a class to return line and position information.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.IJsonLineInfo.HasLineInfo">
+            <summary>
+            Gets a value indicating whether the class can return line information.
+            </summary>
+            <returns>
+            	<c>true</c> if LineNumber and LinePosition can be provided; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="P:Newtonsoft.Json.IJsonLineInfo.LineNumber">
+            <summary>
+            Gets the current line number.
+            </summary>
+            <value>The current l
