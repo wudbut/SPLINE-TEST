@@ -1696,4 +1696,35 @@
             <summary>
             Gets the current line number.
             </summary>
-            <value>The current l
+            <value>The current line number or 0 if no line information is available (for example, HasLineInfo returns false).</value>
+        </member>
+        <member name="P:Newtonsoft.Json.IJsonLineInfo.LinePosition">
+            <summary>
+            Gets the current line position.
+            </summary>
+            <value>The current line position or 0 if no line information is available (for example, HasLineInfo returns false).</value>
+        </member>
+        <member name="T:Newtonsoft.Json.JsonArrayAttribute">
+            <summary>
+            Instructs the <see cref="T:Newtonsoft.Json.JsonSerializer"/> how to serialize the collection.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.JsonContainerAttribute">
+            <summary>
+            Instructs the <see cref="T:Newtonsoft.Json.JsonSerializer"/> how to serialize the object.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonContainerAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonContainerAttribute"/> class.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonContainerAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonContainerAttribute"/> class with the specified container Id.
+            </summary>
+            <param name="id">The container Id.</param>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonContainerAttribute.Id">
+            <summary>
+           
