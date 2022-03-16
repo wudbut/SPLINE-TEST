@@ -1765,4 +1765,33 @@
             	<c>true</c> to keep collection's items object references; otherwise, <c>false</c>. The default is <c>false</c>.
             </value>
         </member>
-        <member name="P:Newtonsoft.Json.JsonC
+        <member name="P:Newtonsoft.Json.JsonContainerAttribute.ItemReferenceLoopHandling">
+            <summary>
+            Gets or sets the reference loop handling used when serializing the collection's items.
+            </summary>
+            <value>The reference loop handling.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonContainerAttribute.ItemTypeNameHandling">
+            <summary>
+            Gets or sets the type name handling used when serializing the collection's items.
+            </summary>
+            <value>The type name handling.</value>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonArrayAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonArrayAttribute"/> class.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonArrayAttribute.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonObjectAttribute"/> class with a flag indicating whether the array can contain null items
+            </summary>
+            <param name="allowNullItems">A flag indicating whether the array can contain null items.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonArrayAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonArrayAttribute"/> class with the specified container Id.
+            </summary>
+            <param name="id">The container Id.</param>
+        </member>
+ 
