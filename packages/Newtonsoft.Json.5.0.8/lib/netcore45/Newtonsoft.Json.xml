@@ -1794,4 +1794,33 @@
             </summary>
             <param name="id">The container Id.</param>
         </member>
- 
+        <member name="P:Newtonsoft.Json.JsonArrayAttribute.AllowNullItems">
+            <summary>
+            Gets or sets a value indicating whether null items are allowed in the collection.
+            </summary>
+            <value><c>true</c> if null items are allowed in the collection; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Newtonsoft.Json.JsonConstructorAttribute">
+            <summary>
+            Instructs the <see cref="T:Newtonsoft.Json.JsonSerializer"/> to use the specified constructor when deserializing that object.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.JsonConvert">
+            <summary>
+            Provides methods for converting between common language runtime types and JSON types.
+            </summary>
+            <example>
+              <code lang="cs" source="..\Src\Newtonsoft.Json.Tests\Documentation\SerializationTests.cs" region="SerializeObject" title="Serializing and Deserializing JSON with JsonConvert" />
+            </example>
+        </member>
+        <member name="F:Newtonsoft.Json.JsonConvert.True">
+            <summary>
+            Represents JavaScript's boolean value true as a string. This field is read-only.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.JsonConvert.False">
+            <summary>
+            Represents JavaScript's boolean value false as a string. This field is read-only.
+            </summary>
+        </member>
+        <member name="F:Newt
