@@ -1876,4 +1876,32 @@
             Converts the <see cref="T:System.DateTimeOffset"/> to its JSON string representation using the <see cref="T:Newtonsoft.Json.DateFormatHandling"/> specified.
             </summary>
             <param name="value">The value to convert.</param>
-            <param name="format">The format the date will be converted to.</param
+            <param name="format">The format the date will be converted to.</param>
+            <returns>A JSON string representation of the <see cref="T:System.DateTimeOffset"/>.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.ToString(System.Boolean)">
+            <summary>
+            Converts the <see cref="T:System.Boolean"/> to its JSON string representation.
+            </summary>
+            <param name="value">The value to convert.</param>
+            <returns>A JSON string representation of the <see cref="T:System.Boolean"/>.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.ToString(System.Char)">
+            <summary>
+            Converts the <see cref="T:System.Char"/> to its JSON string representation.
+            </summary>
+            <param name="value">The value to convert.</param>
+            <returns>A JSON string representation of the <see cref="T:System.Char"/>.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.ToString(System.Enum)">
+            <summary>
+            Converts the <see cref="T:System.Enum"/> to its JSON string representation.
+            </summary>
+            <param name="value">The value to convert.</param>
+            <returns>A JSON string representation of the <see cref="T:System.Enum"/>.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.ToString(System.Int32)">
+            <summary>
+            Converts the <see cref="T:System.Int32"/> to its JSON string representation.
+            </summary>
+            <pa
