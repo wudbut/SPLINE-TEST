@@ -1959,4 +1959,32 @@
         <member name="M:Newtonsoft.Json.JsonConvert.ToString(System.Byte)">
             <summary>
             Converts the <see cref="T:System.Byte"/> to its JSON string representation.
-            </sum
+            </summary>
+            <param name="value">The value to convert.</param>
+            <returns>A JSON string representation of the <see cref="T:System.Byte"/>.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.ToString(System.SByte)">
+            <summary>
+            Converts the <see cref="T:System.SByte"/> to its JSON string representation.
+            </summary>
+            <param name="value">The value to convert.</param>
+            <returns>A JSON string representation of the <see cref="T:System.SByte"/>.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.ToString(System.Decimal)">
+            <summary>
+            Converts the <see cref="T:System.Decimal"/> to its JSON string representation.
+            </summary>
+            <param name="value">The value to convert.</param>
+            <returns>A JSON string representation of the <see cref="T:System.SByte"/>.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.ToString(System.Guid)">
+            <summary>
+            Converts the <see cref="T:System.Guid"/> to its JSON string representation.
+            </summary>
+            <param name="value">The value to convert.</param>
+            <returns>A JSON string representation of the <see cref="T:System.Guid"/>.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.ToString(System.TimeSpan)">
+            <summary>
+            Converts the <see cref="T:System.TimeSpan"/> to its JSON string representation.
+            </summary
