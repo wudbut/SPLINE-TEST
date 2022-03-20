@@ -1904,4 +1904,32 @@
             <summary>
             Converts the <see cref="T:System.Int32"/> to its JSON string representation.
             </summary>
-            <pa
+            <param name="value">The value to convert.</param>
+            <returns>A JSON string representation of the <see cref="T:System.Int32"/>.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.ToString(System.Int16)">
+            <summary>
+            Converts the <see cref="T:System.Int16"/> to its JSON string representation.
+            </summary>
+            <param name="value">The value to convert.</param>
+            <returns>A JSON string representation of the <see cref="T:System.Int16"/>.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.ToString(System.UInt16)">
+            <summary>
+            Converts the <see cref="T:System.UInt16"/> to its JSON string representation.
+            </summary>
+            <param name="value">The value to convert.</param>
+            <returns>A JSON string representation of the <see cref="T:System.UInt16"/>.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.ToString(System.UInt32)">
+            <summary>
+            Converts the <see cref="T:System.UInt32"/> to its JSON string representation.
+            </summary>
+            <param name="value">The value to convert.</param>
+            <returns>A JSON string representation of the <see cref="T:System.UInt32"/>.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.ToString(System.Int64)">
+            <summary>
+            Converts the <see cref="T:System.Int64"/>  to its JSON string representation.
+            </summary>
+            <param name="value">T
