@@ -2015,4 +2015,31 @@
         </member>
         <member name="M:Newtonsoft.Json.JsonConvert.ToString(System.Object)">
             <summary>
- 
+            Converts the <see cref="T:System.Object"/> to its JSON string representation.
+            </summary>
+            <param name="value">The value to convert.</param>
+            <returns>A JSON string representation of the <see cref="T:System.Object"/>.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.SerializeObject(System.Object)">
+            <summary>
+            Serializes the specified object to a JSON string.
+            </summary>
+            <param name="value">The object to serialize.</param>
+            <returns>A JSON string representation of the object.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.SerializeObject(System.Object,Newtonsoft.Json.Formatting)">
+            <summary>
+            Serializes the specified object to a JSON string using formatting.
+            </summary>
+            <param name="value">The object to serialize.</param>
+            <param name="formatting">Indicates how the output is formatted.</param>
+            <returns>
+            A JSON string representation of the object.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.SerializeObject(System.Object,Newtonsoft.Json.JsonConverter[])">
+            <summary>
+            Serializes the specified object to a JSON string using a collection of <see cref="T:Newtonsoft.Json.JsonConverter"/>.
+            </summary>
+            <param name="value">The object to serialize.</param>
+            <param name="converters">A collection con
