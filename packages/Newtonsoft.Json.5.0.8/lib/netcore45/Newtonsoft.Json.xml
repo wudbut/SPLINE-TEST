@@ -2112,4 +2112,27 @@
             <param name="value">The object to serialize.</param>
             <param name="formatting">Indicates how the output is formatted.</param>
             <returns>
-            A task that represents the asynchronous serialize ope
+            A task that represents the asynchronous serialize operation. The value of the <c>TResult</c> parameter contains a JSON string representation of the object.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.SerializeObjectAsync(System.Object,Newtonsoft.Json.Formatting,Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            Asynchronously serializes the specified object to a JSON string using formatting and a collection of <see cref="T:Newtonsoft.Json.JsonConverter"/>.
+            Serialization will happen on a new thread.
+            </summary>
+            <param name="value">The object to serialize.</param>
+            <param name="formatting">Indicates how the output is formatted.</param>
+            <param name="settings">The <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/> used to serialize the object.
+            If this is null, default serialization settings will be is used.</param>
+            <returns>
+            A task that represents the asynchronous serialize operation. The value of the <c>TResult</c> parameter contains a JSON string representation of the object.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.DeserializeObject(System.String)">
+            <summary>
+            Deserializes the JSON to a .NET object.
+            </summary>
+            <param name="value">The JSON to deserialize.</param>
+            <returns>The deserialized object from the Json string.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.DeserializeObject(System.String,Newtonsoft.Json.JsonSerial
