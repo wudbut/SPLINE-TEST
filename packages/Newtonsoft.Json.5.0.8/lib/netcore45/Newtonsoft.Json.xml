@@ -2162,4 +2162,30 @@
             <param name="value">The JSON to deserialize.</param>
             <returns>The deserialized object from the Json string.</returns>
         </member>
-        <member name="M:Newt
+        <member name="M:Newtonsoft.Json.JsonConvert.DeserializeAnonymousType``1(System.String,``0)">
+            <summary>
+            Deserializes the JSON to the given anonymous type.
+            </summary>
+            <typeparam name="T">
+            The anonymous type to deserialize to. This can't be specified
+            traditionally and must be infered from the anonymous type passed
+            as a parameter.
+            </typeparam>
+            <param name="value">The JSON to deserialize.</param>
+            <param name="anonymousTypeObject">The anonymous type object.</param>
+            <returns>The deserialized anonymous type from the JSON string.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.DeserializeAnonymousType``1(System.String,``0,Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            Deserializes the JSON to the given anonymous type using <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/>.
+            </summary>
+            <typeparam name="T">
+            The anonymous type to deserialize to. This can't be specified
+            traditionally and must be infered from the anonymous type passed
+            as a parameter.
+            </typeparam>
+            <param name="value">The JSON to deserialize.</param>
+            <param name="anonymousTypeObject">The anonymous type object.</param>
+            <param name="settings">
+            The <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/> used to deserialize the object.
+            If this is null
