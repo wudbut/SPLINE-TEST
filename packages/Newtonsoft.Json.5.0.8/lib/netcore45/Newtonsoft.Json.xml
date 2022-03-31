@@ -2282,4 +2282,29 @@
             If this is null, default serialization settings will be is used.
             </param>
             <returns>
-            A task that represents the asynchronous deserialize operation. The value of the <c>TResult</c> paramete
+            A task that represents the asynchronous deserialize operation. The value of the <c>TResult</c> parameter contains the deserialized object from the JSON string.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.PopulateObject(System.String,System.Object)">
+            <summary>
+            Populates the object with values from the JSON string.
+            </summary>
+            <param name="value">The JSON to populate values from.</param>
+            <param name="target">The target object to populate values onto.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.PopulateObject(System.String,System.Object,Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            Populates the object with values from the JSON string using <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/>.
+            </summary>
+            <param name="value">The JSON to populate values from.</param>
+            <param name="target">The target object to populate values onto.</param>
+            <param name="settings">
+            The <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/> used to deserialize the object.
+            If this is null, default serialization settings will be is used.
+            </param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.PopulateObjectAsync(System.String,System.Object,Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            Asynchronously populates the object with values from the JSON string using <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/>.
+            </summary>
+      
