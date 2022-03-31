@@ -2234,4 +2234,27 @@
             </param>
             <returns>The deserialized object from the JSON string.</returns>
         </member>
-        <member name="M:Newtonsoft.Json.JsonConvert.DeserializeObject
+        <member name="M:Newtonsoft.Json.JsonConvert.DeserializeObjectAsync``1(System.String)">
+            <summary>
+            Asynchronously deserializes the JSON to the specified .NET type.
+            Deserialization will happen on a new thread.
+            </summary>
+            <typeparam name="T">The type of the object to deserialize to.</typeparam>
+            <param name="value">The JSON to deserialize.</param>
+            <returns>
+            A task that represents the asynchronous deserialize operation. The value of the <c>TResult</c> parameter contains the deserialized object from the JSON string.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.DeserializeObjectAsync``1(System.String,Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            Asynchronously deserializes the JSON to the specified .NET type using <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/>.
+            Deserialization will happen on a new thread.
+            </summary>
+            <typeparam name="T">The type of the object to deserialize to.</typeparam>
+            <param name="value">The JSON to deserialize.</param>
+            <param name="settings">
+            The <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/> used to deserialize the object.
+            If this is null, default serialization settings will be is used.
+            </param>
+            <returns>
+            A task that represents the asynchronous deserialize operation. The value of the <c>TResult</c> parameter contains the deserialized object from the 
