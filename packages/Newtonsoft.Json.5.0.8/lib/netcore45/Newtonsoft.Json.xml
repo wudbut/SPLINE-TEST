@@ -2332,4 +2332,29 @@
             <param name="formatting">Indicates how the output is formatted.</param>
             <returns>A JSON string of the XNode.</returns>
         </member>
-        <member name="M:Newtonsoft.Json.JsonConvert.SerializeXNode(System.Xml.Linq.XObject,Newtonsof
+        <member name="M:Newtonsoft.Json.JsonConvert.SerializeXNode(System.Xml.Linq.XObject,Newtonsoft.Json.Formatting,System.Boolean)">
+            <summary>
+            Serializes the <see cref="T:System.Xml.Linq.XNode"/> to a JSON string using formatting and omits the root object if <paramref name="omitRootObject"/> is <c>true</c>.
+            </summary>
+            <param name="node">The node to serialize.</param>
+            <param name="formatting">Indicates how the output is formatted.</param>
+            <param name="omitRootObject">Omits writing the root object.</param>
+            <returns>A JSON string of the XNode.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.DeserializeXNode(System.String)">
+            <summary>
+            Deserializes the <see cref="T:System.Xml.Linq.XNode"/> from a JSON string.
+            </summary>
+            <param name="value">The JSON string.</param>
+            <returns>The deserialized XNode</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.DeserializeXNode(System.String,System.String)">
+            <summary>
+            Deserializes the <see cref="T:System.Xml.Linq.XNode"/> from a JSON string nested in a root elment specified by <paramref name="deserializeRootElementName"/>.
+            </summary>
+            <param name="value">The JSON string.</param>
+            <param name="deserializeRootElementName">The name of the root element to append when deserializing.</param>
+            <returns>The deserialized XNode</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.DeserializeXNode(System.String,System.String,System.Boolean)">
+          
