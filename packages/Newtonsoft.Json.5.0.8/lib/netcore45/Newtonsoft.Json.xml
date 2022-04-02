@@ -2375,4 +2375,36 @@
             Default settings are automatically used by serialization methods on <see cref="T:Newtonsoft.Json.JsonConvert"/>,
             and <see cref="M:Newtonsoft.Json.Linq.JToken.ToObject``1"/> and <see cref="M:Newtonsoft.Json.Linq.JToken.FromObject(System.Object)"/> on <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
             To serialize without using any default settings create a <see cref="T:Newtonsoft.Json.JsonSerializer"/> with
-            <see cref="M:Newtonsoft.Json.JsonSerial
+            <see cref="M:Newtonsoft.Json.JsonSerializer.Create"/>.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.JsonConverterAttribute">
+            <summary>
+            Instructs the <see cref="T:Newtonsoft.Json.JsonSerializer"/> to use the specified <see cref="T:Newtonsoft.Json.JsonConverter"/> when serializing the member or class.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConverterAttribute.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonConverterAttribute"/> class.
+            </summary>
+            <param name="converterType">Type of the converter.</param>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonConverterAttribute.ConverterType">
+            <summary>
+            Gets the type of the converter.
+            </summary>
+            <value>The type of the converter.</value>
+        </member>
+        <member name="T:Newtonsoft.Json.JsonConverterCollection">
+            <summary>
+            Represents a collection of <see cref="T:Newtonsoft.Json.JsonConverter"/>.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.JsonDictionaryAttribute">
+            <summary>
+            Instructs the <see cref="T:Newtonsoft.Json.JsonSerializer"/> how to serialize the collection.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonDictionaryAttribute.#ctor">
+            <summary>
+            Initializes a new in
