@@ -2307,4 +2307,29 @@
             <summary>
             Asynchronously populates the object with values from the JSON string using <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/>.
             </summary>
-      
+            <param name="value">The JSON to populate values from.</param>
+            <param name="target">The target object to populate values onto.</param>
+            <param name="settings">
+            The <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/> used to deserialize the object.
+            If this is null, default serialization settings will be is used.
+            </param>
+            <returns>
+            A task that represents the asynchronous populate operation.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.SerializeXNode(System.Xml.Linq.XObject)">
+            <summary>
+            Serializes the <see cref="T:System.Xml.Linq.XNode"/> to a JSON string.
+            </summary>
+            <param name="node">The node to convert to JSON.</param>
+            <returns>A JSON string of the XNode.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.SerializeXNode(System.Xml.Linq.XObject,Newtonsoft.Json.Formatting)">
+            <summary>
+            Serializes the <see cref="T:System.Xml.Linq.XNode"/> to a JSON string using formatting.
+            </summary>
+            <param name="node">The node to convert to JSON.</param>
+            <param name="formatting">Indicates how the output is formatted.</param>
+            <returns>A JSON string of the XNode.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonConvert.SerializeXNode(System.Xml.Linq.XObject,Newtonsof
