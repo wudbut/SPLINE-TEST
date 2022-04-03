@@ -2435,4 +2435,29 @@
         </member>
         <member name="M:Newtonsoft.Json.JsonException.#ctor(System.String,System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonException"/> cla
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonException"/> class
+            with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.</param>
+        </member>
+        <member name="T:Newtonsoft.Json.JsonExtensionDataAttribute">
+            <summary>
+            Instructs the <see cref="T:Newtonsoft.Json.JsonSerializer"/> to deserialize properties with no matching class member into the specified collection
+            and write values during serialization.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonExtensionDataAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonExtensionDataAttribute"/> class.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonExtensionDataAttribute.WriteData">
+            <summary>
+            Gets or sets a value that indicates whether to write extension data when serializing the object.
+            </summary>
+            <value>
+            	<c>true</c> to write extension data when serializing the object; otherwise, <c>false</c>. The default is <c>true</c>.
+            </value>
+        </member>
+        <member name="P:New
