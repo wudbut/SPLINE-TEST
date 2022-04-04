@@ -2487,4 +2487,36 @@
             <summary>
             Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonObjectAttribute"/> class with the specified member serialization.
             </summary>
-            <param name="memberSerialization">The member seri
+            <param name="memberSerialization">The member serialization.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonObjectAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonObjectAttribute"/> class with the specified container Id.
+            </summary>
+            <param name="id">The container Id.</param>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonObjectAttribute.MemberSerialization">
+            <summary>
+            Gets or sets the member serialization.
+            </summary>
+            <value>The member serialization.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonObjectAttribute.ItemRequired">
+            <summary>
+            Gets or sets a value that indicates whether the object's properties are required.
+            </summary>
+            <value>
+            	A value indicating whether the object's properties are required.
+            </value>
+        </member>
+        <member name="T:Newtonsoft.Json.JsonPropertyAttribute">
+            <summary>
+            Instructs the <see cref="T:Newtonsoft.Json.JsonSerializer"/> to always serialize the member with the specified name.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonPropertyAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonPropertyAttribute"/> class.
+            </summary>
+        </member>
+ 
