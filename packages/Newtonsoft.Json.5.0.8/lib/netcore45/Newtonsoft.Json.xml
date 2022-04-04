@@ -2519,4 +2519,34 @@
             Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonPropertyAttribute"/> class.
             </summary>
         </member>
- 
+        <member name="M:Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonPropertyAttribute"/> class with the specified name.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonPropertyAttribute.ItemConverterType">
+            <summary>
+            Gets or sets the converter used when serializing the property's collection items.
+            </summary>
+            <value>The collection's items converter.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonPropertyAttribute.NullValueHandling">
+            <summary>
+            Gets or sets the null value handling used when serializing this property.
+            </summary>
+            <value>The null value handling.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonPropertyAttribute.DefaultValueHandling">
+            <summary>
+            Gets or sets the default value handling used when serializing this property.
+            </summary>
+            <value>The default value handling.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonPropertyAttribute.ReferenceLoopHandling">
+            <summary>
+            Gets or sets the reference loop handling used when serializing this property.
+            </summary>
+            <value>The reference loop handling.</value>
+        </member>
+        <member name="P:Newtonsoft.Json
