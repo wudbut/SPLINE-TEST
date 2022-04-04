@@ -2460,4 +2460,31 @@
             	<c>true</c> to write extension data when serializing the object; otherwise, <c>false</c>. The default is <c>true</c>.
             </value>
         </member>
-        <member name="P:New
+        <member name="P:Newtonsoft.Json.JsonExtensionDataAttribute.ReadData">
+            <summary>
+            Gets or sets a value that indicates whether to read extension data when deserializing the object.
+            </summary>
+            <value>
+            	<c>true</c> to read extension data when deserializing the object; otherwise, <c>false</c>. The default is <c>true</c>.
+            </value>
+        </member>
+        <member name="T:Newtonsoft.Json.JsonIgnoreAttribute">
+            <summary>
+            Instructs the <see cref="T:Newtonsoft.Json.JsonSerializer"/> not to serialize the public field or public read/write property value.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.JsonObjectAttribute">
+            <summary>
+            Instructs the <see cref="T:Newtonsoft.Json.JsonSerializer"/> how to serialize the object.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonObjectAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonObjectAttribute"/> class.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonObjectAttribute.#ctor(Newtonsoft.Json.MemberSerialization)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonObjectAttribute"/> class with the specified member serialization.
+            </summary>
+            <param name="memberSerialization">The member seri
