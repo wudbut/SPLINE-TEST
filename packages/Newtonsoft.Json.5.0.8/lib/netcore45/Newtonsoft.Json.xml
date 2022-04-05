@@ -2758,4 +2758,25 @@
         </member>
         <member name="M:Newtonsoft.Json.JsonSerializer.Deserialize``1(Newtonsoft.Json.JsonReader)">
             <summary>
-            Deserializes the Json structure contained by the specified <see cref="T
+            Deserializes the Json structure contained by the specified <see cref="T:Newtonsoft.Json.JsonReader"/>
+            into an instance of the specified type.
+            </summary>
+            <param name="reader">The <see cref="T:Newtonsoft.Json.JsonReader"/> containing the object.</param>
+            <typeparam name="T">The type of the object to deserialize.</typeparam>
+            <returns>The instance of <typeparamref name="T"/> being deserialized.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonSerializer.Deserialize(Newtonsoft.Json.JsonReader,System.Type)">
+            <summary>
+            Deserializes the Json structure contained by the specified <see cref="T:Newtonsoft.Json.JsonReader"/>
+            into an instance of the specified type.
+            </summary>
+            <param name="reader">The <see cref="T:Newtonsoft.Json.JsonReader"/> containing the object.</param>
+            <param name="objectType">The <see cref="T:System.Type"/> of object being deserialized.</param>
+            <returns>The instance of <paramref name="objectType"/> being deserialized.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonSerializer.Serialize(System.IO.TextWriter,System.Object)">
+            <summary>
+            Serializes the specified <see cref="T:System.Object"/> and writes the Json structure
+            to a <c>Stream</c> using the specified <see cref="T:System.IO.TextWriter"/>. 
+            </summary>
+            <param name="textWriter">The <see c
