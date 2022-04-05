@@ -2691,4 +2691,28 @@
             </summary>
             <returns>
             A new <see cref="T:Newtonsoft.Json.JsonSerializer"/> instance.
-            The <see cref="T:Newtonsoft.Json.JsonSerializer"/> will not use default set
+            The <see cref="T:Newtonsoft.Json.JsonSerializer"/> will not use default settings.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonSerializer.Create(Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            Creates a new <see cref="T:Newtonsoft.Json.JsonSerializer"/> instance using the specified <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/>.
+            The <see cref="T:Newtonsoft.Json.JsonSerializer"/> will not use default settings.
+            </summary>
+            <param name="settings">The settings to be applied to the <see cref="T:Newtonsoft.Json.JsonSerializer"/>.</param>
+            <returns>
+            A new <see cref="T:Newtonsoft.Json.JsonSerializer"/> instance using the specified <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/>.
+            The <see cref="T:Newtonsoft.Json.JsonSerializer"/> will not use default settings.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonSerializer.CreateDefault">
+            <summary>
+            Creates a new <see cref="T:Newtonsoft.Json.JsonSerializer"/> instance.
+            The <see cref="T:Newtonsoft.Json.JsonSerializer"/> will use default settings.
+            </summary>
+            <returns>
+            A new <see cref="T:Newtonsoft.Json.JsonSerializer"/> instance.
+            The <see cref="T:Newtonsoft.Json.JsonSerializer"/> will use default settings.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonSerializer.CreateDefault(Newtonsoft.Json.JsonSerializ
