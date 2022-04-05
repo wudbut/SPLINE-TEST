@@ -2636,4 +2636,33 @@
             </summary>
             <value>The line number indicating where the error occurred.</value>
         </member>
-        <member name="P:Newtonsoft.Json.JsonRea
+        <member name="P:Newtonsoft.Json.JsonReaderException.LinePosition">
+            <summary>
+            Gets the line position indicating where the error occurred.
+            </summary>
+            <value>The line position indicating where the error occurred.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonReaderException.Path">
+            <summary>
+            Gets the path to the JSON where the error occurred.
+            </summary>
+            <value>The path to the JSON where the error occurred.</value>
+        </member>
+        <member name="T:Newtonsoft.Json.JsonSerializationException">
+            <summary>
+            The exception thrown when an error occurs during Json serialization or deserialization.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonSerializationException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonSerializationException"/> class.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonSerializationException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonSerializationException"/> class
+            with a specified error message.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonSerializationException.#ctor(System.String,System.Excep
