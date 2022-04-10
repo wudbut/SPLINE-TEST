@@ -2887,4 +2887,34 @@
         </member>
         <member name="P:Newtonsoft.Json.JsonSerializer.Converters">
             <summary>
-            Gets a collection <see cref="T:Newtonsoft.Json.Json
+            Gets a collection <see cref="T:Newtonsoft.Json.JsonConverter"/> that will be used during serialization.
+            </summary>
+            <value>Collection <see cref="T:Newtonsoft.Json.JsonConverter"/> that will be used during serialization.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonSerializer.ContractResolver">
+            <summary>
+            Gets or sets the contract resolver used by the serializer when
+            serializing .NET objects to JSON and vice versa.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonSerializer.Context">
+            <summary>
+            Gets or sets the <see cref="T:System.Runtime.Serialization.StreamingContext"/> used by the serializer when invoking serialization callback methods.
+            </summary>
+            <value>The context.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonSerializer.Formatting">
+            <summary>
+            Indicates how JSON text output is formatted.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonSerializer.DateFormatHandling">
+            <summary>
+            Get or set how dates are written to JSON text.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonSerializer.DateTimeZoneHandling">
+            <summary>
+            Get or set how <see cref="T:System.DateTime"/> time zones are handling during serialization and deserialization.
+            </summary>
+      
