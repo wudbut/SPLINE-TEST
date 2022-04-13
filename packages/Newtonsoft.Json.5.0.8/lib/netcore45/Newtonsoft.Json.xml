@@ -2977,4 +2977,35 @@
             <summary>
             Gets or sets how reference loops (e.g. a class referencing itself) is handled.
             </summary>
-            
+            <value>Reference loop handling.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonSerializerSettings.MissingMemberHandling">
+            <summary>
+            Gets or sets how missing members (e.g. JSON contains a property that isn't a member on the object) are handled during deserialization.
+            </summary>
+            <value>Missing member handling.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonSerializerSettings.ObjectCreationHandling">
+            <summary>
+            Gets or sets how objects are created during deserialization.
+            </summary>
+            <value>The object creation handling.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonSerializerSettings.NullValueHandling">
+            <summary>
+            Gets or sets how null values are handled during serialization and deserialization.
+            </summary>
+            <value>Null value handling.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonSerializerSettings.DefaultValueHandling">
+            <summary>
+            Gets or sets how null default are handled during serialization and deserialization.
+            </summary>
+            <value>The default value handling.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonSerializerSettings.Converters">
+            <summary>
+            Gets or sets a collection <see cref="T:Newtonsoft.Json.JsonConverter"/> that will be used during serialization.
+            </summary>
+            <value>The converters.</value>
+   
