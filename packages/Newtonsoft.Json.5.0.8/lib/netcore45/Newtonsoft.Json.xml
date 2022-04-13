@@ -3041,4 +3041,32 @@
             <value>The contract resolver.</value>
         </member>
         <member name="P:Newtonsoft.Json.JsonSerializerSettings.ReferenceResolver">
-            <summ
+            <summary>
+            Gets or sets the <see cref="T:Newtonsoft.Json.Serialization.IReferenceResolver"/> used by the serializer when resolving references.
+            </summary>
+            <value>The reference resolver.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonSerializerSettings.TraceWriter">
+            <summary>
+            Gets or sets the <see cref="T:Newtonsoft.Json.Serialization.ITraceWriter"/> used by the serializer when writing trace messages.
+            </summary>
+            <value>The trace writer.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonSerializerSettings.Binder">
+            <summary>
+            Gets or sets the <see cref="T:Newtonsoft.Json.SerializationBinder"/> used by the serializer when resolving type names.
+            </summary>
+            <value>The binder.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonSerializerSettings.Error">
+            <summary>
+            Gets or sets the error handler called during serialization and deserialization.
+            </summary>
+            <value>The error handler called during serialization and deserialization.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonSerializerSettings.Context">
+            <summary>
+            Gets or sets the <see cref="T:System.Runtime.Serialization.StreamingContext"/> used by the serializer when invoking serialization callback methods.
+            </summary>
+            <value>The context.</value>
+        </mem
