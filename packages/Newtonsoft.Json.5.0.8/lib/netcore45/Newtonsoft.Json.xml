@@ -3127,4 +3127,32 @@
             Gets a value indicating whether there will be a check for additional content after deserializing an object.
             </summary>
             <value>
-            	<c>
+            	<c>true</c> if there will be a check for additional content after deserializing an object; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Newtonsoft.Json.JsonTextReader">
+            <summary>
+            Represents a reader that provides fast, non-cached, forward-only access to JSON text data.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonTextReader.#ctor(System.IO.TextReader)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonReader"/> class with the specified <see cref="T:System.IO.TextReader"/>.
+            </summary>
+            <param name="reader">The <c>TextReader</c> containing the XML data to read.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonTextReader.Read">
+            <summary>
+            Reads the next JSON token from the stream.
+            </summary>
+            <returns>
+            true if the next token was read successfully; false if there are no more tokens to read.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonTextReader.ReadAsBytes">
+            <summary>
+            Reads the next JSON token from the stream as a <see cref="T:Byte[]"/>.
+            </summary>
+            <returns>
+            A <see cref="T:Byte[]"/> or a null reference if the next JSON token is null. This method will return <c>null</c> at the end of an array.
+            </retu
