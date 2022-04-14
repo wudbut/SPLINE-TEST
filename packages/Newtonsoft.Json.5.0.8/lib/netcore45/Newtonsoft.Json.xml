@@ -3181,4 +3181,39 @@
             </summary>
             <returns>A <see cref="T:System.String"/>. This method will return <c>null</c> at the end of an array.</returns>
         </member>
-     
+        <member name="M:Newtonsoft.Json.JsonTextReader.ReadAsDateTimeOffset">
+            <summary>
+            Reads the next JSON token from the stream as a <see cref="T:System.Nullable`1"/>.
+            </summary>
+            <returns>A <see cref="T:System.DateTimeOffset"/>. This method will return <c>null</c> at the end of an array.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonTextReader.Close">
+            <summary>
+            Changes the state to closed. 
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonTextReader.HasLineInfo">
+            <summary>
+            Gets a value indicating whether the class can return line information.
+            </summary>
+            <returns>
+            	<c>true</c> if LineNumber and LinePosition can be provided; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonTextReader.LineNumber">
+            <summary>
+            Gets the current line number.
+            </summary>
+            <value>
+            The current line number or 0 if no line information is available (for example, HasLineInfo returns false).
+            </value>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonTextReader.LinePosition">
+            <summary>
+            Gets the current line position.
+            </summary>
+            <value>
+            The current line position or 0 if no line information is available (for example, HasLineInfo returns false).
+            </value>
+        </member>
+        <member name="T:Newt
