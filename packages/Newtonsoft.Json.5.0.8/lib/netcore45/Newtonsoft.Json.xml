@@ -3249,4 +3249,37 @@
         </member>
         <member name="M:Newtonsoft.Json.JsonTextWriter.WriteStartConstructor(System.String)">
             <summary>
-  
+            Writes the start of a constructor with the given name.
+            </summary>
+            <param name="name">The name of the constructor.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonTextWriter.WriteEnd(Newtonsoft.Json.JsonToken)">
+            <summary>
+            Writes the specified end token.
+            </summary>
+            <param name="token">The end token to write.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonTextWriter.WritePropertyName(System.String)">
+            <summary>
+            Writes the property name of a name/value pair on a Json object.
+            </summary>
+            <param name="name">The name of the property.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonTextWriter.WritePropertyName(System.String,System.Boolean)">
+            <summary>
+            Writes the property name of a name/value pair on a JSON object.
+            </summary>
+            <param name="name">The name of the property.</param>
+            <param name="escape">A flag to indicate whether the text should be escaped when it is written as a JSON property name.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonTextWriter.WriteIndent">
+            <summary>
+            Writes indent characters.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonTextWriter.WriteValueDelimiter">
+            <summary>
+            Writes the JSON value delimiter.
+            </summary>
+        </member>
+      
