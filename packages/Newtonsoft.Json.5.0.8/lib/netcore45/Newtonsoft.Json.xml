@@ -3216,4 +3216,37 @@
             The current line position or 0 if no line information is available (for example, HasLineInfo returns false).
             </value>
         </member>
-        <member name="T:Newt
+        <member name="T:Newtonsoft.Json.JsonTextWriter">
+            <summary>
+            Represents a writer that provides a fast, non-cached, forward-only way of generating Json data.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonTextWriter.#ctor(System.IO.TextWriter)">
+            <summary>
+            Creates an instance of the <c>JsonWriter</c> class using the specified <see cref="T:System.IO.TextWriter"/>. 
+            </summary>
+            <param name="textWriter">The <c>TextWriter</c> to write to.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonTextWriter.Flush">
+            <summary>
+            Flushes whatever is in the buffer to the underlying streams and also flushes the underlying stream.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonTextWriter.Close">
+            <summary>
+            Closes this stream and the underlying stream.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonTextWriter.WriteStartObject">
+            <summary>
+            Writes the beginning of a Json object.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonTextWriter.WriteStartArray">
+            <summary>
+            Writes the beginning of a Json array.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonTextWriter.WriteStartConstructor(System.String)">
+            <summary>
+  
