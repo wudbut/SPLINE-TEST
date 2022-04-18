@@ -3446,4 +3446,33 @@
             <summary>
             Writes out a comment <code>/*...*/</code> containing the specified text. 
             </summary>
-            <param name="t
+            <param name="text">Text to place inside the comment.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonTextWriter.WriteWhitespace(System.String)">
+            <summary>
+            Writes out the given white space.
+            </summary>
+            <param name="ws">The string of white space characters.</param>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonTextWriter.Indentation">
+            <summary>
+            Gets or sets how many IndentChars to write for each level in the hierarchy when <see cref="T:Newtonsoft.Json.Formatting"/> is set to <c>Formatting.Indented</c>.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonTextWriter.QuoteChar">
+            <summary>
+            Gets or sets which character to use to quote attribute values.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonTextWriter.IndentChar">
+            <summary>
+            Gets or sets which character to use for indenting when <see cref="T:Newtonsoft.Json.Formatting"/> is set to <c>Formatting.Indented</c>.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonTextWriter.QuoteName">
+            <summary>
+            Gets or sets a value indicating whether object names will be surrounded with quotes.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.JsonToken">
+           
