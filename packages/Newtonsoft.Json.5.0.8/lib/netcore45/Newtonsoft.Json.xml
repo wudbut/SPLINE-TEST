@@ -3570,3 +3570,33 @@
             </summary>
         </member>
         <member name="T:Newtonsoft.Json.JsonValidatingReader">
+            <summary>
+            Represents a reader that provides <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> validation.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonValidatingReader.#ctor(Newtonsoft.Json.JsonReader)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonValidatingReader"/> class that
+            validates the content returned from the given <see cref="T:Newtonsoft.Json.JsonReader"/>.
+            </summary>
+            <param name="reader">The <see cref="T:Newtonsoft.Json.JsonReader"/> to read from while validating.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonValidatingReader.ReadAsInt32">
+            <summary>
+            Reads the next JSON token from the stream as a <see cref="T:System.Nullable`1"/>.
+            </summary>
+            <returns>A <see cref="T:System.Nullable`1"/>.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonValidatingReader.ReadAsBytes">
+            <summary>
+            Reads the next JSON token from the stream as a <see cref="T:Byte[]"/>.
+            </summary>
+            <returns>
+            A <see cref="T:Byte[]"/> or a null reference if the next JSON token is null.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonValidatingReader.ReadAsDecimal">
+            <summary>
+            Reads the next JSON token from the stream as a <see cref="T:System.Nullable`1"/>.
+            </summary>
+            <returns>A 
