@@ -3667,4 +3667,34 @@
             </summary>
             <value></value>
         </member>
-        <member name=
+        <member name="P:Newtonsoft.Json.JsonValidatingReader.Schema">
+            <summary>
+            Gets or sets the schema.
+            </summary>
+            <value>The schema.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonValidatingReader.Reader">
+            <summary>
+            Gets the <see cref="T:Newtonsoft.Json.JsonReader"/> used to construct this <see cref="T:Newtonsoft.Json.JsonValidatingReader"/>.
+            </summary>
+            <value>The <see cref="T:Newtonsoft.Json.JsonReader"/> specified in the constructor.</value>
+        </member>
+        <member name="T:Newtonsoft.Json.JsonWriterException">
+            <summary>
+            The exception thrown when an error occurs while reading Json text.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriterException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonWriterException"/> class.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriterException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonWriterException"/> class
+            with a specified error message.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.JsonWriterException.#ctor(System.String,System.Exception)">
+          
