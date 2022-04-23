@@ -3827,4 +3827,35 @@
         </member>
         <member name="P:Newtonsoft.Json.Linq.IJEnumerable`1.Item(System.Object)">
             <summary>
-            Ge
+            Gets the <see cref="T:Newtonsoft.Json.Linq.IJEnumerable`1"/> with the specified key.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:Newtonsoft.Json.Linq.JArray">
+            <summary>
+            Represents a JSON array.
+            </summary>
+            <example>
+              <code lang="cs" source="..\Src\Newtonsoft.Json.Tests\Documentation\LinqToJsonTests.cs" region="LinqToJsonCreateParseArray" title="Parsing a JSON Array from Text" />
+            </example>
+        </member>
+        <member name="T:Newtonsoft.Json.Linq.JContainer">
+            <summary>
+            Represents a token that can contain other tokens.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.Linq.JToken">
+            <summary>
+            Represents an abstract JSON token.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.DeepEquals(Newtonsoft.Json.Linq.JToken,Newtonsoft.Json.Linq.JToken)">
+            <summary>
+            Compares the values of two tokens, including the values of all descendant tokens.
+            </summary>
+            <param name="t1">The first <see cref="T:Newtonsoft.Json.Linq.JToken"/> to compare.</param>
+            <param name="t2">The second <see cref="T:Newtonsoft.Json.Linq.JToken"/> to compare.</param>
+            <returns>true if the tokens are equal; otherwise false.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.AddAfterSelf(System.Object)">
+   
