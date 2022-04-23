@@ -3750,4 +3750,21 @@
             <summary>
             Returns a collection of child values of every object in the source collection.
             </summary>
-            <param name="source">An <see cref="T:System.Collections.Generic.IEnumerable`1"/> of <see cref="T:Newtonsoft.Json.Linq.JToken"/> that contains the source coll
+            <param name="source">An <see cref="T:System.Collections.Generic.IEnumerable`1"/> of <see cref="T:Newtonsoft.Json.Linq.JToken"/> that contains the source collection.</param>
+            <returns>An <see cref="T:System.Collections.Generic.IEnumerable`1"/> of <see cref="T:Newtonsoft.Json.Linq.JToken"/> that contains the values of every node in the source collection.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.Extensions.Values``1(System.Collections.Generic.IEnumerable{Newtonsoft.Json.Linq.JToken},System.Object)">
+            <summary>
+            Returns a collection of converted child values of every object in the source collection with the given key.
+            </summary>
+            <typeparam name="U">The type to convert the values to.</typeparam>
+            <param name="source">An <see cref="T:System.Collections.Generic.IEnumerable`1"/> of <see cref="T:Newtonsoft.Json.Linq.JToken"/> that contains the source collection.</param>
+            <param name="key">The token key.</param>
+            <returns>An <see cref="T:System.Collections.Generic.IEnumerable`1"/> that contains the converted values of every node in the source collection with the given key.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.Extensions.Values``1(System.Collections.Generic.IEnumerable{Newtonsoft.Json.Linq.JToken})">
+            <summary>
+            Returns a collection of converted child values of every object in the source collection.
+            </summary>
+            <typeparam name="U">The type to convert the values to.</typeparam>
+            <param name="source">An <see cref="T:System.Collections.Generic.IEnumerable`1
