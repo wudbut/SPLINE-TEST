@@ -3697,4 +3697,27 @@
             <param name="message">The error message that explains the reason for the exception.</param>
         </member>
         <member name="M:Newtonsoft.Json.JsonWriterException.#ctor(System.String,System.Exception)">
-          
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonWriterException"/> class
+            with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.</param>
+        </member>
+        <member name="P:Newtonsoft.Json.JsonWriterException.Path">
+            <summary>
+            Gets the path to the JSON where the error occurred.
+            </summary>
+            <value>The path to the JSON where the error occurred.</value>
+        </member>
+        <member name="T:Newtonsoft.Json.Linq.Extensions">
+            <summary>
+            Contains the LINQ to JSON extension methods.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.Extensions.Ancestors``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Returns a collection of tokens that contains the ancestors of every token in the source collection.
+            </summary>
+            <typeparam name="T">The type of the objects in source, constrained to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.</typeparam>
+            <param name="source">An <see cref="T:System.Collections.Generic.IEnumerable`1"/> of <see cref="T:Newtonsoft.Json.Li
