@@ -3858,4 +3858,31 @@
             <returns>true if the tokens are equal; otherwise false.</returns>
         </member>
         <member name="M:Newtonsoft.Json.Linq.JToken.AddAfterSelf(System.Object)">
-   
+            <summary>
+            Adds the specified content immediately after this token.
+            </summary>
+            <param name="content">A content object that contains simple content or a collection of content objects to be added after this token.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.AddBeforeSelf(System.Object)">
+            <summary>
+            Adds the specified content immediately before this token.
+            </summary>
+            <param name="content">A content object that contains simple content or a collection of content objects to be added before this token.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.Ancestors">
+            <summary>
+            Returns a collection of the ancestor tokens of this token.
+            </summary>
+            <returns>A collection of the ancestor tokens of this token.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.AfterSelf">
+            <summary>
+            Returns a collection of the sibling tokens after this token, in document order.
+            </summary>
+            <returns>A collection of the sibling tokens after this tokens, in document order.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.BeforeSelf">
+            <summary>
+            Returns a collection of the sibling tokens before this token, in document order.
+            </summary>
+            <returns>A collection of the sibling tokens before this token
