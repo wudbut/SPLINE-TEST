@@ -3767,4 +3767,24 @@
             Returns a collection of converted child values of every object in the source collection.
             </summary>
             <typeparam name="U">The type to convert the values to.</typeparam>
-            <param name="source">An <see cref="T:System.Collections.Generic.IEnumerable`1
+            <param name="source">An <see cref="T:System.Collections.Generic.IEnumerable`1"/> of <see cref="T:Newtonsoft.Json.Linq.JToken"/> that contains the source collection.</param>
+            <returns>An <see cref="T:System.Collections.Generic.IEnumerable`1"/> that contains the converted values of every node in the source collection.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.Extensions.Value``1(System.Collections.Generic.IEnumerable{Newtonsoft.Json.Linq.JToken})">
+            <summary>
+            Converts the value.
+            </summary>
+            <typeparam name="U">The type to convert the value to.</typeparam>
+            <param name="value">A <see cref="T:Newtonsoft.Json.Linq.JToken"/> cast as a <see cref="T:System.Collections.Generic.IEnumerable`1"/> of <see cref="T:Newtonsoft.Json.Linq.JToken"/>.</param>
+            <returns>A converted value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.Extensions.Value``2(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Converts the value.
+            </summary>
+            <typeparam name="T">The source collection type.</typeparam>
+            <typeparam name="U">The type to convert the value to.</typeparam>
+            <param name="value">A <see cref="T:Newtonsoft.Json.Linq.JToken"/> cast as a <see cref="T:System.Collections.Generic.IEnumerable`1"/> of <see cref="T:Newtonsoft.Json.Linq.JToken"/>.</param>
+            <returns>A converted value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.Extensions.Children``1(Syst
