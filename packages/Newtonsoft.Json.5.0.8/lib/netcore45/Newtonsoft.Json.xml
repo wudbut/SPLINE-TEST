@@ -3885,4 +3885,29 @@
             <summary>
             Returns a collection of the sibling tokens before this token, in document order.
             </summary>
-            <returns>A collection of the sibling tokens before this token
+            <returns>A collection of the sibling tokens before this token, in document order.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.Value``1(System.Object)">
+            <summary>
+            Gets the <see cref="T:Newtonsoft.Json.Linq.JToken"/> with the specified key converted to the specified type.
+            </summary>
+            <typeparam name="T">The type to convert the token to.</typeparam>
+            <param name="key">The token key.</param>
+            <returns>The converted token value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.Children">
+            <summary>
+            Returns a collection of the child tokens of this token, in document order.
+            </summary>
+            <returns>An <see cref="T:System.Collections.Generic.IEnumerable`1"/> of <see cref="T:Newtonsoft.Json.Linq.JToken"/> containing the child tokens of this <see cref="T:Newtonsoft.Json.Linq.JToken"/>, in document order.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.Children``1">
+            <summary>
+            Returns a collection of the child tokens of this token, in document order, filtered by the specified type.
+            </summary>
+            <typeparam name="T">The type to filter the child tokens on.</typeparam>
+            <returns>A <see cref="T:Newtonsoft.Json.Linq.JEnumerable`1"/> containing the child tokens of this <see cref="T:Newtonsoft.Json.Linq.JToken"/>, in document order.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.Values``1">
+            <summary>
+            Returns a coll
