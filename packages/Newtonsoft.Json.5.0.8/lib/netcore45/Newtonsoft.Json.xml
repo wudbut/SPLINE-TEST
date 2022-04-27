@@ -4454,4 +4454,26 @@
             <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
         </member>
         <member name="M:Newtonsoft.Json.Linq.JToken.CreateReader">
-            <su
+            <summary>
+            Creates an <see cref="T:Newtonsoft.Json.JsonReader"/> for this token.
+            </summary>
+            <returns>An <see cref="T:Newtonsoft.Json.JsonReader"/> that can be used to read this token and its descendants.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.FromObject(System.Object)">
+            <summary>
+            Creates a <see cref="T:Newtonsoft.Json.Linq.JToken"/> from an object.
+            </summary>
+            <param name="o">The object that will be used to create <see cref="T:Newtonsoft.Json.Linq.JToken"/>.</param>
+            <returns>A <see cref="T:Newtonsoft.Json.Linq.JToken"/> with the value of the specified object</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.FromObject(System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Creates a <see cref="T:Newtonsoft.Json.Linq.JToken"/> from an object using the specified <see cref="T:Newtonsoft.Json.JsonSerializer"/>.
+            </summary>
+            <param name="o">The object that will be used to create <see cref="T:Newtonsoft.Json.Linq.JToken"/>.</param>
+            <param name="jsonSerializer">The <see cref="T:Newtonsoft.Json.JsonSerializer"/> that will be used when reading the object.</param>
+            <returns>A <see cref="T:Newtonsoft.Json.Linq.JToken"/> with the value of the specified object</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.ToObject``1">
+            <summary>
+            Creates the s
