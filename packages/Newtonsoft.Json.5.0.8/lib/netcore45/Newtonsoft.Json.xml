@@ -4622,4 +4622,33 @@
         </member>
         <member name="P:Newtonsoft.Json.Linq.JToken.Previous">
             <summary>
-            Gets the previou
+            Gets the previous sibling token of this node.
+            </summary>
+            <value>The <see cref="T:Newtonsoft.Json.Linq.JToken"/> that contains the previous sibling token.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JToken.Path">
+            <summary>
+            Gets the path of the JSON token. 
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JToken.Item(System.Object)">
+            <summary>
+            Gets the <see cref="T:Newtonsoft.Json.Linq.JToken"/> with the specified key.
+            </summary>
+            <value>The <see cref="T:Newtonsoft.Json.Linq.JToken"/> with the specified key.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JToken.First">
+            <summary>
+            Get the first child token of this token.
+            </summary>
+            <value>A <see cref="T:Newtonsoft.Json.Linq.JToken"/> containing the first child token of the <see cref="T:Newtonsoft.Json.Linq.JToken"/>.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JToken.Last">
+            <summary>
+            Get the last child token of this token.
+            </summary>
+            <value>A <see cref="T:Newtonsoft.Json.Linq.JToken"/> containing the last child token of the <see cref="T:Newtonsoft.Json.Linq.JToken"/>.</value>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JContainer.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:Newtonsoft.
