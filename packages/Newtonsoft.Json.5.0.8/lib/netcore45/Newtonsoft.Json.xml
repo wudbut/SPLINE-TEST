@@ -4702,4 +4702,41 @@
             </summary>
             <param name="content">The content.</param>
         </member>
-        <me
+        <member name="M:Newtonsoft.Json.Linq.JContainer.RemoveAll">
+            <summary>
+            Removes the child nodes from this token.
+            </summary>
+        </member>
+        <member name="E:Newtonsoft.Json.Linq.JContainer.CollectionChanged">
+            <summary>
+            Occurs when the items list of the collection has changed, or the collection is reset.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JContainer.ChildrenTokens">
+            <summary>
+            Gets the container's children tokens.
+            </summary>
+            <value>The container's children tokens.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JContainer.HasValues">
+            <summary>
+            Gets a value indicating whether this token has child tokens.
+            </summary>
+            <value>
+            	<c>true</c> if this token has child values; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JContainer.First">
+            <summary>
+            Get the first child token of this token.
+            </summary>
+            <value>
+            A <see cref="T:Newtonsoft.Json.Linq.JToken"/> containing the first child token of the <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JContainer.Last">
+            <summary>
+            Get the last child token of this token.
+            </summary>
+            <value>
+            A <see cref="T:Newtonsoft.Json.
