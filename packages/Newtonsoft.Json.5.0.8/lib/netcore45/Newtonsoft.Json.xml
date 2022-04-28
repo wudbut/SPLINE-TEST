@@ -4651,4 +4651,29 @@
         </member>
         <member name="M:Newtonsoft.Json.Linq.JContainer.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
             <summary>
-            Raises the <see cref="E:Newtonsoft.
+            Raises the <see cref="E:Newtonsoft.Json.Linq.JContainer.CollectionChanged"/> event.
+            </summary>
+            <param name="e">The <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JContainer.Children">
+            <summary>
+            Returns a collection of the child tokens of this token, in document order.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.Generic.IEnumerable`1"/> of <see cref="T:Newtonsoft.Json.Linq.JToken"/> containing the child tokens of this <see cref="T:Newtonsoft.Json.Linq.JToken"/>, in document order.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JContainer.Values``1">
+            <summary>
+            Returns a collection of the child values of this token, in document order.
+            </summary>
+            <typeparam name="T">The type to convert the values to.</typeparam>
+            <returns>
+            A <see cref="T:System.Collections.Generic.IEnumerable`1"/> containing the child values of this <see cref="T:Newtonsoft.Json.Linq.JToken"/>, in document order.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JContainer.Descendants">
+            <summary>
+            Returns a collection of the descendant tokens for this token in document order.
+            </summary>
+            <returns>An 
