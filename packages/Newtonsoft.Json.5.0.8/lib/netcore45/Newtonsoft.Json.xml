@@ -4541,4 +4541,25 @@
             The object path from the current <see cref="T:Newtonsoft.Json.Linq.JToken"/> to the <see cref="T:Newtonsoft.Json.Linq.JToken"/>
             to be returned. This must be a string of property names or array indexes separated
             by periods, such as <code>Tables[0].DefaultView[0].Price</code> in C# or
-         
+            <code>Tables(0).DefaultView(0).Price</code> in Visual Basic.
+            </param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JToken"/> that matches the object path or a null reference if no matching token is found.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.SelectToken(System.String,System.Boolean)">
+            <summary>
+            Selects the token that matches the object path.
+            </summary>
+            <param name="path">
+            The object path from the current <see cref="T:Newtonsoft.Json.Linq.JToken"/> to the <see cref="T:Newtonsoft.Json.Linq.JToken"/>
+            to be returned. This must be a string of property names or array indexes separated
+            by periods, such as <code>Tables[0].DefaultView[0].Price</code> in C# or
+            <code>Tables(0).DefaultView(0).Price</code> in Visual Basic.
+            </param>
+            <param name="errorWhenNoMatch">A flag to indicate whether an error should be thrown if no token is found.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JToken"/> that matches the object path.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.GetMetaObject(System.Linq.Expressions.Expression)">
+            <summary>
+            Returns the <see cref="T:System.Dynamic.DynamicMetaObject"/> responsible for binding operations performed on this object.
+            </summary>
+            <param name="parameter">The expression tree represent
