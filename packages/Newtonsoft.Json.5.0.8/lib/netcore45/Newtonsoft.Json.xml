@@ -4676,4 +4676,30 @@
             <summary>
             Returns a collection of the descendant tokens for this token in document order.
             </summary>
-            <returns>An 
+            <returns>An <see cref="T:System.Collections.Generic.IEnumerable`1"/> containing the descendant tokens of the <see cref="T:Newtonsoft.Json.Linq.JToken"/>.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JContainer.Add(System.Object)">
+            <summary>
+            Adds the specified content as children of this <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="content">The content to be added.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JContainer.AddFirst(System.Object)">
+            <summary>
+            Adds the specified content as the first children of this <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="content">The content to be added.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JContainer.CreateWriter">
+            <summary>
+            Creates an <see cref="T:Newtonsoft.Json.JsonWriter"/> that can be used to add tokens to the <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <returns>An <see cref="T:Newtonsoft.Json.JsonWriter"/> that is ready to have content written to it.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JContainer.ReplaceAll(System.Object)">
+            <summary>
+            Replaces the children nodes of this token with the specified content.
+            </summary>
+            <param name="content">The content.</param>
+        </member>
+        <me
