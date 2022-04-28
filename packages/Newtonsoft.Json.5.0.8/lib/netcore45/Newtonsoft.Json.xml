@@ -4519,4 +4519,26 @@
             <summary>
             Load a <see cref="T:Newtonsoft.Json.Linq.JToken"/> from a string that contains JSON.
             </summary>
-            <param name="json">A <see cref="T:Sy
+            <param name="json">A <see cref="T:System.String"/> that contains JSON.</param>
+            <returns>A <see cref="T:Newtonsoft.Json.Linq.JToken"/> populated from the string that contains JSON.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.Load(Newtonsoft.Json.JsonReader)">
+            <summary>
+            Creates a <see cref="T:Newtonsoft.Json.Linq.JToken"/> from a <see cref="T:Newtonsoft.Json.JsonReader"/>.
+            </summary>
+            <param name="reader">An <see cref="T:Newtonsoft.Json.JsonReader"/> positioned at the token to read into this <see cref="T:Newtonsoft.Json.Linq.JToken"/>.</param>
+            <returns>
+            An <see cref="T:Newtonsoft.Json.Linq.JToken"/> that contains the token and its descendant tokens
+            that were read from the reader. The runtime type of the token is determined
+            by the token type of the first token encountered in the reader.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JToken.SelectToken(System.String)">
+            <summary>
+            Selects the token that matches the object path.
+            </summary>
+            <param name="path">
+            The object path from the current <see cref="T:Newtonsoft.Json.Linq.JToken"/> to the <see cref="T:Newtonsoft.Json.Linq.JToken"/>
+            to be returned. This must be a string of property names or array indexes separated
+            by periods, such as <code>Tables[0].DefaultView[0].Price</code> in C# or
+         
