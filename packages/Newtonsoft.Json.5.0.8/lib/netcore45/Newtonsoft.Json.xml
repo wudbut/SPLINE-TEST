@@ -4739,4 +4739,32 @@
             Get the last child token of this token.
             </summary>
             <value>
-            A <see cref="T:Newtonsoft.Json.
+            A <see cref="T:Newtonsoft.Json.Linq.JToken"/> containing the last child token of the <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JContainer.Count">
+            <summary>
+            Gets the count of child JSON tokens.
+            </summary>
+            <value>The count of child JSON tokens</value>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JArray.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JArray"/> class.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JArray.#ctor(Newtonsoft.Json.Linq.JArray)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JArray"/> class from another <see cref="T:Newtonsoft.Json.Linq.JArray"/> object.
+            </summary>
+            <param name="other">A <see cref="T:Newtonsoft.Json.Linq.JArray"/> object to copy from.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JArray.#ctor(System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JArray"/> class with the specified content.
+            </summary>
+            <param name="content">The contents of the array.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JArray.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JArray"/> class wi
