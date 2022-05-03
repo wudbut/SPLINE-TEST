@@ -4881,4 +4881,32 @@
             </summary>
             <param name="item">The object to remove from the <see cref="T:System.Collections.Generic.ICollection`1"/>.</param>
             <returns>
-            true if <paramref name="item"/> was successfully removed from the <see cref="T:System.Collections.Generic.ICo
+            true if <paramref name="item"/> was successfully removed from the <see cref="T:System.Collections.Generic.ICollection`1"/>; otherwise, false. This method also returns false if <paramref name="item"/> is not found in the original <see cref="T:System.Collections.Generic.ICollection`1"/>.
+            </returns>
+            <exception cref="T:System.NotSupportedException">The <see cref="T:System.Collections.Generic.ICollection`1"/> is read-only.</exception>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JArray.ChildrenTokens">
+            <summary>
+            Gets the container's children tokens.
+            </summary>
+            <value>The container's children tokens.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JArray.Type">
+            <summary>
+            Gets the node type for this <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <value>The type.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JArray.Item(System.Object)">
+            <summary>
+            Gets the <see cref="T:Newtonsoft.Json.Linq.JToken"/> with the specified key.
+            </summary>
+            <value>The <see cref="T:Newtonsoft.Json.Linq.JToken"/> with the specified key.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JArray.Item(System.Int32)">
+            <summary>
+            Gets or sets the <see cref="T:Newtonsoft.Json.Linq.JToken"/> at the specified index.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JArr
