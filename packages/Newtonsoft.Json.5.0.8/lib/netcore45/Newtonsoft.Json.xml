@@ -4909,4 +4909,31 @@
             </summary>
             <value></value>
         </member>
-        <member name="P:Newtonsoft.Json.Linq.JArr
+        <member name="P:Newtonsoft.Json.Linq.JArray.IsReadOnly">
+            <summary>
+            Gets a value indicating whether the <see cref="T:System.Collections.Generic.ICollection`1" /> is read-only.
+            </summary>
+            <returns>true if the <see cref="T:System.Collections.Generic.ICollection`1" /> is read-only; otherwise, false.</returns>
+        </member>
+        <member name="T:Newtonsoft.Json.Linq.JConstructor">
+            <summary>
+            Represents a JSON constructor.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JConstructor.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JConstructor"/> class.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JConstructor.#ctor(Newtonsoft.Json.Linq.JConstructor)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JConstructor"/> class from another <see cref="T:Newtonsoft.Json.Linq.JConstructor"/> object.
+            </summary>
+            <param name="other">A <see cref="T:Newtonsoft.Json.Linq.JConstructor"/> object to copy from.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JConstructor.#ctor(System.String,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JConstructor"/> class with the specified name and content.
+            </summary>
+            <param name="name">The constructor name.</param>
+            <param name="content">The contents 
