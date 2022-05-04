@@ -4987,4 +4987,36 @@
             <summary>
             Gets the <see cref="T:Newtonsoft.Json.Linq.JToken"/> with the specified key.
             </summary>
-            <value>The <see cref="T:Newtonsoft.Json.Linq.JToken"/> with the specified key.</value
+            <value>The <see cref="T:Newtonsoft.Json.Linq.JToken"/> with the specified key.</value>
+        </member>
+        <member name="T:Newtonsoft.Json.Linq.JEnumerable`1">
+            <summary>
+            Represents a collection of <see cref="T:Newtonsoft.Json.Linq.JToken"/> objects.
+            </summary>
+            <typeparam name="T">The type of token</typeparam>
+        </member>
+        <member name="F:Newtonsoft.Json.Linq.JEnumerable`1.Empty">
+            <summary>
+            An empty collection of <see cref="T:Newtonsoft.Json.Linq.JToken"/> objects.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JEnumerable`1.#ctor(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JEnumerable`1"/> struct.
+            </summary>
+            <param name="enumerable">The enumerable.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JEnumerable`1.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns>
+            A <see cref="T:System.Collections.Generic.IEnumerator`1"/> that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JEnumerable`1.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through a collection.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerator"/> object that can be used to iterate through the coll
