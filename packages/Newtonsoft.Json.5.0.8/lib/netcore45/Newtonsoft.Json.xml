@@ -4936,4 +4936,28 @@
             Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JConstructor"/> class with the specified name and content.
             </summary>
             <param name="name">The constructor name.</param>
-            <param name="content">The contents 
+            <param name="content">The contents of the constructor.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JConstructor.#ctor(System.String,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JConstructor"/> class with the specified name and content.
+            </summary>
+            <param name="name">The constructor name.</param>
+            <param name="content">The contents of the constructor.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JConstructor.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JConstructor"/> class with the specified name.
+            </summary>
+            <param name="name">The constructor name.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JConstructor.WriteTo(Newtonsoft.Json.JsonWriter,Newtonsoft.Json.JsonConverter[])">
+            <summary>
+            Writes this token to a <see cref="T:Newtonsoft.Json.JsonWriter"/>.
+            </summary>
+            <param name="writer">A <see cref="T:Newtonsoft.Json.JsonWriter"/> into which this method will write.</param>
+            <param name="converters">A collection of <see cref="T:Newtonsoft.Json.JsonConverter"/> which will be used when writing the token.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JConstructor.Load(Newtonsoft.Json.JsonReader)">
+            <summary>
+            Loads an <see cref="T:Newtonsoft.Json.Li
