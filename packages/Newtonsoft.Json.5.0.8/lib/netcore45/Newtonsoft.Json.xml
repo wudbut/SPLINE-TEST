@@ -5166,4 +5166,34 @@
             <summary>
             Adds the specified property name.
             </summary>
-            <param name="proper
+            <param name="propertyName">Name of the property.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JObject.Remove(System.String)">
+            <summary>
+            Removes the property with the specified name.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+            <returns>true if item was successfully removed; otherwise, false.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JObject.TryGetValue(System.String,Newtonsoft.Json.Linq.JToken@)">
+            <summary>
+            Tries the get value.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+            <param name="value">The value.</param>
+            <returns>true if a value was successfully retrieved; otherwise, false.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JObject.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns>
+            A <see cref="T:System.Collections.Generic.IEnumerator`1"/> that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JObject.OnPropertyChanged(System.String)">
+            <summary>
+            Raises the <see cref="E:Newtonsoft.Json.Linq.JObject.PropertyChanged"/> event with the provided arguments.
+            </summary>
+            <param name="propertyName">Name of the property.</p
