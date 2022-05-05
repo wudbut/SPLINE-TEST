@@ -5196,4 +5196,36 @@
             <summary>
             Raises the <see cref="E:Newtonsoft.Json.Linq.JObject.PropertyChanged"/> event with the provided arguments.
             </summary>
-            <param name="propertyName">Name of the property.</p
+            <param name="propertyName">Name of the property.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JObject.GetMetaObject(System.Linq.Expressions.Expression)">
+            <summary>
+            Returns the <see cref="T:System.Dynamic.DynamicMetaObject"/> responsible for binding operations performed on this object.
+            </summary>
+            <param name="parameter">The expression tree representation of the runtime value.</param>
+            <returns>
+            The <see cref="T:System.Dynamic.DynamicMetaObject"/> to bind this object.
+            </returns>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JObject.ChildrenTokens">
+            <summary>
+            Gets the container's children tokens.
+            </summary>
+            <value>The container's children tokens.</value>
+        </member>
+        <member name="E:Newtonsoft.Json.Linq.JObject.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JObject.Type">
+            <summary>
+            Gets the node type for this <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <value>The type.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JObject.Item(System.Object)">
+            <summary>
+            Gets the <see cref="T:Newtonsoft.Json.Linq.JToken"/> with the specified key.
+            </summary>
+            <value>The <see cref="T:Newtonsoft.Json.Linq.JToken"/> with the specified key.</valu
