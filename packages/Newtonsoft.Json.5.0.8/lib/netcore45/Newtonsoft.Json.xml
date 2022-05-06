@@ -5228,4 +5228,33 @@
             <summary>
             Gets the <see cref="T:Newtonsoft.Json.Linq.JToken"/> with the specified key.
             </summary>
-            <value>The <see cref="T:Newtonsoft.Json.Linq.JToken"/> with the specified key.</valu
+            <value>The <see cref="T:Newtonsoft.Json.Linq.JToken"/> with the specified key.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JObject.Item(System.String)">
+            <summary>
+            Gets or sets the <see cref="T:Newtonsoft.Json.Linq.JToken"/> with the specified property name.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:Newtonsoft.Json.Linq.JProperty">
+            <summary>
+            Represents a JSON property.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JProperty.#ctor(Newtonsoft.Json.Linq.JProperty)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JProperty"/> class from another <see cref="T:Newtonsoft.Json.Linq.JProperty"/> object.
+            </summary>
+            <param name="other">A <see cref="T:Newtonsoft.Json.Linq.JProperty"/> object to copy from.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JProperty.#ctor(System.String,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JProperty"/> class.
+            </summary>
+            <param name="name">The property name.</param>
+            <param name="content">The property content.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JProperty.#ctor(System.String,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JProperty"/> class.
+            </summary
