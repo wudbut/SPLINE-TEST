@@ -5282,4 +5282,39 @@
             <value>The container's children tokens.</value>
         </member>
         <member name="P:Newtonsoft.Json.Linq.JProperty.Name">
-         
+            <summary>
+            Gets the property name.
+            </summary>
+            <value>The property name.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JProperty.Value">
+            <summary>
+            Gets or sets the property value.
+            </summary>
+            <value>The property value.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JProperty.Type">
+            <summary>
+            Gets the node type for this <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <value>The type.</value>
+        </member>
+        <member name="T:Newtonsoft.Json.Linq.JRaw">
+            <summary>
+            Represents a raw JSON string.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.Linq.JValue">
+            <summary>
+            Represents a value in JSON (string, integer, date, etc).
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.#ctor(Newtonsoft.Json.Linq.JValue)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class from another <see cref="T:Newtonsoft.Json.Linq.JValue"/> object.
+            </summary>
+            <param name="other">A <see cref="T:Newtonsoft.Json.Linq.JValue"/> object to copy from.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.#ctor(System.Int64)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.
