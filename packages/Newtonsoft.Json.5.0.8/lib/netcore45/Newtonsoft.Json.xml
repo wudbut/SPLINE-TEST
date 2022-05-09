@@ -5377,4 +5377,32 @@
         </member>
         <member name="M:Newtonsoft.Json.Linq.JValue.#ctor(System.TimeSpan)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.CreateComment(System.String)">
+            <summary>
+            Creates a <see cref="T:Newtonsoft.Json.Linq.JValue"/> comment with the given value.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Newtonsoft.Json.Linq.JValue"/> comment with the given value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.CreateString(System.String)">
+            <summary>
+            Creates a <see cref="T:Newtonsoft.Json.Linq.JValue"/> string with the given value.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Newtonsoft.Json.Linq.JValue"/> string with the given value.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JValue.WriteTo(Newtonsoft.Json.JsonWriter,Newtonsoft.Json.JsonConverter[])">
+            <summary>
+            Writes this token to a <see cref="T:Newtonsoft.Json.JsonWriter"/>.
+            </summary>
+            <param name="writer">A <see cref="T
