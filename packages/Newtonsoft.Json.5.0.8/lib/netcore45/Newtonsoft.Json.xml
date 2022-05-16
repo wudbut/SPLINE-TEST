@@ -5605,4 +5605,40 @@
             <summary>
             Reads the next JSON token from the stream as a <see cref="T:System.Nullable`1"/>.
             </summary>
-            <returns>A <see cr
+            <returns>A <see cref="T:System.String"/>. This method will return <c>null</c> at the end of an array.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JTokenReader.ReadAsDateTimeOffset">
+            <summary>
+            Reads the next JSON token from the stream as a <see cref="T:System.Nullable`1"/>.
+            </summary>
+            <returns>A <see cref="T:System.Nullable`1"/>. This method will return <c>null</c> at the end of an array.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JTokenReader.Read">
+            <summary>
+            Reads the next JSON token from the stream.
+            </summary>
+            <returns>
+            true if the next token was read successfully; false if there are no more tokens to read.
+            </returns>
+        </member>
+        <member name="T:Newtonsoft.Json.Linq.JTokenType">
+            <summary>
+            Specifies the type of token.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Linq.JTokenType.None">
+            <summary>
+            No token type has been set.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Linq.JTokenType.Object">
+            <summary>
+            A JSON object.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Linq.JTokenType.Array">
+            <summary>
+            A JSON array.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Linq.JTokenType.Construc
