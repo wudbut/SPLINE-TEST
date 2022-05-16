@@ -5691,3 +5691,40 @@
             A date value.
             </summary>
         </member>
+        <member name="F:Newtonsoft.Json.Linq.JTokenType.Raw">
+            <summary>
+            A raw JSON value.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Linq.JTokenType.Bytes">
+            <summary>
+            A collection of bytes value.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Linq.JTokenType.Guid">
+            <summary>
+            A Guid value.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Linq.JTokenType.Uri">
+            <summary>
+            A Uri value.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Linq.JTokenType.TimeSpan">
+            <summary>
+            A TimeSpan value.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.Linq.JTokenWriter">
+            <summary>
+            Represents a writer that provides a fast, non-cached, forward-only way of generating Json data.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JTokenWriter.#ctor(Newtonsoft.Json.Linq.JContainer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JTokenWriter"/> class writing to the given <see cref="T:Newtonsoft.Json.Linq.JContainer"/>.
+            </summary>
+            <param name="container">The container being written to.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Li
