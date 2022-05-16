@@ -5526,3 +5526,29 @@
             <summary>
             Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JRaw"/> class from another <see cref="T:Newtonsoft.Json.Linq.JRaw"/> object.
             </summary>
+            <param name="other">A <see cref="T:Newtonsoft.Json.Linq.JRaw"/> object to copy from.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JRaw.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JRaw"/> class.
+            </summary>
+            <param name="rawJson">The raw json.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JRaw.Create(Newtonsoft.Json.JsonReader)">
+            <summary>
+            Creates an instance of <see cref="T:Newtonsoft.Json.Linq.JRaw"/> with the content of the reader's current token.
+            </summary>
+            <param name="reader">The reader.</param>
+            <returns>An instance of <see cref="T:Newtonsoft.Json.Linq.JRaw"/> with the content of the reader's current token.</returns>
+        </member>
+        <member name="T:Newtonsoft.Json.Linq.JTokenEqualityComparer">
+            <summary>
+            Compares tokens to determine whether they are equal.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JTokenEqualityComparer.Equals(Newtonsoft.Json.Linq.JToken,Newtonsoft.Json.Linq.JToken)">
+            <summary>
+            Determines whether the specified objects are equal.
+            </summary>
+            <param name="x">The first object of type <see cref="T:Newtonsoft.Json.Linq.JToken"/> to compare.</param>
+            <param name="y">The second object of type <see cref="T:Newtonsoft.Js
