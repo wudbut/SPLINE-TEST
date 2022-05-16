@@ -5641,4 +5641,53 @@
             A JSON array.
             </summary>
         </member>
-        <member name="F:Newtonsoft.Json.Linq.JTokenType.Construc
+        <member name="F:Newtonsoft.Json.Linq.JTokenType.Constructor">
+            <summary>
+            A JSON constructor.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Linq.JTokenType.Property">
+            <summary>
+            A JSON object property.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Linq.JTokenType.Comment">
+            <summary>
+            A comment.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Linq.JTokenType.Integer">
+            <summary>
+            An integer value.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Linq.JTokenType.Float">
+            <summary>
+            A float value.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Linq.JTokenType.String">
+            <summary>
+            A string value.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Linq.JTokenType.Boolean">
+            <summary>
+            A boolean value.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Linq.JTokenType.Null">
+            <summary>
+            A null value.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Linq.JTokenType.Undefined">
+            <summary>
+            An undefined value.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Linq.JTokenType.Date">
+            <summary>
+            A date value.
+            </summary>
+        </member>
