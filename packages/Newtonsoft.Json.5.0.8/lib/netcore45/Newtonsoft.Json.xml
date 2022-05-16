@@ -5551,4 +5551,32 @@
             Determines whether the specified objects are equal.
             </summary>
             <param name="x">The first object of type <see cref="T:Newtonsoft.Json.Linq.JToken"/> to compare.</param>
-            <param name="y">The second object of type <see cref="T:Newtonsoft.Js
+            <param name="y">The second object of type <see cref="T:Newtonsoft.Json.Linq.JToken"/> to compare.</param>
+            <returns>
+            true if the specified objects are equal; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JTokenEqualityComparer.GetHashCode(Newtonsoft.Json.Linq.JToken)">
+            <summary>
+            Returns a hash code for the specified object.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object"/> for which a hash code is to be returned.</param>
+            <returns>A hash code for the specified object.</returns>
+            <exception cref="T:System.ArgumentNullException">The type of <paramref name="obj"/> is a reference type and <paramref name="obj"/> is null.</exception>
+        </member>
+        <member name="T:Newtonsoft.Json.Linq.JTokenReader">
+            <summary>
+            Represents a reader that provides fast, non-cached, forward-only access to serialized Json data.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JTokenReader.#ctor(Newtonsoft.Json.Linq.JToken)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JTokenReader"/> class.
+            </summary>
+            <param name="token">The token to read from.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JTokenReader.ReadAsBytes">
+            <summary>
+            Reads the next JSON token from the stream as a <see cref="T:Byte[]"/>.
+            </summary>
+            <retu
