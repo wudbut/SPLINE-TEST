@@ -5889,4 +5889,36 @@
             </summary>
             <param name="value">The <see cref="T:System.DateTime"/> value to write.</param>
         </member>
-        <member na
+        <member name="M:Newtonsoft.Json.Linq.JTokenWriter.WriteValue(System.DateTimeOffset)">
+            <summary>
+            Writes a <see cref="T:System.DateTimeOffset"/> value.
+            </summary>
+            <param name="value">The <see cref="T:System.DateTimeOffset"/> value to write.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JTokenWriter.WriteValue(System.Byte[])">
+            <summary>
+            Writes a <see cref="T:Byte[]"/> value.
+            </summary>
+            <param name="value">The <see cref="T:Byte[]"/> value to write.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JTokenWriter.WriteValue(System.TimeSpan)">
+            <summary>
+            Writes a <see cref="T:System.TimeSpan"/> value.
+            </summary>
+            <param name="value">The <see cref="T:System.TimeSpan"/> value to write.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JTokenWriter.WriteValue(System.Guid)">
+            <summary>
+            Writes a <see cref="T:System.Guid"/> value.
+            </summary>
+            <param name="value">The <see cref="T:System.Guid"/> value to write.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Linq.JTokenWriter.WriteValue(System.Uri)">
+            <summary>
+            Writes a <see cref="T:System.Uri"/> value.
+            </summary>
+            <param name="value">The <see cref="T:System.Uri"/> value to write.</param>
+        </member>
+        <member name="P:Newtonsoft.Json.Linq.JTokenWriter.Token">
+            <summary>
+            G
