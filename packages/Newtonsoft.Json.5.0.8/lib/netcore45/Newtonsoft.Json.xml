@@ -5921,4 +5921,28 @@
         </member>
         <member name="P:Newtonsoft.Json.Linq.JTokenWriter.Token">
             <summary>
-            G
+            Gets the token being writen.
+            </summary>
+            <value>The token being writen.</value>
+        </member>
+        <member name="T:Newtonsoft.Json.MemberSerialization">
+            <summary>
+            Specifies the member serialization options for the <see cref="T:Newtonsoft.Json.JsonSerializer"/>.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.MemberSerialization.OptOut">
+            <summary>
+            All public members are serialized by default. Members can be excluded using <see cref="T:Newtonsoft.Json.JsonIgnoreAttribute"/> or <see cref="!:NonSerializedAttribute"/>.
+            This is the default member serialization mode.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.MemberSerialization.OptIn">
+            <summary>
+            Only members must be marked with <see cref="T:Newtonsoft.Json.JsonPropertyAttribute"/> or <see cref="T:System.Runtime.Serialization.DataMemberAttribute"/> are serialized.
+            This member serialization mode can also be set by marking the class with <see cref="T:System.Runtime.Serialization.DataContractAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.MemberSerialization.Fields">
+            <summary>
+            All public and private fields are serialized. Members can be excluded using <see cref="T:Newtonsoft.Json.JsonIgnoreAttribute"/> or <see cref="!:NonSerializedAttribute"/>.
+            This member serialization mode can also be set by marking the class with <see 
