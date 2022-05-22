@@ -6100,4 +6100,31 @@
         </member>
         <member name="M:Newtonsoft.Json.Schema.Extensions.Validate(Newtonsoft.Json.Linq.JToken,Newtonsoft.Json.Schema.JsonSchema)">
             <summary>
-            Validates the s
+            Validates the specified <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="source">The source <see cref="T:Newtonsoft.Json.Linq.JToken"/> to test.</param>
+            <param name="schema">The schema to test with.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Schema.Extensions.Validate(Newtonsoft.Json.Linq.JToken,Newtonsoft.Json.Schema.JsonSchema,Newtonsoft.Json.Schema.ValidationEventHandler)">
+            <summary>
+            Validates the specified <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            </summary>
+            <param name="source">The source <see cref="T:Newtonsoft.Json.Linq.JToken"/> to test.</param>
+            <param name="schema">The schema to test with.</param>
+            <param name="validationEventHandler">The validation event handler.</param>
+        </member>
+        <member name="T:Newtonsoft.Json.Schema.JsonSchema">
+            <summary>
+            An in-memory representation of a JSON Schema.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Schema.JsonSchema.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> class.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Schema.JsonSchema.Read(Newtonsoft.Json.JsonReader)">
+            <summary>
+            Reads a <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> from the specified <see cref="T:Newtonsoft.Json.JsonReader"/>.
+            </summary>
+            <param
