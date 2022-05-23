@@ -6127,4 +6127,22 @@
             <summary>
             Reads a <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> from the specified <see cref="T:Newtonsoft.Json.JsonReader"/>.
             </summary>
-            <param
+            <param name="reader">The <see cref="T:Newtonsoft.Json.JsonReader"/> containing the JSON Schema to read.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> object representing the JSON Schema.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Schema.JsonSchema.Read(Newtonsoft.Json.JsonReader,Newtonsoft.Json.Schema.JsonSchemaResolver)">
+            <summary>
+            Reads a <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> from the specified <see cref="T:Newtonsoft.Json.JsonReader"/>.
+            </summary>
+            <param name="reader">The <see cref="T:Newtonsoft.Json.JsonReader"/> containing the JSON Schema to read.</param>
+            <param name="resolver">The <see cref="T:Newtonsoft.Json.Schema.JsonSchemaResolver"/> to use when resolving schema references.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> object representing the JSON Schema.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Schema.JsonSchema.Parse(System.String)">
+            <summary>
+            Load a <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> from a string that contains schema JSON.
+            </summary>
+            <param name="json">A <see cref="T:System.String"/> that contains JSON.</param>
+            <returns>A <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> populated from the string that contains JSON.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Schema.JsonSchema.Parse(Syste
