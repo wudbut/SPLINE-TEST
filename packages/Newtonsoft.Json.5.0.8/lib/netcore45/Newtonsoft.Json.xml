@@ -6145,4 +6145,27 @@
             <param name="json">A <see cref="T:System.String"/> that contains JSON.</param>
             <returns>A <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> populated from the string that contains JSON.</returns>
         </member>
-        <member name="M:Newtonsoft.Json.Schema.JsonSchema.Parse(Syste
+        <member name="M:Newtonsoft.Json.Schema.JsonSchema.Parse(System.String,Newtonsoft.Json.Schema.JsonSchemaResolver)">
+            <summary>
+            Parses the specified json.
+            </summary>
+            <param name="json">The json.</param>
+            <param name="resolver">The resolver.</param>
+            <returns>A <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> populated from the string that contains JSON.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Schema.JsonSchema.WriteTo(Newtonsoft.Json.JsonWriter)">
+            <summary>
+            Writes this schema to a <see cref="T:Newtonsoft.Json.JsonWriter"/>.
+            </summary>
+            <param name="writer">A <see cref="T:Newtonsoft.Json.JsonWriter"/> into which this method will write.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Schema.JsonSchema.WriteTo(Newtonsoft.Json.JsonWriter,Newtonsoft.Json.Schema.JsonSchemaResolver)">
+            <summary>
+            Writes this schema to a <see cref="T:Newtonsoft.Json.JsonWriter"/> using the specified <see cref="T:Newtonsoft.Json.Schema.JsonSchemaResolver"/>.
+            </summary>
+            <param name="writer">A <see cref="T:Newtonsoft.Json.JsonWriter"/> into which this method will write.</param>
+            <param name="resolver">The resolver used.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Schema.JsonSchema.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents the current <see cref="T:S
