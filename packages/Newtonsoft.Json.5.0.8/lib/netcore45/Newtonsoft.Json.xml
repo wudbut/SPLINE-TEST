@@ -6168,4 +6168,47 @@
         </member>
         <member name="M:Newtonsoft.Json.Schema.JsonSchema.ToString">
             <summary>
-            Returns a <see cref="T:System.String"/> that represents the current <see cref="T:S
+            Returns a <see cref="T:System.String"/> that represents the current <see cref="T:System.Object"/>.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> that represents the current <see cref="T:System.Object"/>.
+            </returns>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.Id">
+            <summary>
+            Gets or sets the id.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.Required">
+            <summary>
+            Gets or sets whether the object is required.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.ReadOnly">
+            <summary>
+            Gets or sets whether the object is read only.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.Hidden">
+            <summary>
+            Gets or sets whether the object is visible to users.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.Transient">
+            <summary>
+            Gets or sets whether the object is transient.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.Description">
+            <summary>
+            Gets or sets the description of the object.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.Type">
+            <summary>
+            Get
