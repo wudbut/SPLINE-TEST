@@ -6252,4 +6252,33 @@
             <value>The maximum.</value>
         </member>
         <member name="P:Newtonsoft.Json.Schema.JsonSchema.ExclusiveMinimum">
-   
+            <summary>
+            Gets or sets a flag indicating whether the value can not equal the number defined by the "minimum" attribute.
+            </summary>
+            <value>A flag indicating whether the value can not equal the number defined by the "minimum" attribute.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.ExclusiveMaximum">
+            <summary>
+            Gets or sets a flag indicating whether the value can not equal the number defined by the "maximum" attribute.
+            </summary>
+            <value>A flag indicating whether the value can not equal the number defined by the "maximum" attribute.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.MinimumItems">
+            <summary>
+            Gets or sets the minimum number of items.
+            </summary>
+            <value>The minimum number of items.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.MaximumItems">
+            <summary>
+            Gets or sets the maximum number of items.
+            </summary>
+            <value>The maximum number of items.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.Items">
+            <summary>
+            Gets or sets the <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> of items.
+            </summary>
+            <value>The <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> of items.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.Positional
