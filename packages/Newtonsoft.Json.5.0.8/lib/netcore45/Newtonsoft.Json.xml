@@ -6341,4 +6341,40 @@
             <value>The required property if this property is present.</value>
         </member>
         <member name="P:Newtonsoft.Json.Schema.JsonSchema.Enum">
-            <s
+            <summary>
+            Gets or sets the a collection of valid enum values allowed.
+            </summary>
+            <value>A collection of valid enum values allowed.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.Disallow">
+            <summary>
+            Gets or sets disallowed types.
+            </summary>
+            <value>The disallow types.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.Default">
+            <summary>
+            Gets or sets the default value.
+            </summary>
+            <value>The default value.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.Extends">
+            <summary>
+            Gets or sets the collection of <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> that this schema extends.
+            </summary>
+            <value>The collection of <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> that this schema extends.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.Format">
+            <summary>
+            Gets or sets the format.
+            </summary>
+            <value>The format.</value>
+        </member>
+        <member name="T:Newtonsoft.Json.Schema.JsonSchemaException">
+            <summary>
+            Returns detailed information about the schema exception.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Schema.JsonSchemaException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref
