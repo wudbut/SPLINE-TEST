@@ -6310,4 +6310,35 @@
         </member>
         <member name="P:Newtonsoft.Json.Schema.JsonSchema.Properties">
             <summary>
-            Gets or sets th
+            Gets or sets the <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> of properties.
+            </summary>
+            <value>The <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> of properties.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.AdditionalProperties">
+            <summary>
+            Gets or sets the <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> of additional properties.
+            </summary>
+            <value>The <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> of additional properties.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.PatternProperties">
+            <summary>
+            Gets or sets the pattern properties.
+            </summary>
+            <value>The pattern properties.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.AllowAdditionalProperties">
+            <summary>
+            Gets or sets a value indicating whether additional properties are allowed.
+            </summary>
+            <value>
+            	<c>true</c> if additional properties are allowed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.Requires">
+            <summary>
+            Gets or sets the required property if this property is present.
+            </summary>
+            <value>The required property if this property is present.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.Enum">
+            <s
