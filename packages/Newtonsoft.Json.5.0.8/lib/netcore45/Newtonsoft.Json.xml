@@ -6281,4 +6281,33 @@
             </summary>
             <value>The <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> of items.</value>
         </member>
-        <member name="P:Newtonsoft.Json.Schema.JsonSchema.Positional
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.PositionalItemsValidation">
+            <summary>
+            Gets or sets a value indicating whether items in an array are validated using the <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> instance at their array position from <see cref="P:Newtonsoft.Json.Schema.JsonSchema.Items"/>.
+            </summary>
+            <value>
+            	<c>true</c> if items are validated using their array position; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.AdditionalItems">
+            <summary>
+            Gets or sets the <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> of additional items.
+            </summary>
+            <value>The <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> of additional items.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.AllowAdditionalItems">
+            <summary>
+            Gets or sets a value indicating whether additional items are allowed.
+            </summary>
+            <value>
+            	<c>true</c> if additional items are allowed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.UniqueItems">
+            <summary>
+            Gets or sets whether the array items must be unique.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.Properties">
+            <summary>
+            Gets or sets th
