@@ -6377,4 +6377,28 @@
         </member>
         <member name="M:Newtonsoft.Json.Schema.JsonSchemaException.#ctor">
             <summary>
-            Initializes a new instance of the <see cref
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Schema.JsonSchemaException"/> class.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Schema.JsonSchemaException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Schema.JsonSchemaException"/> class
+            with a specified error message.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Schema.JsonSchemaException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Schema.JsonSchemaException"/> class
+            with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.</param>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchemaException.LineNumber">
+            <summary>
+            Gets the line number indicating where the error occurred.
+            </summary>
+            <value>The line number indicating where the error occurred.</value>
+        </member>
+        <member name="P:Ne
