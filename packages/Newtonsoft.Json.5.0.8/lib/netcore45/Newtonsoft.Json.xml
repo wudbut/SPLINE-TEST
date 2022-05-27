@@ -6475,4 +6475,44 @@
             <summary>
             Gets a <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> for the specified reference.
             </summary>
-            
+            <param name="reference">The id.</param>
+            <returns>A <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> for the specified reference.</returns>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchemaResolver.LoadedSchemas">
+            <summary>
+            Gets or sets the loaded schemas.
+            </summary>
+            <value>The loaded schemas.</value>
+        </member>
+        <member name="T:Newtonsoft.Json.Schema.JsonSchemaType">
+            <summary>
+            The value types allowed by the <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/>.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Schema.JsonSchemaType.None">
+            <summary>
+            No type specified.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Schema.JsonSchemaType.String">
+            <summary>
+            String type.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Schema.JsonSchemaType.Float">
+            <summary>
+            Float type.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Schema.JsonSchemaType.Integer">
+            <summary>
+            Integer type.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Schema.JsonSchemaType.Boolean">
+            <summary>
+            Boolean type.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Schema.JsonSchemaType.Object">
+   
