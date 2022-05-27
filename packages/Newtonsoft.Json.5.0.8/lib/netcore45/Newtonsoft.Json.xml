@@ -6515,4 +6515,45 @@
             </summary>
         </member>
         <member name="F:Newtonsoft.Json.Schema.JsonSchemaType.Object">
+            <summary>
+            Object type.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Schema.JsonSchemaType.Array">
+            <summary>
+            Array type.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Schema.JsonSchemaType.Null">
+            <summary>
+            Null type.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Schema.JsonSchemaType.Any">
+            <summary>
+            Any type.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.Schema.UndefinedSchemaIdHandling">
+            <summary>
+            Specifies undefined schema Id handling options for the <see cref="T:Newtonsoft.Json.Schema.JsonSchemaGenerator"/>.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Schema.UndefinedSchemaIdHandling.None">
+            <summary>
+            Do not infer a schema Id.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Schema.UndefinedSchemaIdHandling.UseTypeName">
+            <summary>
+            Use the .NET type name as the schema Id.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.Schema.UndefinedSchemaIdHandling.UseAssemblyQualifiedName">
+            <summary>
+            Use the assembly qualified .NET type name as the schema Id.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.Schema.ValidationEventArgs">
+            <summary>
    
