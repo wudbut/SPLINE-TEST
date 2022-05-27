@@ -6446,4 +6446,33 @@
             Generate a <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> from the specified type.
             </summary>
             <param name="type">The type to generate a <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> from.</param>
-            <param name="resolver">The <see cref="T:Newtonsoft.Json.Schema.JsonSch
+            <param name="resolver">The <see cref="T:Newtonsoft.Json.Schema.JsonSchemaResolver"/> used to resolve schema references.</param>
+            <param name="rootSchemaNullable">Specify whether the generated root <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> will be nullable.</param>
+            <returns>A <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> generated from the specified type.</returns>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchemaGenerator.UndefinedSchemaIdHandling">
+            <summary>
+            Gets or sets how undefined schemas are handled by the serializer.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchemaGenerator.ContractResolver">
+            <summary>
+            Gets or sets the contract resolver.
+            </summary>
+            <value>The contract resolver.</value>
+        </member>
+        <member name="T:Newtonsoft.Json.Schema.JsonSchemaResolver">
+            <summary>
+            Resolves <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> from an id.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Schema.JsonSchemaResolver.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Schema.JsonSchemaResolver"/> class.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Schema.JsonSchemaResolver.GetSchema(System.String)">
+            <summary>
+            Gets a <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> for the specified reference.
+            </summary>
+            
