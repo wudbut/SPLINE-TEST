@@ -6401,4 +6401,30 @@
             </summary>
             <value>The line number indicating where the error occurred.</value>
         </member>
-        <member name="P:Ne
+        <member name="P:Newtonsoft.Json.Schema.JsonSchemaException.LinePosition">
+            <summary>
+            Gets the line position indicating where the error occurred.
+            </summary>
+            <value>The line position indicating where the error occurred.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.JsonSchemaException.Path">
+            <summary>
+            Gets the path to the JSON where the error occurred.
+            </summary>
+            <value>The path to the JSON where the error occurred.</value>
+        </member>
+        <member name="T:Newtonsoft.Json.Schema.JsonSchemaGenerator">
+            <summary>
+            Generates a <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> from a specified <see cref="T:System.Type"/>.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Schema.JsonSchemaGenerator.Generate(System.Type)">
+            <summary>
+            Generate a <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> from the specified type.
+            </summary>
+            <param name="type">The type to generate a <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> from.</param>
+            <returns>A <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> generated from the specified type.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Schema.JsonSchemaGenerator.Generate(System.Type,Newtonsoft.Json.Schema.JsonSchemaResolver)">
+            <summary>
+            Generate a <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> from t
