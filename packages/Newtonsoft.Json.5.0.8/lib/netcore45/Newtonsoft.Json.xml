@@ -6604,4 +6604,26 @@
             <param name="typeName">Specifies the <see cref="T:System.Type"/> name of the serialized object.</param>
         </member>
         <member name="T:Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver">
-            <su
+            <summary>
+            Resolves member mappings for a type, camel casing property names.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.Serialization.DefaultContractResolver">
+            <summary>
+            Used by <see cref="T:Newtonsoft.Json.JsonSerializer"/> to resolves a <see cref="T:Newtonsoft.Json.Serialization.JsonContract"/> for a given <see cref="T:System.Type"/>.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.Serialization.IContractResolver">
+            <summary>
+            Used by <see cref="T:Newtonsoft.Json.JsonSerializer"/> to resolves a <see cref="T:Newtonsoft.Json.Serialization.JsonContract"/> for a given <see cref="T:System.Type"/>.
+            </summary>
+            <example>
+              <code lang="cs" source="..\Src\Newtonsoft.Json.Tests\Documentation\SerializationTests.cs" region="ReducingSerializedJsonSizeContractResolverObject" title="IContractResolver Class"/>
+              <code lang="cs" source="..\Src\Newtonsoft.Json.Tests\Documentation\SerializationTests.cs" region="ReducingSerializedJsonSizeContractResolverExample" title="IContractResolver Example"/>
+            </example>
+        </member>
+        <member name="M:Newtonsoft.Json.Serialization.IContractResolver.ResolveContract(System.Type)">
+            <summary>
+            Resolves the contract for a given type.
+            </summary>
+            <param name="type">The type to resolve a con
