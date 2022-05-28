@@ -6556,4 +6556,32 @@
         </member>
         <member name="T:Newtonsoft.Json.Schema.ValidationEventArgs">
             <summary>
-   
+            Returns detailed information related to the <see cref="T:Newtonsoft.Json.Schema.ValidationEventHandler"/>.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.ValidationEventArgs.Exception">
+            <summary>
+            Gets the <see cref="T:Newtonsoft.Json.Schema.JsonSchemaException"/> associated with the validation error.
+            </summary>
+            <value>The JsonSchemaException associated with the validation error.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.ValidationEventArgs.Path">
+            <summary>
+            Gets the path of the JSON location where the validation error occurred.
+            </summary>
+            <value>The path of the JSON location where the validation error occurred.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Schema.ValidationEventArgs.Message">
+            <summary>
+            Gets the text description corresponding to the validation error.
+            </summary>
+            <value>The text description.</value>
+        </member>
+        <member name="T:Newtonsoft.Json.Schema.ValidationEventHandler">
+            <summary>
+            Represents the callback method that will handle JSON schema validation events and the <see cref="T:Newtonsoft.Json.Schema.ValidationEventArgs"/>.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.SerializationBinder">
+            <summary>
+            Allows users to control class
