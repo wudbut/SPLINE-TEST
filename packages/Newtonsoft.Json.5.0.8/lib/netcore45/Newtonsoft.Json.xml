@@ -6626,4 +6626,25 @@
             <summary>
             Resolves the contract for a given type.
             </summary>
-            <param name="type">The type to resolve a con
+            <param name="type">The type to resolve a contract for.</param>
+            <returns>The contract for a given type.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Serialization.DefaultContractResolver.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.DefaultContractResolver"/> class.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Serialization.DefaultContractResolver.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.DefaultContractResolver"/> class.
+            </summary>
+            <param name="shareCache">
+            If set to <c>true</c> the <see cref="T:Newtonsoft.Json.Serialization.DefaultContractResolver"/> will use a cached shared with other resolvers of the same type.
+            Sharing the cache will significantly performance because expensive reflection will only happen once but could cause unexpected
+            behavior if different instances of the resolver are suppose to produce different results. When set to false it is highly
+            recommended to reuse <see cref="T:Newtonsoft.Json.Serialization.DefaultContractResolver"/> instances with the <see cref="T:Newtonsoft.Json.JsonSerializer"/>.
+            </param>
+        </member>
+        <member name="M:Newtonsoft.Json.Serialization.DefaultContractResolver.ResolveContract(System.Type)">
+            <summary>
+            Resolves the contract
