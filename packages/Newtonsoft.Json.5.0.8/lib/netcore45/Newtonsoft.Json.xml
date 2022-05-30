@@ -6672,4 +6672,24 @@
             </summary>
             <param name="constructor">The constructor to create properties for.</param>
             <param name="memberProperties">The type's member properties.</param>
-            <returns>Proper
+            <returns>Properties for the given <see cref="T:System.Reflection.ConstructorInfo"/>.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Serialization.DefaultContractResolver.CreatePropertyFromConstructorParameter(Newtonsoft.Json.Serialization.JsonProperty,System.Reflection.ParameterInfo)">
+            <summary>
+            Creates a <see cref="T:Newtonsoft.Json.Serialization.JsonProperty"/> for the given <see cref="T:System.Reflection.ParameterInfo"/>.
+            </summary>
+            <param name="matchingMemberProperty">The matching member property.</param>
+            <param name="parameterInfo">The constructor parameter.</param>
+            <returns>A created <see cref="T:Newtonsoft.Json.Serialization.JsonProperty"/> for the given <see cref="T:System.Reflection.ParameterInfo"/>.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Serialization.DefaultContractResolver.ResolveContractConverter(System.Type)">
+            <summary>
+            Resolves the default <see cref="T:Newtonsoft.Json.JsonConverter"/> for the contract.
+            </summary>
+            <param name="objectType">Type of the object.</param>
+            <returns>The contract's default <see cref="T:Newtonsoft.Json.JsonConverter"/>.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Serialization.DefaultContractResolver.CreateDictionaryContract(System.Type)">
+            <summary>
+            Creates a <see cref="T:Newtonsoft.Json.Serialization.JsonDictionaryContract"/> for the given type.
+            </summar
