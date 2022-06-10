@@ -6783,4 +6783,30 @@
             <value>
             	<c>true</c> if using dynamic code generation; otherwise, <c>false</c>.
             </value>
-     
+        </member>
+        <member name="P:Newtonsoft.Json.Serialization.DefaultContractResolver.SerializeCompilerGeneratedMembers">
+            <summary>
+            Gets or sets a value indicating whether compiler generated members should be serialized.
+            </summary>
+            <value>
+            	<c>true</c> if serialized compiler generated members; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver"/> class.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver.ResolvePropertyName(System.String)">
+            <summary>
+            Resolves the name of the property.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+            <returns>The property name camel cased.</returns>
+        </member>
+        <member name="T:Newtonsoft.Json.Serialization.IReferenceResolver">
+            <summary>
+            Used to resolve references when serializing and deserializing JSON by the <see cref="T:Newtonsoft.Json.JsonSerializer"/>.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Serialization.IReferenceResolver.ResolveReference(System.Object,Syste
