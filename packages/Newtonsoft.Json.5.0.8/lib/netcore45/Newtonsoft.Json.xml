@@ -6757,4 +6757,30 @@
             <summary>
             Creates a <see cref="T:Newtonsoft.Json.Serialization.JsonProperty"/> for the given <see cref="T:System.Reflection.MemberInfo"/>.
             </summary>
-            <param name="memberSerialization">The member's parent <see cref="T:Newtonsoft.Json.Memb
+            <param name="memberSerialization">The member's parent <see cref="T:Newtonsoft.Json.MemberSerialization"/>.</param>
+            <param name="member">The member to create a <see cref="T:Newtonsoft.Json.Serialization.JsonProperty"/> for.</param>
+            <returns>A created <see cref="T:Newtonsoft.Json.Serialization.JsonProperty"/> for the given <see cref="T:System.Reflection.MemberInfo"/>.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Serialization.DefaultContractResolver.ResolvePropertyName(System.String)">
+            <summary>
+            Resolves the name of the property.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+            <returns>Name of the property.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Serialization.DefaultContractResolver.GetResolvedPropertyName(System.String)">
+            <summary>
+            Gets the resolved name of the property.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+            <returns>Name of the property.</returns>
+        </member>
+        <member name="P:Newtonsoft.Json.Serialization.DefaultContractResolver.DynamicCodeGeneration">
+            <summary>
+            Gets a value indicating whether members are being get and set using dynamic code generation.
+            This value is determined by the runtime permissions available.
+            </summary>
+            <value>
+            	<c>true</c> if using dynamic code generation; otherwise, <c>false</c>.
+            </value>
+     
