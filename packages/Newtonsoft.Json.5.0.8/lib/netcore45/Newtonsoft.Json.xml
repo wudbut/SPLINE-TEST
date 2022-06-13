@@ -6863,4 +6863,37 @@
             When overridden in a derived class, controls the binding of a serialized object to a type.
             </summary>
             <param name="serializedType">The type of the object the formatter creates a new instance of.</param>
-            <param name="assemblyName">Specifies the <see cr
+            <param name="assemblyName">Specifies the <see cref="T:System.Reflection.Assembly"/> name of the serialized object. </param>
+            <param name="typeName">Specifies the <see cref="T:System.Type"/> name of the serialized object. </param>
+        </member>
+        <member name="T:Newtonsoft.Json.Serialization.ErrorContext">
+            <summary>
+            Provides information surrounding an error.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.Serialization.ErrorContext.Error">
+            <summary>
+            Gets or sets the error.
+            </summary>
+            <value>The error.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Serialization.ErrorContext.OriginalObject">
+            <summary>
+            Gets the original object that caused the error.
+            </summary>
+            <value>The original object that caused the error.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Serialization.ErrorContext.Member">
+            <summary>
+            Gets the member that caused the error.
+            </summary>
+            <value>The member that caused the error.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Serialization.ErrorContext.Path">
+            <summary>
+            Gets the path of the JSON location where the error occurred.
+            </summary>
+            <value>The path of the JSON location where the error occurred.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Serialization.ErrorContext.Handled">
+            <summary>
