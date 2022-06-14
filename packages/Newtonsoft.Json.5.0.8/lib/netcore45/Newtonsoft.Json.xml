@@ -6897,3 +6897,33 @@
         </member>
         <member name="P:Newtonsoft.Json.Serialization.ErrorContext.Handled">
             <summary>
+            Gets or sets a value indicating whether this <see cref="T:Newtonsoft.Json.Serialization.ErrorContext"/> is handled.
+            </summary>
+            <value><c>true</c> if handled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Newtonsoft.Json.Serialization.ErrorEventArgs">
+            <summary>
+            Provides data for the Error event.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Serialization.ErrorEventArgs.#ctor(System.Object,Newtonsoft.Json.Serialization.ErrorContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.ErrorEventArgs"/> class.
+            </summary>
+            <param name="currentObject">The current object.</param>
+            <param name="errorContext">The error context.</param>
+        </member>
+        <member name="P:Newtonsoft.Json.Serialization.ErrorEventArgs.CurrentObject">
+            <summary>
+            Gets the current object the error event is being raised against.
+            </summary>
+            <value>The current object the error event is being raised against.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Serialization.ErrorEventArgs.ErrorContext">
+            <summary>
+            Gets the error context.
+            </summary>
+            <value>The error context.</value>
+        </member>
+        <member name="T:Newtonsoft.Json.Serialization.ExpressionValueProvider">
+            <su
