@@ -6985,4 +6985,32 @@
         <member name="P:Newtonsoft.Json.Serialization.ITraceWriter.LevelFilter">
             <summary>
             Gets the <see cref="T:Newtonsoft.Json.TraceLevel"/> that will be used to filter the trace messages passed to the writer.
-            For example a fi
+            For example a filter level of <code>Info</code> will exclude <code>Verbose</code> messages and include <code>Info</code>,
+            <code>Warning</code> and <code>Error</code> messages.
+            </summary>
+            <value>The <see cref="T:Newtonsoft.Json.TraceLevel"/> that will be used to filter the trace messages passed to the writer.</value>
+        </member>
+        <member name="T:Newtonsoft.Json.Serialization.JsonArrayContract">
+            <summary>
+            Contract details for a <see cref="T:System.Type"/> used by the <see cref="T:Newtonsoft.Json.JsonSerializer"/>.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.Serialization.JsonContainerContract">
+            <summary>
+            Contract details for a <see cref="T:System.Type"/> used by the <see cref="T:Newtonsoft.Json.JsonSerializer"/>.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.Serialization.JsonContract">
+            <summary>
+            Contract details for a <see cref="T:System.Type"/> used by the <see cref="T:Newtonsoft.Json.JsonSerializer"/>.
+            </summary>
+        </member>
+        <member name="P:Newtonsoft.Json.Serialization.JsonContract.UnderlyingType">
+            <summary>
+            Gets the underlying type for the contract.
+            </summary>
+            <value>The underlying type for the contract.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Serialization.JsonContract.CreatedType">
+            <summary>
+            Gets or
