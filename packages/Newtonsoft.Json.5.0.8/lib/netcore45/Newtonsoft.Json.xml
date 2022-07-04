@@ -7359,4 +7359,33 @@
             <summary>
             Gets or sets the type of the property.
             </summary>
-            <val
+            <value>The type of the property.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Serialization.JsonProperty.Converter">
+            <summary>
+            Gets or sets the <see cref="T:Newtonsoft.Json.JsonConverter"/> for the property.
+            If set this converter takes presidence over the contract converter for the property type.
+            </summary>
+            <value>The converter.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Serialization.JsonProperty.MemberConverter">
+            <summary>
+            Gets the member converter.
+            </summary>
+            <value>The member converter.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Serialization.JsonProperty.Ignored">
+            <summary>
+            Gets a value indicating whether this <see cref="T:Newtonsoft.Json.Serialization.JsonProperty"/> is ignored.
+            </summary>
+            <value><c>true</c> if ignored; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Serialization.JsonProperty.Readable">
+            <summary>
+            Gets a value indicating whether this <see cref="T:Newtonsoft.Json.Serialization.JsonProperty"/> is readable.
+            </summary>
+            <value><c>true</c> if readable; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Serialization.JsonProperty.Writable">
+            <summary>
+            Gets a value indicating whether this <see cref="T:Newtonsoft.Json.Serialization.J
