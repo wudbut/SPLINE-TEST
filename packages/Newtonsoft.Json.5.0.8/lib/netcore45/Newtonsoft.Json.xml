@@ -7452,4 +7452,31 @@
             <summary>
             Gets or sets a predicate used to determine whether the property should be serialize.
             </summary>
-            <val
+            <value>A predicate used to determine whether the property should be serialize.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Serialization.JsonProperty.GetIsSpecified">
+            <summary>
+            Gets or sets a predicate used to determine whether the property should be serialized.
+            </summary>
+            <value>A predicate used to determine whether the property should be serialized.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Serialization.JsonProperty.SetIsSpecified">
+            <summary>
+            Gets or sets an action used to set whether the property has been deserialized.
+            </summary>
+            <value>An action used to set whether the property has been deserialized.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Serialization.JsonProperty.ItemConverter">
+            <summary>
+            Gets or sets the converter used when serializing the property's collection items.
+            </summary>
+            <value>The collection's items converter.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Serialization.JsonProperty.ItemIsReference">
+            <summary>
+            Gets or sets whether this property's collection items are serialized as a reference.
+            </summary>
+            <value>Whether this property's collection items are serialized as a reference.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Serialization.JsonProperty.ItemTypeNameHandling">
+            <
