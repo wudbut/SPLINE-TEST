@@ -7479,4 +7479,31 @@
             <value>Whether this property's collection items are serialized as a reference.</value>
         </member>
         <member name="P:Newtonsoft.Json.Serialization.JsonProperty.ItemTypeNameHandling">
-            <
+            <summary>
+            Gets or sets the the type name handling used when serializing the property's collection items.
+            </summary>
+            <value>The collection's items type name handling.</value>
+        </member>
+        <member name="P:Newtonsoft.Json.Serialization.JsonProperty.ItemReferenceLoopHandling">
+            <summary>
+            Gets or sets the the reference loop handling used when serializing the property's collection items.
+            </summary>
+            <value>The collection's items reference loop handling.</value>
+        </member>
+        <member name="T:Newtonsoft.Json.Serialization.JsonPropertyCollection">
+            <summary>
+            A collection of <see cref="T:Newtonsoft.Json.Serialization.JsonProperty"/> objects.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Serialization.JsonPropertyCollection.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.JsonPropertyCollection"/> class.
+            </summary>
+            <param name="type">The type.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Serialization.JsonPropertyCollection.GetKeyForItem(Newtonsoft.Json.Serialization.JsonProperty)">
+            <summary>
+            When implemented in a derived class, extracts the key from the specified element.
+            </summary>
+            <param name="item">The element from which to extract the key.</param>
+            <returns>The key for the specified element.</retu
