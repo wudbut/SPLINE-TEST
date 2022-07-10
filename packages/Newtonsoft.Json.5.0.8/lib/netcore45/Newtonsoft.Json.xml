@@ -7506,4 +7506,31 @@
             When implemented in a derived class, extracts the key from the specified element.
             </summary>
             <param name="item">The element from which to extract the key.</param>
-            <returns>The key for the specified element.</retu
+            <returns>The key for the specified element.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Serialization.JsonPropertyCollection.AddProperty(Newtonsoft.Json.Serialization.JsonProperty)">
+            <summary>
+            Adds a <see cref="T:Newtonsoft.Json.Serialization.JsonProperty"/> object.
+            </summary>
+            <param name="property">The property to add to the collection.</param>
+        </member>
+        <member name="M:Newtonsoft.Json.Serialization.JsonPropertyCollection.GetClosestMatchProperty(System.String)">
+            <summary>
+            Gets the closest matching <see cref="T:Newtonsoft.Json.Serialization.JsonProperty"/> object.
+            First attempts to get an exact case match of propertyName and then
+            a case insensitive match.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+            <returns>A matching property if found.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Serialization.JsonPropertyCollection.GetProperty(System.String,System.StringComparison)">
+            <summary>
+            Gets a property by property name.
+            </summary>
+            <param name="propertyName">The name of the property to get.</param>
+            <param name="comparisonType">Type property name string comparison.</param>
+            <returns>A matching property if found.</returns>
+        </member>
+        <member name="T:Newtonsoft.Json.Serialization.JsonStringContract">
+            <summary>
+        
