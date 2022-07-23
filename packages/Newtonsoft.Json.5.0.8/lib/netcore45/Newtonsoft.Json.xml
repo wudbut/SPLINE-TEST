@@ -7654,4 +7654,43 @@
         <member name="F:Newtonsoft.Json.TraceLevel.Error">
             <summary>
             Output error-handling messages.
-            <
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.TraceLevel.Warning">
+            <summary>
+            Output warnings and error-handling messages.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.TraceLevel.Info">
+            <summary>
+            Output informational messages, warnings, and error-handling messages.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.TraceLevel.Verbose">
+            <summary>
+            Output all debugging and tracing messages.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.TypeNameHandling">
+            <summary>
+            Specifies type name handling options for the <see cref="T:Newtonsoft.Json.JsonSerializer"/>.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.TypeNameHandling.None">
+            <summary>
+            Do not include the .NET type name when serializing types.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.TypeNameHandling.Objects">
+            <summary>
+            Include the .NET type name when serializing into a JSON object structure.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.TypeNameHandling.Arrays">
+            <summary>
+            Include the .NET type name when serializing into a JSON array structure.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.TypeNameHandling.All">
+            <summary>
+   
