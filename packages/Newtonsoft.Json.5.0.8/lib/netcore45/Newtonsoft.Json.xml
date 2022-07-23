@@ -7618,4 +7618,40 @@
             <code>Warning</code> and <code>Error</code> messages.
             </summary>
             <value>
-            The <see cref="T:New
+            The <see cref="T:Newtonsoft.Json.TraceLevel"/> that will be used to filter the trace messages passed to the writer.
+            </value>
+        </member>
+        <member name="T:Newtonsoft.Json.StringEscapeHandling">
+            <summary>
+            Specifies how strings are escaped when writing JSON text.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.StringEscapeHandling.Default">
+            <summary>
+            Only control characters (e.g. newline) are escaped.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.StringEscapeHandling.EscapeNonAscii">
+            <summary>
+            All non-ASCII and control characters (e.g. newline) are escaped.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.StringEscapeHandling.EscapeHtml">
+            <summary>
+            HTML (&lt;, &gt;, &amp;, &apos;, &quot;) and control characters (e.g. newline) are escaped.
+            </summary>
+        </member>
+        <member name="T:Newtonsoft.Json.TraceLevel">
+            <summary>
+            Specifies what messages to output for the <see cref="T:Newtonsoft.Json.Serialization.ITraceWriter"/> class.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.TraceLevel.Off">
+            <summary>
+            Output no tracing and debugging messages.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.TraceLevel.Error">
+            <summary>
+            Output error-handling messages.
+            <
