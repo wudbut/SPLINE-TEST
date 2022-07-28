@@ -7793,4 +7793,34 @@
             </summary>
             <returns></returns>
         </member>
-        <m
+        <member name="M:Newtonsoft.Json.Utilities.EnumUtils.GetNamesAndValues``1(System.Type)">
+            <summary>
+            Gets a dictionary of the names and values of an Enum type.
+            </summary>
+            <param name="enumType">The enum type to get names and values for.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.ReflectionUtils.GetCollectionItemType(System.Type)">
+            <summary>
+            Gets the type of the typed collection's items.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The type of the typed collection's items.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.ReflectionUtils.GetMemberUnderlyingType(System.Reflection.MemberInfo)">
+            <summary>
+            Gets the member's underlying type.
+            </summary>
+            <param name="member">The member.</param>
+            <returns>The underlying type of the member.</returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.ReflectionUtils.IsIndexedProperty(System.Reflection.MemberInfo)">
+            <summary>
+            Determines whether the member is an indexed property.
+            </summary>
+            <param name="member">The member.</param>
+            <returns>
+            	<c>true</c> if the member is an indexed property; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.ReflectionUtils.IsIndexedProperty
