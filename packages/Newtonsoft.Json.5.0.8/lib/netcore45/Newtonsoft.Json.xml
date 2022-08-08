@@ -7878,4 +7878,31 @@
             <summary>
             Determines whether the string is all white space. Empty string will return false.
             </summary>
-            <param name="s">The string to test whet
+            <param name="s">The string to test whether it is all white space.</param>
+            <returns>
+            	<c>true</c> if the string is all white space; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Newtonsoft.Json.Utilities.StringUtils.NullEmptyString(System.String)">
+            <summary>
+            Nulls an empty string.
+            </summary>
+            <param name="s">The string.</param>
+            <returns>Null if the string was null, otherwise the string unchanged.</returns>
+        </member>
+        <member name="T:Newtonsoft.Json.WriteState">
+            <summary>
+            Specifies the state of the <see cref="T:Newtonsoft.Json.JsonWriter"/>.
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.WriteState.Error">
+            <summary>
+            An exception has been thrown, which has left the <see cref="T:Newtonsoft.Json.JsonWriter"/> in an invalid state.
+            You may call the <see cref="M:Newtonsoft.Json.JsonWriter.Close"/> method to put the <see cref="T:Newtonsoft.Json.JsonWriter"/> in the <c>Closed</c> state.
+            Any other <see cref="T:Newtonsoft.Json.JsonWriter"/> method calls results in an <see cref="T:System.InvalidOperationException"/> being thrown. 
+            </summary>
+        </member>
+        <member name="F:Newtonsoft.Json.WriteState.Closed">
+            <summary>
+            The <see cref="M:Newtonsoft.Json.JsonWriter.Close"/> method has been called. 
+            </su
