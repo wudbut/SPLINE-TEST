@@ -14,4 +14,40 @@ try
     # get reference to the window, the console host and the input history
     # show webpage if "install-package newtonsoft.json" was last input
 
-    $consoleWindow = $(Get-VSComponentModel).GetServic
+    $consoleWindow = $(Get-VSComponentModel).GetService([NuGetConsole.IPowerConsoleWindow])
+
+    $props = $consoleWindow.GetType().GetProperties([System.Reflection.BindingFlags]::Instance -bor `
+      [System.Reflection.BindingFlags]::NonPublic)
+
+    $prop = $props | ? { $_.Name -eq "ActiveHostInfo" } | select -first 1
+    if ($prop -eq $null) { return }
+  
+    $hostInfo = $prop.GetValue($consoleWindow)
+    if ($hostInfo -eq $null) { return }
+
+    $history = $hostInfo.WpfConsole.InputHistory.History
+
+    $lastCommand = $history | select -last 1
+
+    if ($lastCommand)
+    {
+      $lastCommand = $lastCommand.Trim().ToLower()
+      if ($lastCommand.StartsWith("install-package") -and $lastCommand.Contains("newtonsoft.json"))
+      {
+        $dte2.ItemOperations.Navigate($url) | Out-Null
+      }
+    }
+  }
+  else
+  {
+    # user is installing from VS NuGet dialog
+    # get reference to the window, then smart output console provider
+    # show webpage if messages in buffered console contains "installing...newtonsoft.json" in last operation
+
+    $instanceField = [NuGet.Dialog.PackageManagerWindow].GetField("CurrentInstance", [System.Reflection.BindingFlags]::Static -bor `
+      [System.Reflection.BindingFlags]::NonPublic)
+    $consoleField = [NuGet.Dialog.PackageManagerWindow].GetField("_smartOutputConsoleProvider", [System.Reflection.BindingFlags]::Instance -bor `
+      [System.Reflection.BindingFlags]::NonPublic)
+    if ($instanceField -eq $null -or $consoleField -eq $null) { return }
+
+    
