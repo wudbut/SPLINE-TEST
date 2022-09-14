@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RestSharp.Silverlight</name>
+    </assembly>
+    <members>
+        <member name="T:RestSharp.Authenticators.OAuth1Authenticator">
+            <seealso href="http://tools.ietf.org/html/rfc5849"/>
+        </member>
+        <member name="T:RestSharp.OAuth2Authenticator">
+            <summary>
+            Base class for OAuth 2 Authenticators.
+            </summary>
+            <remarks>
+            Since there are many ways to authenticate in OAuth2,
+            this is used as a base class to differentiate between 
+            other authenticators.
+            
+            Any other OAuth2 authenticators must derive from this
+            abstract class.
+            </remarks>
+        </member>
+        <member name="F:RestSharp.OAuth2Authenticator._accessToken">
+            <summary>
+            Access token to be used when authenticating.
+            </summary>
+        </member>
+        <member name="M:RestSharp.OAuth2Authenticator.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RestSharp.OAuth2Authenticator"/> class.
+            </summary>
+            <param name="accessToken">
+            The access token.
+            </param>
+        </member>
+        <member name="P:RestSh
