@@ -67,4 +67,38 @@
             Stores the Authorization header value as "[tokenType] accessToken". used for performance.
             </summary>
         </member>
-        <member name="M:RestSharp.OAuth2AuthorizationRequestHeaderAuthe
+        <member name="M:RestSharp.OAuth2AuthorizationRequestHeaderAuthenticator.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RestSharp.OAuth2AuthorizationRequestHeaderAuthenticator"/> class.
+            </summary>
+            <param name="accessToken">
+            The access token.
+            </param>
+        </member>
+        <member name="M:RestSharp.OAuth2AuthorizationRequestHeaderAuthenticator.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RestSharp.OAuth2AuthorizationRequestHeaderAuthenticator"/> class.
+            </summary>
+            <param name="accessToken">
+            The access token.
+            </param>
+            <param name="tokenType">
+            The token type.
+            </param>
+        </member>
+        <member name="F:RestSharp.Authenticators.OAuth.OAuthTools._encoding">
+            <summary>
+            All text parameters are UTF-8 encoded (per section 5.1).
+            </summary>
+            <seealso cref="!:http://www.hueniverse.com/hueniverse/2008/10/beginners-gui-1.html"/> 
+        </member>
+        <member name="M:RestSharp.Authenticators.OAuth.OAuthTools.GetNonce">
+            <summary>
+            Generates a random 16-byte lowercase alphanumeric string. 
+            </summary>
+            <seealso cref="!:http://oauth.net/core/1.0#nonce"/>
+            <returns></returns>
+        </member>
+        <member name="M:RestSharp.Authenticators.OAuth.OAuthTools.GetTimestamp">
+            <summary>
+            Generates a timestamp based on the current elapse
