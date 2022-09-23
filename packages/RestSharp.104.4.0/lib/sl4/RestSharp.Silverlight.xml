@@ -129,4 +129,26 @@
             <param name="value">The value to escape.</param>
             <returns>The escaped value.</returns>
             <remarks>
-            The <see cref=
+            The <see cref="M:System.Uri.EscapeDataString(System.String)"/> method is <i>supposed</i> to take on
+            RFC 3986 behavior if certain elements are present in a .config file.  Even if this
+            actually worked (which in my experiments it <i>doesn't</i>), we can't rely on every
+            host actually having this configuration element present.
+            </remarks>
+            <seealso cref="!:http://oauth.net/core/1.0#encoding_parameters"/>
+            <seealso cref="!:http://stackoverflow.com/questions/846487/how-to-get-uri-escapedatastring-to-comply-with-rfc-3986"/>
+        </member>
+        <member name="M:RestSharp.Authenticators.OAuth.OAuthTools.UrlEncodeStrict(System.String)">
+            <summary>
+            URL encodes a string based on section 5.1 of the OAuth spec.
+            Namely, percent encoding with [RFC3986], avoiding unreserved characters,
+            upper-casing hexadecimal characters, and UTF-8 encoding for text value pairs.
+            </summary>
+            <param name="value"></param>
+            <seealso cref="!:http://oauth.net/core/1.0#encoding_parameters"/>
+        </member>
+        <member name="M:RestSharp.Authenticators.OAuth.OAuthTools.NormalizeRequestParameters(RestSharp.Authenticators.OAuth.WebParameterCollection)">
+            <summary>
+            Sorts a collection of key-value pairs by name, and then value if equal,
+            concatenating them into a single string. This string should be encoded
+            prior to, or after normalization is run.
+            </su
