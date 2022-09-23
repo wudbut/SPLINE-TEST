@@ -151,4 +151,29 @@
             Sorts a collection of key-value pairs by name, and then value if equal,
             concatenating them into a single string. This string should be encoded
             prior to, or after normalization is run.
-            </su
+            </summary>
+            <seealso cref="!:http://oauth.net/core/1.0#rfc.section.9.1.1"/>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestSharp.Authenticators.OAuth.OAuthTools.SortParametersExcludingSignature(RestSharp.Authenticators.OAuth.WebParameterCollection)">
+            <summary>
+            Sorts a <see cref="T:RestSharp.Authenticators.OAuth.WebParameterCollection"/> by name, and then value if equal.
+            </summary>
+            <param name="parameters">A collection of parameters to sort</param>
+            <returns>A sorted parameter collection</returns>
+        </member>
+        <member name="M:RestSharp.Authenticators.OAuth.OAuthTools.ConstructRequestUrl(System.Uri)">
+            <summary>
+            Creates a request URL suitable for making OAuth requests.
+            Resulting URLs must exclude port 80 or port 443 when accompanied by HTTP and HTTPS, respectively.
+            Resulting URLs must be lower case.
+            </summary>
+            <seealso cref="!:http://oauth.net/core/1.0#rfc.section.9.1.2"/>
+            <param name="url">The original request URL</param>
+            <returns></returns>
+        </member>
+        <member name="M:RestSharp.Authenticators.OAuth.OAuthTools.ConcatenateRequestElements(System.String,System.String,RestSharp.Authenticators.OAuth.WebParameterCollection)">
+            <summary>
+            Creates a request elements concatentation value to send with a request. 
+            This is also known as the signature bas
