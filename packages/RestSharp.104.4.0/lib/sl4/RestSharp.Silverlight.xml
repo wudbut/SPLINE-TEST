@@ -200,4 +200,26 @@
             <summary>
             Creates a signature value given a signature base and the consumer secret.
             This method is used when the token secret is currently unknown.
-            <
+            </summary>
+            <seealso cref="!:http://oauth.net/core/1.0#rfc.section.9.2"/>
+            <param name="signatureMethod">The hashing method</param>
+            <param name="signatureTreatment">The treatment to use on a signature value</param>
+            <param name="signatureBase">The signature base</param>
+            <param name="consumerSecret">The consumer key</param>
+            <returns></returns>
+        </member>
+        <member name="M:RestSharp.Authenticators.OAuth.OAuthTools.GetSignature(RestSharp.Authenticators.OAuth.OAuthSignatureMethod,System.String,System.String,System.String)">
+            <summary>
+            Creates a signature value given a signature base and the consumer secret and a known token secret.
+            </summary>
+            <seealso cref="!:http://oauth.net/core/1.0#rfc.section.9.2"/>
+            <param name="signatureMethod">The hashing method</param>
+            <param name="signatureBase">The signature base</param>
+            <param name="consumerSecret">The consumer secret</param>
+            <param name="tokenSecret">The token secret</param>
+            <returns></returns>
+        </member>
+        <member name="M:RestSharp.Authenticators.OAuth.OAuthTools.GetSignature(RestSharp.Authenticators.OAuth.OAuthSignatureMethod,RestSharp.Authenticators.OAuth.OAuthSignatureTreatment,System.String,System.String,System.String)">
+            <summary>
+            Creates a signature value given a signature base and the consumer secret and a known token secret.
+         
