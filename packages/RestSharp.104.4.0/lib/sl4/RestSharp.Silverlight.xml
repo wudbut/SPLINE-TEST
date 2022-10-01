@@ -222,4 +222,31 @@
         <member name="M:RestSharp.Authenticators.OAuth.OAuthTools.GetSignature(RestSharp.Authenticators.OAuth.OAuthSignatureMethod,RestSharp.Authenticators.OAuth.OAuthSignatureTreatment,System.String,System.String,System.String)">
             <summary>
             Creates a signature value given a signature base and the consumer secret and a known token secret.
-         
+            </summary>
+            <seealso cref="!:http://oauth.net/core/1.0#rfc.section.9.2"/>
+            <param name="signatureMethod">The hashing method</param>
+            <param name="signatureTreatment">The treatment to use on a signature value</param>
+            <param name="signatureBase">The signature base</param>
+            <param name="consumerSecret">The consumer secret</param>
+            <param name="tokenSecret">The token secret</param>
+            <returns></returns>
+        </member>
+        <member name="T:RestSharp.Authenticators.OAuth.OAuthWorkflow">
+            <summary>
+            A class to encapsulate OAuth authentication flow.
+            <seealso cref="!:http://oauth.net/core/1.0#anchor9"/>
+            </summary>
+        </member>
+        <member name="M:RestSharp.Authenticators.OAuth.OAuthWorkflow.BuildRequestTokenInfo(System.String)">
+            <summary>
+            Generates a <see cref="T:RestSharp.Authenticators.OAuth.OAuthWebQueryInfo"/> instance to pass to an
+            <see cref="T:RestSharp.IAuthenticator"/> for the purpose of requesting an
+            unauthorized request token.
+            </summary>
+            <param name="method">The HTTP method for the intended request</param>
+            <seealso cref="!:http://oauth.net/core/1.0#anchor9"/>
+            <returns></returns>
+        </member>
+        <member name="M:RestSharp.Authenticators.OAuth.OAuthWorkflow.BuildRequestTokenInfo(System.String,RestSharp.Authenticators.OAuth.WebParameterCollection)">
+            <summary>
+            Generates a <see cref="T:RestSharp.Authenticato
