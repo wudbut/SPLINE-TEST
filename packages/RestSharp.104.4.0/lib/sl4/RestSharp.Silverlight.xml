@@ -333,4 +333,45 @@
         </member>
         <member name="T:RestSharp.DateFormat">
             <summary>
-            Format 
+            Format strings for commonly-used date formats
+            </summary>
+        </member>
+        <member name="F:RestSharp.DateFormat.Iso8601">
+            <summary>
+            .NET format string for ISO 8601 date format
+            </summary>
+        </member>
+        <member name="F:RestSharp.DateFormat.RoundTrip">
+            <summary>
+            .NET format string for roundtrip date format
+            </summary>
+        </member>
+        <member name="T:RestSharp.ResponseStatus">
+            <summary>
+            Status for responses (surprised?)
+            </summary>
+        </member>
+        <member name="T:RestSharp.Extensions.MiscExtensions">
+            <summary>
+            Extension method overload!
+            </summary>
+        </member>
+        <member name="M:RestSharp.Extensions.MiscExtensions.SaveAs(System.Byte[],System.String)">
+            <summary>
+            Save a byte array to a file
+            </summary>
+            <param name="input">Bytes to save</param>
+            <param name="path">Full path to save file to</param>
+        </member>
+        <member name="M:RestSharp.Extensions.MiscExtensions.ReadAsBytes(System.IO.Stream)">
+            <summary>
+            Read a stream into a byte array
+            </summary>
+            <param name="input">Stream to read</param>
+            <returns>byte[]</returns>
+        </member>
+        <member name="M:RestSharp.Extensions.MiscExtensions.CopyTo(System.IO.Stream,System.IO.Stream)">
+            <summary>
+            Copies bytes from one stream to another
+            </summary>
+   
