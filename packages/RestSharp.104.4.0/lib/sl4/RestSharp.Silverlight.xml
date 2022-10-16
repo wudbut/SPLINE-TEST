@@ -374,4 +374,34 @@
             <summary>
             Copies bytes from one stream to another
             </summary>
-   
+            <param name="input">The input stream.</param>
+            <param name="output">The output stream.</param>
+        </member>
+        <member name="M:RestSharp.Extensions.MiscExtensions.AsString(System.Byte[])">
+            <summary>
+            Converts a byte array to a string, using its byte order mark to convert it to the right encoding.
+            http://www.shrinkrays.net/code-snippets/csharp/an-extension-method-for-converting-a-byte-array-to-a-string.aspx
+            </summary>
+            <param name="buffer">An array of bytes to convert</param>
+            <returns>The byte as a string.</returns>
+        </member>
+        <member name="T:RestSharp.Extensions.ReflectionExtensions">
+            <summary>
+            Reflection extensions
+            </summary>
+        </member>
+        <member name="M:RestSharp.Extensions.ReflectionExtensions.GetAttribute``1(System.Reflection.MemberInfo)">
+            <summary>
+            Retrieve an attribute from a member (property)
+            </summary>
+            <typeparam name="T">Type of attribute to retrieve</typeparam>
+            <param name="prop">Member to retrieve attribute from</param>
+            <returns></returns>
+        </member>
+        <member name="M:RestSharp.Extensions.ReflectionExtensions.GetAttribute``1(System.Type)">
+            <summary>
+            Retrieve an attribute from a type
+            </summary>
+            <typeparam name="T">Type of attribute to retrieve</typeparam>
+            <param name="type">Type to retrieve attribute from</param>
+            <returns></
