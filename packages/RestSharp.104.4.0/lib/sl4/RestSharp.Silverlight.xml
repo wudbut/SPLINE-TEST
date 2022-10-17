@@ -434,4 +434,36 @@
             <summary>
             Check that a string is not null or empty
             </summary>
-            
+            <param name="input">String to check</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:RestSharp.Extensions.StringExtensions.RemoveUnderscoresAndDashes(System.String)">
+            <summary>
+            Remove underscores from a string
+            </summary>
+            <param name="input">String to process</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:RestSharp.Extensions.StringExtensions.ParseJsonDate(System.String,System.Globalization.CultureInfo)">
+            <summary>
+            Parses most common JSON date formats
+            </summary>
+            <param name="input">JSON value to parse</param>
+            <returns>DateTime</returns>
+        </member>
+        <member name="M:RestSharp.Extensions.StringExtensions.RemoveSurroundingQuotes(System.String)">
+            <summary>
+            Remove leading and trailing " from a string
+            </summary>
+            <param name="input">String to parse</param>
+            <returns>String</returns>
+        </member>
+        <member name="M:RestSharp.Extensions.StringExtensions.Matches(System.String,System.String)">
+            <summary>
+            Checks a string to see if it matches a regex
+            </summary>
+            <param name="input">String to check</param>
+            <param name="pattern">Pattern to match</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:RestSharp.Extensions.StringExtensions.ToPascalCase(System.String
