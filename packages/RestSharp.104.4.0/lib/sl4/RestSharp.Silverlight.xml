@@ -466,4 +466,33 @@
             <param name="pattern">Pattern to match</param>
             <returns>bool</returns>
         </member>
-        <member name="M:RestSharp.Extensions.StringExtensions.ToPascalCase(System.String
+        <member name="M:RestSharp.Extensions.StringExtensions.ToPascalCase(System.String,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a string to pascal case
+            </summary>
+            <param name="lowercaseAndUnderscoredWord">String to convert</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:RestSharp.Extensions.StringExtensions.ToPascalCase(System.String,System.Boolean,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a string to pascal case with the option to remove underscores
+            </summary>
+            <param name="text">String to convert</param>
+            <param name="removeUnderscores">Option to remove underscores</param>
+            <returns></returns>
+        </member>
+        <member name="M:RestSharp.Extensions.StringExtensions.ToCamelCase(System.String,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a string to camel case
+            </summary>
+            <param name="lowercaseAndUnderscoredWord">String to convert</param>
+            <returns>String</returns>
+        </member>
+        <member name="M:RestSharp.Extensions.StringExtensions.MakeInitialLowerCase(System.String)">
+            <summary>
+            Convert the first letter of a string to lower case
+            </summary>
+            <param name="word">String to convert</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:RestSharp.Extensions.StringExtensions.IsUpperCase(S
