@@ -495,4 +495,37 @@
             <param name="word">String to convert</param>
             <returns>string</returns>
         </member>
-        <member name="M:RestSharp.Extensions.StringExtensions.IsUpperCase(S
+        <member name="M:RestSharp.Extensions.StringExtensions.IsUpperCase(System.String)">
+            <summary>
+            Checks to see if a string is all uppper case
+            </summary>
+            <param name="inputString">String to check</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:RestSharp.Extensions.StringExtensions.AddUnderscores(System.String)">
+            <summary>
+            Add underscores to a pascal-cased string
+            </summary>
+            <param name="pascalCasedWord">String to convert</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:RestSharp.Extensions.StringExtensions.AddDashes(System.String)">
+            <summary>
+            Add dashes to a pascal-cased string
+            </summary>
+            <param name="pascalCasedWord">String to convert</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:RestSharp.Extensions.StringExtensions.AddUnderscorePrefix(System.String)">
+            <summary>
+            Add an undescore prefix to a pascasl-cased string
+            </summary>
+            <param name="pascalCasedWord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestSharp.Extensions.StringExtensions.GetNameVariants(System.String,System.Globalization.CultureInfo)">
+            <summary>
+            Return possible variants of a name for name matching.
+            </summary>
+            <param name="name">String to convert</param>
+            <param name="culture">The culture to use for c
