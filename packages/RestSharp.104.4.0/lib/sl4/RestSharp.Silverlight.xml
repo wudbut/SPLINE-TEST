@@ -528,4 +528,37 @@
             Return possible variants of a name for name matching.
             </summary>
             <param name="name">String to convert</param>
-            <param name="culture">The culture to use for c
+            <param name="culture">The culture to use for conversion</param>
+            <returns>IEnumerable&lt;string&gt;</returns>
+        </member>
+        <member name="T:RestSharp.Extensions.XmlExtensions">
+            <summary>
+            XML Extension Methods
+            </summary>
+        </member>
+        <member name="M:RestSharp.Extensions.XmlExtensions.AsNamespaced(System.String,System.String)">
+            <summary>
+            Returns the name of an element with the namespace if specified
+            </summary>
+            <param name="name">Element name</param>
+            <param name="namespace">XML Namespace</param>
+            <returns></returns>
+        </member>
+        <member name="T:RestSharp.FileParameter">
+            <summary>
+            Container for files to be uploaded with requests
+            </summary>
+        </member>
+        <member name="M:RestSharp.FileParameter.Create(System.String,System.Byte[],System.String,System.String)">
+            <summary>
+             Creates a file parameter from an array of bytes.
+            </summary>
+            <param name="name">The parameter name to use in the request.</param>
+            <param name="data">The data to use as the file's contents.</param>
+            <param name="filename">The filename to use in the request.</param>
+            <param name="contentType">The content type to use in the request.</param>
+            <returns>The <see cref="T:RestSharp.FileParameter"/></returns>
+        </member>
+        <member name="M:RestSharp.FileParameter.Create(System.String,System.Byte[],System.String)">
+            <summary>
+             Creates a 
