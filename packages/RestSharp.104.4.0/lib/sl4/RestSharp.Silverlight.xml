@@ -638,4 +638,45 @@
         </member>
         <member name="P:RestSharp.Http.HasParameters">
             <summary>
-            T
+            True if this HTTP request has any HTTP parameters
+            </summary>
+        </member>
+        <member name="P:RestSharp.Http.HasCookies">
+            <summary>
+            True if this HTTP request has any HTTP cookies
+            </summary>
+        </member>
+        <member name="P:RestSharp.Http.HasBody">
+            <summary>
+            True if a request body has been specified
+            </summary>
+        </member>
+        <member name="P:RestSharp.Http.HasFiles">
+            <summary>
+            True if files have been set to be uploaded
+            </summary>
+        </member>
+        <member name="P:RestSharp.Http.AlwaysMultipartFormData">
+            <summary>
+            Always send a multipart/form-data request - even when no Files are present.
+            </summary>
+        </member>
+        <member name="P:RestSharp.Http.UserAgent">
+            <summary>
+            UserAgent to be sent with request
+            </summary>
+        </member>
+        <member name="P:RestSharp.Http.Timeout">
+            <summary>
+            Timeout in milliseconds to be used for the request
+            </summary>
+        </member>
+        <member name="P:RestSharp.Http.Credentials">
+            <summary>
+            System.Net.ICredentials to be sent with request
+            </summary>
+        </member>
+        <member name="P:RestSharp.Http.CookieContainer">
+            <summary>
+            The System.Net.CookieContainer to be used for the request
+            <
