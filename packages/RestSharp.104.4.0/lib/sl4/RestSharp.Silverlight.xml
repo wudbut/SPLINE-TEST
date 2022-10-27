@@ -601,4 +601,41 @@
             HttpWebRequest wrapper
             </summary>
         </member>
-        <me
+        <member name="P:RestSharp.IHttp.AlwaysMultipartFormData">
+            <summary>
+            Always send a multipart/form-data request - even when no Files are present.
+            </summary>
+        </member>
+        <member name="P:RestSharp.IHttp.RequestBodyBytes">
+            <summary>
+            An alternative to RequestBody, for when the caller already has the byte array.
+            </summary>
+        </member>
+        <member name="M:RestSharp.Http.AsPostAsync(System.Action{RestSharp.HttpResponse},System.String)">
+            <summary>
+            Execute an async POST-style request with the specified HTTP Method.  
+            </summary>
+            <param name="httpMethod">The HTTP method to execute.</param>
+            <returns></returns>
+        </member>
+        <member name="M:RestSharp.Http.AsGetAsync(System.Action{RestSharp.HttpResponse},System.String)">
+            <summary>
+            Execute an async GET-style request with the specified HTTP Method.  
+            </summary>
+            <param name="httpMethod">The HTTP method to execute.</param>
+            <returns></returns>
+        </member>
+        <member name="M:RestSharp.Http.Create">
+            <summary>
+             Creates an IHttp
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RestSharp.Http.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:RestSharp.Http.HasParameters">
+            <summary>
+            T
