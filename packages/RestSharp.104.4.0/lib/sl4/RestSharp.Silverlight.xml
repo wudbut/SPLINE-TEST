@@ -561,4 +561,44 @@
         </member>
         <member name="M:RestSharp.FileParameter.Create(System.String,System.Byte[],System.String)">
             <summary>
-             Creates a 
+             Creates a file parameter from an array of bytes.
+            </summary>
+            <param name="name">The parameter name to use in the request.</param>
+            <param name="data">The data to use as the file's contents.</param>
+            <param name="filename">The filename to use in the request.</param>
+            <returns>The <see cref="T:RestSharp.FileParameter"/> using the default content type.</returns>
+        </member>
+        <member name="P:RestSharp.FileParameter.ContentLength">
+            <summary>
+            The length of data to be sent
+            </summary>
+        </member>
+        <member name="P:RestSharp.FileParameter.Writer">
+            <summary>
+            Provides raw data for file
+            </summary>
+        </member>
+        <member name="P:RestSharp.FileParameter.FileName">
+            <summary>
+            Name of the file to use when uploading
+            </summary>
+        </member>
+        <member name="P:RestSharp.FileParameter.ContentType">
+            <summary>
+            MIME content type of file
+            </summary>
+        </member>
+        <member name="P:RestSharp.FileParameter.Name">
+            <summary>
+            Name of the parameter
+            </summary>
+        </member>
+        <member name="T:RestSharp.Http">
+            <summary>
+            HttpWebRequest wrapper (async methods)
+            </summary>
+            <summary>
+            HttpWebRequest wrapper
+            </summary>
+        </member>
+        <me
