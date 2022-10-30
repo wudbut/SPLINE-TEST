@@ -679,4 +679,47 @@
         <member name="P:RestSharp.Http.CookieContainer">
             <summary>
             The System.Net.CookieContainer to be used for the request
-            <
+            </summary>
+        </member>
+        <member name="P:RestSharp.Http.ResponseWriter">
+            <summary>
+            The method to use to write the response instead of reading into RawBytes
+            </summary>
+        </member>
+        <member name="P:RestSharp.Http.Files">
+            <summary>
+            Collection of files to be sent with request
+            </summary>
+        </member>
+        <member name="P:RestSharp.Http.UseDefaultCredentials">
+            <summary>
+            Determine whether or not the "default credentials" (e.g. the user account under which the current process is running)
+            will be sent along to the server.
+            </summary>
+        </member>
+        <member name="P:RestSharp.Http.Headers">
+            <summary>
+            HTTP headers to be sent with request
+            </summary>
+        </member>
+        <member name="P:RestSharp.Http.Parameters">
+            <summary>
+            HTTP parameters (QueryString or Form values) to be sent with request
+            </summary>
+        </member>
+        <member name="P:RestSharp.Http.Cookies">
+            <summary>
+            HTTP cookies to be sent with request
+            </summary>
+        </member>
+        <member name="P:RestSharp.Http.RequestBody">
+            <summary>
+            Request body to be sent with request
+            </summary>
+        </member>
+        <member name="P:RestSharp.Http.RequestContentType">
+            <summary>
+            Content type of the request body.
+            </summary>
+        </member>
+        <member name="P:RestSha
