@@ -767,4 +767,52 @@
             Date and time that the cookie expires
             </summary>
         </member>
-        <member name=
+        <member name="P:RestSharp.HttpCookie.HttpOnly">
+            <summary>
+            Indicates that this cookie should only be accessed by the server
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpCookie.Name">
+            <summary>
+            Name of the cookie
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpCookie.Path">
+            <summary>
+            Path of the cookie
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpCookie.Port">
+            <summary>
+            Port of the cookie
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpCookie.Secure">
+            <summary>
+            Indicates that the cookie should only be sent over secure channels
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpCookie.TimeStamp">
+            <summary>
+            Date and time the cookie was created
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpCookie.Value">
+            <summary>
+            Value of the cookie
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpCookie.Version">
+            <summary>
+            Version of the cookie
+            </summary>
+        </member>
+        <member name="T:RestSharp.HttpFile">
+            <summary>
+            Container for HTTP file
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpFile.ContentLength">
+            <summary>
+            The length of data to be sent
+  
