@@ -722,4 +722,49 @@
             Content type of the request body.
             </summary>
         </member>
-        <member name="P:RestSha
+        <member name="P:RestSharp.Http.RequestBodyBytes">
+            <summary>
+            An alternative to RequestBody, for when the caller already has the byte array.
+            </summary>
+        </member>
+        <member name="P:RestSharp.Http.Url">
+            <summary>
+            URL to call for this request
+            </summary>
+        </member>
+        <member name="T:RestSharp.HttpCookie">
+            <summary>
+            Representation of an HTTP cookie
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpCookie.Comment">
+            <summary>
+            Comment of the cookie
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpCookie.CommentUri">
+            <summary>
+            Comment of the cookie
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpCookie.Discard">
+            <summary>
+            Indicates whether the cookie should be discarded at the end of the session
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpCookie.Domain">
+            <summary>
+            Domain of the cookie
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpCookie.Expired">
+            <summary>
+            Indicates whether the cookie is expired
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpCookie.Expires">
+            <summary>
+            Date and time that the cookie expires
+            </summary>
+        </member>
+        <member name=
