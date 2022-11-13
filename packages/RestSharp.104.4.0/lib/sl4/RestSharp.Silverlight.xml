@@ -815,4 +815,51 @@
         <member name="P:RestSharp.HttpFile.ContentLength">
             <summary>
             The length of data to be sent
-  
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpFile.Writer">
+            <summary>
+            Provides raw data for file
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpFile.FileName">
+            <summary>
+            Name of the file to use when uploading
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpFile.ContentType">
+            <summary>
+            MIME content type of file
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpFile.Name">
+            <summary>
+            Name of the parameter
+            </summary>
+        </member>
+        <member name="T:RestSharp.HttpHeader">
+            <summary>
+            Representation of an HTTP header
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpHeader.Name">
+            <summary>
+            Name of the header
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpHeader.Value">
+            <summary>
+            Value of the header
+            </summary>
+        </member>
+        <member name="T:RestSharp.HttpParameter">
+            <summary>
+            Representation of an HTTP parameter (QueryString or Form value)
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpParameter.Name">
+            <summary>
+            Name of the parameter
+            </summary>
+        </member>
+        <member name="P:RestSharp.H
