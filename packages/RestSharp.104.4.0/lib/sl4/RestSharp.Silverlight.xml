@@ -862,4 +862,53 @@
             Name of the parameter
             </summary>
         </member>
-        <member name="P:RestSharp.H
+        <member name="P:RestSharp.HttpParameter.Value">
+            <summary>
+            Value of the parameter
+            </summary>
+        </member>
+        <member name="T:RestSharp.HttpResponse">
+            <summary>
+            HTTP response data
+            </summary>
+        </member>
+        <member name="T:RestSharp.IHttpResponse">
+            <summary>
+            HTTP response data
+            </summary>
+        </member>
+        <member name="P:RestSharp.IHttpResponse.ContentType">
+            <summary>
+            MIME content type of response
+            </summary>
+        </member>
+        <member name="P:RestSharp.IHttpResponse.ContentLength">
+            <summary>
+            Length in bytes of the response content
+            </summary>
+        </member>
+        <member name="P:RestSharp.IHttpResponse.ContentEncoding">
+            <summary>
+            Encoding of the response content
+            </summary>
+        </member>
+        <member name="P:RestSharp.IHttpResponse.Content">
+            <summary>
+            String representation of response content
+            </summary>
+        </member>
+        <member name="P:RestSharp.IHttpResponse.StatusCode">
+            <summary>
+            HTTP response status code
+            </summary>
+        </member>
+        <member name="P:RestSharp.IHttpResponse.StatusDescription">
+            <summary>
+            Description of HTTP status returned
+            </summary>
+        </member>
+        <member name="P:RestSharp.IHttpResponse.RawBytes">
+            <summary>
+            Response content
+            </summary>
+        </me
