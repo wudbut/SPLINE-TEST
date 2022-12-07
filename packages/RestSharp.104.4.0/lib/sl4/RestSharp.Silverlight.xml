@@ -1057,4 +1057,32 @@
             <param name="callback">Callback function to be executed upon completion providing access to the async handle.</param>
             <param name="httpMethod">The HTTP method to execute</param>
         </member>
-        <member name="M:RestSharp.IRestClient.ExecuteAsyncGet``1(RestSharp.IRestRequest,System.Action{Res
+        <member name="M:RestSharp.IRestClient.ExecuteAsyncGet``1(RestSharp.IRestRequest,System.Action{RestSharp.IRestResponse{``0},RestSharp.RestRequestAsyncHandle},System.String)">
+            <summary>
+            Executes a GET-style request and callback asynchronously, authenticating if needed
+            </summary>
+            <typeparam name="T">Target deserialization type</typeparam>
+            <param name="request">Request to be executed</param>
+            <param name="callback">Callback function to be executed upon completion</param>
+            <param name="httpMethod">The HTTP method to execute</param>
+        </member>
+        <member name="M:RestSharp.IRestClient.ExecuteAsyncPost``1(RestSharp.IRestRequest,System.Action{RestSharp.IRestResponse{``0},RestSharp.RestRequestAsyncHandle},System.String)">
+            <summary>
+            Executes a GET-style request and callback asynchronously, authenticating if needed
+            </summary>
+            <typeparam name="T">Target deserialization type</typeparam>
+            <param name="request">Request to be executed</param>
+            <param name="callback">Callback function to be executed upon completion</param>
+            <param name="httpMethod">The HTTP method to execute</param>
+        </member>
+        <member name="P:RestSharp.IRestClient.CookieContainer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:RestSharp.IRestClient.UserAgent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:RestSharp.IRestCl
