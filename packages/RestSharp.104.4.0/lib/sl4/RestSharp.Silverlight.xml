@@ -995,4 +995,43 @@
         </member>
         <member name="P:RestSharp.HttpResponse.Server">
             <summary>
-            HttpWebRes
+            HttpWebResponse.Server
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpResponse.Headers">
+            <summary>
+            Headers returned by server with the response
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpResponse.Cookies">
+            <summary>
+            Cookies returned by server with the response
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpResponse.ResponseStatus">
+            <summary>
+            Status of the request. Will return Error for transport errors.
+            HTTP errors will still return ResponseStatus.Completed, check StatusCode instead
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpResponse.ErrorMessage">
+            <summary>
+            Transport or other non-HTTP error generated while attempting request
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpResponse.ErrorException">
+            <summary>
+            Exception thrown when error is encountered.
+            </summary>
+        </member>
+        <member name="T:RestSharp.IRestClient">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:RestSharp.IRestClient.ExecuteAsync(RestSharp.IRestRequest,System.Action{RestSharp.IRestResponse,RestSharp.RestRequestAsyncHandle})">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+        </memb
