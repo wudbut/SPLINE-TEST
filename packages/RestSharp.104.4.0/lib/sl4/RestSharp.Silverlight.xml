@@ -1085,4 +1085,46 @@
             
             </summary>
         </member>
-        <member name="P:RestSharp.IRestCl
+        <member name="P:RestSharp.IRestClient.Timeout">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:RestSharp.IRestClient.UseSynchronizationContext">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:RestSharp.IRestClient.Authenticator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:RestSharp.IRestClient.BaseUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:RestSharp.IRestClient.DefaultParameters">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:RestSharp.IRestRequest.AddBody(System.Object,System.String)">
+            <summary>
+            Serializes obj to format specified by RequestFormat, but passes xmlNamespace if using the default XmlSerializer
+            </summary>
+            <param name="obj">The object to serialize</param>
+            <param name="xmlNamespace">The XML namespace to use when serializing</param>
+            <returns>This request</returns>
+        </member>
+        <member name="M:RestSharp.IRestRequest.AddBody(System.Object)">
+            <summary>
+            Serializes obj to data format specified by RequestFormat and adds it to the request body.
+            </summary>
+            <param name="obj">The object to serialize</param>
+            <returns>This request</returns>
+        </member>
+        <member name="M:RestSharp.IRestRequest.AddObject(System.Object,System.String[])">
+            <summary>
+            
