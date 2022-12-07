@@ -1157,4 +1157,31 @@
             <param name="name">Name of the parameter</param>
             <param name="value">Value of the parameter</param>
             <returns>This request</returns>
-        </membe
+        </member>
+        <member name="M:RestSharp.IRestRequest.AddParameter(System.String,System.Object,RestSharp.ParameterType)">
+            <summary>
+            Adds a parameter to the request. There are five types of parameters:
+            - GetOrPost: Either a QueryString value or encoded form value based on method
+            - HttpHeader: Adds the name/value pair to the HTTP request's Headers collection
+            - UrlSegment: Inserted into URL if there is a matching url token e.g. {AccountId}
+            - Cookie: Adds the name/value pair to the HTTP request's Cookies collection
+            - RequestBody: Used by AddBody() (not recommended to use directly)
+            </summary>
+            <param name="name">Name of the parameter</param>
+            <param name="value">Value of the parameter</param>
+            <param name="type">The type of parameter to add</param>
+            <returns>This request</returns>
+        </member>
+        <member name="M:RestSharp.IRestRequest.AddHeader(System.String,System.String)">
+            <summary>
+            Shortcut to AddParameter(name, value, HttpHeader) overload
+            </summary>
+            <param name="name">Name of the header to add</param>
+            <param name="value">Value of the header to add</param>
+            <returns></returns>
+        </member>
+        <member name="M:RestSharp.IRestRequest.AddCookie(System.String,System.String)">
+            <summary>
+            Shortcut to AddParameter(name, value, Cookie) overload
+            </summary>
+            <par
