@@ -1127,4 +1127,34 @@
         </member>
         <member name="M:RestSharp.IRestRequest.AddObject(System.Object,System.String[])">
             <summary>
-            
+            Calls AddParameter() for all public, readable properties specified in the white list
+            </summary>
+            <example>
+            request.AddObject(product, "ProductId", "Price", ...);
+            </example>
+            <param name="obj">The object with properties to add as parameters</param>
+            <param name="whitelist">The names of the properties to include</param>
+            <returns>This request</returns>
+        </member>
+        <member name="M:RestSharp.IRestRequest.AddObject(System.Object)">
+            <summary>
+            Calls AddParameter() for all public, readable properties of obj
+            </summary>
+            <param name="obj">The object with properties to add as parameters</param>
+            <returns>This request</returns>
+        </member>
+        <member name="M:RestSharp.IRestRequest.AddParameter(RestSharp.Parameter)">
+            <summary>
+            Add the parameter to the request
+            </summary>
+            <param name="p">Parameter to add</param>
+            <returns></returns>
+        </member>
+        <member name="M:RestSharp.IRestRequest.AddParameter(System.String,System.Object)">
+            <summary>
+            Adds a HTTP parameter to the request (QueryString for GET, DELETE, OPTIONS and HEAD; Encoded form for POST and PUT)
+            </summary>
+            <param name="name">Name of the parameter</param>
+            <param name="value">Value of the parameter</param>
+            <returns>This request</returns>
+        </membe
