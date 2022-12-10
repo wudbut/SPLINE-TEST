@@ -1392,4 +1392,42 @@
             Deserialized entity data
             </summary>
         </member>
-        <member name="T:RestSharp
+        <member name="T:RestSharp.Parameter">
+            <summary>
+            Parameter container for REST requests
+            </summary>
+        </member>
+        <member name="M:RestSharp.Parameter.ToString">
+            <summary>
+            Return a human-readable representation of this parameter
+            </summary>
+            <returns>String</returns>
+        </member>
+        <member name="P:RestSharp.Parameter.Name">
+            <summary>
+            Name of the parameter
+            </summary>
+        </member>
+        <member name="P:RestSharp.Parameter.Value">
+            <summary>
+            Value of the parameter
+            </summary>
+        </member>
+        <member name="P:RestSharp.Parameter.Type">
+            <summary>
+            Type of the parameter
+            </summary>
+        </member>
+        <member name="T:RestSharp.RestClient">
+            <summary>
+            Client to translate RestRequests into Http requests and process response result
+            </summary>
+        </member>
+        <member name="M:RestSharp.RestClient.ExecuteAsync(RestSharp.IRestRequest,System.Action{RestSharp.IRestResponse,RestSharp.RestRequestAsyncHandle})">
+            <summary>
+            Executes the request and callback asynchronously, authenticating if needed
+            </summary>
+            <param name="request">Request to be executed</param>
+            <param name="callback">Callback function to be executed upon completion providing access to the async handle.</param>
+        </member>
+        <memb
