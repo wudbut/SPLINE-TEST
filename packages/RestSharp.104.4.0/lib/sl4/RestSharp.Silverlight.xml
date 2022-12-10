@@ -1249,4 +1249,33 @@
             request.AddParameter("ProductId", 123, ParameterType.UrlSegment);
             </example>
         </member>
-        <member nam
+        <member name="P:RestSharp.IRestRequest.RequestFormat">
+            <summary>
+            Serializer to use when writing XML request bodies. Used if RequestFormat is Xml.
+            By default XmlSerializer is used.
+            </summary>
+        </member>
+        <member name="P:RestSharp.IRestRequest.RootElement">
+            <summary>
+            Used by the default deserializers to determine where to start deserializing from.
+            Can be used to skip container or root elements that do not have corresponding deserialzation targets.
+            </summary>
+        </member>
+        <member name="P:RestSharp.IRestRequest.DateFormat">
+            <summary>
+            Used by the default deserializers to explicitly set which date format string to use when parsing dates.
+            </summary>
+        </member>
+        <member name="P:RestSharp.IRestRequest.XmlNamespace">
+            <summary>
+            Used by XmlDeserializer. If not specified, XmlDeserializer will flatten response by removing namespaces from element names.
+            </summary>
+        </member>
+        <member name="P:RestSharp.IRestRequest.Credentials">
+            <summary>
+            In general you would not need to set this directly. Used by the NtlmAuthenticator. 
+            </summary>
+        </member>
+        <member name="P:RestSharp.IRestRequest.Timeout">
+            <summary>
+            Timeout in milliseconds to be used for the request. This timeout value overrides a t
