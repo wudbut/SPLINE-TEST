@@ -1184,4 +1184,35 @@
             <summary>
             Shortcut to AddParameter(name, value, Cookie) overload
             </summary>
-            <par
+            <param name="name">Name of the cookie to add</param>
+            <param name="value">Value of the cookie to add</param>
+            <returns></returns>
+        </member>
+        <member name="M:RestSharp.IRestRequest.AddUrlSegment(System.String,System.String)">
+            <summary>
+            Shortcut to AddParameter(name, value, UrlSegment) overload
+            </summary>
+            <param name="name">Name of the segment to add</param>
+            <param name="value">Value of the segment to add</param>
+            <returns></returns>
+        </member>
+        <member name="P:RestSharp.IRestRequest.AlwaysMultipartFormData">
+            <summary>
+            Always send a multipart/form-data request - even when no Files are present.
+            </summary>
+        </member>
+        <member name="P:RestSharp.IRestRequest.JsonSerializer">
+            <summary>
+            Serializer to use when writing JSON request bodies. Used if RequestFormat is Json.
+            By default the included JsonSerializer is used (currently using JSON.NET default serialization).
+            </summary>
+        </member>
+        <member name="P:RestSharp.IRestRequest.XmlSerializer">
+            <summary>
+            Serializer to use when writing XML request bodies. Used if RequestFormat is Xml.
+            By default the included XmlSerializer is used.
+            </summary>
+        </member>
+        <member name="P:RestSharp.IRestRequest.ResponseWriter">
+            <summary>
+            Set this to write response to Stream rather than reading in
