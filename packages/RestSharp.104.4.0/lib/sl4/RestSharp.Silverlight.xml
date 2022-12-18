@@ -1470,4 +1470,37 @@
             <typeparam name="T">Target deserialization type</typeparam>
             <param name="request">Request to be executed</param>
             <param name="callback">Callback function to be executed upon completion</param>
-            <param name="httpMethod">The HTTP meth
+            <param name="httpMethod">The HTTP method to execute</param>
+        </member>
+        <member name="M:RestSharp.RestClient.#ctor">
+            <summary>
+            Default constructor that registers default content handlers
+            </summary>
+        </member>
+        <member name="M:RestSharp.RestClient.#ctor(System.String)">
+            <summary>
+            Sets the BaseUrl property for requests made by this client instance
+            </summary>
+            <param name="baseUrl"></param>
+        </member>
+        <member name="M:RestSharp.RestClient.AddHandler(System.String,RestSharp.Deserializers.IDeserializer)">
+            <summary>
+            Registers a content handler to process response content
+            </summary>
+            <param name="contentType">MIME content type of the response content</param>
+            <param name="deserializer">Deserializer to use to process content</param>
+        </member>
+        <member name="M:RestSharp.RestClient.RemoveHandler(System.String)">
+            <summary>
+            Remove a content handler for the specified MIME content type
+            </summary>
+            <param name="contentType">MIME content type to remove</param>
+        </member>
+        <member name="M:RestSharp.RestClient.ClearHandlers">
+            <summary>
+            Remove all content handlers
+            </summary>
+        </member>
+        <member name="M:RestSharp.RestClient.GetHandler(System.String)">
+            <summary>
+            Retrieve
