@@ -1503,4 +1503,36 @@
         </member>
         <member name="M:RestSharp.RestClient.GetHandler(System.String)">
             <summary>
-            Retrieve
+            Retrieve the handler for the specified MIME content type
+            </summary>
+            <param name="contentType">MIME content type to retrieve</param>
+            <returns>IDeserializer instance</returns>
+        </member>
+        <member name="M:RestSharp.RestClient.BuildUri(RestSharp.IRestRequest)">
+            <summary>
+            Assembles URL to call based on parameters, method and resource
+            </summary>
+            <param name="request">RestRequest to execute</param>
+            <returns>Assembled System.Uri</returns>
+        </member>
+        <member name="P:RestSharp.RestClient.DefaultParameters">
+            <summary>
+            Parameters included with every request made with this instance of RestClient
+            If specified in both client and request, the request wins
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestClient.MaxRedirects">
+            <summary>
+            Maximum number of redirects to follow if FollowRedirects is true
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestClient.FollowRedirects">
+            <summary>
+            Default is true. Determine whether or not requests that result in 
+            HTTP status codes of 3xx should follow returned redirect
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestClient.CookieContainer">
+            <summary>
+            The CookieContainer used for requests made by this client instance
+            </summary
