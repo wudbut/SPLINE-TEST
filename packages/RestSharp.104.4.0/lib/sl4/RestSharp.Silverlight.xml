@@ -1535,4 +1535,40 @@
         <member name="P:RestSharp.RestClient.CookieContainer">
             <summary>
             The CookieContainer used for requests made by this client instance
-            </summary
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestClient.UserAgent">
+            <summary>
+            UserAgent to use for requests made by this client instance
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestClient.Timeout">
+            <summary>
+            Timeout in milliseconds to use for requests made by this client instance
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestClient.UseSynchronizationContext">
+            <summary>
+            Whether to invoke async callbacks using the SynchronizationContext.Current captured when invoked
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestClient.Authenticator">
+            <summary>
+            Authenticator to use for requests made by this client instance
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestClient.BaseUrl">
+            <summary>
+            Combined with Request.Resource to construct URL for request
+            Should include scheme and domain without trailing slash.
+            </summary>
+            <example>
+            client.BaseUrl = "http://example.com";
+            </example>
+        </member>
+        <member name="M:RestSharp.RestClientExtensions.ExecuteAsync(RestSharp.IRestClient,RestSharp.IRestRequest,System.Action{RestSharp.IRestResponse})">
+            <summary>
+            Executes the request and callback asynchronously, authenticating if needed
+            </summary>
+            <param name="client">The IRestClient this method extends</param>
+            <param name="request"
