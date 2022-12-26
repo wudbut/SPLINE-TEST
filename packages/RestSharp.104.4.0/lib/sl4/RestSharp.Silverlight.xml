@@ -1619,4 +1619,36 @@
             </summary>
             <param name="restClient">The IRestClient instance</param>
             <param name="name">Name of the parameter</param>
-            <param name="value">
+            <param name="value">Value of the parameter</param>
+            <param name="type">The type of parameter to add</param>
+            <returns>This request</returns>
+        </member>
+        <member name="M:RestSharp.RestClientExtensions.AddDefaultHeader(RestSharp.IRestClient,System.String,System.String)">
+            <summary>
+            Shortcut to AddDefaultParameter(name, value, HttpHeader) overload
+            </summary>
+            <param name="restClient">The IRestClient instance</param>
+            <param name="name">Name of the header to add</param>
+            <param name="value">Value of the header to add</param>
+            <returns></returns>
+        </member>
+        <member name="M:RestSharp.RestClientExtensions.AddDefaultUrlSegment(RestSharp.IRestClient,System.String,System.String)">
+            <summary>
+            Shortcut to AddDefaultParameter(name, value, UrlSegment) overload
+            </summary>
+            <param name="restClient">The IRestClient instance</param>
+            <param name="name">Name of the segment to add</param>
+            <param name="value">Value of the segment to add</param>
+            <returns></returns>
+        </member>
+        <member name="T:RestSharp.RestRequest">
+            <summary>
+            Container for data used to make requests
+            </summary>
+        </member>
+        <member name="M:RestSharp.RestRequest.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member nam
