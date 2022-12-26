@@ -1651,4 +1651,38 @@
             Default constructor
             </summary>
         </member>
-        <member nam
+        <member name="M:RestSharp.RestRequest.#ctor(RestSharp.Method)">
+            <summary>
+            Sets Method property to value of method
+            </summary>
+            <param name="method">Method to use for this request</param>
+        </member>
+        <member name="M:RestSharp.RestRequest.#ctor(System.String)">
+            <summary>
+            Sets Resource property
+            </summary>
+            <param name="resource">Resource to use for this request</param>
+        </member>
+        <member name="M:RestSharp.RestRequest.#ctor(System.String,RestSharp.Method)">
+            <summary>
+            Sets Resource and Method properties
+            </summary>
+            <param name="resource">Resource to use for this request</param>
+            <param name="method">Method to use for this request</param>
+        </member>
+        <member name="M:RestSharp.RestRequest.#ctor(System.Uri)">
+            <summary>
+            Sets Resource property
+            </summary>
+            <param name="resource">Resource to use for this request</param>
+        </member>
+        <member name="M:RestSharp.RestRequest.#ctor(System.Uri,RestSharp.Method)">
+            <summary>
+            Sets Resource and Method properties
+            </summary>
+            <param name="resource">Resource to use for this request</param>
+            <param name="method">Method to use for this request</param>
+        </member>
+        <member name="M:RestSharp.RestRequest.AddFile(System.String,System.String)">
+            <summary>
+            Adds a f
