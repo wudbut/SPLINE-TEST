@@ -1791,4 +1791,36 @@
             <param name="type">The type of parameter to add</param>
             <returns>This request</returns>
         </member>
-        <member 
+        <member name="M:RestSharp.RestRequest.AddHeader(System.String,System.String)">
+            <summary>
+            Shortcut to AddParameter(name, value, HttpHeader) overload
+            </summary>
+            <param name="name">Name of the header to add</param>
+            <param name="value">Value of the header to add</param>
+            <returns></returns>
+        </member>
+        <member name="M:RestSharp.RestRequest.AddCookie(System.String,System.String)">
+            <summary>
+            Shortcut to AddParameter(name, value, Cookie) overload
+            </summary>
+            <param name="name">Name of the cookie to add</param>
+            <param name="value">Value of the cookie to add</param>
+            <returns></returns>
+        </member>
+        <member name="M:RestSharp.RestRequest.AddUrlSegment(System.String,System.String)">
+            <summary>
+            Shortcut to AddParameter(name, value, UrlSegment) overload
+            </summary>
+            <param name="name">Name of the segment to add</param>
+            <param name="value">Value of the segment to add</param>
+            <returns></returns>
+        </member>
+        <member name="M:RestSharp.RestRequest.IncreaseNumAttempts">
+            <summary>
+            Internal Method so that RestClient can increase the number of attempts
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestRequest.AlwaysMultipartFormData">
+            <summary>
+            Always send a multipart/form-data request - even when no Files are present.
+      
