@@ -1887,4 +1887,36 @@
         </member>
         <member name="P:RestSharp.RestRequest.RootElement">
             <summary>
-            Used by the default deserializers to determine where to s
+            Used by the default deserializers to determine where to start deserializing from.
+            Can be used to skip container or root elements that do not have corresponding deserialzation targets.
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestRequest.OnBeforeDeserialization">
+            <summary>
+            A function to run prior to deserializing starting (e.g. change settings if error encountered)
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestRequest.DateFormat">
+            <summary>
+            Used by the default deserializers to explicitly set which date format string to use when parsing dates.
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestRequest.XmlNamespace">
+            <summary>
+            Used by XmlDeserializer. If not specified, XmlDeserializer will flatten response by removing namespaces from element names.
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestRequest.Credentials">
+            <summary>
+            In general you would not need to set this directly. Used by the NtlmAuthenticator. 
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestRequest.UserState">
+            <summary>
+            Gets or sets a user-defined state object that contains information about a request and which can be later 
+            retrieved when the request completes.
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestRequest.Timeout">
+            <summary>
+            Timeout in milliseconds to be used for the request. This timeou
