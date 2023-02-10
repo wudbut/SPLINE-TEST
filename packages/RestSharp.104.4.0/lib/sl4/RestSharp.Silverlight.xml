@@ -1961,4 +1961,45 @@
         </member>
         <member name="P:RestSharp.RestResponseBase.ContentEncoding">
             <summary>
-    
+            Encoding of the response content
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestResponseBase.Content">
+            <summary>
+            String representation of response content
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestResponseBase.StatusCode">
+            <summary>
+            HTTP response status code
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestResponseBase.StatusDescription">
+            <summary>
+            Description of HTTP status returned
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestResponseBase.RawBytes">
+            <summary>
+            Response content
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestResponseBase.ResponseUri">
+            <summary>
+            The URL that actually responded to the content (different from request if redirected)
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestResponseBase.Server">
+            <summary>
+            HttpWebResponse.Server
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestResponseBase.Cookies">
+            <summary>
+            Cookies returned by server with the response
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestResponseBase.Headers">
+            <summary>
+            Headers returned by server with the response
+            </sum
