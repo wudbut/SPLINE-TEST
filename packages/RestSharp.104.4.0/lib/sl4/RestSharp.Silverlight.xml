@@ -2002,4 +2002,43 @@
         <member name="P:RestSharp.RestResponseBase.Headers">
             <summary>
             Headers returned by server with the response
-            </sum
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestResponseBase.ResponseStatus">
+            <summary>
+            Status of the request. Will return Error for transport errors.
+            HTTP errors will still return ResponseStatus.Completed, check StatusCode instead
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestResponseBase.ErrorMessage">
+            <summary>
+            Transport or other non-HTTP error generated while attempting request
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestResponseBase.ErrorException">
+            <summary>
+            The exception thrown during the request, if any
+            </summary>
+        </member>
+        <member name="T:RestSharp.RestResponse`1">
+            <summary>
+            Container for data sent back from API including deserialized data
+            </summary>
+            <typeparam name="T">Type of data to deserialize to</typeparam>
+        </member>
+        <member name="P:RestSharp.RestResponse`1.Data">
+            <summary>
+            Deserialized entity data
+            </summary>
+        </member>
+        <member name="T:RestSharp.RestResponse">
+            <summary>
+            Container for data sent back from API
+            </summary>
+        </member>
+        <member name="T:RestSharp.Serializers.DotNetXmlSerializer">
+            <summary>
+            Wrapper for System.Xml.Serialization.XmlSerializer.
+            </summary>
+        </member>
+        <member name="M:RestSharp.Serializers.DotN
