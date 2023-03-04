@@ -2079,4 +2079,45 @@
             Content type for serialized content
             </summary>
         </member>
-        <member name="P:RestSharp.Serializers.Do
+        <member name="P:RestSharp.Serializers.DotNetXmlSerializer.Encoding">
+            <summary>
+            Encoding for serialized content
+            </summary>
+        </member>
+        <member name="T:RestSharp.Serializers.DotNetXmlSerializer.EncodingStringWriter">
+            <summary>
+            Need to subclass StringWriter in order to override Encoding
+            </summary>
+        </member>
+        <member name="T:RestSharp.Serializers.JsonSerializer">
+            <summary>
+            Default JSON serializer for request bodies
+            Doesn't currently use the SerializeAs attribute, defers to Newtonsoft's attributes
+            </summary>
+        </member>
+        <member name="M:RestSharp.Serializers.JsonSerializer.#ctor">
+            <summary>
+            Default serializer
+            </summary>
+        </member>
+        <member name="M:RestSharp.Serializers.JsonSerializer.Serialize(System.Object)">
+            <summary>
+            Serialize the object as JSON
+            </summary>
+            <param name="obj">Object to serialize</param>
+            <returns>JSON as String</returns>
+        </member>
+        <member name="P:RestSharp.Serializers.JsonSerializer.DateFormat">
+            <summary>
+            Unused for JSON Serialization
+            </summary>
+        </member>
+        <member name="P:RestSharp.Serializers.JsonSerializer.RootElement">
+            <summary>
+            Unused for JSON Serialization
+            </summary>
+        </member>
+        <member name="P:RestSharp.Serializers.JsonSerializer.Namespace">
+            <summary>
+            Unused for JSON Serialization
+            </
