@@ -2120,4 +2120,40 @@
         <member name="P:RestSharp.Serializers.JsonSerializer.Namespace">
             <summary>
             Unused for JSON Serialization
-            </
+            </summary>
+        </member>
+        <member name="P:RestSharp.Serializers.JsonSerializer.ContentType">
+            <summary>
+            Content type for serialized content
+            </summary>
+        </member>
+        <member name="T:RestSharp.Serializers.SerializeAsAttribute">
+            <summary>
+            Allows control how class and property names and values are serialized by XmlSerializer
+            Currently not supported with the JsonSerializer
+            When specified at the property level the class-level specification is overridden
+            </summary>
+        </member>
+        <member name="M:RestSharp.Serializers.SerializeAsAttribute.TransformName(System.String)">
+            <summary>
+            Called by the attribute when NameStyle is speficied
+            </summary>
+            <param name="input">The string to transform</param>
+            <returns>String</returns>
+        </member>
+        <member name="P:RestSharp.Serializers.SerializeAsAttribute.Name">
+            <summary>
+            The name to use for the serialized element
+            </summary>
+        </member>
+        <member name="P:RestSharp.Serializers.SerializeAsAttribute.Attribute">
+            <summary>
+            Sets the value to be serialized as an Attribute instead of an Element
+            </summary>
+        </member>
+        <member name="P:RestSharp.Serializers.SerializeAsAttribute.Culture">
+            <summary>
+            The culture to use when serializing
+            </summary>
+        </member>
+        <me
