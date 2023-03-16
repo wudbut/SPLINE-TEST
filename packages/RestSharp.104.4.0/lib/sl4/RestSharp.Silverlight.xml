@@ -2156,4 +2156,42 @@
             The culture to use when serializing
             </summary>
         </member>
-        <me
+        <member name="P:RestSharp.Serializers.SerializeAsAttribute.NameStyle">
+            <summary>
+            Transforms the casing of the name based on the selected value.
+            </summary>
+        </member>
+        <member name="P:RestSharp.Serializers.SerializeAsAttribute.Index">
+            <summary>
+            The order to serialize the element. Default is int.MaxValue.
+            </summary>
+        </member>
+        <member name="T:RestSharp.Serializers.NameStyle">
+            <summary>
+            Options for transforming casing of element names
+            </summary>
+        </member>
+        <member name="T:RestSharp.Serializers.XmlSerializer">
+            <summary>
+            Default XML Serializer
+            </summary>
+        </member>
+        <member name="M:RestSharp.Serializers.XmlSerializer.#ctor">
+            <summary>
+            Default constructor, does not specify namespace
+            </summary>
+        </member>
+        <member name="M:RestSharp.Serializers.XmlSerializer.#ctor(System.String)">
+            <summary>
+            Specify the namespaced to be used when serializing
+            </summary>
+            <param name="namespace">XML namespace</param>
+        </member>
+        <member name="M:RestSharp.Serializers.XmlSerializer.Serialize(System.Object)">
+            <summary>
+            Serialize the object as XML
+            </summary>
+            <param name="obj">Object to serialize</param>
+            <returns>XML as string</returns>
+        </member>
+        <member name="P:RestShar
