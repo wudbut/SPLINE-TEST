@@ -2194,4 +2194,44 @@
             <param name="obj">Object to serialize</param>
             <returns>XML as string</returns>
         </member>
-        <member name="P:RestShar
+        <member name="P:RestSharp.Serializers.XmlSerializer.RootElement">
+            <summary>
+            Name of the root element to use when serializing
+            </summary>
+        </member>
+        <member name="P:RestSharp.Serializers.XmlSerializer.Namespace">
+            <summary>
+            XML namespace to use when serializing
+            </summary>
+        </member>
+        <member name="P:RestSharp.Serializers.XmlSerializer.DateFormat">
+            <summary>
+            Format string to use when serializing dates
+            </summary>
+        </member>
+        <member name="P:RestSharp.Serializers.XmlSerializer.ContentType">
+            <summary>
+            Content type for serialized content
+            </summary>
+        </member>
+        <member name="T:RestSharp.JsonArray">
+            <summary>
+            Represents the json array.
+            </summary>
+        </member>
+        <member name="M:RestSharp.JsonArray.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:RestSharp.JsonArray"/> class. 
+            </summary>
+        </member>
+        <member name="M:RestSharp.JsonArray.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RestSharp.JsonArray"/> class. 
+            </summary>
+            <param name="capacity">The capacity of the json array.</param>
+        </member>
+        <member name="M:RestSharp.JsonArray.ToString">
+            <summary>
+            The json representation of the array.
+            </summary>
+            <returns>The json re
