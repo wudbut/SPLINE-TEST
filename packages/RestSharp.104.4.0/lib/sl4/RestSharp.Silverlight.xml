@@ -2268,4 +2268,41 @@
             <summary>
             Determines whether the specified key contains key.
             </summary>
-            <param name="key
+            <param name="key">The key.</param>
+            <returns>
+                <c>true</c> if the specified key contains key; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:RestSharp.JsonObject.Remove(System.String)">
+            <summary>
+            Removes the specified key.
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:RestSharp.JsonObject.TryGetValue(System.String,System.Object@)">
+            <summary>
+            Tries the get value.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:RestSharp.JsonObject.Add(System.Collections.Generic.KeyValuePair{System.String,System.Object})">
+            <summary>
+            Adds the specified item.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:RestSharp.JsonObject.Clear">
+            <summary>
+            Clears this instance.
+            </summary>
+        </member>
+        <member name="M:RestSharp.JsonObject.Contains(System.Collections.Generic.KeyValuePair{System.String,System.Object})">
+            <summary>
+            Determines whether [contains] [the specified item].
+            </summary>
+            <param name="item">The item.</param>
+            <returns>
+            	<c>true</c> if [contains] [the specified
