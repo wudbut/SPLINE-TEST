@@ -2383,4 +2383,37 @@
             </value>
         </member>
         <member name="T:RestSharp.SimpleJson">
-       
+            <summary>
+            This class encodes and decodes JSON strings.
+            Spec. details, see http://www.json.org/
+            
+            JSON uses Arrays and Objects. These correspond here to the datatypes JsonArray(IList&lt;object>) and JsonObject(IDictionary&lt;string,object>).
+            All numbers are parsed to doubles.
+            </summary>
+        </member>
+        <member name="M:RestSharp.SimpleJson.DeserializeObject(System.String)">
+            <summary>
+            Parses the string json into a value
+            </summary>
+            <param name="json">A JSON string.</param>
+            <returns>An IList&lt;object>, a IDictionary&lt;string,object>, a double, a string, null, true, or false</returns>
+        </member>
+        <member name="M:RestSharp.SimpleJson.TryDeserializeObject(System.String,System.Object@)">
+            <summary>
+            Try parsing the json string into a value.
+            </summary>
+            <param name="json">
+            A JSON string.
+            </param>
+            <param name="obj">
+            The object.
+            </param>
+            <returns>
+            Returns true if successfull otherwise false.
+            </returns>
+        </member>
+        <member name="M:RestSharp.SimpleJson.SerializeObject(System.Object,RestSharp.IJsonSerializerStrategy)">
+            <summary>
+            Converts a IDictionary&lt;string,object> / IList&lt;object> object into a JSON string
+            </summary>
+            <param name="json">A ID
