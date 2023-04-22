@@ -2416,4 +2416,36 @@
             <summary>
             Converts a IDictionary&lt;string,object> / IList&lt;object> object into a JSON string
             </summary>
-            <param name="json">A ID
+            <param name="json">A IDictionary&lt;string,object> / IList&lt;object></param>
+            <param name="jsonSerializerStrategy">Serializer strategy to use</param>
+            <returns>A JSON encoded string, or null if object 'json' is not serializable</returns>
+        </member>
+        <member name="M:RestSharp.SimpleJson.IsNumeric(System.Object)">
+            <summary>
+            Determines if a given object is numeric in any way
+            (can be integer, double, null, etc).
+            </summary>
+        </member>
+        <member name="T:RestSharp.Validation.Require">
+            <summary>
+            Helper methods for validating required values
+            </summary>
+        </member>
+        <member name="M:RestSharp.Validation.Require.Argument(System.String,System.Object)">
+            <summary>
+            Require a parameter to not be null
+            </summary>
+            <param name="argumentName">Name of the parameter</param>
+            <param name="argumentValue">Value of the parameter</param>
+        </member>
+        <member name="T:RestSharp.Validation.Validate">
+            <summary>
+            Helper methods for validating values
+            </summary>
+        </member>
+        <member name="M:RestSharp.Validation.Validate.IsBetween(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Validate an integer value is between the specified values (exclusive of min/max)
+            </summary>
+            <param name="value">Value to validate</param>
+            <param name="min">Exclusive minimum value<
